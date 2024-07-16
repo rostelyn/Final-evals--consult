@@ -1,6 +1,6 @@
 @extends('layouts.consultation-layout')
 
 @section('content')
-<h1>settings</h1>
+<h1>Approve/Disapprove</h1>
 <!-- Add your calendar content here -->
 @endsection

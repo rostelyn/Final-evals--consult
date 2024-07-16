@@ -2,21 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-
-
-
-//student
+// Student routes
 Route::get('/student-evaluation-consultation', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
@@ -29,8 +15,7 @@ Route::get('/consultation', function () {
     return view('student.consultation');
 })->name('consultation');
 
-
-//HR MAAM CHARM
+// HR routes
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
@@ -55,12 +40,7 @@ Route::get('/hr-settings', function () {
     return view('hr.hr-settings');
 })->name('hr-settings');
 
-Route::get('/hr-sidebar', function () {
-    return view('hr.hr-sidebar');
-})->name('hr.hr-db');
-
-// MAAM JESS
-
+// Consultation routes
 Route::get('/Ct-db', function () {
     return view('Consultation.Ct-db');
 })->name('Consultation-db');
@@ -72,6 +52,10 @@ Route::get('/Ct-studentlist', function () {
 Route::get('/Ct-calendar', function () {
     return view('Consultation.Ct-calendar');
 })->name('Ct-calendar');
+
+Route::get('/Ct-appdis', function () {
+    return view('Consultation.Ct-appdis');
+})->name('Ct-appdis');
 
 Route::get('/Ct-notify', function () {
     return view('Consultation.Ct-notify');
@@ -85,6 +69,7 @@ Route::get('/Ct-settings', function () {
     return view('Consultation.Ct-settings');
 })->name('Ct-settings');
 
-Route::get('/Ct-sidebar', function () {
-    return view('Ct.Ct-sidebar');
-})->name('Consultation.Ct-db');
+// Catch-all route for errors or missing pages
+Route::fallback(function () {
+    return view('errors.404');
+});
