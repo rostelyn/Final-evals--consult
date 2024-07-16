@@ -50,3 +50,11 @@ Route::get('/hr-notify', function () {
 Route::get('/hr-history', function () {
     return view('hr.hr-history');
 })->name('hr-history');
+
+Route::get('/hr-settings', function () {
+    return view('hr.hr-settings');
+})->name('hr-settings');
+
+Route::get('/hr-sidebar', function () {
+    return view('hr.hr-sidebar');
+})->name('hr.hr-db');
