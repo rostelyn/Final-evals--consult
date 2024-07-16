@@ -53,7 +53,7 @@ body {
 }
 
 .sidebar ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 }
@@ -70,4 +70,33 @@ body {
 
 .content h1 {
     color: #688e4e;
+}
+
+
+.appointment-form {
+    margin-top: 20px;
+}
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+.appointment-form label {
+    margin-bottom: 5px;
+}
+.appointment-form input,
+.appointment-form select {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 16px;
+}
+.appointment-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.appointment-form button:hover {
+    background-color: #00cccc;
 }
