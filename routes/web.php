@@ -22,7 +22,7 @@ Route::get('/student-evaluation-consultation', function () {
 })->name('student-evaluation');
 
 Route::get('/evaluation', function () {
-    return view('student.evaluation');
+    return view('student.evaluation.evaluation');
 })->name('evaluation');
 
 Route::get('/consultation', function () {
