@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Hrcalendar;
+use App\Http\Controllers\HrCalendarController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,8 @@ use App\Http\Controllers\EvaluationController;
 */
 
 
+
+//student
 
 
 // Student routes
@@ -41,7 +45,12 @@ Route::get('/consultation', function () {
     return view('student.consultation.layout.app');
 })->name('consultation');
 
+
+//HR MAAM CHARM
+
+
 // HR routes
+
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
@@ -65,6 +74,14 @@ Route::get('/hr-history', function () {
 Route::get('/hr-settings', function () {
     return view('hr.hr-settings');
 })->name('hr-settings');
+
+
+Route::get('/hr-sidebar', function () {
+    return view('hr.hr-sidebar');
+})->name('hr.hr-db');
+
+Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
+Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
 
 // Consultation routes
 Route::get('/Ct-db', function () {
