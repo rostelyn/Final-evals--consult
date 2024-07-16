@@ -1,4 +1,4 @@
-@extends('layouts.hr-layout')
+@extends('layouts.consultation-layout')
 
 @section('content')
 <h1>student list</h1>

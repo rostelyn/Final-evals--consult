@@ -1,8 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\Hrcalendar;
 use App\Http\Controllers\HrCalendarController;
+=======
+<<<<<<< HEAD
+use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\EvaluationController;
+>>>>>>> 35370e4c78091731e27b61e2456edf2b587c7fb8
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,21 +24,38 @@ use App\Http\Controllers\HrCalendarController;
 
 
 //student
+=======
+
+// Student routes
+>>>>>>> 45eb4cf7a0801a456dd2a9f5424742c2c9a7941f
 Route::get('/student-evaluation-consultation', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 
 Route::get('/evaluation', function () {
-    return view('student.evaluation.evaluation');
+    return view('student.evaluation.layout.app');
 })->name('evaluation');
 
+
+Route::get('/faculty', [FacultyController::class, 'index']);
+Route::get('/faculty/{department}', [FacultyController::class, 'show']);
+
+Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
+
+Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
+
+
 Route::get('/consultation', function () {
-    return view('student.consultation');
+    return view('student.consultation.layout.app');
 })->name('consultation');
 
+<<<<<<< HEAD
 
 //HR MAAM CHARM
 
+=======
+// HR routes
+>>>>>>> 35370e4c78091731e27b61e2456edf2b587c7fb8
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
@@ -57,9 +80,45 @@ Route::get('/hr-settings', function () {
     return view('hr.hr-settings');
 })->name('hr-settings');
 
+<<<<<<< HEAD
 Route::get('/hr-sidebar', function () {
     return view('hr.hr-sidebar');
 })->name('hr.hr-db');
 
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
+=======
+// Consultation routes
+Route::get('/Ct-db', function () {
+    return view('Consultation.Ct-db');
+})->name('Consultation-db');
+
+Route::get('/Ct-studentlist', function () {
+    return view('Consultation.Ct-studentlist');
+})->name('Ct-studentlist');
+
+Route::get('/Ct-calendar', function () {
+    return view('Consultation.Ct-calendar');
+})->name('Ct-calendar');
+
+Route::get('/Ct-appdis', function () {
+    return view('Consultation.Ct-appdis');
+})->name('Ct-appdis');
+
+Route::get('/Ct-notify', function () {
+    return view('Consultation.Ct-notify');
+})->name('Ct-notify');
+
+Route::get('/Ct-history', function () {
+    return view('Consultation.Ct-history');
+})->name('Ct-history');
+
+Route::get('/Ct-settings', function () {
+    return view('Consultation.Ct-settings');
+})->name('Ct-settings');
+
+// Catch-all route for errors or missing pages
+Route::fallback(function () {
+    return view('errors.404');
+});
+>>>>>>> 35370e4c78091731e27b61e2456edf2b587c7fb8
