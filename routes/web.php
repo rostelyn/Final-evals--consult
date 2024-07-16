@@ -58,3 +58,33 @@ Route::get('/hr-settings', function () {
 Route::get('/hr-sidebar', function () {
     return view('hr.hr-sidebar');
 })->name('hr.hr-db');
+
+// MAAM JESS
+
+Route::get('/Ct-db', function () {
+    return view('Consultation.Ct-db');
+})->name('Consultation-db');
+
+Route::get('/Ct-studentlist', function () {
+    return view('Consultation.Ct-studentlist');
+})->name('Ct-studentlist');
+
+Route::get('/Ct-calendar', function () {
+    return view('Consultation.Ct-calendar');
+})->name('Ct-calendar');
+
+Route::get('/Ct-notify', function () {
+    return view('Consultation.Ct-notify');
+})->name('Ct-notify');
+
+Route::get('/Ct-history', function () {
+    return view('Consultation.Ct-history');
+})->name('Ct-history');
+
+Route::get('/Ct-settings', function () {
+    return view('Consultation.Ct-settings');
+})->name('Ct-settings');
+
+Route::get('/Ct-sidebar', function () {
+    return view('Ct.Ct-sidebar');
+})->name('Consultation.Ct-db');
