@@ -26,21 +26,18 @@
         .sidebar a:hover {
             background-color: #cad2c5;
         }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
     </style>
 </head>
 
 <body>
     <div class="sidebar">
         <img src="logo.png" alt="Eastwoods College" style="width: 100%; height: auto;">
-        <a href="#">Dashboard</a>
-        <a href="#">List of Student</a>
-        <a href="#">Profile</a>
-        <a href="#">Faculty List</a>
+        <a href="/student-evaluation-consultation">Dashboard</a>
+        <a href="{{ ('/faculty') }}">Faculty List</a>
         <a href="#">Calendar</a>
         <a href="#">Settings</a>
     </div>
+    @yield('content')
 </body>
 </html>
+

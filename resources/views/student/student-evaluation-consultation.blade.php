@@ -116,7 +116,6 @@
                 <div class="info">
                     <p><strong>DENN HARENZ ESCAT</strong></p>
                     <p>dennharenz@oulook.com</p>
-                    <a href="#" class="send-message">Send Message</a>
                 </div>
             </div>
 
