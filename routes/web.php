@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
+
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
 /*
@@ -18,12 +18,9 @@ use App\Http\Controllers\EvaluationController;
 
 
 
-//student
-=======
-
 // Student routes
->>>>>>> 45eb4cf7a0801a456dd2a9f5424742c2c9a7941f
-Route::get('/student-evaluation-consultation', function () {
+
+Route::get('/', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 
