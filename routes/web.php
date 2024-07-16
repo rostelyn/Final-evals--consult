@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Hrcalendar;
+use App\Http\Controllers\HrCalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,7 @@ Route::get('/consultation', function () {
 
 
 //HR MAAM CHARM
+
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
@@ -58,3 +60,6 @@ Route::get('/hr-settings', function () {
 Route::get('/hr-sidebar', function () {
     return view('hr.hr-sidebar');
 })->name('hr.hr-db');
+
+Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
+Route::post('/hrcalendars', [HrCalendarController::class, 'store']);

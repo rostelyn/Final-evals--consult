@@ -6,6 +6,6 @@
     <title>HR DASHBOARD</title>
 </head>
 <body>
-    <h1>You are now in HR Dashboard page</h1>
+    <h1>You are in HR dashboard</h1>
 </body>
 </html>
