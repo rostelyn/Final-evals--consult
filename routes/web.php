@@ -46,18 +46,31 @@ Route::get('/consultation', function () {
 })->name('consultation');
 
 
-//HR MAAM CHARM
-
-
-// HR routes
+//HR MAAM CHARM ROUTES
 
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
 
+
+
+
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-studentlist');
 })->name('hr-studentlist');
+
+Route::get('/hr-bsit', function () {
+    return view('hr.courseinfo.hr-bsit');
+})->name('hr-bsit');
+
+Route::get('/hr-bsit101', function () {
+    return view('hr.courseinfo.hr-bsit101');
+})->name('hr-bsit101');
+
+
+
+
+
 
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');

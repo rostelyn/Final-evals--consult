@@ -24,7 +24,7 @@ body {
     background-color: #8dc099;
     color: white;
     height: 100vh;
-    padding: 20px 10px;
+    padding: 80px 10px;
     box-sizing: border-box;
     transition: width 0.3s;
 }
@@ -53,9 +53,9 @@ body {
 }
 
 .sidebar ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 .sidebar ul li a:hover {
@@ -70,4 +70,149 @@ body {
 
 .content h1 {
     color: #688e4e;
+}
+
+
+
+
+
+
+
+.appointment-form {
+    margin-top: 20px;
+}
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+.appointment-form label {
+    margin-bottom: 5px;
+}
+.appointment-form input,
+.appointment-form select {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 16px;
+}
+.appointment-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.appointment-form button:hover {
+    background-color: #00cccc;
+}
+
+
+
+/* General Styles */
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f6f6de;
+}
+
+.content h1 {
+    color: #688e4e;
+ 
+}
+
+.content h2 {
+    color: #688e4e;
+
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    background-color: #688e4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5a7d3b;
+}
+
+/* Container for buttons */
+.content > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content div a {
+    text-decoration: none;
+}
+
+/* Student List Specific Styles */
+.student-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.student-list-container button {
+    width: 100%;
+}
+
+/* BSIT Year List Specific Styles */
+.year-list-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.year-list-container button {
+    width: 100%;
+}
+
+/* BSIT 301 Student List Specific Styles */
+.bsit101-student-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.bsit101-student-list > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bsit101-student-list > div p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.bsit101-student-list > div button {
+    background-color: #688e4e;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: auto;
+}
+
+.bsit101-student-list > div button:hover {
+    background-color: #5a7d3b;
 }
