@@ -42,7 +42,7 @@ Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('
 
 
 Route::get('/consultation', function () {
-    return view('student.consultation.');
+    return view('layouts.studentConsult-layout');
 })->name('consultation');
 
 
