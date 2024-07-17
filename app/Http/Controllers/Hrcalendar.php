@@ -13,7 +13,7 @@ class HrCalendarController extends Controller
         $hrcalendars = HrCalendar::all();
 
         // Pass hr calendar data to the view
-        return view('consultant.calendar', compact('hrcalendars'));
+        return view('hr.hr-calendar', compact('hrcalendars'));
     }
 
     public function store(Request $request)

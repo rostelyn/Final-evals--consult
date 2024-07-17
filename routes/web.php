@@ -29,6 +29,7 @@ Route::get('/', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 //for dashboard
+
 Route::get('/student.student-evaluation-consultation
 ', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
@@ -37,8 +38,12 @@ Route::get('/student.student-evaluation-consultation
 
 
 Route::get('/', function () {return view('student.student-evaluation-consultation');
-
 })->name('student-evaluation');
+//for dashboard
+Route::get('/student.student-evaluation-consultation
+', function () {return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
+// Student routes
 
 Route::get('/evaluation', function () {
     return view('layouts.evaluation-layout');
@@ -59,15 +64,33 @@ Route::get('/consultation', function () {
     return view('student.consultation.student-appoint');
 })->name('consultation');
 
+
+
 // HR routes
 
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
 
+
+
+
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-studentlist');
 })->name('hr-studentlist');
+
+Route::get('/hr-bsit', function () {
+    return view('hr.courseinfo.hr-bsit');
+})->name('hr-bsit');
+
+Route::get('/hr-bsit101', function () {
+    return view('hr.courseinfo.hr-bsit101');
+})->name('hr-bsit101');
+
+
+
+
+
 
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');
@@ -122,3 +145,8 @@ Route::get('/Ct-settings', function () {
     return view('StudentConsult.Ct-settings');
 })->name('Ct-settings');
 
+
+// Catch-all route for errors or missing pages
+Route::fallback(function () {
+    return view('errors.404');
+});

@@ -1,4 +1,3 @@
-
 @extends('layouts.hr-layout')
 
 @section('content')
