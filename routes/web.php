@@ -1,15 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-
-use App\Http\Controllers\Hrcalendar;
 use App\Http\Controllers\HrCalendarController;
 
-=======
-use App\Http\Controllers\Hrcalendar;
-use App\Http\Controllers\HrCalendarController;
->>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
 
@@ -29,26 +22,23 @@ use App\Http\Controllers\EvaluationController;
 //student
 
 
-// Student routes
-
-<<<<<<< HEAD
-Route::get('/student-evaluation-consultation', function () {
-=======
+// Student route
 Route::get('/', function () {
->>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
+    return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
+//for dashboard
+Route::get('/student.student-evaluation-consultation
+', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 
 Route::get('/evaluation', function () {
-    return view('student.evaluation.layout.app');
+    return view('layouts.evaluation-layout');
 })->name('evaluation');
-
 
 Route::get('/faculty', [FacultyController::class, 'index']);
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
-
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
-
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 
@@ -61,11 +51,6 @@ Route::get('/consultation', function () {
     return view('student.consultation.student-appoint');
 })->name('consultation');
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
 // HR routes
 
 Route::get('/hr-db', function () {
@@ -133,7 +118,3 @@ Route::get('/Ct-settings', function () {
 Route::fallback(function () {
     return view('errors.404');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
