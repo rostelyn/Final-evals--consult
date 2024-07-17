@@ -284,3 +284,61 @@ button:hover {
         color: #fff;
     }
 
+<<<<<<< Updated upstream
+=======
+
+    .box {
+        border: 1px solid #ddd;
+        background-color: #fff;
+        margin-bottom: 40px; /* Increased margin bottom for more space */
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .box-header {
+        background-color: transparent; /* Remove background color */
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .box-header h2 {
+        margin: 0;
+        color: #333;
+    }
+    
+    .box-content {
+        padding: 10px;
+    }
+    
+    .actions button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        background-color: #8dc099;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .actions button:hover {
+        background-color: #688e4e;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 250px;
+    }
+    
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    table th {
+        background-color: #f2f2f2;
+    }
+    
+>>>>>>> Stashed changes
