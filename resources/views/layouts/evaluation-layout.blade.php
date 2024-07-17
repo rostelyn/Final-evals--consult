@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student - Student Evaluation and Consultation</title>
+    <title>HR - Student Evaluation and Consultation</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -13,10 +13,10 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-            <li><a href="{{ route('student-evaluation') }}">Evaluation Consultation</a></li>
-            <li><a href="{{ route('evaluation') }}">Evaluation</a></li>
-            <li><a href="{{ route('consultation') }}">Consultation</a></li>
+        <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
+            <li><a href="{{ ('/faculty') }}">Faculty List</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Settings</a></li>
         </ul>
     </div>
     <div class="content">
@@ -31,3 +31,4 @@
     </script>
 </body>
 </html>
+

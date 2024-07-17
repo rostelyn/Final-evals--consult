@@ -1,4 +1,4 @@
-@extends('student.evaluation.layout.app')
+@extends('layouts.evaluation-layout')
 
 @section('content')
     <style>
