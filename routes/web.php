@@ -138,7 +138,7 @@ Route::get('/Ct-notify', function () {
 })->name('Ct-notify');
 
 Route::get('/Ct-history', function () {
-    return view('CStudentConsult.Ct-history');
+    return view('StudentConsult.Ct-history');
 })->name('Ct-history');
 
 Route::get('/Ct-settings', function () {

@@ -1,4 +1,4 @@
-@extends('layouts.student-consultation-layout')
+@extends('layouts.studentconsultation-layout')
 
 @section('content')
 <h1>dashboard</h1>
