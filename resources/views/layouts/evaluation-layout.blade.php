@@ -15,7 +15,7 @@
         <ul>
         <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
             <li><a href="{{ ('faculty') }}">Faculty List</a></li>
-         <li><a href="{{ ('student.evaluation.student-calendar.index') }}">Student Calendar</a></li>
+            <li><a href="{{ ('student-calendar') }}">Student Calendar</a></li>
             <li><a href="#">Settings</a></li>
         </ul>
     </div>

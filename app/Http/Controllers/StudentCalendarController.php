@@ -1,5 +1,6 @@
 <?php
 
+// app/Http/Controllers/StudentCalendarController.php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,17 +9,14 @@ class StudentCalendarController extends Controller
 {
     public function index()
     {
-        return view('student.evaluation.student-calendar.index');
-    }
-
-    public function events()
-    {
-        // Retrieve events from the database or define them statically for now
+        // Define the $events variable
         $events = [
-            ['title' => 'Event 1', 'start' => '2024-07-20'],
-            ['title' => 'Event 2', 'start' => '2024-07-22'],
+            // Example events
+            ['name' => 'Event 1', 'date' => '2024-07-20'],
+            ['name' => 'Event 2', 'date' => '2024-07-21'],
+            // Add your actual events logic here
         ];
 
-        return response()->json($events);
+        return view('student.evaluation.studentCalendar.index', compact('events'));
     }
 }

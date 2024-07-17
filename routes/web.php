@@ -41,9 +41,11 @@ Route::get('/evaluation-form', function () {return view('student.evaluation.eval
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 //studentCalendar
+
+
 Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('student-calendar.index');
-Route::get('/student-calendar', function () {return view('student.evaluation.student-calendar.index');})->name('student-calendar.index');
-Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('student-calendar.events');
+Route::get('/studentCalendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
+
 
 Route::get('/consultation', function () {
     return view('layouts.studentConsult-layout');
@@ -52,10 +54,7 @@ Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
 
-
-
 // HR routes
-
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
