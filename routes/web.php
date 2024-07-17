@@ -22,21 +22,7 @@ use App\Http\Controllers\EvaluationController;
 
 
 
-//student
-
-// Student route
-Route::get('/', function () {
-    return view('student.student-evaluation-consultation');
-})->name('student-evaluation');
-//for dashboard
-
-Route::get('/student.student-evaluation-consultation
-', function () {return view('student.student-evaluation-consultation');
-})->name('student-evaluation');
 // Student routes
-
-
-
 Route::get('/', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 //for dashboard
@@ -72,9 +58,6 @@ Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
 
-
-
-
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-studentlist');
 })->name('hr-studentlist');
@@ -86,11 +69,6 @@ Route::get('/hr-bsit', function () {
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
 })->name('hr-bsit101');
-
-
-
-
-
 
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');
@@ -115,6 +93,8 @@ Route::get('/hr-sidebar', function () {
 
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
+
+
 
 // Consultation routes
 Route::get('/Ct-db', function () {
