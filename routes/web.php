@@ -8,7 +8,7 @@ use App\Http\Controllers\Hrcalendar;
 
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
-
+use App\Http\Controllers\StudentCalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,18 +34,20 @@ Route::get('/student.student-evaluation-consultation
 Route::get('/evaluation', function () {
     return view('layouts.evaluation-layout');
 })->name('evaluation');
-
+//list of teachers
 Route::get('/faculty', [FacultyController::class, 'index']);
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
+//studentCalendar
+Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('student-calendar.index');
+Route::get('/student-calendar', function () {return view('student.evaluation.student-calendar.index');})->name('student-calendar.index');
+Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('student-calendar.events');
 
 Route::get('/consultation', function () {
     return view('layouts.studentConsult-layout');
 })->name('consultation');
-
-
 Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
@@ -126,6 +128,3 @@ Route::get('/Ct-settings', function () {
 
 
 // Catch-all route for errors or missing pages
-Route::fallback(function () {
-    return view('errors.404');
-});
