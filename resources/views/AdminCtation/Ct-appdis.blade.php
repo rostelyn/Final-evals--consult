@@ -1,4 +1,4 @@
-@extends('layouts.consultation-layout')
+@extends('layouts.AdminConsult-layout')
 
 @section('content')
     <div class="approve-disapprove-form">

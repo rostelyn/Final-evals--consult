@@ -8,7 +8,7 @@ use App\Http\Controllers\Hrcalendar;
 
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
-
+use App\Http\Controllers\StudentCalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,21 +22,7 @@ use App\Http\Controllers\EvaluationController;
 
 
 
-//student
-
-// Student route
-Route::get('/', function () {
-    return view('student.student-evaluation-consultation');
-})->name('student-evaluation');
-//for dashboard
-
-Route::get('/student.student-evaluation-consultation
-', function () {return view('student.student-evaluation-consultation');
-})->name('student-evaluation');
 // Student routes
-
-
-
 Route::get('/', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 //for dashboard
@@ -48,21 +34,23 @@ Route::get('/student.student-evaluation-consultation
 Route::get('/evaluation', function () {
     return view('layouts.evaluation-layout');
 })->name('evaluation');
-
+//list of teachers
 Route::get('/faculty', [FacultyController::class, 'index']);
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
+//studentCalendar
+Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('student-calendar.index');
+Route::get('/student-calendar', function () {return view('student.evaluation.student-calendar.index');})->name('student-calendar.index');
+Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('student-calendar.events');
 
 Route::get('/consultation', function () {
-    return view('student.consultation.');
+    return view('layouts.studentConsult-layout');
 })->name('consultation');
-
-
-Route::get('/consultation', function () {
+Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
-})->name('consultation');
+})->name('Appointment');
 
 
 
@@ -84,6 +72,7 @@ Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
 })->name('hr-bsit101');
 
+
 Route::get('/hr-bsit201', function () {
     return view('hr.courseinfo.hr-bsit201');
 })->name('hr-bsit201');
@@ -95,6 +84,7 @@ Route::get('/hr-bsit301', function () {
 Route::get('/hr-bsit401', function () {
     return view('hr.courseinfo.hr-bsit401');
 })->name('hr-bsit401');
+
 
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');
@@ -120,42 +110,42 @@ Route::get('/hr-sidebar', function () {
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
 
+
 Route::get('/hr-profile', function () {
     return view('hr.courseinfo.hr-profile');
 })->name('hr-profile');
 
 
+
+
 // Consultation routes
 Route::get('/Ct-db', function () {
-    return view('StudentConsult.Ct-db');
+    return view('AdminCtation.Ct-db');
 })->name('Ct-db');
 
 Route::get('/Ct-studentlist', function () {
-    return view('StudentConsult.Ct-studentlist');
+    return view('AdminCtation.Ct-studentlist');
 })->name('Ct-studentlist');
 
 Route::get('/Ct-calendar', function () {
-    return view('StudentConsult.Ct-calendar');
+    return view('AdminCtation.Ct-calendar');
 })->name('Ct-calendar');
 
 Route::get('/Ct-appdis', function () {
-    return view('StudentConsult.Ct-appdis');
+    return view('AdminCtation.Ct-appdis');
 })->name('Ct-appdis');
 
 Route::get('/Ct-notify', function () {
-    return view('StudentConsult.Ct-notify');
+    return view('AdminCtation.Ct-notify');
 })->name('Ct-notify');
 
 Route::get('/Ct-history', function () {
-    return view('CStudentConsult.Ct-history');
+    return view('AdminCtation.Ct-history');
 })->name('Ct-history');
 
 Route::get('/Ct-settings', function () {
-    return view('StudentConsult.Ct-settings');
+    return view('AdminCtation.Ct-settings');
 })->name('Ct-settings');
 
 
 // Catch-all route for errors or missing pages
-Route::fallback(function () {
-    return view('errors.404');
-});

@@ -14,3 +14,24 @@
     </div>
 </div>
 @endsection
+
+@push('styles')
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .container h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+    .btn-block {
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+    .btn-block:hover {
+        background-color: #28a745;
+        color: #fff;
+    }
+</style>
+@endpush
