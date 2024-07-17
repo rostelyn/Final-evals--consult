@@ -106,32 +106,33 @@ Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
 
 // Consultation routes
 Route::get('/Ct-db', function () {
-    return view('Consultation.Ct-db');
-})->name('Consultation-db');
+    return view('StudentConsult.Ct-db');
+})->name('Ct-db');
 
 Route::get('/Ct-studentlist', function () {
-    return view('Consultation.Ct-studentlist');
+    return view('StudentConsult.Ct-studentlist');
 })->name('Ct-studentlist');
 
 Route::get('/Ct-calendar', function () {
-    return view('Consultation.Ct-calendar');
+    return view('StudentConsult.Ct-calendar');
 })->name('Ct-calendar');
 
 Route::get('/Ct-appdis', function () {
-    return view('Consultation.Ct-appdis');
+    return view('StudentConsult.Ct-appdis');
 })->name('Ct-appdis');
 
 Route::get('/Ct-notify', function () {
-    return view('Consultation.Ct-notify');
+    return view('StudentConsult.Ct-notify');
 })->name('Ct-notify');
 
 Route::get('/Ct-history', function () {
-    return view('Consultation.Ct-history');
+    return view('CStudentConsult.Ct-history');
 })->name('Ct-history');
 
 Route::get('/Ct-settings', function () {
-    return view('Consultation.Ct-settings');
+    return view('StudentConsult.Ct-settings');
 })->name('Ct-settings');
+
 
 // Catch-all route for errors or missing pages
 Route::fallback(function () {
