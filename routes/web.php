@@ -29,6 +29,17 @@ Route::get('/', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 //for dashboard
+
+Route::get('/student.student-evaluation-consultation
+', function () {return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
+// Student routes
+
+
+
+Route::get('/', function () {return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
+//for dashboard
 Route::get('/student.student-evaluation-consultation
 ', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
@@ -52,6 +63,7 @@ Route::get('/consultation', function () {
 Route::get('/consultation', function () {
     return view('student.consultation.student-appoint');
 })->name('consultation');
+
 
 
 // HR routes
