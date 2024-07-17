@@ -1,5 +1,4 @@
 
-
 @extends('layouts.studentConsult-layout')
 
 @section('content')
@@ -122,14 +121,5 @@
         </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <div class="alert alert-success">
-                Appointment confirmed successfully.
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+ 
 @endsection

@@ -1,7 +1,5 @@
 <?php
 
-// app/Http/Controllers/ConsultationController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -51,6 +49,3 @@ class ConsultationController extends Controller
         return redirect()->back()->with('success', 'Appointment confirmed successfully.');
     }
 }
-
-
-

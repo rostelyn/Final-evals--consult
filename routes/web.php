@@ -8,15 +8,15 @@ use App\Http\Controllers\Hrcalendar;
 
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
-<<<<<<< Updated upstream
+
 use App\Http\Controllers\StudentCalendarController;
-=======
+
 
 
 
 use App\Http\Controllers\ConsultationController;
 
->>>>>>> Stashed changes
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -156,8 +156,7 @@ Route::get('/Ct-settings', function () {
 
 
 // Catch-all route for errors or missing pages
-<<<<<<< Updated upstream
-=======
+
 Route::fallback(function () {
     return view('errors.404');
 });
@@ -167,4 +166,4 @@ Route::fallback(function () {
 
 Route::get('/Ct-appdis', [ConsultationController::class, 'index'])->name('Ct-appdis');
 Route::post('/consultation', [ConsultationController::class, 'store'])->name('consultation.store');
->>>>>>> Stashed changes
+
