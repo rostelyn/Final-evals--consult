@@ -10,7 +10,7 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo">
+        <img src="{{ asset('css/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
             <li><a href="{{ route('Ct-db') }}">Dashboard</a></li>

@@ -66,10 +66,24 @@ Route::get('/hr-studentlist', function () {
 Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
-
+//for section
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
 })->name('hr-bsit101');
+
+
+Route::get('/hr-bsit201', function () {
+    return view('hr.courseinfo.hr-bsit201');
+})->name('hr-bsit201');
+
+Route::get('/hr-bsit301', function () {
+    return view('hr.courseinfo.hr-bsit301');
+})->name('hr-bsit301');
+
+Route::get('/hr-bsit401', function () {
+    return view('hr.courseinfo.hr-bsit401');
+})->name('hr-bsit401');
+
 
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');
@@ -94,6 +108,13 @@ Route::get('/hr-sidebar', function () {
 
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
+
+
+Route::get('/hr-profile', function () {
+    return view('hr.courseinfo.hr-profile');
+})->name('hr-profile');
+
+
 
 
 // Consultation routes
