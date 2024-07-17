@@ -1,4 +1,4 @@
-@extends('layouts.studentconsultation-layout')
+@extends('layouts.AdminConsult-layout')
 
 @section('content')
     <!DOCTYPE html>
