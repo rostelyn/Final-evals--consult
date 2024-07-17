@@ -13,7 +13,7 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="{{ route('Consultation-db') }}">Dashboard</a></li>
+            <li><a href="{{ route('Ct-db') }}">Dashboard</a></li>
             <li><a href="{{ route('Ct-studentlist') }}">Student List</a></li>
             <li><a href="{{ route('Ct-appdis') }}">Approve/Disapprove</a></li>
             <li><a href="{{ route('Ct-calendar') }}">Calendar</a></li>
