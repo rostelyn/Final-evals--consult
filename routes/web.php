@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\HrCalendarController;
+
+use App\Http\Controllers\Hrcalendar;
 
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
@@ -21,15 +24,20 @@ use App\Http\Controllers\EvaluationController;
 
 //student
 
-
 // Student route
 Route::get('/', function () {
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 //for dashboard
 Route::get('/student.student-evaluation-consultation
-', function () {
-    return view('student.student-evaluation-consultation');
+', function () {return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
+// Student routes
+
+
+
+Route::get('/', function () {return view('student.student-evaluation-consultation');
+
 })->name('student-evaluation');
 
 Route::get('/evaluation', function () {
@@ -43,7 +51,7 @@ Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('
 
 
 Route::get('/consultation', function () {
-    return view('student.consultation.layout.app');
+    return view('student.consultation.');
 })->name('consultation');
 
 
