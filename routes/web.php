@@ -24,7 +24,11 @@ use App\Http\Controllers\EvaluationController;
 
 // Student routes
 
+<<<<<<< HEAD
+Route::get('/student-evaluation-consultation', function () {
+=======
 Route::get('/', function () {
+>>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
     return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
 
@@ -42,11 +46,20 @@ Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('
 
 
 Route::get('/consultation', function () {
-    return view('student.consultation.layout.app');
+    return view('student.consultation.');
 })->name('consultation');
 
 
-//HR MAAM CHARM ROUTES
+Route::get('/consultation', function () {
+    return view('student.consultation.student-appoint');
+})->name('consultation');
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
+// HR routes
 
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
@@ -129,3 +142,7 @@ Route::get('/Ct-settings', function () {
 Route::fallback(function () {
     return view('errors.404');
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 793c45b9010c609c36805386fbcdc711aff6ce6e
