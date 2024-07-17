@@ -60,9 +60,9 @@ Route::get('/consultation', function () {
 })->name('consultation');
 
 
-Route::get('/consultation', function () {
+Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
-})->name('consultation');
+})->name('Appointment');
 
 
 
@@ -116,33 +116,36 @@ Route::get('/hr-sidebar', function () {
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);
 
+
+
+
 // Consultation routes
 Route::get('/Ct-db', function () {
-    return view('StudentConsult.Ct-db');
+    return view('AdminCtation.Ct-db');
 })->name('Ct-db');
 
 Route::get('/Ct-studentlist', function () {
-    return view('StudentConsult.Ct-studentlist');
+    return view('AdminCtation.Ct-studentlist');
 })->name('Ct-studentlist');
 
 Route::get('/Ct-calendar', function () {
-    return view('StudentConsult.Ct-calendar');
+    return view('AdminCtation.Ct-calendar');
 })->name('Ct-calendar');
 
 Route::get('/Ct-appdis', function () {
-    return view('StudentConsult.Ct-appdis');
+    return view('AdminCtation.Ct-appdis');
 })->name('Ct-appdis');
 
 Route::get('/Ct-notify', function () {
-    return view('StudentConsult.Ct-notify');
+    return view('AdminCtation.Ct-notify');
 })->name('Ct-notify');
 
 Route::get('/Ct-history', function () {
-    return view('StudentConsult.Ct-history');
+    return view('AdminCtation.Ct-history');
 })->name('Ct-history');
 
 Route::get('/Ct-settings', function () {
-    return view('StudentConsult.Ct-settings');
+    return view('AdminCtation.Ct-settings');
 })->name('Ct-settings');
 
 

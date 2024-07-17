@@ -13,10 +13,11 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
             <li><a href="{{ route('student-evaluation') }}">Evaluation Consultation</a></li>
             <li><a href="{{ route('evaluation') }}">Evaluation</a></li>
-            <li><a href="{{ route('consultation') }}">Consultation</a></li>
+            <li><a href="{{ route('Appointment') }}">Appointment</a></li>
+
+
         </ul>
     </div>
     <div class="content">
