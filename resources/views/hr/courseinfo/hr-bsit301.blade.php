@@ -6,7 +6,7 @@
     <h2>BSIT 301</h2>
     <div>
         <p>STUDENT NAME</p>
-        <a href="{{ route('hr-profile') }}">
+        <a href="{{ ('hr-profile') }}">
             <button>VIEW STUDENT</button>
         </a>
     </div>
