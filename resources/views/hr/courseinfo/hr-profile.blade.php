@@ -1,51 +1,67 @@
 @extends('layouts.hr-layout')
 
 @section('content')
-    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <div>
-        <div>
-            <label for="picture">1x1 Picture</label>
-            <input type="file" id="picture" name="picture">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluation and Consultation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>STUDENT EVALUATION AND CONSULTATION</h2>
+    <body>
+        <div class="row">
+            <div class="column">
+                <div class="picture-box center">1x1 picture</div>
+                <div class="info">
+                    <div class="label">DENN MARENZ ESCAT</div>
+                    <div>dennHarenz@outlook.com</div>
+                </div>
+            </div>
+            <div class="column">
+                <table class="table">
+                    <tr>
+                        <th>Gender</th>
+                        <th>Student Number</th>
+                    </tr>
+                    <tr>
+                        <td>Male</td>
+                        <td>21-1111</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div>
-            <label for="gender">Gender</label>
-            <input type="text" id="gender" name="gender" value="Male" readonly>
-        </div>
-        <div>
-            <label for="student_number">Student Number</label>
-            <input type="text" id="student_number" name="student_number" value="21-1111" readonly>
-        </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="DENN HARNEZ ESCAT" readonly>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="denharnez@outlook.com" readonly>
-        </div>
-    </div>
-    <div>
-        <h2>List of Teachers</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name of Teacher</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Teacher Name</td>
-                    <td>
-                        <a href="#">
-                            <button>Current Evaluation</button>
-                        </a>
-                        <a href="#">
-                            <button>Past Evaluation</button>
-                        </a>
+         <h2>LIST OF TEACHERS</h2>
+    <div class="teacher-list">
+       
+        <div class="column">
+                <table class="table">
+                    <tr>
+                        <th>Name of teacher</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>ARIES CAYABYAB</td>
+                        <td>
+                        <button class="current-evaluation">Current Evaluation</button>
+                        <button class="past-evaluation">Past Evaluation</button>
                     </td>
-                </tr>
-            </tbody>
-        </table>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>SIR PERCIAN</td>       
+                      <td>
+                        <button class="current-evaluation">Current Evaluation</button>
+                        <button class="past-evaluation">Past Evaluation</button>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
     </div>
+</body>
+</html>
 @endsection
