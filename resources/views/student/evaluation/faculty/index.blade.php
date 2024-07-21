@@ -2,39 +2,27 @@
 
 @section('content')
 
-<style>
-    body {
-        background-color: #f8f9fa;
-    }
-    .container h1 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #343a40;
-    }
-    .btn-block {
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-    }
-    .btn-block:hover {
-        background-color: #28a745;
-        color: #fff;
-    }
-</style>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
 
-<div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
-    <div class="bg-white p-5 rounded shadow-lg" style="max-width: 600px;">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center mb-4">
+    <!-- Main Content -->
+    <div class="flex-fill d-flex align-items-center justify-content-center" style="background-color: #F5F7E7;">
+        <div class="container">
+
+        <div class="col-12 text-center mb-4">
                     <h1>Select Department</h1>
-                </div>
+        </div>
+
+            <div class="row">
                 @foreach($departments as $department)
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ url('/faculty/'.$department) }}" class="btn btn-success btn-block py-3">{{ $department }}</a>
+                    <div class="col-md-6 mb-3 d-flex justify-content-center">
+                        <a href="{{ url('/faculty/'.$department) }}" class="btn btn-success btn-lg" style="min-width: 150px; min-height: 75px; font-size: 1.2rem; background-color: #28a745; border: none; display: flex; align-items: center; justify-content: center;">
+                            {{ $department }}
+                        </a>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
 </div>
+
 @endsection
