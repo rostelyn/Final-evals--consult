@@ -1,5 +1,3 @@
-
-
 @extends('layouts.AdminConsult-layout')
 
 @section('content')
@@ -34,8 +32,14 @@
                             <td>{{ $appointment->meeting_mode }}</td>
                             <td>{{ $appointment->online_preference }}</td>
                             <td>
-                                <button>Approve</button>
-                                <button>Disapprove</button>
+                                <form action="{{ route('consultations.approve', $appointment->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                </form>
+                                <form action="{{ route('consultations.disapprove', $appointment->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger btn-sm">Disapprove</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -44,17 +48,12 @@
         </div>
     </div>
     <div class="actions">
-        <button onclick="deleteAppointments()">Delete</button>
         <button onclick="savePDF()">Save PDF</button>
         <button onclick="printAppointments()">Print</button>
     </div>
 </div>
 
 <script>
-    function deleteAppointments() {
-        // Add delete functionality here
-    }
-
     function savePDF() {
         // Add save PDF functionality here
     }

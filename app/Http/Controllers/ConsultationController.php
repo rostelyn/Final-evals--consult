@@ -7,7 +7,7 @@ use App\Models\Appointment;
 
 class ConsultationController extends Controller
 {
-    // Existing methods (if any)
+    // Existing methods (index, store)
 
     /**
      * Display a listing of the appointments.
@@ -47,5 +47,35 @@ class ConsultationController extends Controller
 
         // Redirect with a success message
         return redirect()->back()->with('success', 'Appointment confirmed successfully.');
+    }
+
+    /**
+     * Approve the specified appointment.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function approve($id)
+    {
+        $appointment = Appointment::findOrFail($id);
+        $appointment->status = 'approved';
+        $appointment->save();
+
+        return redirect()->back()->with('success', 'Consultation approved successfully.');
+    }
+
+    /**
+     * Disapprove the specified appointment.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function disapprove($id)
+    {
+        $appointment = Appointment::findOrFail($id);
+        $appointment->status = 'disapproved';
+        $appointment->save();
+
+        return redirect()->back()->with('success', 'Consultation disapproved successfully.');
     }
 }
