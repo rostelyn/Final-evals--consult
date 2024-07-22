@@ -103,10 +103,6 @@ Route::get('/hr-notify', function () {
     return view('hr.hr-notify');
 })->name('hr-notify');
 
-Route::get('/hr-history', function () {
-    return view('hr.hr-history');
-})->name('hr-history');
-
 Route::get('/hr-settings', function () {
     return view('hr.hr-settings');
 })->name('hr-settings');
