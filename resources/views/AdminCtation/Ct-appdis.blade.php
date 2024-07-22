@@ -3,6 +3,7 @@
 @extends('layouts.AdminConsult-layout')
 
 @section('content')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <div class="header" style="background-color: transparent;">
     <h1>Approve - Disapprove Appointments</h1>
 </div>
@@ -44,11 +45,10 @@
         </div>
     </div>
     <div class="actions">
-        <button onclick="deleteAppointments()">Delete</button>
-        <button onclick="savePDF()">Save PDF</button>
-        <button onclick="printAppointments()">Print</button>
-    </div>
-</div>
+        <button oneclick="deleteAppointments()"class="btn btn-danger">Delete</button>
+        <button oneclick="savePDF()"class="btn btn-success">Save PDF</button>
+        <button oneclick="printAppointments()"class="btn btn-info">Print</button>
+        </div>
 
 <script>
     function deleteAppointments() {
