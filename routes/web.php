@@ -152,11 +152,6 @@ Route::get('/Ct-settings', function () {
 })->name('Ct-settings');
 
 
-// Catch-all route for errors or missing pages
-
-Route::fallback(function () {
-    return view('errors.404');
-});
 
 
 //consultation controller
@@ -164,3 +159,5 @@ Route::fallback(function () {
 Route::get('/Ct-appdis', [ConsultationController::class, 'index'])->name('Ct-appdis');
 Route::post('/consultation', [ConsultationController::class, 'store'])->name('consultation.store');
 
+Route::post('/consultations/approve/{id}', [ConsultationController::class, 'approve'])->name('consultations.approve');
+Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'disapprove'])->name('consultations.disapprove');
