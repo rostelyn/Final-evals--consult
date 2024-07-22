@@ -54,6 +54,11 @@
         <button oneclick="savePDF()"class="btn btn-success">Save PDF</button>
         <button oneclick="printAppointments()"class="btn btn-info">Print</button>
         </div>
+
+
+        <button onclick="printAppointments()">Print</button>
+
+
     </div>
 </div>
 

@@ -137,6 +137,34 @@ Route::get('/Ct-studentlist', function () {
     return view('AdminCtation.Ct-studentlist');
 })->name('Ct-studentlist');
 
+// Student List/Course list
+Route::get('/Consult-bsit', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-bsit');
+})->name('Consult-bsit');
+
+//for section
+Route::get('/Consult-bsit101', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-bsit101');
+})->name('Consult-bsit101');
+
+Route::get('/Consult-bsit201', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-bsit201');
+})->name('Consult-bsit201');
+
+Route::get('/Consult-bsit301', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-bsit301');
+})->name('Consult-bsit301');
+
+Route::get('/Consult-bsit401', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-bsit401');
+})->name('Consult-bsit401');
+
+Route::get('/Consult-profile', function () {
+    return view('AdminCtation.Studentlistinfo.Consult-profile');
+})->name('Consult-profile');
+
+//
+
 Route::get('/Ct-calendar', function () {
     return view('AdminCtation.Ct-calendar');
 })->name('Ct-calendar');
