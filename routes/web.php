@@ -75,6 +75,7 @@ Route::get('/hr-studentlist', function () {
 Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
+
 //for section
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
