@@ -430,7 +430,7 @@ button:hover {
     justify-content: center;
 }
 /*student evaluation form*/
-/* Centering the container */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -442,7 +442,6 @@ button:hover {
 }
 
 /* Styling the form */
-
 .evaluation-content {
     background-color: #ffffff;
     padding: 20px;
@@ -487,8 +486,8 @@ p {
 }
 
 .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 16px; /* Slightly reduced padding */
+    font-size: 0.9rem; /* Slightly reduced font size */
     border-radius: 5px;
 }
 
@@ -518,3 +517,42 @@ p {
     text-align: center;
 }
 
+
+/*for faculty/department */
+    .btn-custom {
+        background-color: #62CB6D;
+        border-color: #62CB6D;
+        color: white;
+        width: 100px; /* Adjust width as needed */
+        padding: 8px 16px; /* Adjust padding as needed */
+        text-align: center;
+        display: inline-block;
+        font-size: 14px; /* Adjust font size as needed */
+    }
+    .btn-custom:hover {
+        background-color: #52b25d;
+        border-color: #52b25d;
+    }
+    .faculty-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6f6de;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .faculty-member {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .faculty-member .picture {
+        width: 100px;
+        height: 100px;
+        background-color: #dcdcdc;
+        margin-bottom: 10px;
+    }
+    .department-head {
+        margin-bottom: 40px;
+        text-align: center;
+    }
