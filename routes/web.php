@@ -7,6 +7,7 @@ use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\StudentCalendarController;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 
 
@@ -62,6 +63,11 @@ Route::get('/consultation', function () {
 Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
+
+//studentSettings
+Route::get('/StudentSettings', function () {
+    return view('student.StudentSettings');
+})->name('StudentSettings');
 
 // HR routes
 Route::get('/hr-db', function () {
@@ -162,3 +168,9 @@ Route::post('/consultation', [ConsultationController::class, 'store'])->name('co
 
 Route::post('/consultations/approve/{id}', [ConsultationController::class, 'approve'])->name('consultations.approve');
 Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'disapprove'])->name('consultations.disapprove');
+
+//Department Head
+Route::get('/DpHead', function () {
+    return view('DpHead.DpHead');
+})->name('DpHead');
+Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->name('DpHeadAppDis');

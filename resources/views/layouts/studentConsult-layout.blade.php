@@ -15,7 +15,7 @@
         <ul>
             <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
             <li><a href="Appointment">Appointment</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="StudentSettings">Settings</a></li>
         </ul>
     </div>
     <div class="content">
