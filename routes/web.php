@@ -64,6 +64,11 @@ Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
 
+//studentSettings
+Route::get('/StudentSettings', function () {
+    return view('student.StudentSettings');
+})->name('StudentSettings');
+
 // HR routes
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
