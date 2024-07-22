@@ -420,15 +420,18 @@ button:hover {
 /*Student*/
 
 .container .btn {
-    min-width: 150px;
-    min-height: 75px;
-    font-size: 1.2rem;
+    min-width: 120px;
+    min-height: 50px;
+    font-size: 1rem;
+    padding: 10px;
     background-color: #28a745;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 }
+
 /*student evaluation form*/
 
 .container {
@@ -556,3 +559,237 @@ p {
         margin-bottom: 40px;
         text-align: center;
     }
+
+    /*SETTINGS*/
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3e8;
+    }
+    
+    /* Header styles */
+    header {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 24px;
+        color: #4CAF50;
+        font-weight: bold;
+    }
+    
+    /* Main container styles */
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    
+    /* Button styles */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+
+
+    /*LOGIN*/
+
+        h1{
+            text-align: center;
+            font-family: italic bold; 
+            font-size: 100px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        p{
+            text-align: center;
+        }
+        
+        .row{
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0.5rem;
+        }
+
+        .bn5{
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .bn5:before{
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowingbn5 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowingbn5 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .bn5:active{
+            color: #000;
+        }
+
+        .bn5:active:after{
+             background-color: #84C7F2;
+        }
+
+        .bn5:hover:before{
+            opacity: 1;
+        }
+
+        .bn5:after{
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #191919;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+/*REGISTER*/
+
+h1{
+    text-align: center;
+    font-family: italic bold; 
+    font-size: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.row{
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
+.bn5{
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.bn5:before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.bn5:active{
+    color: #000;
+}
+
+.bn5:active:after{
+    background: transparent;
+}
+
+.bn5:hover:before{
+    opacity: 1;
+}
+
+.bn5:after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}

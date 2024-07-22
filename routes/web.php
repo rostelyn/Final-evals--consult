@@ -1,20 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HrCalendarController;
-
 use App\Http\Controllers\Hrcalendar;
-
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
-
 use App\Http\Controllers\StudentCalendarController;
-
-
-
-
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\AuthController;
 
 
 /*
@@ -29,6 +22,15 @@ use App\Http\Controllers\ConsultationController;
 */
 
 
+//LOGIN AND REGISTER//
+
+Route::get('/login',[AuthController::class,'index'])->name('login');
+Route::post('/login',[AuthController::class,'login'])->name('login.submit');
+Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
+
+Route::get('/register',[AuthController::class,'registration'])->name('registration');
+Route::post('/register',[AuthController::class,'register'])->name('register');
+
 
 // Student routes
 Route::get('/', function () {return view('student.student-evaluation-consultation');
@@ -37,11 +39,12 @@ Route::get('/', function () {return view('student.student-evaluation-consultatio
 Route::get('/student.student-evaluation-consultation
 ', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');
-// Student routes
 
+// Student routes
 Route::get('/evaluation', function () {
     return view('layouts.evaluation-layout');
 })->name('evaluation');
+
 //list of teachers
 Route::get('/faculty', [FacultyController::class, 'index']);
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
@@ -49,8 +52,6 @@ Route::get('/evaluation-form', function () {return view('student.evaluation.eval
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 //studentCalendar
-
-
 Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('student-calendar.index');
 Route::get('/studentCalendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
 
