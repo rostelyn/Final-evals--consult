@@ -1,6 +1,4 @@
-@extends('layouts.resources')
 
-@section('content')
 
 <h1>Registration Page</h1>
 
@@ -38,9 +36,3 @@
         <button class="bn5">Submit</button>
     </div>
 </form>
-
-@endsection
-
-@section('title')
-Registration
-@endsection

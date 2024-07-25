@@ -56,9 +56,6 @@
         </div>
 
 
-        <button onclick="printAppointments()">Print</button>
-
-
     </div>
 </div>
 

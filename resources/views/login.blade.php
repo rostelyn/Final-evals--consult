@@ -1,10 +1,14 @@
-@extends('layouts.resources')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR - Student Evaluation and Consultation</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 
     <h1>Log In Page</h1>
-    
-
     <form action="{{route('login.submit')}}" method="post">
         @csrf
 
@@ -24,8 +28,3 @@
             <button class="bn5">Submit</button>
         </div>
     </form>
-@endsection
-
-@section('title')
-    Login Page
-@endsection
