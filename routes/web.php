@@ -25,7 +25,7 @@ use App\Http\Controllers\AuthController;
 
 //LOGIN AND REGISTER//
 
-Route::get('/login',[AuthController::class,'index'])->name('login');
+Route::get('/',[AuthController::class,'index'])->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
@@ -33,9 +33,8 @@ Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 
-
 // Student routes
-/* Route::get('/', function () {return view('student.student-evaluation-consultation');
+/*Route::get('/', function () {return view('student.student-evaluation-consultation');
 })->name('student-evaluation');*/
 //for dashboard
 Route::get('/student.student-evaluation-consultation

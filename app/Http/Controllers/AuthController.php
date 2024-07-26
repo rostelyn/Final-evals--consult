@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     public function index(){
-        return view('login');
+        return view('student.student-evaluation-consultation');
     }
 
     public function login(Request $request){
@@ -44,7 +44,7 @@ class AuthController extends Controller
         $user = User::create($validate);
 
         if($user){
-            return redirect('/login');
+            return redirect('/student.student-evaluation-consultation');
         }
     }
 }
