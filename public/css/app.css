@@ -395,11 +395,7 @@ button:hover {
         cursor: pointer;
     }
     
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 250px;
-    }
+
     
     table th, table td {
         border: 1px solid #ddd;

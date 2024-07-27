@@ -18,7 +18,7 @@
             <li><a href="{{ route('Ct-appdis') }}">Approve/Disapprove</a></li>
             <li><a href="{{ route('Ct-calendar') }}">Calendar</a></li>
             <li><a href="{{ route('Ct-notify') }}">Notifications</a></li>
-            <li><a href="{{ route('Ct-history') }}">Evaluation History</a></li>
+            <li><a href="{{ route('Ct-history') }}">Consultation History</a></li>
             <li><a href="{{ route('Ct-settings') }}">Settings</a></li>
         </ul>
     </div>
