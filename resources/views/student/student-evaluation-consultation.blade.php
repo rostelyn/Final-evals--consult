@@ -108,7 +108,14 @@
         }
     </style>
 </head>
-
+                 <ul>
+                    @if(auth()->check())
+                    <li><a href="{{route('logout')}}">Log Out</a></li>
+                    @else
+                    <li><a href="{{ route('login') }}">Log In</a></li>
+                    <li><a href="{{ route('registration') }}">Register</a></li>
+                    @endif
+                </ul>
 <body>
     <div class="container">
         <div class="content">
@@ -121,6 +128,7 @@
             </div>
 
             <div class="main">
+       
                 <div class="details">
                     <div class="detail-item">Gender<br><strong>Male</strong></div>
                     <div class="detail-item">Course/Strand<br><strong>BSIT</strong></div>

@@ -29,9 +29,11 @@ Route::get('/',[AuthController::class,'index'])->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
-
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
+
+Route::view('/student/evaluation/consultation', 'student.student-evaluation-consultation')->name('student.student-evaluation-consultation');
+
 
 // Student routes
 /*Route::get('/', function () {return view('student.student-evaluation-consultation');
