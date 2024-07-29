@@ -5,27 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     public function index(){
-        return view('student.student-evaluation-consultation');
+        return view('login');
     }
 
     public function login(Request $request){
-        $credentials = $request->only(['username','password']);
+        $credentials = $request->only(['username', 'password']);
 
-        if(Auth::attempt($credentials)){
-            return redirect('/');
-        }else{
-            return redirect()->back()->withErrors(['message'=>'Invalid username or password']);
+        if (Auth::attempt($credentials)) {
+            // Redirect to the intended route after login
+            return redirect()->intended(route('student.student-evaluation-consultation'));
+        } else {
+            return redirect()->back()->withErrors(['message' => 'Invalid username or password']);
         }
     }
 
     public function logout(){
         Auth::logout();
-
         return redirect('/login');
     }
 
@@ -34,17 +33,22 @@ class AuthController extends Controller
     }
 
     public function register(Request $request){
-
         $validate = $request->validate([
-            'name'=>'required|max:30',
-            'username'=>'required|unique:users|min:5|max:20',
-            'password'=>'required|min:5|max:20'
+            'StudentId' => 'required|max:30',
+            'name' => 'required|max:30',
+            'age' => 'required|integer',
+            'Outlook Email' => 'required|email|max:50',
+            'Course/Strand' => 'required|max:30',
+            'Grade Level & Section' => 'required|max:30',
+            'password' => 'required|min:5|max:20'
         ]);
+
+        $validate['password'] = bcrypt($request->password);  // Encrypt the password
 
         $user = User::create($validate);
 
-        if($user){
-            return redirect('/student.student-evaluation-consultation');
+        if ($user) {
+            return redirect('/login');
         }
     }
 }
