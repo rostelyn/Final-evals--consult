@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Login Page</title>
 </head>
 <body>
-      <h1>Login Page</h1>
-    
-
-    <form action="{{route('login.submit')}}" method="post">
-        @csrf
-
-        @error('message')
-        <p>{{$message}}</p>
-        @enderror
-
-        <div class="row">
-            <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="Username">
+       
+     <div class="login-background">
+        <div class="login-overlay">
+            <form action="{{ route('login.submit') }}" method="post" class="login-form">
+                @csrf
+                <div class="login-container">
+                    <div class="login-header">
+                         <img src="{{ asset('css/logoo.jpg') }}" alt="Logo" class="logo">
+                    </div>
+                    @error('message')
+                        <p class="error-message">{{ $message }}</p>
+                    @enderror
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Username" required>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Register</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
         </div>
-        <div class="row">
-            <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="Password">
-        </div>
-        <div class="row">
-            <button class="bn5">Submit</button>
-        </div>
-    </form>
+    </div>
 </body>
 </html>
