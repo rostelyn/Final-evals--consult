@@ -38,6 +38,8 @@
                         <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Register</button>
                         <button type="submit" class="btn btn-success">Submit</button>
                     </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
