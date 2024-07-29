@@ -17,9 +17,9 @@
                         <th>Name</th>
                         <th>Course/Grade Level/Section</th>
                         <th>Purpose</th>
-                        <th>Date / Time</th>
                         <th>Meeting Mode</th>
                         <th>Meeting Preference</th>
+                        <th>Date / Time</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -29,9 +29,9 @@
                             <td>{{ $appointment->name }}</td>
                             <td>{{ $appointment->course }}</td>
                             <td>{{ $appointment->purpose }}</td>
-                            <td>{{ $appointment->schedule }}</td>
                             <td>{{ $appointment->meeting_mode }}</td>
                             <td>{{ $appointment->online_preference }}</td>
+                            <td>{{ $appointment->schedule }}</td>
                             <td>
                                 <form action="{{ route('consultations.approve', $appointment->id) }}" method="POST" style="display:inline;">
                                     @csrf
