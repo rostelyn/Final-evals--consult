@@ -9,6 +9,7 @@ use App\Http\Controllers\StudentCalendarController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 
 
 
@@ -161,8 +162,12 @@ Route::get('/Consult-bsit401', function () {
 })->name('Consult-bsit401');
 
 //Profile
+Route::get('/profile/bsit101', [ProfileController::class, 'showProfile'])->name('profile.bsit101');
+Route::get('/profile/bsit201', [ProfileController::class, 'showProfile'])->name('profile.bsit201');
+Route::get('/profile/bsit301', [ProfileController::class, 'showProfile'])->name('profile.bsit301');
+Route::get('/profile/bsit401', [ProfileController::class, 'showProfile'])->name('profile.bsit401');
 
-
+Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
 Route::get('/Ct-calendar', function () {

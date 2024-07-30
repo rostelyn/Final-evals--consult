@@ -724,4 +724,47 @@ p {
   }
   
 
-  
+  .student-profile {
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-info {
+    display: flex;
+    gap: 20px;
+}
+
+.picture {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-history {
+    margin-top: 20px;
+}
+
+.appointment-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointment-history th, .appointment-history td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
