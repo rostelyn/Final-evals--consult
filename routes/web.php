@@ -11,6 +11,7 @@ use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,19 +26,17 @@ use App\Http\Controllers\AuthController;
 
 //LOGIN AND REGISTER//
 
-Route::get('/',[AuthController::class,'index'])->name('login');
+Route::get('/login',[AuthController::class,'index'])->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 
-Route::view('/student/evaluation/consultation', 'student.student-evaluation-consultation')->name('student.student-evaluation-consultation');
-
 
 // Student routes
-/*Route::get('/', function () {return view('student.student-evaluation-consultation');
-})->name('student-evaluation');*/
+Route::get('/', function () {return view('student.student-evaluation-consultation');
+})->name('student-evaluation');
 //for dashboard
 Route::get('/student.student-evaluation-consultation
 ', function () {return view('student.student-evaluation-consultation');
@@ -83,7 +82,6 @@ Route::get('/hr-studentlist', function () {
 Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
-
 //for section
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
@@ -162,9 +160,8 @@ Route::get('/Consult-bsit401', function () {
     return view('AdminCtation.Studentlistinfo.Consult-bsit401');
 })->name('Consult-bsit401');
 
-Route::get('/Consult-profile', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-profile');
-})->name('Consult-profile');
+//Profile
+
 
 //
 
