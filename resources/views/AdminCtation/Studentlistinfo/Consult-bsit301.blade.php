@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>BSIT 101</h2>
+    <h2>BSIT 301</h2>
     <div class="bsit-consultation-page bsit301">
     <div class="table-container">
   <table>
@@ -18,6 +18,7 @@
         <td class="number">1</td>
         <td class="name">Consult BSIT 301</td>
         <td class="actions">
+        <a href="{{ route('Prof-bsit301') }}">
           <button>View</button>
         </td>
       </tr>

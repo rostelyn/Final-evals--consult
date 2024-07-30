@@ -1,23 +1,44 @@
 @extends('layouts.AdminConsult-layout')
 
 @section('content')
-<div class="student-profile">
-    <div class="profile-header">
-        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-        <div class="student-info">
-            <div class="picture">1x1 picture</div>
-            <div class="details">
-                <p>Name: [NAME]</p>
-                <p>Gender: Male</p>
-                <p>Student Number: 00-0000</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Evaluation and Consultation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>STUDENT EVALUATION AND CONSULTATION</h2>
+    <body>
+        <div class="row">
+            <div class="column">
+                <div class="picture-box center">1x1 picture</div>
+                <div class="info">
+                    <div class="label">NAME</div>
+                    <div>@outlook.com</div>
+                </div>
+            </div>
+            <div class="column">
+                <table class="table">
+                    <tr>
+                        <th>Gender</th>
+                        <th>Student Number</th>
+                    </tr>
+                    <tr>
+                        <td>Male</td>
+                        <td>21-1111</td>
+                    </tr>
+                </table>
             </div>
         </div>
-    </div>
+         <h2>APPOINTMENT HISTORY</h2>
     <div class="appointment-history">
-        <h2>APPOINTMENT HISTORY</h2>
-        <table>
-            <thead>
-                <tr>
+       
+        <div class="column">
+                <table class="table">
+                    <tr>
                     <th>No.</th>
                     <th>Name</th>
                     <th>Course/Grade Level/Section</th>
@@ -26,11 +47,12 @@
                     <th>Meeting Preference</th>
                     <th>Date/Time</th>
                 </tr>
-            </thead>
-            <tbody>
-                <!-- Appointment records go here -->
-            </tbody>
-        </table>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
     </div>
-</div>
+</body>
+</html>
 @endsection

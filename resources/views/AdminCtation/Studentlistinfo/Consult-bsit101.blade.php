@@ -18,6 +18,7 @@
         <td class="number">1</td>
         <td class="name">Consult BSIT 101</td>
         <td class="actions">
+        <a href="{{ route('Prof-bsit101') }}">
           <button>View</button>
         </td>
       </tr>

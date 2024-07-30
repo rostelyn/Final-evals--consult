@@ -330,35 +330,7 @@ h2 {
 .table th {
     background-color: #8DC5DD;
 }
-.picture-box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    line-height: 100px;
-    text-align: center;
-}
 
-button {
-    padding: 10px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.current-evaluation {
-    background-color: #2D9939;
-}
-
-.past-evaluation {
-    background-color: #D5CD17;
-}
-
-button:hover {
-    opacity: 0.8;
-}
 
 
 
@@ -724,47 +696,4 @@ p {
   }
   
 
-  .student-profile {
-    width: 100%;
-    padding: 20px;
-}
 
-.profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.student-info {
-    display: flex;
-    gap: 20px;
-}
-
-.picture {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-}
-
-.appointment-history {
-    margin-top: 20px;
-}
-
-.appointment-history table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.appointment-history th, .appointment-history td {
-    border: 1px solid #000;
-    padding: 10px;
-    text-align: left;
-}

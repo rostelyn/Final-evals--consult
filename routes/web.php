@@ -162,11 +162,23 @@ Route::get('/Consult-bsit401', function () {
 })->name('Consult-bsit401');
 
 //Profile
-Route::get('/profile/bsit101', [ProfileController::class, 'showProfile'])->name('profile.bsit101');
-Route::get('/profile/bsit201', [ProfileController::class, 'showProfile'])->name('profile.bsit201');
-Route::get('/profile/bsit301', [ProfileController::class, 'showProfile'])->name('profile.bsit301');
-Route::get('/profile/bsit401', [ProfileController::class, 'showProfile'])->name('profile.bsit401');
+Route::get('/Prof-bsit101', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit101');
+})->name('Prof-bsit101');
 
+Route::get('/Prof-bsit201', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit201');
+})->name('Prof-bsit201');
+
+Route::get('/Prof-bsit301', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit301');
+})->name('Prof-bsit301');
+
+Route::get('/Prof-bsit401', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit401');
+})->name('Prof-bsit401');
+
+//Profile Controller
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
