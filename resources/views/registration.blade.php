@@ -5,52 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Evaluation and Consultation</title>
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Registration Page</title>
 </head>
 <body>
-
-<div class="container">
-    <div class="header">
-        <h2>STUDENT EVALUATION AND CONSULTATION</h2>
-    </div>
-        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-            @csrf
-            <div class="picture-upload">
-                <img src="" alt="Profile Picture" id="profile-picture">
-                <button type="button" onclick="document.getElementById('picture').click()">UPLOAD</button>
-                <input type="file" id="picture" name="picture" style="display: none;">
+    <div class="form-container">
+        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+        <form>
+            <div class="form-group picture-upload">
+                <label for="picture">PICTURES</label>
+                <div class="picture-box">1X1</div>
+                <input type="file" id="picture">
+                <button type="button" class="upload-btn">UPLOAD</button>
             </div>
-
-            <label for="student_id">STUDENT ID NO</label>
-            <input type="text" id="student_id" name="student_id" required>
-
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="age">AGE</label>
-            <input type="text" id="age" name="age" required>
-
-            <label for="OutlookEmail">OUTLOOK EMAIL</label>
-            <input type="email" id="OutlookEmail" name="OutlookEmail" required>
-
-            <label for="CourseStrand">COURSE/STRAND</label>
-            <input type="text" id="CourseStrand" name="CourseStrand" required>
-
-            <label for="GradeLevelSection">GRADE LEVEL/SECTION</label>
-            <input type="text" id="GradeLevelSection" name="GradeLevelSection" required>
-
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="cfpassword">CONFIRM PASSWORD</label>
-            <input type="cfpassword" id="cfpassword" name="cfassword" required>
-
-            <button type="submit">SAVE</button>
-            
+            <div class="form-group">
+                <label for="student-id">STUDENT ID NO</label>
+                <input type="text" id="student-id">
+            </div>
+            <div class="form-group">
+                <label for="name">NAME</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="age">AGE</label>
+                <input type="text" id="age">
+            </div>
+            <div class="form-group">
+                <label for="email">OUTLOOK EMAIL</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="course">COURSE/STRAND</label>
+                <input type="text" id="course">
+            </div>
+            <div class="form-group">
+                <label for="grade">GRADE LEVEL/SECTION</label>
+                <input type="text" id="grade">
+            </div>
+            <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm-password">
+            </div>
+            <button type="submit" class="save-btn">SAVE</button>
         </form>
     </div>
-</div>
-
 </body>
 </html>

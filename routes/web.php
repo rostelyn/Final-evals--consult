@@ -77,6 +77,10 @@ Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
 
+Route::get('/hr-pickyear', function () {
+    return view('hr.hr-pickyear');
+})->name('hr-pickyear');
+
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-studentlist');
 })->name('hr-studentlist');
@@ -84,6 +88,7 @@ Route::get('/hr-studentlist', function () {
 Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
+
 //for section
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
