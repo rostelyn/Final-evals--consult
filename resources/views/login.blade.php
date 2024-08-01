@@ -35,7 +35,7 @@
                         <label for="remember">Remember Me</label>
                     </div>
                     <div class="form-buttons">
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ url('/') }}'">Register</button>
+                        <button type="register" class="btn btn-warning btn-sm"><a href="register">Register if you Dont have Account</a></button>
                         <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                 </div>

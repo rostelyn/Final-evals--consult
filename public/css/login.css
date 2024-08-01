@@ -19,17 +19,18 @@ body, html {
 .login-overlay {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
+    padding: 40px;
+    max-width: 600px; 
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 150px;
     margin: 0 auto 20px;
     display: block;
+    border-radius: 50%;
 }
 
 .login-form .login-container {
@@ -37,31 +38,42 @@ body, html {
 }
 
 .login-header {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .eastwoods-logo {
-    max-width: 100px;
-    margin: 0 auto 20px;
+    max-width: 150px;
+    margin: 0 auto 30px;
     display: block;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .form-group input {
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.form-remember {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-remember input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .form-buttons {
@@ -69,26 +81,9 @@ body, html {
     justify-content: space-between;
 }
 
-.register-button, .submit-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 48%;
-}
-
-.register-button {
-    background-color: #007bff;
-    color: white;
-}
-
 .submit-button {
     background-color: #28a745;
     color: white;
-}
-
-.register-button:hover, .submit-button:hover {
-    opacity: 0.8;
 }
 
 .login-container .error-message {
