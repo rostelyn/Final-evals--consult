@@ -64,7 +64,7 @@ Route::get('/studentCalendar/events', [StudentCalendarController::class, 'events
 
 
 Route::get('/consultation', function () {
-    return view('layouts.studentConsult-layout');
+    return view('student.consultation.student-appoint');
 })->name('consultation');
 Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
