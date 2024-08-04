@@ -14,7 +14,6 @@
                 <label for="picture">PICTURES</label>
                 <div class="picture-box">1X1</div>
                 <input type="file" id="picture">
-                <button type="button" class="upload-btn">UPLOAD</button>
             </div>
             <div class="form-group">
                 <label for="student-id">STUDENT ID NO</label>
@@ -48,7 +47,7 @@
                 <label for="confirm-password">CONFIRM PASSWORD</label>
                 <input type="password" id="confirm-password">
             </div>
-            <button type="submit" class="save-btn">SAVE</button>
+            <button type="submit" class="save-btn">SUBMIT</button>
         </form>
     </div>
 </body>

@@ -36,19 +36,29 @@
             padding: 20px;
             border-radius: 10px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 100%;
             box-sizing: border-box;
             margin-top: 20px;
             border: 1px solid #ccc;
         }
         .sidebar {
-            width: 200px;
+            width: 250px; /* Increased the width */
             margin-right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .sidebar .picture-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
         }
         .sidebar img {
             width: 100%;
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
-            border: 1px solid #ccc;
         }
         .sidebar .info {
             text-align: center;
@@ -57,17 +67,6 @@
         .sidebar .info p {
             margin: 5px 0;
             color: #333;
-        }
-        .sidebar .send-message {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-decoration: none;
         }
         .main {
             flex-grow: 1;
@@ -98,11 +97,11 @@
             background-color: #1FC2BB;
             color: black;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 30px;
             margin: 0 10px;
             cursor: pointer;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 18px;
             text-decoration: none;
             text-align: center;
         }
@@ -113,7 +112,9 @@
     <div class="container">
         <div class="content">
             <div class="sidebar">
-                <img src="{{ asset('images/student.jpg') }}" alt="Student Image">
+                <div class="picture-box">
+                    <img src="{{ asset('images/student.jpg') }}" alt="Student Image">
+                </div>
                 <div class="info">
                     <p><strong>DENN HARENZ ESCAT</strong></p>
                     <p>dennharenz@oulook.com</p>
@@ -121,7 +122,6 @@
             </div>
 
             <div class="main">
-       
                 <div class="details">
                     <div class="detail-item">Gender<br><strong>Male</strong></div>
                     <div class="detail-item">Course/Strand<br><strong>BSIT</strong></div>
