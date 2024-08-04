@@ -330,35 +330,7 @@ h2 {
 .table th {
     background-color: #8DC5DD;
 }
-.picture-box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    line-height: 100px;
-    text-align: center;
-}
 
-button {
-    padding: 10px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.current-evaluation {
-    background-color: #2D9939;
-}
-
-.past-evaluation {
-    background-color: #D5CD17;
-}
-
-button:hover {
-    opacity: 0.8;
-}
 
 
 
@@ -396,7 +368,6 @@ button:hover {
     }
     
 
-    
     table th, table td {
         border: 1px solid #ddd;
         padding: 8px;
@@ -691,3 +662,38 @@ p {
         top: 0;
         border-radius: 10px;
     }
+
+    /* Box around the grid */
+.table-container {
+    border: 2px solid #ddd;
+    padding: 16px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make container full width */
+    max-width: 1200px; /* Set a max-width for large screens */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .number {
+    text-align: left;
+    width: 10%; /* Adjust width for number column */
+  }
+  
+  .name {
+    text-align: left;
+    width: 70%; /* Adjust width for name column */
+  }
+  
+
+

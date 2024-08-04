@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/css/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group label {
+    width: 20%;
+    color: #4CAF50;
+    font-size: 16px;
+    text-align: left;
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="cfpassword"], select {
+    width: 80%; /* Reduced width to make inputs smaller */
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #019306;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #609966;
+}
+
+.picture-upload {
+    margin-top: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.picture-box {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px; /* Added margin to the bottom for spacing between the picture box and the upload button */
+}
+
+.upload-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Added margin to the top for spacing between the file input and upload button */
+}
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}

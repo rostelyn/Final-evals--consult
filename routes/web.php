@@ -9,6 +9,8 @@ use App\Http\Controllers\StudentCalendarController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
+
 
 
 /*
@@ -29,16 +31,17 @@ Route::get('/',[AuthController::class,'index'])->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::post('/',[AuthController::class,'login'])->name('login.submit');
+Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 
-Route::view('/student/evaluation/consultation', 'student.student-evaluation-consultation')->name('student.student-evaluation-consultation');
-
 
 // Student routes
-/*Route::get('/', function () {return view('student.student-evaluation-consultation');
-})->name('student-evaluation');*/
+Route::get('/student.student-evaluation-consultation', function () {return view('student.student-evaluation-consultation');
+})->middleware('auth')->name('student.student-evaluation-consultation');
+
 //for dashboard
 Route::get('/student.student-evaluation-consultation
 ', function () {return view('student.student-evaluation-consultation');
@@ -76,6 +79,10 @@ Route::get('/StudentSettings', function () {
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
+
+Route::get('/hr-pickyear', function () {
+    return view('hr.hr-pickyear');
+})->name('hr-pickyear');
 
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-studentlist');
@@ -163,10 +170,25 @@ Route::get('/Consult-bsit401', function () {
     return view('AdminCtation.Studentlistinfo.Consult-bsit401');
 })->name('Consult-bsit401');
 
-Route::get('/Consult-profile', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-profile');
-})->name('Consult-profile');
+//Profile
+Route::get('/Prof-bsit101', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit101');
+})->name('Prof-bsit101');
 
+Route::get('/Prof-bsit201', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit201');
+})->name('Prof-bsit201');
+
+Route::get('/Prof-bsit301', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit301');
+})->name('Prof-bsit301');
+
+Route::get('/Prof-bsit401', function () {
+    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit401');
+})->name('Prof-bsit401');
+
+//Profile Controller
+Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
 Route::get('/Ct-calendar', function () {
