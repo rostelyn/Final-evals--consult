@@ -1,4 +1,3 @@
-<!-- resources/views/hr/hr-studentlist.blade.php -->
 @extends('layouts.hr-layout')
 
 @section('content')
