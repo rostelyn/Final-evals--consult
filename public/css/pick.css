@@ -1,0 +1,66 @@
+/* CSS for the main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    padding: 0;
+  
+}
+
+/* CSS for the title */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6b8e23; /* Dark olive green */
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* CSS for the courses/strand container */
+.courses-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* CSS for each course button */
+.course-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000; /* Black border */
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    min-width: 200px;
+    height: 250px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.course-button.college {
+    background-color: #98FB98; /* Light green for college */
+}
+
+.course-button.highschool {
+    background-color: #00FFFF; /* Aqua for high school */
+}
+
+.course-button:hover {
+    background-color: #ddd; /* Light grey on hover */
+}
+
+/* CSS for the icons */
+.course-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
