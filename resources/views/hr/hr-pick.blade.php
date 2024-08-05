@@ -13,9 +13,10 @@
         <div class="title">STUDENT EVALUATION AND CONSULTATION</div>
             <div class="main-container">
                  <div class="courses-container">
-            <button class="course-button college">
+            <button class="course-button college" >
                 <div class="course-icon">🎓</div>
-                <div>COLLEGE DEPARTMENT</div>
+                <div><a href="hr-bsit">COLLEGE DEPARTMENT</a></div>
+                
         </button>
         <button class="course-button highschool">
             <div class="course-icon">👨‍🎓</div>
