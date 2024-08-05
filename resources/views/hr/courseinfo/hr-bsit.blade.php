@@ -1,8 +1,7 @@
-<!-- resources/views/hr/courseinfo/hr-bsit.blade.php -->
 @extends('layouts.hr-layout')
 
 @section('content')
-    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>BSIT YEAR LIST</h2>
     <div>
         
@@ -24,4 +23,7 @@
             <button>BSIT 401</button>
         </a>
     </div>
-@endsection
+
+    @endsection
+
+   
