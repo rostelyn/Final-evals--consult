@@ -85,16 +85,12 @@ Route::get('/hr-pickyear', function () {
 })->name('hr-pickyear');
 
 Route::get('/hr-studentlist', function () {
-    return view('hr.hr-studentlist');
-})->name('hr-studentlist');
+    return view('hr.hr-pick');
+})->name('hr-pick');
 
 Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
-
-Route::get('/hr-pick', function () {
-    return view('hr.hr-pick');
-})->name('hr-pick');
 
 //for section
 Route::get('/hr-bsit101', function () {

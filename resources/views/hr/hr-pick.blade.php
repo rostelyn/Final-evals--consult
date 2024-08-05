@@ -10,6 +10,7 @@
     <title>Student EVALUATION AND CONSULTATION</title>
 </head>
 <body>
+
     <div class="title">STUDENT EVALUATION AND CONSULTATION</div>
     <div class="main-container">
         <div class="courses-container">
@@ -21,6 +22,20 @@
                 <img class="course-icon" src="{{ asset('css/hslogo.jpg') }}" alt="High School Icon">
                 <div>HIGH SCHOOL</div>
             </button>
+
+        <div class="title">STUDENT EVALUATION AND CONSULTATION</div>
+            <div class="main-container">
+                 <div class="courses-container">
+            <button class="course-button college" >
+                <div class="course-icon">🎓</div>
+                <div><a href="hr-bsit">COLLEGE DEPARTMENT</a></div>
+                
+        </button>
+        <button class="course-button highschool">
+            <div class="course-icon">👨‍🎓</div>
+            <div>HIGH SCHOOL</div>
+        </button>
+             </div>
         </div>
     </div>
 </body>

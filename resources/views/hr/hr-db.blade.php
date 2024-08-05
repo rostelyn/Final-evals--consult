@@ -44,12 +44,13 @@
     body {
         background-color: #f0f0f0; 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px; 
     }
 
     .container {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 20px;
+        max-width: 1000px; 
+        margin: 40px auto; 
+        padding: 50px; 
         background: #fff; 
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -57,26 +58,26 @@
 
     .dashboard-header {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px; 
     }
 
     .dashboard-header h2 {
         margin: 0;
-        font-size: 28px;
+        font-size: 36px; 
         font-weight: bold;
         color: #333;
     }
 
     .dashboard-header p {
-        margin: 5px 0;
-        font-size: 16px;
+        margin: 10px 0; 
+        font-size: 20px; 
         color: #666;
     }
 
     .dashboard-content {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 30px; 
         justify-content: center;
     }
 
@@ -84,9 +85,9 @@
         background: #fff;
         border: 1px solid #ddd;
         border-radius: 8px;
-        padding: 20px;
+        padding: 30px; 
         width: 100%;
-        max-width: 300px;
+        max-width: 350px; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease;
@@ -99,46 +100,47 @@
 
     .card .icon {
         position: absolute;
-        top: -20px;
+        top: -25px; 
         left: 50%;
         transform: translateX(-50%);
         background-color: #6C63FF; /* Purple */
         color: #fff;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
+        width: 50px; 
+        height: 50px; 
+        line-height: 50px; 
         text-align: center;
         border-radius: 50%;
     }
 
     .card .icon i {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .card h3 {
-        margin: 0 0 10px;
-        font-size: 20px;
+        margin: 0 0 15px; 
+        font-size: 24px;
         color: #333;
     }
 
     .total-evaluations {
-        background: #09FF87; /* Geen Something */
+        background: #09FF87; /* Green */
     }
 
     .pending-evaluations {
-        background: #FF6584; /* Coral */
+        background: #09FF87; 
     }
 
     .recent-evaluations {
-        background: #28B5B5; /* Teal */
+        background: #09FF87; 
     }
 
     .notifications {
-        background: #FFC107; /* Amber */
+        background: #09FF87; 
     }
+
     .card p {
         margin: 0;
-        font-size: 18px;
+        font-size: 22px;
         color: #666;
     }
 
@@ -151,8 +153,9 @@
     }
 
     .card ul li {
-        padding: 8px 0;
+        padding: 12px 0; 
         border-bottom: 1px solid #eee;
+        font-size: 20px; 
     }
 
     .card ul li:last-child {
