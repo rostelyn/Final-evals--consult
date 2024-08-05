@@ -92,6 +92,10 @@ Route::get('/hr-bsit', function () {
     return view('hr.courseinfo.hr-bsit');
 })->name('hr-bsit');
 
+Route::get('/hr-pick', function () {
+    return view('hr.hr-pick');
+})->name('hr-pick');
+
 //for section
 Route::get('/hr-bsit101', function () {
     return view('hr.courseinfo.hr-bsit101');
