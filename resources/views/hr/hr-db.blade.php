@@ -51,7 +51,7 @@
         max-width: 1000px; 
         margin: 40px auto; 
         padding: 50px; 
-        background: #fff; 
+        background: transparent; /* Removed background color */
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -82,7 +82,7 @@
     }
 
     .card {
-        background: #fff;
+        background: transparent; 
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 30px; 

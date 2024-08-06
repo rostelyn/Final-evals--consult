@@ -7,11 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/pick.css') }}">
-    <title>Student EVALUATION AND CONSULTATION</title>
+    <title>Student EVALUATION SUDENT LIST</title>
 </head>
 <body>
-
-        <div class="title">STUDENT EVALUATION AND CONSULTATION</div>
+        <div class="title">Student EVALUATION SUDENT LIST</div>
             <div class="main-container">
                  <div class="courses-container">
             <div class="course-button college" >
