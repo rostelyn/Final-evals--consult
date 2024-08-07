@@ -144,9 +144,15 @@ Route::get('/Ct-db', function () {
     return view('AdminCtation.Ct-db');
 })->name('Ct-db');
 
+// routes/web.php
 Route::get('/Ct-studentlist', function () {
-    return view('AdminCtation.Ct-studentlist');
-})->name('Ct-studentlist');
+    return view('AdminCtation.Ct-pick');
+})->name('Ct-pick');
+
+
+Route::get('/Ct-student', function () {
+    return view('AdminCtation.Ct-student');
+})->name('Ct-student');
 
 // Student List/Course list
 Route::get('/Consult-bsit', function () {
