@@ -1,76 +1,52 @@
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #fff7cc; /* Light yellow background color */
+    font-size: 20px;
+    background-color: #fff7cc;
     margin: 0;
     padding: 0;
 }
 
-.container {
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: Papyrus;
+    font-size: 36px;
+    font-style: Bold;
+    color:  #6b8e23;
+    margin: 0;
+
+}
+
+.profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Make the container 80% width */
-    margin: 0 auto; /* Center the container */
+    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.title {
-    font-size: 20px;
-    font-style: italic;
-}
-
-.content {
+.picture-box {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
     display: flex;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.picture-box img {
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border: 1px solid #ccc;
+    height: 100%;
+    object-fit: cover;
 }
 
-.sidebar {
-    width: 250px; /* Increased the width */
-    margin-right: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.sidebar .picture-box {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
+.info {
     text-align: center;
-}
-
-.sidebar img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-}
-
-.sidebar .info {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.sidebar .info p {
-    margin: 5px 0;
-    color: #333;
 }
 
 .main {
@@ -79,11 +55,10 @@ body {
     border-radius: 10px;
     color: #333;
     box-sizing: border-box;
+    padding-top: 30px;
 }
 
 .main .details {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
     background-color: #007C91;
     padding: 10px;
@@ -91,9 +66,16 @@ body {
     color: white;
 }
 
-.main .details .detail-item {
-    flex: 1;
-    text-align: center;
+.main .details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.main .details-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 20px;
 }
 
 .main .tabs {
