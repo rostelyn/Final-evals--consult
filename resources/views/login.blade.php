@@ -35,8 +35,9 @@
                         <label for="remember">Remember Me</label>
                     </div>
                     <div class="form-buttons">
-                        <button type="register" class="btn btn-warning btn-sm"><a href="register">Register if you Dont have Account</a></button>
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        
+                        <button><a href="register">Register if you Dont have Account</a></button>
+                        <button type="submit" class="btn btn-p">Submit</button>
                     </div>
                 </div>
             </form>

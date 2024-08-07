@@ -81,10 +81,6 @@ body, html {
     justify-content: space-between;
 }
 
-.submit-button {
-    background-color: #28a745;
-    color: white;
-}
 
 .login-container .error-message {
     color: red;
