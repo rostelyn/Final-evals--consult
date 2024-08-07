@@ -14,7 +14,7 @@
         </div>
         <ul>
             <li><a href="{{ route('Ct-db') }}">Dashboard</a></li>
-            <li><a href="{{ route('Ct-studentlist') }}">Student List</a></li>
+            <li><a href="{{ ('Ct-studentlist') }}">Student List</a></li>
             <li><a href="{{ route('Ct-appdis') }}">Approve/Disapprove</a></li>
             <li><a href="{{ route('Ct-calendar') }}">Calendar</a></li>
             <li><a href="{{ route('Ct-notify') }}">Notifications</a></li>
