@@ -16,7 +16,7 @@
                 @csrf
                 <div class="login-container">
                     <div class="login-header">
-                         <img src="{{ asset('css/logoo.jpg') }}" alt="Logo" class="logo">
+                         <img src="{{ asset('css/resources/logoo.jpg') }}" alt="Logo" class="logo">
                     </div>
                     @error('message')
                         <p class="error-message">{{ $message }}</p>
@@ -37,7 +37,7 @@
                     <div class="form-buttons">
                         
                         <button><a href="register">Register if you Dont have Account</a></button>
-                        <button type="submit" class="btn btn-p">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </form>

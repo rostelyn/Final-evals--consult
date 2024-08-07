@@ -10,7 +10,7 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo">
-        <img src="{{ asset('css/logoo.jpg') }}" alt="Logo">
+        <img src="{{ asset('css/resources/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
             <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
