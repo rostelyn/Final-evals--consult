@@ -45,15 +45,15 @@
 
 <style>
     body {
-        background-color: #f0f0f0; 
+        background-color: #f0f0f0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .dashboard {
         max-width: 1000px;
-        margin: 40px auto;
-        padding: 50px;
+        margin: 0 auto; /* Removed top margin */
+        padding: 0 50px 50px; /* Removed top padding */
         background: transparent;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@
     }
 
     .card {
-        background: transparent;
+        background: #4BC0C0; /* Vibrant Cyan */
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 30px;
@@ -110,6 +110,7 @@
         top: -25px;
         left: 50%;
         transform: translateX(-50%);
+        background-color: #6C63FF;
         color: #fff;
         width: 50px;
         height: 50px;
@@ -149,22 +150,6 @@
 
     .card ul li:last-child {
         border-bottom: none;
-    }
-
-    .total-appointments {
-        background: #4BC0C0;
-    }
-
-    .pending-appointments {
-        background: #4BC0C0;
-    }
-
-    .upcoming-appointments {
-        background: #4BC0C0;
-    }
-
-    .notifications {
-        background: #4BC0C0;
     }
 </style>
 

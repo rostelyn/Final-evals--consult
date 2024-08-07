@@ -32,7 +32,7 @@
         </div>
 
         <div class="card notifications">
-            <span class="icon">icon<i class="fas fa-bell"></i></span>
+            <span class="icon"><i class="fas fa-bell"></i></span>
             <h3>Notifications</h3>
             <p>No new notifications.</p>
         </div>
@@ -45,15 +45,15 @@
 
 <style>
     body {
-        background-color: #f0f0f0; 
+        background-color: #f0f0f0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .dashboard {
         max-width: 1000px;
-        margin: 40px auto;
-        padding: 50px;
+        margin: 0 auto; 
+        padding: 0 50px 50px; 
         background: transparent;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@
     }
 
     .card {
-        background: transparent;
+        background: #4BC0C0; /* Vibrant Cyan */
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 30px;
@@ -127,22 +127,6 @@
         margin: 0 0 15px;
         font-size: 24px;
         color: #333;
-    }
-
-    .total-evaluations {
-        background: #4BC0C0;
-    }
-
-    .pending-evaluations {
-        background: #4BC0C0; 
-    }
-
-    .recent-evaluations {
-        background: #4BC0C0; 
-    }
-
-    .notifications {
-        background: #4BC0C0; /* Vibrant Cyan */
     }
 
     .card p, .card ul {

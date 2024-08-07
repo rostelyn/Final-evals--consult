@@ -78,7 +78,7 @@ Route::get('/StudentSettings', function () {
 // HR routes
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
-})->name('hr-db');
+})->middleware('auth')->name('hr-db');
 
 Route::get('/hr-pickyear', function () {
     return view('hr.hr-pickyear');
@@ -142,7 +142,7 @@ Route::get('/hr-profile', function () {
 // Consultation routes
 Route::get('/Ct-db', function () {
     return view('AdminCtation.Ct-db');
-})->name('Ct-db');
+})->middleware('auth')->name('Ct-db');
 
 // routes/web.php
 Route::get('/Ct-studentlist', function () {
@@ -232,4 +232,4 @@ Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'd
 Route::get('/DpHead', function () {
     return view('DpHead.DpHead');
 })->name('DpHead');
-Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->name('DpHeadAppDis');
+Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->middleware('auth')->name('DpHeadAppDis');
