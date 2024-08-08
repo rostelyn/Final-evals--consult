@@ -152,41 +152,41 @@ Route::get('/Ct-student', function () {
 
 // Student List/Course list
 Route::get('/Consult-bsit', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-bsit');
+    return view('AdminCtation.StudentlistinfoCL.Consult-bsit');
 })->name('Consult-bsit');
 
 //for section
 Route::get('/Consult-bsit101', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-bsit101');
+    return view('AdminCtation.StudentlistinfoCL.Consult-bsit101');
 })->name('Consult-bsit101');
 
 Route::get('/Consult-bsit201', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-bsit201');
+    return view('AdminCtation.StudentlistinfoCL.Consult-bsit201');
 })->name('Consult-bsit201');
 
 Route::get('/Consult-bsit301', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-bsit301');
+    return view('AdminCtation.StudentlistinfoCL.Consult-bsit301');
 })->name('Consult-bsit301');
 
 Route::get('/Consult-bsit401', function () {
-    return view('AdminCtation.Studentlistinfo.Consult-bsit401');
+    return view('AdminCtation.StudentlistinfoCL.Consult-bsit401');
 })->name('Consult-bsit401');
 
 //Profile
 Route::get('/Prof-bsit101', function () {
-    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit101');
+    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit101');
 })->name('Prof-bsit101');
 
 Route::get('/Prof-bsit201', function () {
-    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit201');
+    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit201');
 })->name('Prof-bsit201');
 
 Route::get('/Prof-bsit301', function () {
-    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit301');
+    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit301');
 })->name('Prof-bsit301');
 
 Route::get('/Prof-bsit401', function () {
-    return view('AdminCtation.Studentlistinfo.Profile.Prof-bsit401');
+    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit401');
 })->name('Prof-bsit401');
 
 //Profile Controller
