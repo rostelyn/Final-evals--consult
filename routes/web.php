@@ -151,7 +151,7 @@ Route::get('/Ct-student', function () {
 })->name('Ct-student');
 
 Route::get('/Ct-studentHS', function () {
-    return view('AdminCtation.Ct-student');
+    return view('AdminCtation.Ct-studentHS');
 })->name('Ct-studentHS');
 
 // Student List/Course list
