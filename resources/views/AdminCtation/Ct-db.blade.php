@@ -61,7 +61,7 @@
 
     .dashboard-header {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 30px; /* Increased margin */
     }
 
     .dashboard-header h2 {
