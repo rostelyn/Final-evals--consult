@@ -150,6 +150,10 @@ Route::get('/Ct-student', function () {
     return view('AdminCtation.Ct-student');
 })->name('Ct-student');
 
+Route::get('/Ct-studentHS', function () {
+    return view('AdminCtation.Ct-student');
+})->name('Ct-studentHS');
+
 // Student List/Course list
 Route::get('/Consult-bsit', function () {
     return view('AdminCtation.StudentlistinfoCL.Consult-bsit');
