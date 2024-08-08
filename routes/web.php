@@ -47,11 +47,12 @@ Route::get('/student.student-evaluation-consultation', function () {return view(
 
 // Student routes
 Route::get('/evaluation', function () {
-    return view('layouts.evaluation-layout');
+    return view('faculty.index');
 })->name('evaluation');
 
+
 //list of teachers
-Route::get('/faculty', [FacultyController::class, 'index']);
+Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
@@ -64,6 +65,7 @@ Route::get('/studentCalendar/events', [StudentCalendarController::class, 'events
 Route::get('/consultation', function () {
     return view('student.consultation.student-appoint');
 })->name('consultation');
+
 Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
