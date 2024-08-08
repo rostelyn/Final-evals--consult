@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="tabs">
-            <a href="{{ route('evaluation') }}">Evaluation</a>
-            <a href="{{ route('consultation') }}">Consultation</a>
+            <a href="{{ ('faculty') }}">Evaluation</a>
+            <a href="{{ ('consultation') }}">Consultation</a>
         </div>
     </div>
 </body>
