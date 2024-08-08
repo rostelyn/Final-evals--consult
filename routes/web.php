@@ -154,7 +154,7 @@ Route::get('/Ct-studentHS', function () {
     return view('AdminCtation.Ct-studentHS');
 })->name('Ct-studentHS');
 
-// Student List/Course list
+// Student List/Course list and Highschool
 Route::get('/Consult-bsit', function () {
     return view('AdminCtation.StudentlistinfoCL.Consult-bsit');
 })->name('Consult-bsit');
@@ -163,7 +163,27 @@ Route::get('/CTHS-G7section', function () {
     return view('AdminCtation.StudentlistinfoHS.CTHS-G7section');
 })->name('CTHS-G7section');
 
-//for section
+Route::get('/CTHS-G8section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G8section');
+})->name('CTHS-G8section');
+
+Route::get('/CTHS-G9section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G9section');
+})->name('CTHS-G9section');
+
+Route::get('/CTHS-G10section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G10section');
+})->name('CTHS-G10section');
+
+Route::get('/CTHS-G11section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G11section');
+})->name('CTHS-G11section');
+
+Route::get('/CTHS-G12section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G12section');
+})->name('CTHS-G12section');
+
+//for section college
 Route::get('/Consult-bsit101', function () {
     return view('AdminCtation.StudentlistinfoCL.Consult-bsit101');
 })->name('Consult-bsit101');

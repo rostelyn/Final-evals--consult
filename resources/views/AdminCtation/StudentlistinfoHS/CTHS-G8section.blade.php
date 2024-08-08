@@ -3,7 +3,7 @@
 
 @section('content')
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>GRADE 7 SECTION</h2>
+    <h2>GRADE 8 SECTION</h2>
     <div>
         
         <a href="{{('Consult-bsit101') }}">
