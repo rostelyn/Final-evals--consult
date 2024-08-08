@@ -76,7 +76,7 @@ Route::get('/StudentSettings', function () {
 // HR routes
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
-})->name('hr-db');
+})->middleware('auth')->name('hr-db');
 
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-pick');
@@ -136,11 +136,17 @@ Route::get('/hr-profile', function () {
 // Consultation routes
 Route::get('/Ct-db', function () {
     return view('AdminCtation.Ct-db');
-})->name('Ct-db');
+})->middleware('auth')->name('Ct-db');
 
+// routes/web.php
 Route::get('/Ct-studentlist', function () {
-    return view('AdminCtation.Ct-studentlist');
-})->name('Ct-studentlist');
+    return view('AdminCtation.Ct-pick');
+})->name('Ct-pick');
+
+
+Route::get('/Ct-student', function () {
+    return view('AdminCtation.Ct-student');
+})->name('Ct-student');
 
 // Student List/Course list
 Route::get('/Consult-bsit', function () {
@@ -220,4 +226,4 @@ Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'd
 Route::get('/DpHead', function () {
     return view('DpHead.DpHead');
 })->name('DpHead');
-Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->name('DpHeadAppDis');
+Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->middleware('auth')->name('DpHeadAppDis');

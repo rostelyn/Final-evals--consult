@@ -2,10 +2,9 @@
 
 @section('content')
 
-<div class="container">
+<div class="dashboard">
     <div class="dashboard-header">
         <h2>Consultation Appointment Dashboard</h2>
-        <p>Welcome</p>
     </div>
 
     <div class="dashboard-content">
@@ -38,55 +37,64 @@
             <p>No new notifications.</p>
         </div>
     </div>
+
+    <div class="dashboard-footer">
+        <p>Welcome Admin</p>
+    </div>
 </div>
 
 <style>
     body {
-        background-color: #f0f0f0; 
+        background-color: #f0f0f0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 22px; /* Increased font size */
+        font-size: 18px;
     }
 
-    .container {
-        max-width: 1200px; /* Increased max-width */
-        margin: 40px auto; /* Increased margin */
-        padding: 60px; /* Increased padding */
-        background: transparent; /* Removed background color */
+    .dashboard {
+        max-width: 1000px;
+        margin: 0 auto; /* Removed top margin */
+        padding: 0 50px 50px; /* Removed top padding */
+        background: transparent;
         border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .dashboard-header {
         text-align: center;
-        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 30px; /* Increased margin */
     }
 
     .dashboard-header h2 {
         margin: 0;
-        font-size: 48px; /* Increased font size */
+        font-size: 36px;
         font-weight: bold;
         color: #333;
-    }
-
-    .dashboard-header p {
-        margin: 10px 0; /* Increased margin */
-        font-size: 28px; /* Increased font size */
-        color: #666;
     }
 
     .dashboard-content {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px; /* Increased gap */
+        gap: 30px;
         justify-content: center;
     }
 
+    .dashboard-footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .dashboard-footer p {
+        font-size: 20px;
+        color: #666;
+    }
+
     .card {
-        background: transparent; /* Removed background color */
+        background: #4BC0C0; /* Vibrant Cyan */
         border: 1px solid #ddd;
         border-radius: 8px;
-        padding: 40px; /* Increased padding */
+        padding: 30px;
         width: 100%;
-        max-width: 400px; /* Increased max-width */
+        max-width: 350px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease;
@@ -99,67 +107,49 @@
 
     .card .icon {
         position: absolute;
-        top: -30px; /* Increased top */
+        top: -25px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #6C63FF; 
+        background-color: #6C63FF;
         color: #fff;
-        width: 60px; /* Increased width */
-        height: 60px; /* Increased height */
-        line-height: 60px; /* Increased line-height */
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
         border-radius: 50%;
     }
 
     .card .icon i {
-        font-size: 36px; /* Increased font size */
+        font-size: 28px;
     }
 
     .card h3 {
-        margin: 0 0 20px; /* Increased margin */
-        font-size: 32px; /* Increased font size */
+        margin: 0 0 15px;
+        font-size: 24px;
         color: #333;
     }
 
-    .card p {
+    .card p, .card ul {
         margin: 0;
-        font-size: 28px; /* Increased font size */
-        color: #666;
+        font-size: 22px;
+        color: #fff;
     }
 
     .card ul {
         list-style: none;
         padding: 0;
         margin: 0;
-        color: #666;
         text-align: left;
     }
 
     .card ul li {
-        padding: 16px 0; /* Increased padding */
-        border-bottom: 1px solid #eee;
-        font-size: 26px; /* Increased font size */
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 20px;
     }
 
     .card ul li:last-child {
         border-bottom: none;
-    }
-
-    /* Card colors */
-    .total-appointments {
-        background: #09FF87;
-    }
-
-    .pending-appointments {
-        background: #09FF87; 
-    }
-
-    .upcoming-appointments {
-        background: #09FF87;
-    }
-
-    .notifications {
-        background: #09FF87;
     }
 </style>
 
