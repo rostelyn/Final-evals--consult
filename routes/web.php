@@ -159,6 +159,10 @@ Route::get('/Consult-bsit', function () {
     return view('AdminCtation.StudentlistinfoCL.Consult-bsit');
 })->name('Consult-bsit');
 
+Route::get('/CTHS-G7section', function () {
+    return view('AdminCtation.StudentlistinfoHS.CTHS-G7section');
+})->name('CTHS-G7section');
+
 //for section
 Route::get('/Consult-bsit101', function () {
     return view('AdminCtation.StudentlistinfoCL.Consult-bsit101');

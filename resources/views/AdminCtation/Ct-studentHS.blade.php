@@ -2,8 +2,9 @@
 
 @section('content')
 <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+<h2>GRADE LEVEL</h2>
     <div>
-        <a href="{{ route('Consult-bsit') }}">
+        <a href="{{ route('CTHS-G7section') }}">
             <button>GRADE 7</button>
         </a>
         <a href="#">
