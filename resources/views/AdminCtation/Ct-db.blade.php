@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="dashboard-footer">
+    <div class="dashboard-header">
         <p>Welcome Admin</p>
     </div>
 </div>
@@ -61,7 +61,9 @@
 
     .dashboard-header {
         text-align: center;
-        margin-bottom: 30px; /* Increased margin */
+        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 30px;
+
     }
 
     .dashboard-header h2 {
