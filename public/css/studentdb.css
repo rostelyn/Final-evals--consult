@@ -1,91 +1,85 @@
 body {
     font-family: 'Times New Roman', serif;
     font-size: 20px;
-    background-color: #fff7cc;
+    background-color: #7aa5d9;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 .header h1 {
-    font-family: Papyrus;
+    font-family: 'Times New Roman', serif;
+    font-style: bold;
     font-size: 36px;
-    font-style: Bold;
-    color:  #6b8e23;
+    color: rgb(0, 0, 0);
     margin: 0;
-
+   
 }
 
-.profile {
+.student-profile {
+    width: 70%;
+    min-height: 70vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 10px 10px black; 
+    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 30px;
+    justify-content: center;
 }
 
-.picture-box {
+.student-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.student-photo {
+    margin-bottom: 20px;
+}
+
+.student-photo img {
     width: 150px;
     height: 150px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-top: 30px;
+   
 }
 
-.picture-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.info {
+.student-details {
     text-align: center;
 }
 
-.main {
-    flex-grow: 1;
-    padding: 20px;
-    border-radius: 10px;
-    color: #333;
-    box-sizing: border-box;
-    padding-top: 30px;
+.student-details h2 {
+    margin-top: 0;
 }
 
-.main .details {
-    margin-bottom: 20px;
-    background-color: #007C91;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
+.details p {
+    margin: 5px 0;
 }
 
-.main .details-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.main .details-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ffffff;
-    padding-top: 20px;
-}
-
-.main .tabs {
+.tabs {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
 }
 
-.main .tabs a {
-    background-color: #1FC2BB;
+.tabs a {
+    background-color:  #7aa5d9;
     color: black;
     border: none;
     padding: 15px 30px;
@@ -95,4 +89,15 @@ body {
     font-size: 18px;
     text-decoration: none;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabs a:hover {
+    background-color: #17a2a8;
+    color: white;
+}
+
+.tabs a:active {
+    background-color: #159497;
+    color: white;
 }

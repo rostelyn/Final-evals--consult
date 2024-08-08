@@ -43,9 +43,7 @@ Route::get('/student.student-evaluation-consultation', function () {return view(
 })->middleware('auth')->name('student.student-evaluation-consultation');
 
 //for dashboard
-Route::get('/student.student-evaluation-consultation
-', function () {return view('student.student-evaluation-consultation');
-})->name('student-evaluation');
+
 
 // Student routes
 Route::get('/evaluation', function () {
@@ -79,10 +77,6 @@ Route::get('/StudentSettings', function () {
 Route::get('/hr-db', function () {
     return view('hr.hr-db');
 })->name('hr-db');
-
-Route::get('/hr-pickyear', function () {
-    return view('hr.hr-pickyear');
-})->name('hr-pickyear');
 
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-pick');

@@ -57,7 +57,7 @@
 
     .dashboard-header {
         text-align: center;
-        margin-bottom: 30px; /* Increased margin */
+        margin-bottom: 20px; /* Increased margin */
     }
 
     .dashboard-header h2 {
