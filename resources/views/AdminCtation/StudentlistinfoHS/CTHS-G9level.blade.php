@@ -3,10 +3,10 @@
 
 @section('content')
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>GRADE 10 SECTION</h2>
+    <h2>GRADE 9 SECTION</h2>
     <div>
         
-        <a href="{{('G10101') }}">
+        <a href="{{('CtG9101-section') }}">
         <h2 class=></h2>
             <button>101</button>
         </a>
