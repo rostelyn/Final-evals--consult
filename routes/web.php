@@ -107,12 +107,175 @@ Route::get('/hr-bsit401', function () {
 })->name('hr-bsit401');
 
 
-// High School Route
+// HR High School Route
 
 Route::get('/hr-studentHS', function () {
     return view('hr.hr-studentHS');
 })->name('hr-studentHS');
 
+// HR highschool route
+Route::get('/hrHS-G7level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G7level');
+})->name('hrHS-G7level');
+
+Route::get('/hrHS-G8level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G8level');
+})->name('hrHS-G8level');
+
+Route::get('/hrHS-G9level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G9level');
+})->name('hrHS-G9level');
+
+Route::get('/hrHS-G10level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G10level');
+})->name('hrHS-G10level');
+
+Route::get('/hrHS-G11level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G11level');
+})->name('hrHS-G11level');
+
+Route::get('/hrHS-G12level', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-G12level');
+})->name('hrHS-G12level');
+
+
+//for section highschool and strand
+Route::get('/hrG7101-section', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-GLEVEL.hrG7101-section');
+})->name('hrG7101-section');
+
+Route::get('/hrG8101-section', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-GLEVEL.hrG8101-section');
+})->name('hrG8101-section');
+
+Route::get('/hrG9101-section', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-GLEVEL.hrG9101-section');
+})->name('hrG9101-section');
+
+Route::get('/hrG10101-section', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-GLEVEL.hrG10101-section');
+})->name('hrG10101-section');
+
+//strand G11
+Route::get('/hrHS-G11abm', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G11abm');
+})->name('hrHS-G11abm');
+
+Route::get('/hrHS-G11stem', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G11stem');
+})->name('hrHS-G11stem');
+
+Route::get('/hrHS-G11gas', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G11gas');
+})->name('hrHS-G11gas');
+
+Route::get('/hrHS-G11ict', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G11ict');
+})->name('hrHS-G11ict');
+
+Route::get('/hrG11abm101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG11abm101');
+})->name('hrG11abm101');
+
+Route::get('/hrG11stem101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG11stem101');
+})->name('hrG11stem101');
+
+Route::get('/hrG11ict101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG11ict101');
+})->name('hrG11ict101');
+
+Route::get('/hrG11gas101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG11gas101');
+})->name('hrG11gas101');
+
+//strand G12
+Route::get('/hrHS-G12abm', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G12abm');
+})->name('hrHS-G12abm');
+
+Route::get('/hrHS-G12stem', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G12stem');
+})->name('hrHS-G12stem');
+
+Route::get('/hrHS-G12gas', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G12gas');
+})->name('hrHS-G12gas');
+
+Route::get('/hrHS-G12ict', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrHS-G12ict');
+})->name('hrHS-G12ict');
+
+Route::get('/hrG12abm101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG12abm101');
+})->name('hrG12abm101');
+
+Route::get('/hrG12stem101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG12stem101');
+})->name('hrG12stem101');
+
+Route::get('/hrG12ict101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG12ict101');
+})->name('hrG12ict101');
+
+Route::get('/hrG12gas101', function () {
+    return view('hr.hrStudentlistinfoHS.hrHS-Strand.hrG12gas101');
+})->name('hrG12gas101');
+
+
+
+// ProfileHS
+Route::get('/hrProfHS-G7101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfHS-G7101');
+})->name('hrProfHS-G7101');
+
+Route::get('/hrProfHS-G8101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfHS-G8101');
+})->name('hrProfHS-G8101');
+
+Route::get('/hrProfHS-G9101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfHS-G9101');
+})->name('hrProfHS-G9101');
+
+Route::get('/hrProfHS-G10101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfHS-G10101');
+})->name('hrProfHS-G10101');
+
+//Profle Strand G11
+Route::get('/hrProfG11-stem101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG11-stem101');
+})->name('hrProfG11-stem101');
+
+Route::get('/hrProfG11-abm101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG11-abm101');
+})->name('hrProfG11-abm101');
+
+Route::get('/hrProfG11-gas101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG11-gas101');
+})->name('hrProfG11-gas101');
+
+Route::get('/hrProfG11-ict101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG11-ict101');
+})->name('hrProfG11-ict101');
+
+//Profle Strand G12
+Route::get('/hrProfG12-stem101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG12-stem101');
+})->name('hrProfG12-stem101');
+
+Route::get('/hrProfG12-abm101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG12-abm101');
+})->name('hrProfG12-abm101');
+
+Route::get('/hrProfG12-gas101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG12-gas101');
+})->name('hrProfG12-gas101');
+
+Route::get('/hrProfG12-ict101', function () {
+    return view('hr.hrStudentlistinfoHS.hrProfileHS.hrProfG12-ict101');
+})->name('hrProfG12-ict101');
+
+//
 Route::get('/hr-calendar', function () {
     return view('hr.hr-calendar');
 })->name('hr-calendar');
