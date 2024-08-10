@@ -1,6 +1,8 @@
 @extends('layouts.evaluation-layout')
 
 @section('content')
+
+    <link rel="stylesheet" href="{{ asset('css/settings.css') }}">
 <body>
     <header>
         STUDENT EVALUATION AND CONSULTATION
