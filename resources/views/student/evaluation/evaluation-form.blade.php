@@ -4,107 +4,105 @@
 
 <style>
     .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px; /* Limits the container width */
-    margin: 0 auto; /* Centers the container */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    background-color: #ffffff;
-    border-radius: 10px; /* Rounds the container corners */
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        max-width: 1200px; /* Limits the container width */
+        margin: 0 auto; /* Centers the container */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        background-color: #ffffff;
+        border-radius: 10px; /* Rounds the container corners */
+    }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #333333;
-    text-transform: uppercase;
-}
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #333333;
+        text-transform: uppercase;
+    }
 
-.evaluation-content {
-    width: 100%;
-}
+    .evaluation-content {
+        width: 100%;
+    }
 
-.evaluation-section {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-}
+    .evaluation-section {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    }
 
-.form-label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #4BC0C0; /* Highlight color */
-}
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #4BC0C0; /* Highlight color */
+    }
 
-.form-select, .form-control {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    font-size: 1rem;
-    background-color: #ffffff;
-}
+    .form-select, .form-control {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: #ffffff;
+    }
 
-textarea.form-control {
-    resize: vertical;
-}
+    textarea.form-control {
+        resize: vertical;
+    }
 
-h5 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #4BC0C0; /* Highlight color */
-    text-transform: uppercase;
-}
+    h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #4BC0C0; /* Highlight color */
+        text-transform: uppercase;
+    }
 
-p {
-    margin-bottom: 1.5rem;
-    color: #6c757d;
-}
+    p {
+        margin-bottom: 1.5rem;
+        color: #6c757d;
+    }
 
-.btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
 
-.btn-secondary {
-    background-color: #6c757d;
-    border: none;
-    color: #ffffff;
-}
+    .btn-secondary {
+        background-color: #6c757d;
+        border: none;
+        color: #ffffff;
+    }
 
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
 
-.btn-primary {
-    background-color: #4BC0C0; /* Primary button color */
-    border: none;
-    color: #ffffff;
-}
+    .btn-primary {
+        background-color: #4BC0C0; /* Primary button color */
+        border: none;
+        color: #ffffff;
+    }
 
-.btn-primary:hover {
-    background-color: #3da9a9;
-}
+    .btn-primary:hover {
+        background-color: #3da9a9;
+    }
 
-.text-center {
-    text-align: center;
-}
-
+    .text-center {
+        text-align: center;
+    }
 </style>
 
 <div class="container">
-    
-    
     <div class="evaluation-content">
         <h2 class="text-center mb-4">EASTWOODS Professional College of Science and Technology</h2>
+        
         <!-- Select School Year Section -->
         <div class="text-center mb-4">
             <label for="school_year" class="form-label">Select School Year:</label>
