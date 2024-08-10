@@ -155,7 +155,7 @@
             </div>
             
             <div class="d-flex justify-content-between">
-                <a href="{{ url('/faculty.show') }}" class="btn btn-secondary">Back</a>
+                <a href="{{ ('/faculty') }}" class="btn btn-secondary">Back</a>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
