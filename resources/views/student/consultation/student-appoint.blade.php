@@ -1,4 +1,3 @@
-
 @extends('layouts.studentConsult-layout')
 
 @section('content')
@@ -7,8 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/Student/consultationform.css') }}">
     <title>Consultation Appointment</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
     <style>
         .modal {
             display: none; 
@@ -53,11 +53,6 @@
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("meeting-mode").addEventListener("change", toggleOnlinePreference);
             toggleOnlinePreference(); // Initial call to set the correct state on page load
-
-            @if(session('success'))
-                showModal();
-                setTimeout(hideModal, 3000);
-            @endif
         });
 
         function showModal() {
@@ -121,5 +116,19 @@
         </div>
     </div>
 
- 
+    @if(session('success'))
+        <div id="successModal" class="modal" style="display: block;">
+            <div class="modal-content">
+                <div class="alert-success">
+                    Appointment submitted successfully!
+                </div>
+            </div>
+        </div>
+        <script>
+            setTimeout(hideModal, 3000);
+        </script>
+    @endif
+
+</body>
+</html>
 @endsection

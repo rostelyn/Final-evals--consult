@@ -53,7 +53,7 @@
 }
 
 .course-button.highschool {
-    background-color: #004284; /* Aqua for high school */
+    background-color: #12a3d3; /* Aqua for high school */
 }
 
 .course-button.college:hover {
@@ -61,7 +61,7 @@
 }
 
 .course-button.highschool:hover {
-    background-color: #12a3d3; /* Light grey on hover */
+    background-color: #79a7b9; 
 }
 
 

@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Evaluation and Consultation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/Hrstudentprofile.css') }}">
+
 </head>
 <body>
     <h2>STUDENT EVALUATION AND CONSULTATION</h2>

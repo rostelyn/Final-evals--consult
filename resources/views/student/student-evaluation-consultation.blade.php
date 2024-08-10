@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile</title>
-    <link rel="stylesheet" href="{{ asset('css/studentdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Student/studentdb.css') }}">
 </head>
 <body>
     <div class="header">

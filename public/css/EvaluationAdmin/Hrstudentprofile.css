@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F4E1;
+}
+
+h2 {
+    text-align: center;
+    color: #5E9461;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #9DB8A0;
+}
+
+.table th {
+    background-color: #8DC5DD;
+}
+
+.picture-box {
+    width: 100px;
+    height: 100px;
+    background-color: #fbfefbad;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 10px; /* Added margin to the bottom for spacing between the picture box and the upload button */
+}

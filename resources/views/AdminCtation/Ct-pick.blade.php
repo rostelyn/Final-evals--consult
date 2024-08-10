@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/pick.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CTpick.css') }}">
     <title>Student Evaluation and Consultation</title>
 </head>
 <body>
