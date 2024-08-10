@@ -1,6 +1,9 @@
 @extends('layouts.hr-layout')
 
 @section('content')
+
+<link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/hmYearList.css') }}">
+
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>BSIT 401</h2>
     <div>
