@@ -63,4 +63,81 @@
             </form>
         </div>
     </div>
+ <style>
+    /* Styling the form evaluation*/
+.evaluation-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+.form-select, .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #666666;
+}
+
+.btn {
+    padding: 8px 16px; /* Slightly reduced padding */
+    font-size: 0.9rem; /* Slightly reduced font size */
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+ </style>
 @endsection

@@ -71,11 +71,6 @@ body {
     background-color: #f6f6de;
 }
 
-.content h1 {
-    color: #688e4e;
-}
-
-
 /*consultation*/
 
 .appointment-form {
@@ -250,39 +245,9 @@ button:hover {
 }
 
 
-    body {
-        background-color: #f8f9fa;
-    }
-    .container h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #343a40;
-    }
-    .department-head {
-        background-color: #e9ecef;
-        padding: 20px;
-        border-radius: 8px;
-    }
-    .faculty-member {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .faculty-member .picture {
-        width: 100%;
-        height: 150px;
-        background-color: #dee2e6;
-        border-radius: 8px;
-    }
-    .btn-primary {
-        font-size: 1rem;
-        transition: all 0.3s ease;
-    }
-    .btn-primary:hover {
-        background-color: #007bff;
-        color: #fff;
-    }
+body {
+    background-color: #f8f9fa;
+}
 
 /*HR STUDENT PROFILE*/
 body {
@@ -331,240 +296,89 @@ h2 {
     background-color: #8DC5DD;
 }
 
-
-
-
 /*Approve-Disapprove*/
-    .box {
-        border: 1px solid #ddd;
-        background-color: #fff;
-        margin-bottom: 40px; /* Increased margin bottom for more space */
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    
-    .box-header {
-        background-color: transparent; /* Remove background color */
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .box-header h2 {
-        margin: 0;
-        color: #333;
-    }
-    
-    .box-content {
-        padding: 10px;
-    }
-    
-    .actions button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: none;
-        cursor: pointer;
-    }
-    
-
-    table th, table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-    
-    table th {
-        background-color: #f2f2f2;
-    }
-    
-/*Student*/
-
-.container .btn {
-    min-width: 120px;
-    min-height: 50px;
-    font-size: 1rem;
-    padding: 10px;
-    background-color: #28a745;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+.box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 40px; /* Increased margin bottom for more space */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/*student evaluation form*/
+.box-header {
+    background-color: transparent; /* Remove background color */
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.box-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.box-content {
+    padding: 10px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/*SETTINGS*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3e8;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Main container styles */
+.main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
-/* Styling the form */
-.evaluation-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: #333333;
-}
-
-.form-label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #555555;
-}
-
-.form-select, .form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-textarea.form-control {
-    resize: vertical;
-}
-
-h5 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #333333;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    color: #666666;
-}
-
-.btn {
-    padding: 8px 16px; /* Slightly reduced padding */
-    font-size: 0.9rem; /* Slightly reduced font size */
-    border-radius: 5px;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    color: #ffffff;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: #ffffff;
-}
-
-.d-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mb-4 {
-    margin-bottom: 1.5rem;
-}
-
-.text-center {
+    padding: 15px 30px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-
-/*for faculty/department */
-    .btn-custom {
-        background-color: #62CB6D;
-        border-color: #62CB6D;
-        color: white;
-        width: 100px; /* Adjust width as needed */
-        padding: 8px 16px; /* Adjust padding as needed */
-        text-align: center;
-        display: inline-block;
-        font-size: 14px; /* Adjust font size as needed */
-    }
-    .btn-custom:hover {
-        background-color: #52b25d;
-        border-color: #52b25d;
-    }
-    .faculty-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f6f6de;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .faculty-member {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .faculty-member .picture {
-        width: 100px;
-        height: 100px;
-        background-color: #dcdcdc;
-        margin-bottom: 10px;
-    }
-    .department-head {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    /*SETTINGS*/
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f3f3e8;
-    }
-    
-    /* Header styles */
-    header {
-        text-align: center;
-        padding: 20px 0;
-        font-size: 24px;
-        color: #4CAF50;
-        font-weight: bold;
-    }
-    
-    /* Main container styles */
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-    }
-    
-    /* Button styles */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    
-    button:hover {
-        background-color: #45a049;
-    }
-
-
-   
+button:hover {
+    background-color: #45a049;
+}
