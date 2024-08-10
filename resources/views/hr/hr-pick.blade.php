@@ -15,7 +15,7 @@
                  <div class="courses-container">
             <div class="course-button college" >
             <img class="course-icon" src="{{ asset('css/resources/logoo.jpg') }}" alt="College Department Icon">
-                <div><a href="hr-bsit">COLLEGE DEPARTMENT</a></div>    
+                <div><a href="hr-student">COLLEGE DEPARTMENT</a></div>    
         </div> 
         <button class="course-button highschool">
         <img class="course-icon" src="{{ asset('css/resources/hslogo.jpg') }}" alt="High School Icon">
