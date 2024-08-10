@@ -71,7 +71,6 @@ body {
     background-color: #f6f6de;
 }
 
-
 /*consultation*/
 
 .appointment-form {
@@ -100,9 +99,6 @@ body {
 }
 .appointment-form button:hover {
     background-color: #9DB8A0;
-
-.content h1 {
-    color: #688e4e;
 }
 
 /* sidebar design */
@@ -155,7 +151,7 @@ button {
 }
 
 button:hover {
-    background-color: #547e2e;
+    background-color: #5a7d3b;
 }
 
 /* Container for buttons */
@@ -252,7 +248,6 @@ button:hover {
 body {
     background-color: #f8f9fa;
 }
-
 
 /*HR STUDENT PROFILE*/
 body {
@@ -387,90 +382,3 @@ button {
 button:hover {
     background-color: #45a049;
 }
-
-
-/*for faculty/department */
-    .btn-custom {
-        background-color: #62CB6D;
-        border-color: #62CB6D;
-        color: white;
-        width: 100px; /* Adjust width as needed */
-        padding: 8px 16px; /* Adjust padding as needed */
-        text-align: center;
-        display: inline-block;
-        font-size: 14px; /* Adjust font size as needed */
-    }
-    .btn-custom:hover {
-        background-color: #52b25d;
-        border-color: #52b25d;
-    }
-    .faculty-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f6f6de;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .faculty-member {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .faculty-member .picture {
-        width: 100px;
-        height: 100px;
-        background-color: #dcdcdc;
-        margin-bottom: 10px;
-    }
-    .department-head {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    /*SETTINGS*/
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f3f3e8;
-    }
-    
-    /* Header styles */
-    header {
-        text-align: center;
-        padding: 20px 0;
-        font-size: 24px;
-        color: #4CAF50;
-        font-weight: bold;
-    }
-    
-    /* Main container styles */
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-    }
-    
-    /* Button styles */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    
-    button:hover {
-        background-color: #45a049;
-    }
-
-
