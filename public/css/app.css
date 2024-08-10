@@ -296,6 +296,49 @@ h2 {
     background-color: #8DC5DD;
 }
 
+/*Approve-Disapprove*/
+.box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 40px; /* Increased margin bottom for more space */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box-header {
+    background-color: transparent; /* Remove background color */
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.box-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.box-content {
+    padding: 10px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
 /*SETTINGS*/
 body {
     font-family: Arial, sans-serif;

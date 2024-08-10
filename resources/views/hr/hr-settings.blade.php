@@ -1,6 +1,9 @@
 @extends('layouts.hr-layout')
 
 @section('content')
+    
+    <link rel="stylesheet" href="{{ asset('css/settings.css') }}">
+
 <body>
     <header>
         STUDENT EVALUATION AND CONSULTATION
