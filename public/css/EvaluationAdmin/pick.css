@@ -1,5 +1,4 @@
-/* CSS for the main container */
-.main-container {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,11 +10,11 @@
 
 /* CSS for the title */
 .title {
-    font-family: Times New Roman;
+    font-family: 'Times New Roman', serif;
     font-style: bold;
     font-size: 40px;
     font-weight: bold;
-    color: #6b8e23; /* Dark olive green */
+    color: #000000;
     margin-bottom: 20px;
     text-align: center;
     padding-top: 50px;
@@ -49,23 +48,22 @@
 }
 
 .course-button.college {
-    background-color: #06bb06; 
+    background-color: #41c341; 
 }
 
 .course-button.highschool {
-    background-color: #12a3d3; /* Aqua for high school */
+    background-color: #12a3d3; 
 
 }
 
 .course-button.college:hover {
-    background-color: #9bdf8a; /* Light grey on hover */
+    background-color: #9bdf8a; 
 }
 
 .course-button.highschool:hover {
     background-color: #79a7b9; 
   
 }
-
 
 /* CSS for the icons */
 .course-icon {

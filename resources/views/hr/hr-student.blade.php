@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/hmYearList.css') }}">
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>COURSES/STRAND</h2>
+    <h2>COURSES</h2>
     <div>
         <a href="{{ route('hr-bsit') }}">
             <button>BSIT</button>

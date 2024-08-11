@@ -11,7 +11,7 @@
 </head>
 <body>
         <div class="title">Student Evaluation and Consultation</div>
-            <div class="main-container">
+            <div class="container">
                  <div class="courses-container">
             <div class="course-button college" >
             <img class="course-icon" src="{{ asset('css/resources/logoo.jpg') }}" alt="College Department Icon">

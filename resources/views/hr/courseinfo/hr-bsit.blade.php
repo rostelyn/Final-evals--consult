@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/hmYearList.css') }}">
 
      <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>BSIT YEAR LIST</h2>
+    <h1>BSIT YEAR LIST</h1>
     <div>
         
         <a href="{{('hr-bsit101') }}">
