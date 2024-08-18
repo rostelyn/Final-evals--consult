@@ -13,7 +13,7 @@
     <div class="student-profile">
         <div class="student-info">
             <div class="student-photo">
-                <img src="{{ asset('css/resources/pic.jpg') }}" alt="Profile Picture">
+                <img src="{{ asset('css/GeneralResources/pic.jpg') }}" alt="Profile Picture">
             </div>
             <div class="student-details">
                 <h2>Denn Harenz Escat</h2>
