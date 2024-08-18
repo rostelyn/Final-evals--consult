@@ -76,9 +76,9 @@ Route::get('/StudentSettings', function () {
 })->name('StudentSettings');
 
 // HR routes
-Route::get('/hr-db', function () {
-    return view('hr.hr-db');
-})->middleware('auth')->name('hr-db');
+Route::get('/hr-dashboard', function () {
+    return view('hr.hr-dashboard');
+})->middleware('auth')->name('hr-dashboard');
 
 Route::get('/hr-studentlist', function () {
     return view('hr.hr-pick');
@@ -295,7 +295,7 @@ Route::get('/hr-settings', function () {
 
 Route::get('/hr-sidebar', function () {
     return view('hr.hr-sidebar');
-})->name('hr.hr-db');
+})->name('hr.hr-dashboard');
 
 Route::get('/hrcalendars', [HrCalendarController::class, 'index']);
 Route::post('/hrcalendars', [HrCalendarController::class, 'store']);

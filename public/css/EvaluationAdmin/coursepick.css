@@ -26,14 +26,22 @@ body {
 
 /* Button Styles */
 button {
+    font-family: 'Times New Roman', serif;
     background-color: #0F67B1;
     color: white;
     border: none;
-    padding: 10px 20px;
+    width: 250px; /* Set the width to 50px */
+    height: 150px; /* Set the height to 50px */
+    padding: 10px; /* Remove padding */
     margin: 10px;
-    font-size: 18px;
+    font-size: 30px; /* You may want to adjust the font size for smaller buttons */
     cursor: pointer;
     transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px black;
+   
 }
 
 button:hover {
@@ -41,36 +49,17 @@ button:hover {
 }
 
 /* Container for buttons */
-.content > div {
+.course-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #E4E7EB; 
+    border-radius: 10px; 
+    height: 90vh; /* Set the height to 90% of the viewport */
+    align-items: flex-start; /* Align buttons to the top of the container */
+    padding-top: 20px; /* Optional: add padding to create some space at the top */
 }
-
-.content div a {
+.course-container a {
     text-decoration: none;
 }
 
-/* Student List Specific Styles */
-.student-list-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.student-list-container button {
-    width: 100%;
-}
-
-/* BSIT Year List Specific Styles */
-.year-list-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
-}
-
-.year-list-container button {
-    width: 100%;
-} 

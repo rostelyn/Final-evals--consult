@@ -3,7 +3,10 @@
 @section('content')
 <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>COURSES/STRAND</h2>
-    <div>
+
+    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/coursepick.css') }}">
+
+    <div class="container">
         <a href="{{ route('Consult-bsit') }}">
             <button>BSIT</button>
         </a>
