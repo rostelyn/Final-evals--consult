@@ -16,7 +16,7 @@
                 @csrf
                 <div class="login-container">
                     <div class="login-header">
-                         <img src="{{ asset('css/resources/logoo.jpg') }}" alt="Logo" class="logo">
+                         <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo" class="logo">
                     </div>
                     @error('message')
                         <p class="error-message">{{ $message }}</p>
