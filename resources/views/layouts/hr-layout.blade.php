@@ -10,10 +10,10 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="{{ asset('css/resources/logoo.jpg') }}" alt="Logo">
+            <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="{{('hr-db') }}">Dashboard</a></li>
+            <li><a href="{{('hr-dashboard') }}">Dashboard</a></li>
             <li><a href="{{('hr-studentlist') }}">Student List</a></li>
             <li><a href="{{('hr-calendar') }}">Calendar</a></li>
             <li><a href="{{('hr-notify') }}">Notifications</a></li>
