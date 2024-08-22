@@ -1,0 +1,43 @@
+.strand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Increase the minimum column size */
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.strand-header {
+    font-size: 1.75em; /* Slightly larger font size */
+    color: #0044cc;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    padding: 15px; /* Increase padding */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.strand-header:hover {
+    background-color: #e0e0e0;
+    color: #0033aa;
+}
+
+.section-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    margin-top: 10px;
+}
+
+.section-buttons button {
+    font-size: 1.5em; /* Larger font size for buttons */
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    background-color: #0044cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-buttons button:hover {
+    background-color: #0033aa;
+    transform: scale(1.05); /* Slight scaling on hover for emphasis */
+}

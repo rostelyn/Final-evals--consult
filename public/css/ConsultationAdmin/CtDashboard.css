@@ -1,0 +1,66 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #ffff;
+}
+
+.dashboard-header {
+    font-family: 'Times New Roman', serif;
+    background-color: #0F67B1;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+.dashboard-header h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px; /* Reduced font size */
+}
+
+.dashboard-header p {
+    font-size: 20px; /* Reduced font size */
+}
+
+.dashboard-card {
+    padding: 30px; /* Reduced padding */
+    background-color: white;
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Reduced shadow */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h5 {
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 20px; /* Reduced font size */
+}
+
+.dashboard-card p {
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    color: #000000;
+}
+
+.dashboard-card img {
+    width: 60px; /* Reduced width */
+    height: 60px; /* Reduced height */
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.card-container {
+    margin-top: 50px;
+}
+
+
+a:link {
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: black;
+}
