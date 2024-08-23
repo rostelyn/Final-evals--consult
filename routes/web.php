@@ -120,13 +120,13 @@ Route::get('/HrHighSchool', function () {
 
 
 //for section highschool and strand
-Route::get('/GRADE7-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.GRADE7-101');
-})->name('GRADE7-101');
+Route::get('/Grade7-101', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Grade7-101');
+})->name('Grade7-101');
 
-Route::get('/GRADE8-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.GRADE8-101');
-})->name('GRADE8-101');
+Route::get('/Grade8-101', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Grade8-101');
+})->name('Grade8-101');
 
 Route::get('/GRADE9-101', function () {
     return view('hr.HRHighSchool.VIEWSTUDENT.GRADE9-101');
@@ -149,62 +149,62 @@ Route::get('/Grade11Gas', function () {
     return view('hr.HRHighSchool.11GAS.Grade11Gas');
 })->name('Grade11Gas');
 
-Route::get('/hrHS-G11ict', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G11ict');
-})->name('hrHS-G11ict');
+Route::get('/GRADE11Ict', function () {
+    return view('hr.HRHighSchool.11STRANDSECTION.11ICT.GRADE11Ict');
+})->name('GRADE11Ict');
 
-Route::get('/hrHS-G11gas', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G11gas');
-})->name('hrHS-G11gas');
+Route::get('/GRADE11Gas', function () {
+    return view('hr.HRHighSchool.11STRANDSECTION.11GAS.GRADE11Gas');
+})->name('GRADE11Gas');
 
-Route::get('/hrG11abm101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG11abm101');
-})->name('hrG11abm101');
+Route::get('/11ABM101', function () {
+    return view('hr.HRHighSchool.STRAND.11ABM101');
+})->name('11ABM101');
 
-Route::get('/hrG11stem101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG11stem101');
-})->name('hrG11stem101');
+Route::get('/11STEM101', function () {
+    return view('hr.HRHighSchool.STRAND.11STEM101');
+})->name('11STEM101');
 
-Route::get('/hrG11ict101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG11ict101');
-})->name('hrG11ict101');
+Route::get('/11ICT101', function () {
+    return view('hr.HRHighSchool.STRAND.11ICT101');
+})->name('11ICT101');
 
-Route::get('/hrG11gas101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG11gas101');
-})->name('hrG11gas101');
+Route::get('/11GAS101', function () {
+    return view('hr.HRHighSchool.STRAND.11GAS101');
+})->name('11GAS101');
 
 //strand G12
-Route::get('/hrHS-G12abm', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G12abm');
-})->name('hrHS-G12abm');
+Route::get('/GRADE12Abm', function () {
+    return view('hr.HRHighSchool.12STRANDSECTION.12ABM.GRADE12Abm');
+})->name('GRADE12Abm');
 
-Route::get('/hrHS-G12stem', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G12stem');
-})->name('hrHS-G12stem');
+Route::get('/GRADE12Stem', function () {
+    return view('hr.HRHighSchool.12STRANDSECTION.12STEM.GRADE12Stem');
+})->name('GRADE12Stem');
 
-Route::get('/hrHS-G12gas', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G12gas');
-})->name('hrHS-G12gas');
+Route::get('/GRADE12Gas', function () {
+    return view('hr.HRHighSchool.12STRANDSECTION.12GAS.GRADE12Gas');
+})->name('GRADE12Gas');
 
-Route::get('/hrHS-G12ict', function () {
-    return view('hr.HRHighSchool.STRAND.hrHS-G12ict');
-})->name('hrHS-G12ict');
+Route::get('/GRADE12Ict', function () {
+    return view('hr.HRHighSchool.12STRANDSECTION.12ICT.GRADE12Ict');
+})->name('GRADE12Ict');
 
-Route::get('/12ABM-101', function () {
-    return view('hr.HRHighSchool.STRAND.12ABM-101');
-})->name('12ABM-101');
+Route::get('/12ABM101', function () {
+    return view('hr.HRHighSchool.STRAND.12ABM101');
+})->name('12ABM101');
 
-Route::get('/hrG12stem101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG12stem101');
-})->name('hrG12stem101');
+Route::get('/12STEM101', function () {
+    return view('hr.HRHighSchool.STRAND.12STEM101');
+})->name('12STEM101');
 
-Route::get('/hrG12ict101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG12ict101');
-})->name('hrG12ict101');
+Route::get('/12ICT101', function () {
+    return view('hr.HRHighSchool.STRAND.12ICT101');
+})->name('12ICT101');
 
-Route::get('/hrG12gas101', function () {
-    return view('hr.HRHighSchool.STRAND.hrG12gas101');
-})->name('hrG12gas101');
+Route::get('/12GAS101', function () {
+    return view('hr.HRHighSchool.STRAND.12GAS101');
+})->name('12GAS101');
 
 
 
@@ -213,51 +213,51 @@ Route::get('/GRADE7PROFILE', function () {
     return view('hr.HRHighSchool.HSPROFILE.GRADE7PROFILE');
 })->name('GRADE7PROFILE');
 
-Route::get('/hrProfHS-G8101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfHS-G8101');
-})->name('hrProfHS-G8101');
+Route::get('/GRADE8PROFILE', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE8PROFILE');
+})->name('GRADE8PROFILE');
 
-Route::get('/hrProfHS-G9101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfHS-G9101');
-})->name('hrProfHS-G9101');
+Route::get('/GRADE9PROFILE', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE9PROFILE');
+})->name('GRADE9PROFILE');
 
-Route::get('/hrProfHS-G10101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfHS-G10101');
-})->name('hrProfHS-G10101');
+Route::get('/GRADE10PROFILE', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE10PROFILE');
+})->name('GRADE10PROFILE');
 
 //Profle Strand G11
-Route::get('/hrProfG11-stem101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG11-stem101');
-})->name('hrProfG11-stem101');
+Route::get('/GRADE11STEM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE11STEM');
+})->name('GRADE11STEM');
 
-Route::get('/hrProfG11-abm101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG11-abm101');
-})->name('hrProfG11-abm101');
+Route::get('/GRADE11ABM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE11ABM');
+})->name('GRADE11ABM');
 
-Route::get('/hrProfG11-gas101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG11-gas101');
-})->name('hrProfG11-gas101');
+Route::get('/GRADE11GAS', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE11GAS');
+})->name('GRADE11GAS');
 
-Route::get('/hrProfG11-ict101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG11-ict101');
-})->name('hrProfG11-ict101');
+Route::get('/GRADE11ICT', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE11ICT');
+})->name('GRADE11ICT');
 
 //Profle Strand G12
-Route::get('/hrProfG12-stem101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG12-stem101');
-})->name('hrProfG12-stem101');
+Route::get('/GRADE12STEM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE12STEM');
+})->name('GRADE12STEM');
 
-Route::get('/hrProfG12-abm101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG12-abm101');
-})->name('hrProfG12-abm101');
+Route::get('/GRADE12ABM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE12ABM');
+})->name('GRADE12ABM');
 
-Route::get('/hrProfG12-gas101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG12-gas101');
-})->name('hrProfG12-gas101');
+Route::get('/GRADE12GAS', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE12GAS');
+})->name('GRADE12GAS');
 
-Route::get('/hrProfG12-ict101', function () {
-    return view('hr.HRHighSchool.HSPROFILE.hrProfG12-ict101');
-})->name('hrProfG12-ict101');
+Route::get('/GRADE12ICT', function () {
+    return view('hr.HRHighSchool.HSPROFILE.GRADE12ICT');
+})->name('GRADE12ICT');
 
 //
 Route::get('/HrCalendar', function () {

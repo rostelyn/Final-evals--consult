@@ -43,7 +43,7 @@
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>STEM</h2>
     <div class="button-container">
-        <a href="{{ ('hrG11stem101') }}">
+        <a href="{{ ('11STEM101') }}">
             <button>101</button>
         </a>
         <a href="{{ ('hrProfG11-abm201') }}">

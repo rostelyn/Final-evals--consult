@@ -18,8 +18,9 @@
         <td class="number">1</td>
         <td class="name">Consult BSIT 101</td>
         <td class="actions">
-        <a href="{{ route('hrProfG12-gas101') }}">
+        <a href="{{ route('GRADE12STEM') }}">
           <button>View</button>
+        </a>
         </td>
       </tr>
       <!-- Repeat for each row -->

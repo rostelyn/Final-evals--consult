@@ -19,7 +19,7 @@
             <tr>
                 <td>Escat Denn Harenz</td>
                 <td>
-                <a href="{{ route('GRADE7PROFILE') }}">
+                <a href="{{ route('GRADE9PROFILE') }}">
                         <button>VIEW STUDENT</button>
                     </a>
                 </td>

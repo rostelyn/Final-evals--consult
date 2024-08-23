@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
         
         <h1><center>STUDENT EVALUATION AND CONSULTATION</center></h1>
-                <h2> ABM </h2>
+                <h2>GRADE 8 </h2>
     
     <table class="bsit-course-student-list">
         <thead>
@@ -18,8 +18,8 @@
         <tbody>
             <tr>
                 <td>Escat Denn Harenz</td>
-                <td>
-                <a href="{{ route('12ABM-101') }}">
+                <td>     
+                    <a href="{{ route('GRADE8PROFILE') }}">
                         <button>VIEW STUDENT</button>
                     </a>
                 </td>
@@ -44,4 +44,3 @@
     </table>
 
 @endsection
-

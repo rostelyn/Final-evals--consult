@@ -6,7 +6,7 @@
     <h2>ABM</h2>
     <div>
         
-        <a href="{{('hrG12ict101') }}">
+        <a href="{{('12STEM101') }}">
         <h2 class=></h2>
             <button>101</button>
         </a>

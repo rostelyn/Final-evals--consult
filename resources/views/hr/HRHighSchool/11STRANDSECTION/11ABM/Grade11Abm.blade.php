@@ -43,10 +43,10 @@
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>ABM</h2>
     <div class="button-container">
-        <a href="{{ ('hrG11abm101') }}">
+        <a href="{{ ('11ABM101') }}">
             <button>101</button>
         </a>
-        <a href="{{ ('hrProfG11-abm201') }}">
+        <a href="{{ ('11ABM201') }}">
             <button>201</button>
         </a>
     </div>

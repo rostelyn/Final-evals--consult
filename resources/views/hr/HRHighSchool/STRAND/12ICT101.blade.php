@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>ICT 101</h2>
+    <h2>ABM 101</h2>
     <div class="bsit-consultation-page bsit101">
     <div class="table-container">
   <table>
@@ -18,7 +18,7 @@
         <td class="number">1</td>
         <td class="name">Consult BSIT 101</td>
         <td class="actions">
-        <a href="{{ route('hrProfG11-ict101') }}">
+        <a href="{{ route('GRADE12ICT') }}">
           <button>View</button>
         </td>
       </tr>

@@ -64,7 +64,7 @@ button:hover {
         <div class="section">
             <h2>GRADE 7</h2>
             <div>
-                <a href="{{('GRADE7-101') }}">
+                <a href="{{('Grade7-101') }}">
                     <button>101</button>
                 </a>
             </div>
@@ -78,7 +78,7 @@ button:hover {
         <div class="section">
             <h2>GRADE 8</h2>
             <div>
-                <a href="{{('GRADE8-101') }}">
+                <a href="{{('Grade8-101') }}">
                     <button>101</button>
                 </a>
             </div>
@@ -130,12 +130,12 @@ button:hover {
                 </a>
             </div>
             <div>
-                <a href="{{('hrHS-G11ict') }}">
+                <a href="{{('GRADE11Ict') }}">
                     <button>ICT</button>
                 </a>
             </div>
             <div>
-                <a href="{{('hrHS-G11gas') }}">
+                <a href="{{('GRADE11Gas') }}">
                     <button>GAS</button>
                 </a>
             </div>
@@ -144,22 +144,22 @@ button:hover {
         <div class="section">
             <h2>GRADE 12</h2>
             <div>
-                <a href="{{('hrHS-G12stem') }}">
+                <a href="{{('GRADE12Stem') }}">
                     <button>STEM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('hrHS-G12abm') }}">
+                <a href="{{('GRADE12Abm') }}">
                     <button>ABM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('hrHS-G12ict') }}">
+                <a href="{{('GRADE12Ict') }}">
                     <button>ICT</button>
                 </a>
             </div>
               <div>
-                 <a href="{{('hrHS-G12gas') }}">
+                 <a href="{{('GRADE12Gas') }}">
                     <button>GAS</button>
                 </a>
             </div>
