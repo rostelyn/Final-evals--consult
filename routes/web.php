@@ -289,29 +289,29 @@ Route::get('/HrProfile', function () {
 
 
 // Consultation routes
-Route::get('/Ct-db', function () {
-    return view('AdminCtation.Ct-db');
-})->middleware('auth')->name('Ct-db');
+Route::get('/CTDashboard', function () {
+    return view('AdminCtation.CTDashboard');
+})->middleware('auth')->name('CTDashboard');
 
 // routes/web.php
 
-Route::get('/Ct-studentlist', function () {
-    return view('AdminCtation.Ct-studentlist');
-})->name('Ct-studentlist');
+Route::get('/CtStudentList', function () {
+    return view('AdminCtation.CtStudentList');
+})->name('CtStudentList');
 
-Route::get('/Ct-student', function () {
-    return view('AdminCtation.Ct-student');
-})->name('Ct-student');
-
-
-Route::get('/Ct-calendar', function () {
-    return view('AdminCtation.Ct-calendar');
-})->name('Ct-calendar');
+Route::get('/CtCollegeCourse', function () {
+    return view('AdminCtation.CtCollegeCourse');
+})->name('CtCollegeCourse');
 
 
-Route::get('/Ct-studentHS', function () {
-    return view('AdminCtation.Ct-studentHS');
-})->name('Ct-studentHS');
+Route::get('/CtCalendar', function () {
+    return view('AdminCtation.CtCalendar');
+})->name('CtCalendar');
+
+
+Route::get('/CtHighSchoolSection', function () {
+    return view('AdminCtation.CtHighSchoolSection');
+})->name('CtHighSchoolSection');
 
 // Student List/Course list and Highschool
 Route::get('/Consult-bsit', function () {
@@ -520,31 +520,31 @@ Route::get('/Prof-bsit401', function () {
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
-Route::get('/Ct-appdis', function () {
-    return view('AdminCtation.Ct-appdis');
-})->name('Ct-appdis');
+Route::get('/CtApprroveDisapprove', function () {
+    return view('AdminCtation.CtApprroveDisapprove');
+})->name('CtApprroveDisapprove');
 
-Route::get('/Ct-calendar', function () {
-    return view('AdminCtation.Ct-calendar');
-})->name('Ct-calendar');
+Route::get('/CtCalendar', function () {
+    return view('AdminCtation.CtCalendar');
+})->name('CtCalendar');
 
 
-Route::get('/Ct-notify', function () {
-    return view('AdminCtation.Ct-notify');
-})->name('Ct-notify');
+Route::get('/CtNotification', function () {
+    return view('AdminCtation.CtNotification');
+})->name('CtNotification');
 
-Route::get('/Ct-history', function () {
-    return view('AdminCtation.Ct-history');
-})->name('Ct-history');
+Route::get('/CtHistory', function () {
+    return view('AdminCtation.CtHistory');
+})->name('CtHistory');
 
-Route::get('/Ct-settings', function () {
-    return view('AdminCtation.Ct-settings');
-})->name('Ct-settings');
+Route::get('/CtSettings', function () {
+    return view('AdminCtation.CtSettings');
+})->name('CtSettings');
 
 
 //consultation controller
 
-Route::get('/Ct-appdis', [ConsultationController::class, 'index'])->name('Ct-appdis');
+Route::get('/CtApprroveDisapprove', [ConsultationController::class, 'index'])->name('CtApprroveDisapprove');
 Route::post('/consultation', [ConsultationController::class, 'store'])->name('consultation.store');
 
 Route::post('/consultations/approve/{id}', [ConsultationController::class, 'approve'])->name('consultations.approve');

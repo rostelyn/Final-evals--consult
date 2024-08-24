@@ -20,7 +20,7 @@ class DpHeadConsultationController extends Controller
         $appointments = Appointment::all();
 
         // Return the view with the appointments
-        return view('AdminCtation.Ct-appdis', compact('appointments'));
+        return view('AdminCtation.CtApprroveDisapprove', compact('appointments'));
     }
 
     /**

@@ -1,3 +1,5 @@
+
+/* Other existing styles */
 body {
     font-family: 'Times New Roman', serif;
     background-color: #ffff;
@@ -22,15 +24,6 @@ body {
     font-size: 20px; /* Reduced font size */
 }
 
-.dashboard-card {
-    padding: 30px; /* Reduced padding */
-    background-color: white;
-    border-radius: 8px; /* Reduced border radius */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Reduced shadow */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .dashboard-card h5 {
     margin-bottom: 10px; /* Reduced margin */
     font-size: 20px; /* Reduced font size */
@@ -48,10 +41,24 @@ body {
     margin-bottom: 5px; /* Reduced margin */
 }
 
+.dashboard-card {
+    padding: 30px; /* Reduced padding */
+    background-color: white;
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Reduced shadow */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    background-color: #7aa5d9;
+    transform: translateY(-10px);
+}
+
 .card-container {
     margin-top: 50px;
 }
-
 
 a:link {
     color: rgb(255, 255, 255);
