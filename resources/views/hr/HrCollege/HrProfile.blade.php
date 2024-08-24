@@ -12,29 +12,33 @@
 
 </head>
 <body>
-<h2>STUDENT EVALUATION AND CONSULTATION</h2>
+<h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <div class="row">
         <div class="column">
             <div class="picture-box center ">1x1 picture</div>
             <div class="info">
                 <div class="label">DENN MARENZ ESCAT</div>
-                <div>dennHarenz@outlook.com</div>
+                <div class="label">dennHarenz@outlook.com</div>
             </div>
         </div>
         <div class="column">
             <table class="table">
                 <tr>
+                
                     <th>Gender</th>
                     <th>Student Number</th>
                 </tr>
                 <tr>
                     <td>Male</td>
                     <td>21-1111</td>
+                
                 </tr>
             </table>
         </div>
     </div>
-    <h2>LIST OF TEACHERS</h2>
+            <div class="teacher-list h1">
+              <h1>LIST OF TEACHERS</h1>
+            </div>
     <div class="teacher-list">
         <div class="column">
             <table class="table">

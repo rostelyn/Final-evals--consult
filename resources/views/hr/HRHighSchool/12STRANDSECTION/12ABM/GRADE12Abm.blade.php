@@ -2,6 +2,7 @@
 @extends('layouts.HrLayout')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrStrandSection.css') }}">
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>12 ABM</h2>
     <div>

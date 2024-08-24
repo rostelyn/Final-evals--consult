@@ -1,12 +1,18 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #F4F4E1;
+    font-family: 'Times New Roman', serif;
+    background-color: #ffff;
 }
 
-h2 {
+h1 {
     text-align: center;
-    color: #5E9461;
+    color: #0F67B1;
+    
+}
+
+.info .label {
+    margin-left: 15px;
+   font-size: 20px;
+   font-weight: bold;
 }
 
 .row {
@@ -31,18 +37,32 @@ h2 {
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-}
+    margin-top: 40px;
 
-.table th, .table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background-color: #9DB8A0;
 }
 
 .table th {
-    background-color: #8DC5DD;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #7aa5d9;
+    color: white;
+
+}
+
+.table td {
+    border: 1px solid #ccc;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #7aa5d9;
+    color: rgb(0, 0, 0);
+
+}
+
+.table th {
+    background-color: #0F67B1;
 }
 
 .picture-box {
@@ -59,6 +79,13 @@ h2 {
     cursor: pointer;
     font-size: 15px;
     margin-bottom: 10px;
-    margin-left: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
+.teacher-list h1{
+    margin-top: 30px; 
+    text-align: center;
+    color: #0F67B1;
+    
+}

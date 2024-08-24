@@ -1,31 +1,46 @@
 @extends('layouts.HrLayout')
 
 @section('content')
-    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>ABM 101</h2>
-    <div class="bsit-consultation-page bsit101">
-    <div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="number">1</td>
-        <td class="name">Consult BSIT 101</td>
-        <td class="actions">
-        <a href="{{ route('GRADE12ICT') }}">
-          <button>View</button>
-        </td>
-      </tr>
-      <!-- Repeat for each row -->
-    </tbody>
-  </table>
-</div>
+<link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
+        
+        <h1><center>STUDENT EVALUATION AND CONSULTATION</center></h1>
+                <h2> 12 ICT </h2>
+    
+    <table class="bsit-course-student-list">
+        <thead>
+            <tr>
+        
+                <th><center>Name</center></th>
+                <th><center>Actions</center></th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Escat Denn Harenz</td>
+                <td>
+                <a href="{{ route('GRADE12ICT') }}">
+                        <button>VIEW STUDENT</button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Abundia Rostelyn Jane</td>
+                <td>
+                    <a href="#">
+                        <button>VIEW STUDENT</button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Peralta Karl Allan</td>
+                <td>
+                    <a href="#">
+                        <button>VIEW STUDENT</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
 @endsection
-

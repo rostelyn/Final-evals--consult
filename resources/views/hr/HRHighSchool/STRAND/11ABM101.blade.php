@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
         
         <h1><center>STUDENT EVALUATION AND CONSULTATION</center></h1>
-                <h2>ABM</h2>
+                <h2>11 ABM</h2>
     
     <table class="bsit-course-student-list">
         <thead>

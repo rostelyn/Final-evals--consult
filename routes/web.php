@@ -10,6 +10,7 @@ use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentController;
 
 
 
@@ -554,3 +555,8 @@ Route::get('/DpHead', function () {
     return view('DpHead.DpHead');
 })->name('DpHead');
 Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->middleware('auth')->name('DpHeadAppDis');
+
+
+//STUDENT VIEW 
+
+Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('HrProfile');

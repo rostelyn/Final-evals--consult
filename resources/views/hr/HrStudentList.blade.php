@@ -10,7 +10,7 @@
     <title>Student Evaluation and Consultation</title>
 </head>
 <body>
-        <div class="title">Student Evaluation and Consultation</div>
+        <div class="title">STUDENT EVALUATION AND CONSULTATION</div>
             <div class="container">
                  <div class="courses-container">
             <div class="course-button college" >

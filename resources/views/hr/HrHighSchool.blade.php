@@ -2,61 +2,8 @@
 
 @section('content')
 
-<style>
+<link rel="stylesheet" href="{{ asset('css/HighSchoolButton.css') }}">
 
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: black;
-    
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #0F67B1;
-}
-
-.grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.section {
-    text-align: center;
-    width: 150px; /* Consistent width for all sections */
-}
-
-.section h2 {
-    margin-bottom: 10px;
-}
-
-.section div {
-    margin: 10px 0;
-}
-
-button {
-    background-color: #7aa5d9;
-    color: black;
-    padding: 15px 30px; /* Padding inside the button */
-    font-size: 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 150px; /* Width of the button */
-    transition: background-color 0.3s ease;
-    margin: 20px 0; /* Added margin to create space between buttons */
-}
-
-button:hover {
-    background-color: #0F67B1;
-}
-
-
-</style>
 
     <h1> <center>STUDENT EVALUATION AND CONSULTATION</center></h1>
 

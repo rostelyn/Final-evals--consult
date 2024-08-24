@@ -3,27 +3,49 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrYearList.css') }}">
 
-     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h1>BSIT YEAR LIST</h1>
-    <div>
+    <body>
         
-        <a href="{{('HrBSIT101') }}">
-        <h2 class="year">1st year</h2>
-            <button>BSIT 101</button>
-        </a>
-        <a href="{{('HrBSIT201') }}">
-        <h2 class="year">2nd year</h2>
-            <button>BSIT 201</button>
-        </a>
-        <a href="{{('HrBSIT301') }}">
-        <h2 class="year">3rd year</h2>
-            <button>BSIT 301</button>
-        </a>
-
-        <a href="{{('HrBSIT401') }}">
-        <h2 class="year">4th year</h2>
-            <button>BSIT 401</button>
-        </a>
+    
+    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+    <h2>BSIT YEAR LIST</h2>
+    <div class="year-container">
+        <div class="year-block">
+            <h2>First Year</h2>
+            <a href="{{('HrBSIT101') }}">
+                <button>101</button>
+            </a>
+            <a href="{{('') }}">
+                <button>102</button>
+            </a>
+            
+        </div>
+        <div class="year-block">
+            <h2>Second Year</h2>
+            <a href="{{('HrBSIT201') }}">
+                <button>201</button>
+            </a>
+            <a href="{{('') }}">
+                <button>202</button>
+            </a>
+        </div>
+        <div class="year-block">
+            <h2>Third Year</h2>
+            <a href="{{('HrBSIT301') }}">
+                <button>301</button>
+            </a>
+            <a href="{{('') }}">
+                <button>303</button>
+            </a>
+        </div>
+        <div class="year-block">
+            <h2>Fourth Year</h2>
+            <a href="{{('HrBSIT401') }}">
+                <button>401</button>
+            </a>
+            <a href="{{('') }}">
+                <button>402</button>
+            </a>
+        </div>
     </div>
-
+</body>
     @endsection

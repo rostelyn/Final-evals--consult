@@ -7,27 +7,27 @@
     <div class="course-container">
           <a href="{{ route('HrBSIT') }}">
             <button>
-                BSIT
+            Bachelor of Science and Technology Information
             </button>   
         </a>
         <a href="#">
             <button>
-                BSHM
+            Bachelor of Science and Hospitality Management
             </button>
         </a>
         <a href="#">
             <button>
-                ACT
+            Associate in Computer Technology
             </button>
         </a>
         <a href="#">
             <button>
-                HRT
+                Hotel and Restaurant Technology
             </button>
         </a>
         <a href="#">
             <button>
-                BSCS
+            Bachelor of Science in Computer Science
             </button>
         </a>
         <a href="#">
@@ -37,7 +37,7 @@
         </a>
         <a href="#">
             <button>
-                HRS
+            Hotel & Restaurant Services
             </button>
         </a>
         <a href="#">
