@@ -6,13 +6,12 @@ body {
 h1 {
     text-align: center;
     color: #0F67B1;
-    
 }
 
 .info .label {
     margin-left: 15px;
-   font-size: 20px;
-   font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .row {
@@ -38,31 +37,29 @@ h1 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 40px;
-
 }
 
-.table th {
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    background-color: #7aa5d9;
-    color: white;
-
-}
 
 .table td {
     border: 1px solid #ccc;
-    font-size: 20px;
     padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: rgb(0, 0, 0);
+}
+
+th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
     text-align: center;
     background-color: #7aa5d9;
     color: rgb(0, 0, 0);
-
 }
 
-.table th {
-    background-color: #0F67B1;
+.table tr:nth-child(even) td {
+    background-color: #f9f9f9; /* Even row background color */
 }
 
 .picture-box {
@@ -83,9 +80,34 @@ h1 {
     margin-top: 50px;
 }
 
-.teacher-list h1{
-    margin-top: 30px; 
+.teacher-list h1 {
+    margin-top: 30px;
     text-align: center;
     color: #0F67B1;
-    
+}
+
+button {
+    font-family: 'Times New Roman', serif;
+    background-color: #0F67B1; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 18px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin: 5px; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #094a79; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #073358; /* Even darker blue when clicked */
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px #094a79; /* Add a subtle shadow on focus */
 }

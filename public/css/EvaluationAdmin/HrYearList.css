@@ -21,8 +21,8 @@ body {
 .content h2 {
     color: #000000;
     text-align: center;
-    margin-bottom: 20px; /* Increased bottom margin */
-    margin-top: 20px;    /* Increased top margin */
+    margin-bottom: 20px;
+    margin-top: 20px;    
 }
 
 /* Button Styles */
@@ -32,7 +32,7 @@ button {
     border: none;
     border-radius: 8px;
     padding: 15px 30px;
-    margin: 20px 0; /* Increased margin on top and bottom */
+    margin: 20px 0;
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.5s;
