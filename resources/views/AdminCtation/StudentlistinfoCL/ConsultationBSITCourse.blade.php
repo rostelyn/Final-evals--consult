@@ -7,7 +7,7 @@
     <div class="year-container">
         <div class="year-block">
             <h2>First Year</h2>
-            <a href="{{('Consult-bsit101') }}">
+            <a href="{{('ConsultationBsit101') }}">
                 <button>101</button>
             </a>
             <a href="{{('Consult-bsit102') }}">
@@ -17,7 +17,7 @@
         </div>
         <div class="year-block">
             <h2>Second Year</h2>
-            <a href="{{('Consult-bsit201') }}">
+            <a href="{{('ConsultationBsit201') }}">
                 <button>201</button>
             </a>
             <a href="{{('Consult-bsit202') }}">
@@ -26,7 +26,7 @@
         </div>
         <div class="year-block">
             <h2>Third Year</h2>
-            <a href="{{('Consult-bsit301') }}">
+            <a href="{{('ConsultationBsit301') }}">
                 <button>301</button>
             </a>
             <a href="{{('Consult-bsit303') }}">
@@ -35,7 +35,7 @@
         </div>
         <div class="year-block">
             <h2>Fourth Year</h2>
-            <a href="{{('Consult-bsit401') }}">
+            <a href="{{('ConsultationBsit401') }}">
                 <button>401</button>
             </a>
             <a href="{{('Consult-bsit402') }}">

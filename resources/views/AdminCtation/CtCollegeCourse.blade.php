@@ -6,7 +6,7 @@
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     <h2>COURSES</h2>
     <div class="course-container">
-    <a href="{{ route('Consult-bsit') }}">
+    <a href="{{ route('ConsultationBSITCourse') }}">
             <button class="button">
                 Bachelor of Science and Technology Information
             </button>   
@@ -23,12 +23,12 @@
         </a>
         <a href="#">
             <button>
-                HRT
+            Hotel and Restaurant Technology
             </button>
         </a>
         <a href="#">
             <button>
-                BSCS
+            Bachelor of Science in Computer Science
             </button>
         </a>
         <a href="#">
@@ -38,7 +38,7 @@
         </a>
         <a href="#">
             <button>
-                HRS
+            Hotel & Restaurant Services
             </button>
         </a>
         <a href="#">

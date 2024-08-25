@@ -24,41 +24,42 @@ body {
     margin-bottom: 20px;
 }
 
-
 /* Button Styles */
 button {
     font-family: 'Times New Roman', serif;
     background-color: #7aa5d9;
     color: rgb(0, 0, 0);
     border: none;
-    width: 250px; /* Reduced width */
-    height: 150px; /* Reduced height */
+    width: 250px;
+    height: 150px;
     padding: 10px; 
     margin: 10px;
-    font-size: 25px; /* Reduced font size */
+    font-size: 20px; 
     cursor: pointer;
     transition: background-color 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 10px black;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    
+   
 }
 
 button:hover {
     background-color: #0F67B1;
+    transform: translateY(-10px);
 }
 
-
-/* Container for buttons */
 .course-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-color: #E4E7EB; 
     border-radius: 10px; 
-    height: 90vh; /* Set the height to 90% of the viewport */
-    align-items: flex-start; /* Align buttons to the top of the container */
-    padding-top: 20px; /* Optional: add padding to create some space at the top */
+    height: 90vh;
+    align-items: flex-start;
+    padding-top: 20px;
 }
 .course-container a {
     text-decoration: none;

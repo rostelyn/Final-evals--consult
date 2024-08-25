@@ -1,0 +1,89 @@
+h2 {
+    text-align: center;
+    color: #0F67B1;
+}
+
+.student-info-table {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-collapse: collapse;
+    margin-right: 30px;
+    margin-top: 70px;
+    width: auto; /* Allows the table to adjust based on content */
+}
+
+.student-info-table th,
+.student-info-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.student-info-table th {
+    background-color: #7aa5d9;
+    color: black;
+}
+
+.student-info-table th.gender,
+.student-info-table th.student-number,
+.student-info-table td.gender,
+.student-info-table td.student-number {
+    width: 250px; 
+    border: 1px solid black;
+}
+
+.student-info-table td {
+    text-align: center; /* Center the text horizontally */
+    vertical-align: middle; /* Center the text vertically */
+}
+
+.student-info-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.student-info-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.appointment-history .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appointment-history .table th, 
+.appointment-history .table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.appointment-history .table th {
+    background-color: #7aa5d9;
+    color: black;
+}
+
+.appointment-history .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.appointment-history .table tr:hover {
+    background-color: #999ea4;
+}
+
+.picture-box {
+    width: 100px;
+    height: 100px;
+    background-color: #000000ad;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

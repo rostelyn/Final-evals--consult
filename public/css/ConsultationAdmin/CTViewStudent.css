@@ -20,14 +20,14 @@ body {
     width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
-    border: 2px solid #000000; 
+    border: 1px solid #000000; /* Border around the entire table */
 }
 
 .bsit-course-student-list th, .bsit-course-student-list td {
     padding: 12px 15px;
     text-align: left;
+    border: 1px solid #000000; /* Border around each cell */
     font-size: 20px;
-    border: 1px solid #000000; 
 }
 
 .bsit-course-student-list th {
@@ -36,11 +36,11 @@ body {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-bottom: 2px solid #000000; 
+    border-bottom: 1px solid #000000; /* Bottom border for header */
 }
 
 .bsit-course-student-list td:first-child {
-    border-right: 2px solid #000000; 
+    border-right: 1px solid #000000; /* Vertical line between columns */
 }
 
 .bsit-course-student-list tr:nth-child(even) {

@@ -314,9 +314,9 @@ Route::get('/CtHighSchoolSection', function () {
 })->name('CtHighSchoolSection');
 
 // Student List/Course list and Highschool
-Route::get('/Consult-bsit', function () {
-    return view('AdminCtation.StudentlistinfoCL.Consult-bsit');
-})->name('Consult-bsit');
+Route::get('/ConsultationBSITCourse', function () {
+    return view('AdminCtation.StudentlistinfoCL.ConsultationBSITCourse');
+})->name('ConsultationBSITCourse');
 
 
 //highschool route
@@ -483,38 +483,38 @@ Route::get('/ProfG12-ict101', function () {
 
 
 //for section college
-Route::get('/Consult-bsit101', function () {
-    return view('AdminCtation.StudentlistinfoCL.Consult-bsit101');
-})->name('Consult-bsit101');
+Route::get('/ConsultationBsit101', function () {
+    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit101');
+})->name('ConsultationBsit101');
 
-Route::get('/Consult-bsit201', function () {
-    return view('AdminCtation.StudentlistinfoCL.Consult-bsit201');
-})->name('Consult-bsit201');
+Route::get('/ConsultationBsit201', function () {
+    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit201');
+})->name('ConsultationBsit201');
 
-Route::get('/Consult-bsit301', function () {
-    return view('AdminCtation.StudentlistinfoCL.Consult-bsit301');
-})->name('Consult-bsit301');
+Route::get('/ConsultationBsit301', function () {
+    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit301');
+})->name('ConsultationBsit301');
 
-Route::get('/Consult-bsit401', function () {
-    return view('AdminCtation.StudentlistinfoCL.Consult-bsit401');
-})->name('Consult-bsit401');
+Route::get('/ConsultationBsit401', function () {
+    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit401');
+})->name('ConsultationBsit401');
 
 //Profile
-Route::get('/Prof-bsit101', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit101');
-})->name('Prof-bsit101');
+Route::get('/BSIT101Profile', function () {
+    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT101Profile');
+})->name('BSIT101Profile');
 
-Route::get('/Prof-bsit201', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit201');
-})->name('Prof-bsit201');
+Route::get('/BSIT201Profile', function () {
+    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT201Profile');
+})->name('BSIT201Profile');
 
-Route::get('/Prof-bsit301', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit301');
-})->name('Prof-bsit301');
+Route::get('/BSIT301Profile', function () {
+    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT301Profile');
+})->name('BSIT301Profile');
 
-Route::get('/Prof-bsit401', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.Prof-bsit401');
-})->name('Prof-bsit401');
+Route::get('/BSIT401Profile', function () {
+    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT401Profile');
+})->name('BSIT401Profile');
 
 //Profile Controller
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
