@@ -59,12 +59,12 @@
 
 .course-button.college:hover {
     background-color: #79a7b9;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .course-button.highschool:hover {
     background-color: #79a7b9;
-    transform: translateY(-10px); 
+    transform: translateY(-5px); 
   
 }
 

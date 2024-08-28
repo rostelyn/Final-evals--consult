@@ -33,8 +33,8 @@ h2 {
 }
 
 .student-info-table td {
-    text-align: center; /* Center the text horizontally */
-    vertical-align: middle; /* Center the text vertically */
+    text-align: center; 
+    vertical-align: middle; 
 }
 
 .student-info-table tr:nth-child(even) {
