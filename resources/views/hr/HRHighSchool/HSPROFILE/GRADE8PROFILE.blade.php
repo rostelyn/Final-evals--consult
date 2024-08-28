@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Evaluation and Consultation</title>
     <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrStudentProfile.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
 
 </head>
 <body>
@@ -49,15 +49,15 @@
                 <tr>
                     <td>ARIES CAYABYAB</td>
                     <td>
-                        <button type="button" class="btn btn-primary mr-5">Current Evaluation</button>
-                        <button type="button" class="btn btn-warning">Past Evaluation</button>
+                        <button type="button">Current Evaluation</button>
+                        <button type="button">Past Evaluation</button>
                     </td>
                 </tr>
                 <tr>
                     <td>SIR PERCIAN</td>       
                     <td>
-                    <button type="button" class="btn btn-primary mr-5">Current Evaluation</button>
-                    <button type="button" class="btn btn-warning">Past Evaluation</button>
+                    <button type="button">Current Evaluation</button>
+                    <button type="button">Past Evaluation</button>
                     </td>
                 </tr>
             </table>

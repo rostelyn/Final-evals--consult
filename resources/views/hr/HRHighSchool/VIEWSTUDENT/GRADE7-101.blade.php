@@ -19,7 +19,7 @@
             <tr>
                 <td>Escat Denn Harenz</td>
                 <td>
-                
+                    <a href="{{ route('GRADE7PROFILE') }}">
                         <button>VIEW STUDENT</button>
                     </a>
                 </td>
@@ -44,5 +44,3 @@
     </table>
 
 @endsection
-
-<a href="{{ route('GRADE7PROFILE') }}">
