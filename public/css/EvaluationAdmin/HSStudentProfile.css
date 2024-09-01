@@ -5,7 +5,7 @@
 h1 {
     font-family: "Averia Serif Libre", serif;
     text-align: center;
-    color: #059862;
+    color: #0F67B1;
 }
 
 
@@ -55,8 +55,8 @@ h1 {
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    background-color: #609966;
-    color: rgb(255, 255, 255);
+    background-color: #7aa5d9;;
+    color: rgb(0, 0, 0);
 }
 
 .table tr:nth-child(even) td {
@@ -84,13 +84,13 @@ h1 {
 .teacher-list h1 {
     margin-top: 30px;
     text-align: center;
-    color: #059862;
+    color: #0F67B1
 }
 
 button {
     font-family: 'Times New Roman', serif;
-    background-color: #18A558;
-    color: white;
+    background-color: #0F67B1;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     font-size: 18px;
     border: none; 
@@ -101,6 +101,6 @@ button {
 }
 
 button:hover {
-    background-color: #88c999; 
+    background-color: #7aa5d9;
 }
 

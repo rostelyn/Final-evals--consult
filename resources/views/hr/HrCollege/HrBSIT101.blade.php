@@ -4,6 +4,10 @@
 
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
         
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
+
     <h1><center>STUDENT EVALUATION AND CONSULTATION</center></h1>
             <h2>BSIT 101</h2>
 
@@ -18,7 +22,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>STUDENT NAME</td>
+            <td>John Smith</td>
             <td>
                 <a href="#">
                     <button>VIEW STUDENT</button>
@@ -26,7 +30,7 @@
             </td>
         </tr>
         <tr>
-            <td>STUDENT NAME</td>
+            <td>Jane Doe</td>
             <td>
                 <a href="#">
                     <button>VIEW STUDENT</button>
@@ -34,7 +38,7 @@
             </td>
         </tr>
         <tr>
-            <td>STUDENT NAME</td>
+            <td>Michael Johnson</td>
             <td>
                 <a href="#">
                     <button>VIEW STUDENT</button>

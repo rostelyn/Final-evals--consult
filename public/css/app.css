@@ -1,6 +1,6 @@
 body {
     display: flex;
-    font-family: 'Times New Roman', serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #7aa5d9;
+    background-color: #18A558;
     color: white;
     height: 120vh;
     padding: 10;
@@ -43,16 +43,16 @@ body {
 }
 
 .sidebar ul li a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
     display: block;
-    padding-left: 10px; /* Add padding-left to move text to the left */
+    padding-left: 10px;
 }
 
 .sidebar ul li {
     margin: 15px 0;
-    padding-left: 10px; /* Optional: Adjust the padding here if you want more control */
+    padding-left: 10px; 
 }
 
 .sidebar ul li a:hover {
@@ -71,6 +71,6 @@ body {
     position: absolute;
     left: 20px;
     top: 20px;
-    color: #0F67B1;
+    color: #000000;
 }
 

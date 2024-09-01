@@ -3,7 +3,7 @@
 }
 .content h1 {
     font-family: "Averia Serif Libre", serif;
-    color: #059862;
+    color: #0F67B1;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -31,9 +31,9 @@
 }
 
 .bsit-course-student-list th {
-    background-color: #609966;
+    background-color: #7aa5d9;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-bottom: 2px solid #000000; 
@@ -53,7 +53,7 @@
 
 
 .bsit-course-student-list button {
-    background-color: #04aa6d;
+    background-color: #0F67B1;
     padding: 5px 10px;
     font-size: 16px;
     border: none;
@@ -63,6 +63,6 @@
 }
 
 .bsit-course-student-list button:hover {
-    background-color: #88c999
+    background-color: #7aa5d9
     ;
 }

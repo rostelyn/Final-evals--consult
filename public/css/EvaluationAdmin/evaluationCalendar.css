@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Georgia', serif;
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
@@ -120,7 +120,7 @@ body {
 }
 
 .event-button:hover {
-    background-color: #1b54a2; /* Darker green on hover */
+    background-color: #1b54a2;
 }
 
 
@@ -134,7 +134,7 @@ body {
 }
 
 .cancel-button:hover {
-    background-color: #b63240; /* Darker red on hover */
+    background-color: #b63240; 
 }
 
 .back-button {

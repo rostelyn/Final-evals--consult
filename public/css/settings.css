@@ -1,16 +1,17 @@
 body {
-    font-family: 'Times New Roman', serif;    margin: 0;
+    font-family: 'Georgia', serif;
+    margin: 0;
     padding: 0;
     background-color: #ffffff;
 }
 
 /* Header styles */
 h1 {
+    font-family: "Averia Serif Libre", serif;
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
     color: #0F67B1;
-    font-weight: bold;
 }
 
 /* Main container styles */
