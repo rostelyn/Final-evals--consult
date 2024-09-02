@@ -10,7 +10,7 @@ h2 {
     border-collapse: collapse;
     margin-right: 30px;
     margin-top: 70px;
-    width: auto;
+    width: auto; /* Allows the table to adjust based on content */
 }
 
 .student-info-table th,

@@ -2,11 +2,14 @@
 @extends('layouts.AdminConsult-layout')
 
 @section('content')
+
+<link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/StrandSection.css') }}">
+
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>ICT</h2>
+    <h2>12 stem</h2>
     <div>
         
-        <a href="{{('G11ict101') }}">
+        <a href="{{('G12stem101') }}">
         <h2 class=></h2>
             <button>101</button>
         </a>

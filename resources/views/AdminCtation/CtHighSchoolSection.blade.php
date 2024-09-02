@@ -67,22 +67,22 @@
         <div class="section">
             <h2>GRADE 11</h2>
             <div>
-                <a href="{{('Grade11Stem') }}">
+                <a href="{{('CT11STEM') }}">
                     <button>STEM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('Grade11Abm') }}">
+                <a href="{{('CT11ABM') }}">
                     <button>ABM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE11Ict') }}">
+                <a href="{{('CT11ICT') }}">
                     <button>ICT</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE11Gas') }}">
+                <a href="{{('CT11GAS') }}">
                     <button>GAS</button>
                 </a>
             </div>
@@ -91,22 +91,22 @@
         <div class="section">
             <h2>GRADE 12</h2>
             <div>
-                <a href="{{('GRADE12Stem') }}">
+                <a href="{{('CT12STEM') }}">
                     <button>STEM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE12Abm') }}">
+                <a href="{{('CT12ABM') }}">
                     <button>ABM</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE12Ict') }}">
+                <a href="{{('CT12ICT') }}">
                     <button>ICT</button>
                 </a>
             </div>
               <div>
-                 <a href="{{('GRADE12Gas') }}">
+                 <a href="{{('CT12GAS') }}">
                     <button>GAS</button>
                 </a>
             </div>

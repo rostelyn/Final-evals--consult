@@ -2,7 +2,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CTViewStudent.css') }}">
+<link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/HSViewStudent.css') }}">
         
         <h1><center>STUDENT EVALUATION AND CONSULTATION</center></h1>
                 <h2>GRADE 8 101</h2>

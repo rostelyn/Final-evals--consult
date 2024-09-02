@@ -41,13 +41,13 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Escat Denn Harenz</td>
+                    <td>John Doe</td>
                     <td>BSIT / 4th Year / 401</td>
                     <td>CS Department</td>
                     <td>Graduating Students</td>
-                    <td>Face to Face</td>
-                    <td>School</td>
-                    <td>07/30/24 10:00 AM</td>
+                    <td>Online</td>
+                    <td>Zoom</td>
+                    <td>07/28/24 10:00 AM</td>
                 </tr>
                 
             </table>

@@ -3,7 +3,7 @@
 @section('content')
 <head>
     <title>Student Evaluation and Consultation</title>
-    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CTProfile.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/HSProfile.css') }}">
     
 </head>
 <body>
