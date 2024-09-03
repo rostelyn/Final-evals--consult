@@ -14,7 +14,7 @@ body {
 }
 
 .content h1 {
-    color: #0F67B1;
+    color: #059862;
     text-align: center;
 }
 
@@ -24,10 +24,10 @@ body {
     margin-bottom: 20px;
 }
 
-/* Button Styles */
+
 button {
     font-family: 'Times New Roman', serif;
-    background-color: #7aa5d9;
+    background-color: #18A558;
     color: rgb(0, 0, 0);
     border: none;
     width: 250px;
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: #0F67B1;
+    background-color: #88c999;
     transform: translateY(-10px);
 }
 

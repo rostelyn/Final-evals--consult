@@ -1,6 +1,6 @@
 h2 {
     text-align: center;
-    color: #0F67B1;
+    color: #059862;
 }
 
 .student-info-table {
@@ -15,13 +15,13 @@ h2 {
 
 .student-info-table th,
 .student-info-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     padding: 8px;
 }
 
 .student-info-table th {
-    background-color: #7aa5d9;
-    color: black;
+    background-color: #609966;
+    color: rgb(255, 255, 255);
 }
 
 .student-info-table th.gender,
@@ -29,7 +29,7 @@ h2 {
 .student-info-table td.gender,
 .student-info-table td.student-number {
     width: 250px; 
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .student-info-table td {
@@ -58,12 +58,12 @@ h2 {
 }
 
 .appointment-history .table th {
-    background-color: #7aa5d9;
-    color: black;
+    background-color: #609966;
+    color: rgb(255, 255, 255);
 }
 
 .appointment-history .table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .appointment-history .table tr:hover {
