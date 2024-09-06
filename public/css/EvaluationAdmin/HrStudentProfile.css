@@ -1,12 +1,13 @@
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #ffff;
+*{
+    font-family: 'Georgia', serif;
 }
 
 h1 {
+    font-family: "Averia Serif Libre", serif;
     text-align: center;
-    color: #0F67B1;
+    color: #059862;
 }
+
 
 .info .label {
     margin-left: 15px;
@@ -54,12 +55,12 @@ h1 {
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    background-color: #7aa5d9;
-    color: rgb(0, 0, 0);
+    background-color: #609966;
+    color: rgb(255, 255, 255);
 }
 
 .table tr:nth-child(even) td {
-    background-color: #f9f9f9; /* Even row background color */
+    background-color: #f9f9f9;
 }
 
 .picture-box {
@@ -83,31 +84,23 @@ h1 {
 .teacher-list h1 {
     margin-top: 30px;
     text-align: center;
-    color: #0F67B1;
+    color: #059862;
 }
 
 button {
     font-family: 'Times New Roman', serif;
-    background-color: #0F67B1; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for the button */
-    font-size: 18px; /* Font size */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    margin: 5px; /* Space between buttons */
+    background-color: #18A558;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
 }
 
 button:hover {
-    background-color: #094a79; /* Darker blue on hover */
+    background-color: #88c999; 
 }
 
-button:active {
-    background-color: #073358; /* Even darker blue when clicked */
-}
-
-button:focus {
-    outline: none; /* Remove outline on focus */
-    box-shadow: 0 0 5px #094a79; /* Add a subtle shadow on focus */
-}

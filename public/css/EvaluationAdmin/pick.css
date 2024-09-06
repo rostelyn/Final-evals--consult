@@ -1,16 +1,18 @@
+*{
+    font-family: 'Georgia', serif;
+}
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80vh; 
-    font-family: 'Times New Roman', serif;
     padding: 0;
 }
 
-/* CSS for the title */
+
 .title {
-    font-family: 'Times New Roman', serif;
+    font-family: "Averia Serif Libre", serif;
     color: #0F67B1;
     font-weight: bold;
     font-size: 40px;
@@ -59,12 +61,12 @@
 
 .course-button.college:hover {
     background-color: #79a7b9;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .course-button.highschool:hover {
     background-color: #79a7b9;
-    transform: translateY(-10px); 
+    transform: translateY(-5px); 
   
 }
 
@@ -78,11 +80,13 @@
 }
 
 a:link {
-    color: rgb(236, 236, 236);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 a:visited {
     color: rgb(0, 0, 0);
+    
 }
 
 a:hover {

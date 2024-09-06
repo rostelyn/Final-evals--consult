@@ -1,21 +1,21 @@
-/* General Styles */
-body {
-    font-family: 'Times New Roman', serif;
+*{
+    font-family: 'Georgia', serif;
 }
-
 .content h1 {
-    color: #0F67B1;
+    font-family: "Averia Serif Libre", serif;
+    color: #059862;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .content h2 {
-    color: #0F67B1;
+    font-family: "Averia Serif Libre", serif;
+    color: black;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Table Styling */
+
 .bsit-course-student-list {
     width: 100%;
     margin: 20px auto;
@@ -31,9 +31,9 @@ body {
 }
 
 .bsit-course-student-list th {
-    background-color: #7aa5d9;
+    background-color: #609966;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-bottom: 2px solid #000000; 
@@ -51,9 +51,9 @@ body {
     background-color: #999ea4;
 }
 
-/* Button Styling */
+
 .bsit-course-student-list button {
-    background-color: #0F67B1;
+    background-color: #04aa6d;
     padding: 5px 10px;
     font-size: 16px;
     border: none;
@@ -63,5 +63,6 @@ body {
 }
 
 .bsit-course-student-list button:hover {
-    background-color: #7aa5d9;
+    background-color: #88c999
+    ;
 }
