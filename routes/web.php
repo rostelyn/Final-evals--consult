@@ -299,6 +299,10 @@ Route::get('/CtStudentList', function () {
     return view('AdminCtation.CtStudentList');
 })->name('CtStudentList');
 
+Route::get('/CtDocumentation', function () {
+    return view('AdminCtation.CtDocumentation');
+})->name('CtDocumentation');
+
 Route::get('/CtCollegeCourse', function () {
     return view('AdminCtation.CtCollegeCourse');
 })->name('CtCollegeCourse');
