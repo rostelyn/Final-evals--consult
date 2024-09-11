@@ -33,7 +33,7 @@
         </a>
         <a href="#">
             <button>
-                CET
+                Computer Engineering Technology
             </button>
         </a>
         <a href="#">

@@ -53,6 +53,7 @@
                                 <form action="{{ route('consultations.disapprove', $appointment->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-sm">Disapprove</button>
+                                    <button oneclick="printAppointments()"class="btn btn-info">Print</button>
                                 </form>
                             </td>
                         </tr>
@@ -63,9 +64,9 @@
     </div>
     <div class="actions">
 
-        <button oneclick="deleteAppointments()"class="btn btn-danger">Delete</button>
+
         <button oneclick="savePDF()"class="btn btn-success">Save PDF</button>
-        <button oneclick="printAppointments()"class="btn btn-info">Print</button>
+       
         </div>
 
 
@@ -74,11 +75,11 @@
 
 <script>
     function savePDF() {
-        // Add save PDF functionality here
+
     }
 
     function printAppointments() {
-        // Add print functionality here
+     
     }
 </script>
 @endsection

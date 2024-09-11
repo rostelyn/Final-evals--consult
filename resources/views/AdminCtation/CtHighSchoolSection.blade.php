@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/HighSchoolButton.css') }}">
 
 
-    <h1> <center>STUDENT EVALUATION AND CONSULTATION</center></h1>
+    <h1> <center> STUDENT EVALUATION AND CONSULTATION </center></h1>
 
     <div class="grid-container">
         <div class="section">
