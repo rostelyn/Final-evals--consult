@@ -19,6 +19,7 @@
             <li><a href="{{ route('CtCalendar') }}">Calendar</a></li>
             <li><a href="{{ route('CtNotification') }}">Notifications</a></li>
             <li><a href="{{ route('CtHistory') }}">Consultation History</a></li>
+            <li><a href="{{ route('CtDocumentation') }}">Documentation</a></li>
             <li><a href="{{ route('CtSettings') }}">Settings</a></li>
         </ul>
     </div>
