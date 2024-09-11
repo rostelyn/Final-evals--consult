@@ -10,6 +10,7 @@
     <div class="header">
         <h1>Student Profile</h1>
     </div>
+     
     <div class="student-profile">
         <div class="student-info">
             <div class="student-photo">
@@ -24,6 +25,7 @@
                     <p><strong>Section:</strong> 301</p>
                     <p><strong>Student Number:</strong> 21-1111</p>
                 </div>
+                <a href="{{ route('logout') }}"><h5>Log Out</a>
             </div>
         </div>
         <div class="tabs">

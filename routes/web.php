@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HrCalendarController;
-use App\Http\Controllers\Hrcalendar;
 use App\Http\Controllers\FacultyControllerHighschool;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
@@ -12,6 +11,7 @@ use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ConsultationHighschoolController;
 
 
 
@@ -77,7 +77,15 @@ Route::get('/Appointment', function () {
     return view('student.consultation.student-appoint');
 })->name('Appointment');
 
-//studentSettings
+//bago
+Route::post('/consultationhighschool', [ConsultationHighschoolController::class, 'store'])->name('consultationhighschool.store');
+
+Route::get('/highschoolconsultation', function () {
+    return view('student.consultation.studenthighschool-appoint');
+})->name('highschoolconsultation');
+
+
+
 Route::get('/StudentSettings', function () {
     return view('student.StudentSettings');
 })->name('StudentSettings');
@@ -315,10 +323,6 @@ Route::get('/CtStudentList', function () {
     return view('AdminCtation.CtStudentList');
 })->name('CtStudentList');
 
-Route::get('/CtDocumentation', function () {
-    return view('AdminCtation.CtDocumentation');
-})->name('CtDocumentation');
-
 Route::get('/CtCollegeCourse', function () {
     return view('AdminCtation.CtCollegeCourse');
 })->name('CtCollegeCourse');
@@ -550,9 +554,14 @@ Route::post('/consultations/approve/{id}', [ConsultationController::class, 'appr
 Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'disapprove'])->name('consultations.disapprove');
 
 //Department Head
-Route::get('/DpHead', function () {
-    return view('DpHead.DpHead');
-})->name('DpHead');
+Route::get('/DpHeadDB', function () {
+    return view('DpHead.DpHeadDB');
+})->name('DpHeadDB');
+
+Route::get('/DpHeadAppDis', function () {
+    return view('DpHead.DpHeadAppDis');
+})->name('DpHeadAppDis');
+
 Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->middleware('auth')->name('DpHeadAppDis');
 
 

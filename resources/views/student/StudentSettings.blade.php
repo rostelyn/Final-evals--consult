@@ -8,9 +8,9 @@
         STUDENT EVALUATION AND CONSULTATION
     </header>
     <div class="main-container">
-                <ul>
-                    <li><a href="{{route('logout')}}">Log Out</a></li>
-                </ul>
+        <div>
+                <a href="{{ route('logout') }}"><h5>Log Out</a>
+        </div>    
         <button>About</button>
     </div>
 </body>

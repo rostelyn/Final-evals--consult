@@ -53,7 +53,7 @@
                                 <form action="{{ route('consultations.disapprove', $appointment->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-sm">Disapprove</button>
-                                    <button oneclick="printAppointments()"class="btn btn-info">Print</button>
+                                  <button oneclick="printAppointments()"class="btn btn-info">Print</button>
                                 </form>
                             </td>
                         </tr>
@@ -65,7 +65,7 @@
     <div class="actions">
 
 
-        <button oneclick="savePDF()"class="btn btn-success">Save PDF</button>
+     <center><button oneclick="savePDF()"class="btn btn-success">Save PDF</button></center>  
        
         </div>
 

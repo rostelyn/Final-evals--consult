@@ -19,7 +19,7 @@
         </div> 
         <button class="course-button highschool">
         <img class="course-icon" src="{{ asset('css/GeneralResources/hslogo.jpg') }}" alt="High School Icon">
-                <div><a href="consultation">HIGH SCHOOL</a></div>
+                <div><a href="highschoolconsultation">HIGH SCHOOL</a></div>
         </button>
              </div>
         </div>
