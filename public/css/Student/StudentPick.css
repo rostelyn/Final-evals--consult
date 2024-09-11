@@ -22,6 +22,7 @@
     padding-top: 50px;
 }
 
+/* CSS for the courses/strand container */
 .courses-container {
     display: flex;
     justify-content: center;

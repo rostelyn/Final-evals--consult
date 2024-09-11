@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HrCalendarController;
 use App\Http\Controllers\Hrcalendar;
+use App\Http\Controllers\FacultyControllerHighschool;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\StudentCalendarController;
@@ -55,6 +56,11 @@ Route::get('/evaluation', function () {
 //list of teachers
 Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
+
+Route::get('/facultyhighschool', [FacultyControllerHighschool::class, 'index'])->name('facultyhighschool.index');
+Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighschool::class, 'show']);
+
+
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
@@ -75,6 +81,16 @@ Route::get('/Appointment', function () {
 Route::get('/StudentSettings', function () {
     return view('student.StudentSettings');
 })->name('StudentSettings');
+
+//StudentPickEvaluation
+
+Route::get('/StudentPickEvaluation', function () {
+    return view('student.StudentPickEvaluation');
+})->name('StudentPickEvaluation');
+
+Route::get('/StudentPickConsultation', function () {
+    return view('student.StudentPickConsultation');
+})->name('StudentPickConsultation');
 
 // HR routes
 Route::get('/HrDashboard', function () {

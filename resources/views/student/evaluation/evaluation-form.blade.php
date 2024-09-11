@@ -85,7 +85,7 @@
     }
 
     .btn-primary {
-        background-color: #4BC0C0; /* Primary button color */
+        background-color: #4BC0C0;
         border: none;
         color: #ffffff;
     }
