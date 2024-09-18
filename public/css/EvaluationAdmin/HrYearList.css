@@ -1,5 +1,5 @@
 *{
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia';
 }
 .content {
     flex: 1;
@@ -42,7 +42,6 @@ button:hover {
 }
 
 
-/* Container for buttons */
 .content > div {
     display: flex;
     justify-content: center;
@@ -54,7 +53,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* Student List Specific Styles */
+
 .student-list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));

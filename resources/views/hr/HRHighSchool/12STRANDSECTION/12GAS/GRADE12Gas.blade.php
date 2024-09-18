@@ -1,6 +1,4 @@
-
-@extends('layouts.HrLayout')
-
+@extends('hslayout.HrAdmin-layout')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrStrandSection.css') }}">
 

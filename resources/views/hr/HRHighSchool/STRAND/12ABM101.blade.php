@@ -1,4 +1,4 @@
-@extends('layouts.HrLayout')
+@extends('hslayout.HrAdmin-layout')
 
 @section('content')
 
@@ -24,7 +24,7 @@
             <tr>
                 <td>Escat Denn Harenz</td>
                 <td>
-                <a href="{{ route('GRADE12ABM') }}">
+                <a href="{{ route('HRGRADE12ABM') }}">
                         <button>VIEW STUDENT</button>
                     </a>
                 </td>

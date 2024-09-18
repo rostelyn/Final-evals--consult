@@ -12,8 +12,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ConsultationHighschoolController;
-
-
+use App\Http\Controllers\HighSchoolCalendarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,9 +64,8 @@ Route::get('/evaluation-form', function () {return view('student.evaluation.eval
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 //studentCalendar
-Route::get('/studeHrCalendar', [StudentCalendarController::class, 'index'])->name('studeHrCalendar.index');
-Route::get('/studentCalendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
-
+Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('studeHrCalendar.index');
+Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
 
 Route::get('/consultation', function () {
     return view('student.consultation.student-appoint');
@@ -203,9 +201,9 @@ Route::get('/GRADE12Abm', function () {
     return view('hr.HRHighSchool.12STRANDSECTION.12ABM.GRADE12Abm');
 })->name('GRADE12Abm');
 
-Route::get('/GRADE11Stem', function () {
-    return view('hr.HRHighSchool.12STRANDSECTION.12STEM.GRADE11Stem');
-})->name('GRADE11Stem');
+Route::get('/GRADE12Stem', function () {
+    return view('hr.HRHighSchool.12STRANDSECTION.12STEM.GRADE12Stem');
+})->name('GRADE12Stem');
 
 Route::get('/GRADE12Gas', function () {
     return view('hr.HRHighSchool.12STRANDSECTION.12GAS.GRADE12Gas');
@@ -251,38 +249,38 @@ Route::get('/GRADE10PROFILE', function () {
 })->name('GRADE10PROFILE');
 
 //Profle Strand G11
-Route::get('/GRADE11STEM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE11STEM');
-})->name('GRADE11STEM');
+Route::get('/HRGRADE11STEM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11STEM');
+})->name('HRGRADE11STEM');
 
-Route::get('/GRADE11ABM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE11ABM');
-})->name('GRADE11ABM');
+Route::get('/HRGRADE11ABM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11ABM');
+})->name('HRGRADE11ABM');
 
-Route::get('/GRADE11GAS', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE11GAS');
-})->name('GRADE11GAS');
+Route::get('/HRGRADE11GAS', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11GAS');
+})->name('HRGRADE11GAS');
 
-Route::get('/GRADE11ICT', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE11ICT');
-})->name('GRADE11ICT');
+Route::get('/HRGRADE11ICT', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11ICT');
+})->name('HRGRADE11ICT');
 
 //Profle Strand G12
-Route::get('/GRADE11STEM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE11STEM');
-})->name('GRADE11STEM');
+Route::get('/HRGRADE12STEM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12STEM');
+})->name('HRGRADE12STEM');
 
-Route::get('/GRADE12ABM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE12ABM');
-})->name('GRADE12ABM');
+Route::get('/HRGRADE12ABM', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12ABM');
+})->name('HRGRADE12ABM');
 
-Route::get('/GRADE12GAS', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE12GAS');
-})->name('GRADE12GAS');
+Route::get('/HRGRADE12GAS', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12GAS');
+})->name('HRGRADE12GAS');
 
-Route::get('/GRADE12ICT', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE12ICT');
-})->name('GRADE12ICT');
+Route::get('/HRGRADE12ICT', function () {
+    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12ICT');
+})->name('HRGRADE12ICT');
 
 //
 Route::get('/HrCalendar', function () {
@@ -568,3 +566,10 @@ Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->mid
 //STUDENT VIEW 
 
 Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('HrProfile');
+
+
+//HIGHSCHOOL ROUTE FOR STUDENT SIDEBAR
+
+Route::get('/HighSchoolSettings', function () {
+    return view('student.HighSchool.HighSchoolSettings');
+})->name('HighSchoolSettings');

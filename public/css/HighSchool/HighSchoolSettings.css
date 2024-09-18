@@ -5,14 +5,15 @@ body {
     background-color: #ffffff;
 }
 
-/* Header styles */
+
 h1 {
     font-family: "Averia Serif Libre", serif;
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-    color: #18A558;
+    color: #0F67B1;
 }
+
 
 .main-container {
     display: flex;
@@ -22,7 +23,7 @@ h1 {
 }
 
 button {
-    background-color: #18A558;
+    background-color: #7aa5d9;
     color: rgb(0, 0, 0);
     border: none;
     padding: 15px 30px;
@@ -36,5 +37,5 @@ button {
 }
 
 button:hover {
-    background-color: #88c999;
+    background-color: #0F67B1;
 }

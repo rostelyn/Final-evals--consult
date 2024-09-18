@@ -1,24 +1,24 @@
-@extends('layouts.evaluation-layout')
+@extends('hslayout.HsSidebar-layout')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/Student/facultyhighschool.css') }}">
 
-<div class="facultyhighschool-page">
+<div class="hsfaculty-page">
 
     <div class="header">
         <h2>{{ $departmenthighschool }} </h2>
     </div>
 
-    <div class="facultyhighschool-head">
-        <div class="facultyhighschool-picture"></div>
-        <p>Departmenthighschool Head: {{ $highschooldetails['head'] }}</p>
+    <div class="hsfaculty-head">
+        <div class="hsfaculty-picture"></div>
+        <p>High School Department Head: {{ $highschooldetails['head'] }}</p>
         <a href="{{ route('evaluation-form') }}" class="btn-evaluate">Evaluate</a>
     </div>
 
-    <div class="facultyhighschool-list">
+    <div class="hsfaculty-list">
         @foreach($highschooldetails['members'] as $member)
-            <div class="facultyhighschool-member">
-                <div class="facultyhighschool-picture"></div>
+            <div class="hsfaculty-member">
+                <div class="hsfaculty-picture"></div>
                 <p>{{ $member }}</p>
                 <a href="{{ route('evaluation-form') }}" class="btn-evaluate">Evaluate</a>
             </div>
