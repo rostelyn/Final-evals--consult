@@ -17,7 +17,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Redirect to the intended route after login
-            return redirect()->intended(route('student.student-evaluation-consultation'));
+            return redirect()->intended(route('HrDashboard'));
         } else {
             return redirect()->back()->withErrors(['message' => 'Invalid username or password']);
         }
