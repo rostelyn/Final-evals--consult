@@ -1,4 +1,4 @@
-@extends('layouts.HrLayout')
+@extends('hslayout.HrAdmin-layout')
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HSViewStudent.css') }}">
@@ -23,7 +23,7 @@
             <tr>
                 <td>Escat Denn Harenz</td>
                 <td>     
-                <a href="{{ route('GRADE11ABM') }}">
+                <a href="{{ route('HRGRADE11ABM') }}">
                         <button>VIEW STUDENT</button>
                     </a>
                 </td>

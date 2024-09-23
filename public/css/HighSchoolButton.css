@@ -1,5 +1,6 @@
 
 h1 {
+    font-family: "Averia Serif Libre", serif;
     font-size: 36px;
     font-weight: bold;
     color: black;
@@ -7,6 +8,7 @@ h1 {
 }
 
 h2 {
+    font-family: "Averia Serif Libre", serif;
     font-size: 24px;
     margin-bottom: 20px;
     color: #0F67B1;
@@ -22,7 +24,7 @@ h2 {
 
 .section {
     text-align: center;
-    width: 150px; /* Consistent width for all sections */
+    width: 150px;
 }
 
 .section h2 {
@@ -36,14 +38,14 @@ h2 {
 button {
     background-color: #7aa5d9;
     color: black;
-    padding: 15px 30px; /* Padding inside the button */
+    padding: 15px 30px; 
     font-size: 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 150px; /* Width of the button */
+    width: 150px;
     transition: background-color 0.3s ease;
-    margin: 20px 0; /* Added margin to create space between buttons */
+    margin: 20px 0;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 

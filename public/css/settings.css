@@ -1,5 +1,5 @@
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia';
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -11,10 +11,9 @@ h1 {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-    color: #0F67B1;
+    color: #18A558;
 }
 
-/* Main container styles */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -22,9 +21,8 @@ h1 {
     padding-top: 50px;
 }
 
-/* Button styles */
 button {
-    background-color: #7aa5d9;
+    background-color: #18A558;
     color: rgb(0, 0, 0);
     border: none;
     padding: 15px 30px;
@@ -38,5 +36,5 @@ button {
 }
 
 button:hover {
-    background-color: #0F67B1;
+    background-color: #88c999;
 }
