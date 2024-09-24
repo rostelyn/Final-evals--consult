@@ -11,7 +11,7 @@
 
 .content h1 {
     font-family: "Averia Serif Libre", serif;
-    color: #059862;
+    color: black;
     text-align: center;
 }
 
@@ -39,8 +39,6 @@ button {
     align-items: center;
     box-shadow: 0 10px 10px black;
     transition: background-color 0.3s ease, transform 0.2s ease; 
-    
-   
 }
 
 button:hover {

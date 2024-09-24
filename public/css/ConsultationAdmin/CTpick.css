@@ -1,34 +1,31 @@
-/* CSS for the main container */
-.main-container {
+*{
+    font-family: 'Georgia';
+}
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh; /* Full viewport height */
-    font-family: Arial, sans-serif;
+    height: 80vh; 
     padding: 0;
 }
-
-/* CSS for the title */
 .title {
-    font-family: Times New Roman;
-    font-style: bold;
+    font-family: "Averia Serif Libre", serif;
+    color: black;
+    font-weight: bold;
     font-size: 40px;
     font-weight: bold;
-    color: #6b8e23; /* Dark olive green */
     margin-bottom: 20px;
     text-align: center;
     padding-top: 50px;
 }
 
-/* CSS for the courses/strand container */
 .courses-container {
     display: flex;
     justify-content: center;
     gap: 40px;
 }
 
-/* CSS for each course button */
 .course-button {
     display: flex;
     flex-direction: column;
@@ -39,26 +36,31 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #e2e2e2;
-    width: 250px; /* Fixed width */
-    height: 250px; /* Fixed height */
+    color: #ffffff;
+    width: 250px;
+    height: 250px; 
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.5s;
 }
 
 .course-button.college {
-    background-color: #1bbb1b; 
+    background-color: #18A558; 
 }
 
 .course-button.highschool {
     background-color: #0F67B1; 
+
+}
+.course-button.college:hover {
+    background-color: #88c999;
+    transform: translateY(-5px);
 }
 
-.course-button.college:hover,
 .course-button.highschool:hover {
     background-color: #79a7b9;
-    transform: translateY(-5px);
+    transform: translateY(-5px); 
+  
 }
 
 .course-icon {
@@ -70,11 +72,13 @@
 }
 
 a:link {
-    color: rgb(236, 236, 236);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 a:visited {
     color: rgb(0, 0, 0);
+    
 }
 
 a:hover {

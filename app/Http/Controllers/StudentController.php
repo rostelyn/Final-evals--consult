@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -20,6 +19,11 @@ class StudentController extends Controller
 
     $teachers = [];
     return view('HrProfile', compact('student', 'teachers'));
+}
+public function register(Request $request)
+{
+    // Validate the form data
+    
 }
 
 }

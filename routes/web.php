@@ -573,3 +573,11 @@ Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('
 Route::get('/HighSchoolSettings', function () {
     return view('student.HighSchool.HighSchoolSettings');
 })->name('HighSchoolSettings');
+
+
+
+
+Route::get('/students', [StudentController::class, 'index'])->name('studentList');
+
+// Route for viewing an individual student profile (now called viewStudentProfile)
+Route::get('/student/view/{id}', [StudentController::class, 'viewStudent'])->name('viewStudentProfile');

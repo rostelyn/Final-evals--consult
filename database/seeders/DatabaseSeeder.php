@@ -28,9 +28,5 @@ class DatabaseSeeder extends Seeder
             'username' => 'staff'
         ]);
 
-        \App\Models\User::factory()->create([
-            'name' => 'Carl',
-            'username' => 'carl'
-        ]);
     }
 }

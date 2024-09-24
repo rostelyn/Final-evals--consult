@@ -1,4 +1,9 @@
+*{
+    font-family: 'Georgia';
+}
+
 h2 {
+    font-family: "Averia Serif Libre", serif;
     text-align: center;
     color: #0F67B1;
 }
@@ -10,7 +15,7 @@ h2 {
     border-collapse: collapse;
     margin-right: 30px;
     margin-top: 70px;
-    width: auto; /* Allows the table to adjust based on content */
+    width: auto;
 }
 
 .student-info-table th,

@@ -1,4 +1,4 @@
-@extends('layouts.AdminConsult-layout')
+@extends('hslayout.CTAdmin-layout')
 
 @section('content')
     <!DOCTYPE html>

@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    // Optional: Define the table name if it's not 'students'
-    protected $table = 'students';
 
-    // Ensure the correct fields are fillable
-    protected $fillable = ['name', 'email', 'gender', 'student_number'];
+    protected $table = 'register_table'; 
+
+    protected $fillable = [
+        'student_id', 'name', 'age', 'email', 'course', 'grade', 'password', 'picture'
+    ];
 }

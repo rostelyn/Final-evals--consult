@@ -16,8 +16,7 @@ class AuthController extends Controller
         $credentials = $request->only(['username', 'password']);
 
         if (Auth::attempt($credentials)) {
-            // Redirect to the intended route after login
-            return redirect()->intended(route('student.student-evaluation-consultation'));
+            return redirect()->intended(route('HrDashboard'));
         } else {
             return redirect()->back()->withErrors(['message' => 'Invalid username or password']);
         }
@@ -33,17 +32,9 @@ class AuthController extends Controller
     }
 
     public function register(Request $request){
-        $validate = $request->validate([
-            'StudentId' => 'required|max:30',
-            'name' => 'required|max:30',
-            'age' => 'required|integer',
-            'Outlook Email' => 'required|email|max:50',
-            'Course/Strand' => 'required|max:30',
-            'Grade Level & Section' => 'required|max:30',
-            'password' => 'required|min:5|max:20'
-        ]);
 
-        $validate['password'] = bcrypt($request->password);  // Encrypt the password
+        
+        $validate['password'] = bcrypt($request->password);
 
         $user = User::create($validate);
 
@@ -51,4 +42,5 @@ class AuthController extends Controller
             return redirect('/login');
         }
     }
+ 
 }
