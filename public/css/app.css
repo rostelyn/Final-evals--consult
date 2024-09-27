@@ -12,7 +12,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #18A558;
+    background-color: #d9ae86;
     color: white;
     height: 120vh;
     padding: 10;
@@ -25,16 +25,13 @@ body {
     overflow: hidden;
 }
 
-.logo {
+.logo h1{
+    font-family: "Averia Serif Libre", serif;
+    color: rgb(0, 0, 0);
+    font-size:30px;
     text-align: center;
     margin-bottom: 30px;
-    padding-top: 20px;
-}
-
-.logo img {
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    padding-top: 80px;
 }
 
 .sidebar ul {
@@ -43,11 +40,11 @@ body {
 }
 
 .sidebar ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     display: block;
-    padding-left: 10px;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .sidebar ul li {
@@ -56,8 +53,10 @@ body {
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    background-color: rgb(143, 144, 145);
+    color: rgb(255, 255, 255);
 }
+
 
 .content {
     flex: 1;
