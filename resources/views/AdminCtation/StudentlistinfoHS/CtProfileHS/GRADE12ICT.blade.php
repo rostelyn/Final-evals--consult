@@ -1,10 +1,13 @@
-@extends('layouts.AdminConsult-layout')
+@extends('hslayout.CTAdmin-layout')
 
 @section('content')
 <head>
     <title>Student Evaluation and Consultation</title>
     <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/HSProfile.css') }}">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <h2>STUDENT EVALUATION AND CONSULTATION</h2>

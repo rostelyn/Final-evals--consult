@@ -1,3 +1,14 @@
+*{
+    font-family: 'Georgia';
+}
+
+h2 {
+    font-family: "Averia Serif Libre", serif;
+    text-align: center;
+    color: #18A558;
+}
+
+
 .faculty-page {
     display: flex;
     flex-direction: column;
@@ -50,8 +61,15 @@
     margin-bottom: 10px;
 }
 
+.faculty-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .btn-evaluate {
-    background-color: #4BC0C0;
+    background-color: #18A558;
     color: #fff;
     padding: 8px 16px;
     border-radius: 5px;
@@ -61,5 +79,5 @@
 }
 
 .btn-evaluate:hover {
-    background-color: #3aa8a8;
+    background-color: #88c999;
 }

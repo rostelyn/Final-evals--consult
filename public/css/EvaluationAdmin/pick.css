@@ -28,9 +28,9 @@
     gap: 40px;
 }
 
-/* CSS for each course button */
+
 .course-button {
-    flex: 0 0 250px; /* Ensures the buttons have the same size */
+    flex: 0 0 250px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,25 +41,23 @@
     font-size: 18px;
     font-weight: bold;
     color: #e2e2e2;
-    width: 250px; /* Fixed width */
-    height: 250px; /* Fixed height */
+    width: 250px;
+    height: 250px; 
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.5s;
 }
 
 .course-button.college {
-    background-color: #1bbb1b; 
+    background-color: #18A558; 
 }
 
 .course-button.highschool {
     background-color: #0F67B1; 
-    
 
 }
-
 .course-button.college:hover {
-    background-color: #79a7b9;
+    background-color: #88c999;
     transform: translateY(-5px);
 }
 
@@ -69,10 +67,10 @@
   
 }
 
-/* CSS for the icons */
+
 .course-icon {
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
     object-fit: contain;

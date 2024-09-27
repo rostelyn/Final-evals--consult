@@ -45,7 +45,7 @@ h1 {
 }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="cfpassword"], select {
-    width: 80%; /* Reduced width to make inputs smaller */
+    width: 80%; 
     padding: 10px;
     margin: 8px 0;
     display: inline-block;
@@ -74,7 +74,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start; 
 }
 
 .picture-box {
@@ -90,7 +90,7 @@ button:hover {
     background-position: center;
     cursor: pointer;
     font-size: 20px;
-    margin-bottom: 10px; /* Added margin to the bottom for spacing between the picture box and the upload button */
+    margin-bottom: 10px;
 }
 
 .upload-btn {
@@ -100,7 +100,7 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px; /* Added margin to the top for spacing between the file input and upload button */
+    margin-top: 10px;
 }
 
 .upload-btn:hover {
@@ -110,4 +110,27 @@ button:hover {
 input[type="file"] {
     display: block;
     margin-top: 10px;
+}
+/*back button*/
+.back-btn {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.back-btn:hover {
+    background-color: #aaa;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }

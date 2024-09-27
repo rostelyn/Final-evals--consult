@@ -13,7 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ConsultationHighschoolController;
 use App\Http\Controllers\HighSchoolCalendarController;
-
+use App\Http\Controllers\RegistrationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +36,8 @@ Route::post('/',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
 
+
+Route::post('/registration', [RegistrationController::class, 'store']);
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 
@@ -574,3 +576,11 @@ Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('
 Route::get('/HighSchoolSettings', function () {
     return view('student.HighSchool.HighSchoolSettings');
 })->name('HighSchoolSettings');
+
+
+
+
+Route::get('/students', [StudentController::class, 'index'])->name('studentList');
+
+// Route for viewing an individual student profile (now called viewStudentProfile)
+Route::get('/student/view/{id}', [StudentController::class, 'viewStudent'])->name('viewStudentProfile');

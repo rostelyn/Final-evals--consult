@@ -15,18 +15,18 @@ body {
     margin-bottom: 20px;
 }
 
-/* Table Styling */
+
 .bsit-course-student-list {
     width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
-    border: 1px solid #000000; /* Border around the entire table */
+    border: 1px solid #000000;
 }
 
 .bsit-course-student-list th, .bsit-course-student-list td {
     padding: 12px 15px;
     text-align: left;
-    border: 1px solid #000000; /* Border around each cell */
+    border: 1px solid #000000; 
     font-size: 20px;
 }
 
@@ -36,11 +36,11 @@ body {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-bottom: 1px solid #000000; /* Bottom border for header */
+    border-bottom: 1px solid #000000;
 }
 
 .bsit-course-student-list td:first-child {
-    border-right: 1px solid #000000; /* Vertical line between columns */
+    border-right: 1px solid #000000; 
 }
 
 .bsit-course-student-list tr:nth-child(even) {
@@ -51,7 +51,6 @@ body {
     background-color: #999ea4;
 }
 
-/* Button Styling */
 .bsit-course-student-list button {
     background-color: #0F67B1;
     padding: 5px 10px;
