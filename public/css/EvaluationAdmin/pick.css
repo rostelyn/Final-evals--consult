@@ -11,15 +11,18 @@
 }
 
 
-.title {
+.header {
+    background-color: #d9ae86;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
     font-family: "Averia Serif Libre", serif;
-    color: #0F67B1;
-    font-weight: bold;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 50px;
+    color: black;
+    margin: 0;
 }
 
 .courses-container {
@@ -27,7 +30,6 @@
     justify-content: center;
     gap: 40px;
 }
-
 
 .course-button {
     flex: 0 0 250px; 
@@ -64,9 +66,7 @@
 .course-button.highschool:hover {
     background-color: #79a7b9;
     transform: translateY(-5px); 
-  
 }
-
 
 .course-icon {
     width: 150px;
@@ -87,5 +87,5 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }

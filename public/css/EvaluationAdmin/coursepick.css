@@ -8,14 +8,27 @@
     background-color: #ffffff;
     position: relative;
 }
+.header {
+    background-color: #059862;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.content h1 {
+h1 {
     font-family: "Averia Serif Libre", serif;
-    color: black;
+    color: #000000;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Averia Serif Libre", serif;
+    color: white;
     text-align: center;
 }
 
-.content h2 {
+h2 {
     font-family: "Averia Serif Libre", serif;
     color: #000000;
     text-align: center;
@@ -59,4 +72,21 @@ button:hover {
 .course-container a {
     text-decoration: none;
 }
+.back-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: #f00c0c;
+    color: white;
+    box-shadow: 0 10px 10px black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
 
+.back-button:hover {
+    background-color: #b63240;
+}

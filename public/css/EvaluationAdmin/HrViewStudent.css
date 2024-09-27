@@ -1,24 +1,32 @@
 *{
     font-family: 'Georgia';
 }
-.content h1 {
-    font-family: "Averia Serif Libre", serif;
-    color: #059862;
-    text-align: center;
-    margin-bottom: 20px;
+
+.header {
+    background-color: #059862;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content h2 {
+h1 {
+    font-family: "Averia Serif Libre", serif;
+    color: white;
+    margin: 0;
+}
+
+
+h2 {
     font-family: "Averia Serif Libre", serif;
     color: black;
     text-align: center;
     margin-bottom: 20px;
 }
 
-
 .bsit-course-student-list {
-    width: 100%;
-    margin: 20px auto;
+    width: 95%;
+    margin: 60px auto 60px;
     border-collapse: collapse;
     border: 2px solid #000000; 
 }
@@ -51,7 +59,6 @@
     background-color: #999ea4;
 }
 
-
 .bsit-course-student-list button {
     background-color: #04aa6d;
     padding: 5px 10px;
@@ -63,6 +70,24 @@
 }
 
 .bsit-course-student-list button:hover {
-    background-color: #88c999
-    ;
+    background-color: #88c999;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: #f00c0c;
+    color: white;
+    box-shadow: 0 10px 10px black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
+
+.back-button:hover {
+    background-color: #b63240;
 }
