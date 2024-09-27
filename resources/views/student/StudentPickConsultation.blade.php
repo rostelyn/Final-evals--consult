@@ -15,11 +15,11 @@
                  <div class="courses-container">
             <div class="course-button college" >
             <img class="course-icon" src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="College Department Icon">
-                <div><a href="consultation">COLLEGE DEPARTMENT</a></div>    
+                <div><a href="consult">COLLEGE DEPARTMENT</a></div>    
         </div> 
         <button class="course-button highschool">
         <img class="course-icon" src="{{ asset('css/GeneralResources/hslogo.jpg') }}" alt="High School Icon">
-                <div><a href="highschoolconsultation">HIGH SCHOOL</a></div>
+                <div><a href="highschool">HIGH SCHOOL</a></div>
         </button>
              </div>
         </div>
