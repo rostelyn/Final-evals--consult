@@ -12,9 +12,13 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ConsultationHighschoolController;
 use App\Http\Controllers\HighSchoolCalendarController;
+
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\ConsultController; // Updated from ConsultationController to ConsultController
 use App\Http\Controllers\HighSchoolConsultController;
+
+use App\Http\Controllers\RegistrationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -95,6 +99,8 @@ Route::post('/',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
 
 
+
+Route::post('/registration', [RegistrationController::class, 'store']);
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    // Updated to match the migration table name
+    protected $table = 'students';
 
-    protected $table = 'register_table'; 
-
+    // Updated to match the column names from the migration
     protected $fillable = [
-        'student_id', 'name', 'age', 'email', 'course', 'grade', 'password', 'picture'
+        'StudentId', 'name', 'age', 'Outlook_Email', 'Course_Strand', 'Grade_Level_Section', 'password', 'picture'
     ];
 }
