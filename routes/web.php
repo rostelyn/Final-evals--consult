@@ -6,14 +6,19 @@ use App\Http\Controllers\FacultyControllerHighschool;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\StudentCalendarController;
-use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ConsultationHighschoolController;
 use App\Http\Controllers\HighSchoolCalendarController;
+
+use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\ConsultController; // Updated from ConsultationController to ConsultController
+use App\Http\Controllers\HighSchoolConsultController;
+
 use App\Http\Controllers\RegistrationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +29,64 @@ use App\Http\Controllers\RegistrationController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/highschoolconsult', [HighSchoolConsultController::class, 'showHighSchoolConsultForm'])->name('highschoolconsult.form');
+Route::post('/highschoolconsult/submit', [HighSchoolConsultController::class, 'submitHighSchoolConsult'])->name('highschoolconsult.submit');
+Route::post('/highschoolconsult/approve/{id}', [HighSchoolConsultController::class, 'approveConsultation'])->name('highschoolconsult.approve');
+Route::post('/highschoolconsult/decline/{id}', [HighSchoolConsultController::class, 'declineConsultation'])->name('highschoolconsult.decline');
+
+// High School consultation approval, calendar, and history
+Route::get('/highschoolconsult/approval', [HighSchoolConsultController::class, 'showApproval'])->name('highschool.approval');
+Route::get('/highschoolconsult/calendar', [HighSchoolConsultController::class, 'showCalendar'])->name('highschool.calendar');
+Route::get('/highschoolconsult/history', [HighSchoolConsultController::class, 'showHistory'])->name('highschool.history');
+
+
+Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
+Route::post('/highschool/consult/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
+Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
+Route::post('/highschool/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
+Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
+Route::post('/highschool/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
+
+
+
+
+Route::get('/consult/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
+// Route for submitting the high school consultation form
+
+Route::post('/consult/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
+
+
+Route::get('/admin/calendar', [ConsultController::class, 'showCalendar'])->name('admin.calendar');
+Route::get('/admin/approval', [ConsultController::class, 'showApproval'])->name('admin.approval');
+Route::get('/admin/history', [ConsultController::class, 'showHistory'])->name('admin.history');
+
+Route::get('/consult', [ConsultController::class, 'showConsultForm'])->name('consult.form');
+
+// Routes for consultation
+
+Route::post('/highschoolconsult/approval', [ConsultController::class, 'submitHighSchoolConsult'])->name('highschoolconsult.approval');
+Route::post('/consult/submit', [ConsultController::class, 'submitConsult'])->name('consult.submit');
+Route::get('/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
+Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
+Route::post('/consult/decline/{id}', [ConsultController::class, 'declineConsult'])->name('consult.decline');
+Route::get('/history', [ConsultController::class, 'showHistory'])->name('consult.history');
+
+Route::post('/busyhourscreation', [CalendarController::class, 'createBusyEvent'])->name('busyhourscreate');
+
+// Routes for calendar
+Route::get('/calendar', [CalendarController::class, 'showCalendar'])->name('calendar.show');
+
+// Route to create a calendar event (other than busy hour)
+Route::post('/create-event', [CalendarController::class, 'createEvent'])->name('create.event');
+
+// Additional route to handle destroying busy hours (if it's different from `deleteBusyHour`)
+Route::delete('/busyhours/{id}', [CalendarController::class, 'destroyBusyHour'])->name('busyhours.destroy');
+
+Route::delete('/busyhours/{id}', [CalendarController::class, 'deleteBusyHour'])->name('deletehours');
+
+
+
 
 
 //LOGIN AND REGISTER//
@@ -71,19 +134,19 @@ Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->na
 Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
 
 Route::get('/consultation', function () {
-    return view('student.consultation.student-appoint');
+    return view('student.consultation.consult');
 })->name('consultation');
 
 Route::get('/Appointment', function () {
-    return view('student.consultation.student-appoint');
+    return view('student.consultation.consult');
 })->name('Appointment');
 
 //bago
 Route::post('/consultationhighschool', [ConsultationHighschoolController::class, 'store'])->name('consultationhighschool.store');
 
-Route::get('/highschoolconsultation', function () {
-    return view('student.consultation.studenthighschool-appoint');
-})->name('highschoolconsultation');
+Route::get('/highschool', function () {
+    return view('student.consultation.highschool');
+})->name('highschool');
 
 
 
@@ -524,35 +587,29 @@ Route::get('/BSIT401Profile', function () {
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
-Route::get('/CtApprroveDisapprove', function () {
-    return view('AdminCtation.CtApprroveDisapprove');
-})->name('CtApprroveDisapprove');
 
-Route::get('/CtCalendar', function () {
-    return view('AdminCtation.CtCalendar');
-})->name('CtCalendar');
+
+
 
 
 Route::get('/CtNotification', function () {
     return view('AdminCtation.CtNotification');
 })->name('CtNotification');
 
-Route::get('/CtHistory', function () {
-    return view('AdminCtation.CtHistory');
-})->name('CtHistory');
+
 
 Route::get('/CtSettings', function () {
     return view('AdminCtation.CtSettings');
 })->name('CtSettings');
 
+Route::get('/CtDocumentation', function () {
+    return view('AdminCtation.CtDocumentation');
+})->name('CtDocumentation');
+
 
 //consultation controller
 
-Route::get('/CtApprroveDisapprove', [ConsultationController::class, 'index'])->name('CtApprroveDisapprove');
-Route::post('/consultation', [ConsultationController::class, 'store'])->name('consultation.store');
 
-Route::post('/consultations/approve/{id}', [ConsultationController::class, 'approve'])->name('consultations.approve');
-Route::post('/consultations/disapprove/{id}', [ConsultationController::class, 'disapprove'])->name('consultations.disapprove');
 
 //Department Head
 Route::get('/DpHeadDB', function () {
@@ -563,7 +620,7 @@ Route::get('/DpHeadAppDis', function () {
     return view('DpHead.DpHeadAppDis');
 })->name('DpHeadAppDis');
 
-Route::get('/DpHeadAppDis', [DpHeadConsultationController::class, 'index'])->middleware('auth')->name('DpHeadAppDis');
+
 
 
 //STUDENT VIEW 
