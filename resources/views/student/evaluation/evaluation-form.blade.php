@@ -9,11 +9,11 @@
         align-items: center;
         padding: 20px;
         width: 100%;
-        max-width: 1200px; /* Limits the container width */
-        margin: 0 auto; /* Centers the container */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        max-width: 1200px; 
+        margin: 0 auto;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
         background-color: #ffffff;
-        border-radius: 10px; /* Rounds the container corners */
+        border-radius: 10px; 
     }
 
     h2 {
@@ -38,7 +38,7 @@
     .form-label {
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: #4BC0C0; /* Highlight color */
+        color: #4BC0C0; 
     }
 
     .form-select, .form-control {
@@ -58,7 +58,7 @@
     h5 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
-        color: #4BC0C0; /* Highlight color */
+        color: #4BC0C0; 
         text-transform: uppercase;
     }
 
@@ -103,7 +103,7 @@
     <div class="evaluation-content">
         <h2 class="text-center mb-4">EASTWOODS Professional College of Science and Technology</h2>
         
-        <!-- Select School Year Section -->
+   
         <div class="text-center mb-4">
             <label for="school_year" class="form-label">Select School Year:</label>
             <select class="form-select" id="school_year" name="school_year">
@@ -113,7 +113,7 @@
             </select>
         </div>
         
-        <!-- Evaluation Form -->
+        
         <form action="{{ route('evaluation.submit') }}" method="POST">
             @csrf
             <div class="evaluation-section mb-4">
