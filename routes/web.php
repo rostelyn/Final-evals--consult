@@ -100,7 +100,11 @@ Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name
 
 
 
-Route::post('/registration', [RegistrationController::class, 'store']);
+
+Route::get('/register', [StudentController::class, 'create'])->name('students.create');
+Route::post('/registration', [StudentController::class, 'store'])->name('students.store');
+
+
 Route::get('/register',[AuthController::class,'registration'])->name('registration');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 

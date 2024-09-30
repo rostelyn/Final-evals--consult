@@ -11,17 +11,17 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('student_id');
+            $table->string('StudentId')->unique();
             $table->string('name');
             $table->integer('age');
-            $table->string('email');
-            $table->string('course');
-            $table->string('grade');
+            $table->string('Outlook_Email')->unique();
+            $table->string('Course_Strand');
+            $table->string('Grade_Level_Section');
             $table->string('password');
-            $table->string('picture');
+            $table->string('picture')->nullable(); // For storing the image
             $table->timestamps();
         });
-    }
+    }    
 
     public function down()
     {
