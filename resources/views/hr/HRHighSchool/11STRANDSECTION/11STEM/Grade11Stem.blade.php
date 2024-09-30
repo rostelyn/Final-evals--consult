@@ -1,19 +1,26 @@
-@extends('hslayout.HrAdmin-layout')
-
-@section('content')
-<link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrStrandSection.css') }}">
-
-    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>11 STEM</h2>
-    <div class="button-container">
-        <a href="{{ ('11STEM101') }}">
-            <button>101</button>
-        </a>
-        <a href="{{ ('hrProfG11-abm201') }}">
-            <button>201</button>
-        </a>
-        <a href="{{ ('hrProfG11-abm201') }}">
-            <button>301</button>
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrStrandSection.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
     </div>
-@endsection
+    
+    <div class="content">
+        <h2>11 STEM</h2>
+        <div class="button-container">
+             <a href="{{ ('11STEM101') }}">
+                <button>101</button>
+            </a>
+            <a href="{{ ('') }}">
+                <button>201</button>
+            </a>
+        </div>
+    </div>
+             <a href="{{'HrHighSchool'}}">
+                <button class="back-button">Back</button>
+             </a>
+ </body>
+</html>
