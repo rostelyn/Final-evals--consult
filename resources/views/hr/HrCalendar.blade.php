@@ -16,7 +16,7 @@
     <div class="calendar-container">
         <div id="miniCalendarContainer">
             <button id="createEventButton" onclick="showSideForm()">Create Event</button>
-            <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
+            <button class="back-button" onclick="goBack()">Back</button>
             <div id="createEventForm">
                 <h3>Create Event</h3>
                 <input type="text" id="sideEventTitle" placeholder="Event Title">

@@ -2,14 +2,19 @@
     font-family: 'Georgia';
 }
 
-h1 {
-    font-family: "Averia Serif Libre", serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: black;
-    
+.header {
+    background-color: #0F67B1;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+h1 {
+    font-family: "Averia Serif Libre", serif;
+    color: white;
+    margin: 0;
+}
 h2 {
     font-family: "Averia Serif Libre", serif;
     font-size: 24px;
@@ -23,6 +28,7 @@ h2 {
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .section {
@@ -40,6 +46,7 @@ h2 {
 
 button {
     background-color: #7aa5d9;
+    box-shadow: 10px 10px 5px rgb(82, 80, 80);
     color: black;
     padding: 15px 30px; 
     font-size: 20px;
@@ -47,7 +54,6 @@ button {
     border-radius: 8px;
     cursor: pointer;
     width: 150px;
-    transition: background-color 0.3s ease;
     margin: 20px 0;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -55,4 +61,22 @@ button {
 button:hover {
     background-color: #0F67B1;
     transform: translateY(-10px);
+}
+.back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: #f00c0c;
+    color: white;
+    box-shadow: 10px 10px 5px rgb(163, 160, 160);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
+
+.back-button:hover {
+    background-color: #b63240;
 }

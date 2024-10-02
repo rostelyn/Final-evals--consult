@@ -1,6 +1,3 @@
-@extends('hslayout.HrAdmin-layout')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +11,10 @@
 
 </head>
 <body>
-<h1>STUDENT EVALUATION AND CONSULTATION</h1>
+         <div class="header">
+                <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+            </div>
+
     <div class="row">
         <div class="column">
             <div class="picture-box center ">1x1 picture</div>
@@ -65,6 +65,8 @@
             </table>
         </div>
     </div>
+             <a href="{{'Grade8-101'}}">
+                <button class="back-button">Back</button>
+            </a>
 </body>
 </html>
-@endsection

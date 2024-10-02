@@ -12,11 +12,11 @@
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
 </div>
 
-    <h2>BSIT YEAR LIST</h2>
+    <h2>Associate in Computer Technology</h2>
     <div class="year-container">
         <div class="year-block">
             <h2>First Year</h2>
-            <a href="{{('HrBSIT101') }}">
+            <a href="{{('ACT101') }}">
                 <button>101</button>
             </a>
             <a href="{{('') }}">
@@ -26,7 +26,7 @@
         </div>
         <div class="year-block">
             <h2>Second Year</h2>
-            <a href="{{('HrBSIT201') }}">
+            <a href="{{('') }}">
                 <button>201</button>
             </a>
             <a href="{{('') }}">
@@ -35,7 +35,7 @@
         </div>
         <div class="year-block">
             <h2>Third Year</h2>
-            <a href="{{('HrBSIT301') }}">
+            <a href="{{('') }}">
                 <button>301</button>
             </a>
             <a href="{{('') }}">
@@ -44,7 +44,7 @@
         </div>
         <div class="year-block">
             <h2>Fourth Year</h2>
-            <a href="{{('HrBSIT401') }}">
+            <a href="{{('') }}">
                 <button>401</button>
             </a>
             <a href="{{('') }}">
@@ -52,7 +52,7 @@
             </a>
         </div>
     </div>
-    <a href="{{ 'HrCollegeCourse'}}">
+    <a href="{{'HrCollegeCourse'}}">
         <button class="back-button">Back</button>
     </a>
 </body>

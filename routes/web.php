@@ -178,7 +178,7 @@ Route::get('/HrStudentList', function () {
 })->name('HrStudentList');
 
 Route::get('/HrBSIT', function () {
-    return view('hr.HrCollege.HrBSIT');
+    return view('hr.HrCollegeBSIT.HrBSIT');
 })->name('HrBSIT');
 
 Route::get('/HrCollegeCourse', function () {
@@ -187,21 +187,88 @@ Route::get('/HrCollegeCourse', function () {
 
 //for section
 Route::get('/HrBSIT101', function () {
-    return view('hr.HrCollege.HrBSIT101');
+    return view('hr.HrCollegeBSIT.HrBSIT101');
 })->name('HrBSIT101');
 
 
 Route::get('/HrBSIT201', function () {
-    return view('hr.HrCollege.HrBSIT201');
+    return view('hr.HrCollegeBSIT.HrBSIT201');
 })->name('HrBSIT201');
 
 Route::get('/HrBSIT301', function () {
-    return view('hr.HrCollege.HrBSIT301');
+    return view('hr.HrCollegeBSIT.HrBSIT301');
 })->name('HrBSIT301');
 
 Route::get('/HrBSIT401', function () {
-    return view('hr.HrCollege.HrBSIT401');
+    return view('hr.HrCollegeBSIT.HrBSIT401');
 })->name('HrBSIT401');
+
+
+//HR BSHM ROUTE
+Route::get('/HrHM', function () {
+    return view('hr.HRBSHM.HrHM');
+})->name('HrHm');
+
+Route::get('/HM101', function () {
+    return view('hr.HRBSHM.HM101');
+})->name('HM101');
+
+
+//HR ACT ROUTE
+Route::get('/HrACT', function () {
+    return view('hr.HrACT.HrACT');
+})->name('HrACT');
+
+Route::get('/ACT101', function () {
+    return view('hr.HrACT.ACT101');
+})->name('ACT101');
+
+//HR HRT
+
+Route::get('/HrHRT', function () {
+    return view('hr.HrHRT.HrHRT');
+})->name('HrHRT');
+Route::get('/HRT101', function () {
+    return view('hr.HrHRT.HRT101');
+})->name('HRT101');
+
+//COMSCI
+
+Route::get('/HrComputerScience', function () {
+    return view('hr.HrComSci.HrComputerScience');
+})->name('HrComputerScience');
+Route::get('/CS101', function () {
+    return view('hr.HrComSci.CS101');
+})->name('CS101');
+
+//CET
+
+Route::get('/HrCET', function () {
+    return view('hr.HrCET.HrCET');
+})->name('HrCET');
+Route::get('/CET101', function () {
+    return view('hr.HrCET.CET101');
+})->name('CET101');
+
+//HRS
+
+Route::get('/HrHRS', function () {
+    return view('hr.HrHRS.HrHRS');
+})->name('HrHRS');
+Route::get('/HRS101', function () {
+    return view('hr.HrHRS.HRS101');
+})->name('HRS101');
+
+//Tourism
+Route::get('/HrTourism', function () {
+    return view('hr.HrTourism.HrTourism');
+})->name('HrTourism');
+Route::get('/Tourism101', function () {
+    return view('hr.HrTourism.Tourism101');
+})->name('Tourism101');
+
+
+
 
 
 // HR High School Route
