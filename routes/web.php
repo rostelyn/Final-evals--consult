@@ -110,8 +110,9 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 
 
 // Student routes
-Route::get('/student.student-evaluation-consultation', function () {return view('student.student-evaluation-consultation');
-})->middleware('auth')->name('student.student-evaluation-consultation');
+
+Route::get('/student.student.dashboard', function () {return view('student.student.dashboard');
+})->middleware('auth')->name('student.student.dashboard');
 
 //for dashboard
 
@@ -186,9 +187,10 @@ Route::get('/HrCollegeCourse', function () {
 })->name('HrCollegeCourse');
 
 //for section
-Route::get('/HrBSIT101', function () {
-    return view('hr.HrCollegeBSIT.HrBSIT101');
-})->name('HrBSIT101');
+
+//Route::get('/HrBSIT101', function () {
+  //  return view('hr.HrCollegeBSIT.HrBSIT101');
+//})->name('HrBSIT101');
 
 
 Route::get('/HrBSIT201', function () {
@@ -266,8 +268,6 @@ Route::get('/HrTourism', function () {
 Route::get('/Tourism101', function () {
     return view('hr.HrTourism.Tourism101');
 })->name('Tourism101');
-
-
 
 
 
@@ -707,8 +707,17 @@ Route::get('/HighSchoolSettings', function () {
 
 
 
+// Route for showing the list of BSIT 101 students
+Route::get('/HrBSIT101', [StudentController::class, 'HrBSIT101'])->name('HrBSIT101');
 
-Route::get('/students', [StudentController::class, 'index'])->name('studentList');
+// Route for showing the registration form
+Route::get('/students/register', [StudentController::class, 'create'])->name('students.create');
 
-// Route for viewing an individual student profile (now called viewStudentProfile)
-Route::get('/student/view/{id}', [StudentController::class, 'viewStudent'])->name('viewStudentProfile');
+// Route for storing a new student
+Route::post('/students/store', [StudentController::class, 'store'])->name('students.store');
+
+// Route for viewing a specific student's profile
+Route::get('/students/{id}', [StudentController::class, 'show'])->name('student.show');
+
+// Route for viewing the student's dashboard (if separate from show)
+Route::get('/student-evaluation-consultation/{id}', [StudentController::class, 'dashboard'])->name('student-evaluation-consultation');

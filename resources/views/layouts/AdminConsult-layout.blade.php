@@ -6,32 +6,30 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- CSRF token for form submissions and AJAX requests -->
     <title>@yield('title', 'Admin - Student Evaluation and Consultation')</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- FullCalendar CSS -->
     <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.5.0/main.min.css' rel='stylesheet' />
     <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.5.0/main.min.css' rel='stylesheet' />
     <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@5.5.0/main.min.css' rel='stylesheet' />
-
-    <!-- Additional Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
 
-    <!-- View-specific styles -->
+
     @yield('styles')
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <div class="logo">
-            <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
-        </div>
+           <div class="logo">
+                 <h1>Consultation Admin</h1>
+           </div>
         <ul>
             <li><a href="{{ route('CTDashboard') }}">Dashboard</a></li>
             <li><a href="{{ route ('CtStudentList') }}">Student List</a></li>
-            <li><a href="{{ route('consult.approval') }}">Approve/Disapprove</a></li> <!-- Updated route -->
-            <li><a href="{{ route('calendar.show') }}">Calendar</a></li> <!-- Updated route -->
+            <li><a href="{{ route('consult.approval') }}">Approve/Disapprove</a></li> 
+            <li><a href="{{ route('calendar.show') }}">Calendar</a></li> 
             <li><a href="{{ route('CtNotification') }}">Notifications</a></li>
-            <li><a href="{{ route('consult.history') }}">Consultation History</a></li> <!-- Updated route -->
+            <li><a href="{{ route('consult.history') }}">Consultation History</a></li> 
             <li><a href="{{ route('CtDocumentation') }}">Documentation</a></li>
             <li><a href="{{ route('CtSettings') }}">Settings</a></li>
         </ul>
