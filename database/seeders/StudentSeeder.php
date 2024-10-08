@@ -1,7 +1,5 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -12,10 +10,9 @@ class StudentSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
-
-           $numStudents = 10;
-           $prefix = '21-';
-           $counter = 1;
+        $numStudents = 10;
+        $prefix = '21-';
+        $counter = 1;
 
         for ($i = 0; $i < $numStudents; $i++) {
 
@@ -26,10 +23,8 @@ class StudentSeeder extends Seeder
                 'name' => $faker->name,
                 'age' => $faker->numberBetween(18, 25),
                 'Outlook_Email' => $faker->unique()->safeEmail,
-                'Course_Strand' => $faker->randomElement([
-                    'Science and Technology', 'Business Management', 'Arts and Design', 'Humanities'
-                ]),
-                'Grade_Level_Section' => 'Grade 12 - Section ' . $faker->randomLetter,
+                'Course_Strand' => 'BSIT',
+                'Grade_Level_Section' => $faker->randomElement(['BSIT 101', 'BSIT 201']), // Adjusted section format
                 'password' => Hash::make('password' . $i),
                 'picture' => $faker->imageUrl(),
             ]);

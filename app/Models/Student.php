@@ -13,12 +13,11 @@ class Student extends Model
         'StudentId',
         'name',
         'age',
+        'gender', 
         'Outlook_Email',
         'Course_Strand',
         'Grade_Level_Section',
         'password',
         'picture',
     ];
-
-    public $incrementing = false;
 }

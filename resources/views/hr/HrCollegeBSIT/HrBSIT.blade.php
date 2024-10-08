@@ -19,8 +19,11 @@
             <a href="{{('HrBSIT101') }}">
                 <button>101</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HrBSIT102') }}">
                 <button>102</button>
+            </a>
+            <a href="{{('HrBSIT103') }}">
+                <button>103</button>
             </a>
             
         </div>
@@ -29,8 +32,11 @@
             <a href="{{('HrBSIT201') }}">
                 <button>201</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HrBSIT202') }}">
                 <button>202</button>
+            </a>
+            <a href="{{('HrBSIT203') }}">
+                <button>203</button>
             </a>
         </div>
         <div class="year-block">
@@ -38,7 +44,10 @@
             <a href="{{('HrBSIT301') }}">
                 <button>301</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HrBSIT302') }}">
+                <button>302</button>
+            </a>
+            <a href="{{('HrBSIT303') }}">
                 <button>303</button>
             </a>
         </div>
@@ -47,8 +56,11 @@
             <a href="{{('HrBSIT401') }}">
                 <button>401</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HrBSIT402') }}">
                 <button>402</button>
+            </a>
+            <a href="{{('HrBSIT403') }}">
+                <button>403</button>
             </a>
         </div>
     </div>
