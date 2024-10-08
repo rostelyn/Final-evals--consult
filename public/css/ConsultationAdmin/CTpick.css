@@ -9,15 +9,20 @@
     height: 80vh; 
     padding: 0;
 }
-.title {
+
+
+.header {
+    background-color: #d9ae86;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
     font-family: "Averia Serif Libre", serif;
     color: black;
-    font-weight: bold;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 50px;
+    margin: 0;
 }
 
 .courses-container {
@@ -27,16 +32,18 @@
 }
 
 .course-button {
+    flex: 0 0 250px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 10px black;
+    box-shadow: 10px 10px 5px rgb(82, 80, 80);
     border-radius: 15px;
+    border: none;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #ffffff;
+    color: #e2e2e2;
     width: 250px;
     height: 250px; 
     background-color: transparent;
@@ -60,12 +67,11 @@
 .course-button.highschool:hover {
     background-color: #79a7b9;
     transform: translateY(-5px); 
-  
 }
 
 .course-icon {
-    width: 150px; 
-    height: 150px; 
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
     object-fit: contain;
@@ -82,5 +88,5 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }

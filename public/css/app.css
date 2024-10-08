@@ -4,12 +4,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .menu-icon {
     font-size: 15px;
     cursor: pointer;
 }
-
 .sidebar {
     width: 250px;
     background-color: #d9ae86;
@@ -19,51 +17,42 @@ body {
     box-sizing: border-box;
     transition: width 0.3s;
 }
-
 .sidebar.collapsed {
     width: 0;
     overflow: hidden;
 }
-
 .logo h1{
     font-family: "Averia Serif Libre", serif;
     color: rgb(0, 0, 0);
-    font-size:30px;
+    font-size:25px;
     text-align: center;
     margin-bottom: 30px;
     padding-top: 80px;
 }
-
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
-
 .sidebar ul li a {
     font-size: 18px;
     display: block;
     color: black;
-    padding: 10px;
+    padding: 5px;
+    margin-left: 10px;
     text-decoration: none;
 }
-
 .sidebar ul li {
     margin: 15px 0;
-    padding-left: 10px; 
 }
-
 .sidebar ul li a:hover {
     background-color: rgb(143, 144, 145);
     color: rgb(255, 255, 255);
 }
-
-
 .content {
     flex: 1;
     padding: 20px;
     background-color: #ffffff;
 }
-
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
