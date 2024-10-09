@@ -3,37 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+    <title>Student Dashboard</title>
     <link rel="stylesheet" href="{{ asset('css/Student/studentdb.css') }}">
 </head>
 <body>
     <div class="header">
-        <h1>Student Profile</h1>
+        <h1>Welcome, {{ $student->name }}</h1>
     </div>
      
     <div class="student-profile">
         <div class="student-info">
             <div class="student-photo">
-                <img src="{{ asset('css/GeneralResources/pic.jpg') }}" alt="Profile Picture">
+                <img src="{{ asset('images/' . $student->picture) }}" alt="Profile Picture">
             </div>
             <div class="student-details">
-                <h2>Denn Harenz Escat</h2>
-                <p>Outlook: dennharenz@outlook.com</p>
-                <div class="details">
-                    <p><strong>Gender:</strong> Male</p>
-                    <p><strong>Course/Strand:</strong> BSIT</p>
-                    <p><strong>Section:</strong> 301</p>
-                    <p><strong>Student Number:</strong> 21-1111</p>
-                </div>
-                <a href="{{ route('logout') }}"><h5>Log Out</a>
+                <p><strong>Gender:</strong> {{ ucfirst($student->gender) }}</p>
+                <p><strong>Age:</strong> {{ $student->age }} Years Old</p>
+                <p><strong>Outlook:</strong> {{ $student->Outlook_Email }}</p>
+                <p><strong>Course/Strand:</strong> {{ $student->Course_Strand }}</p>
+                <p><strong>Section:</strong> {{ $student->Grade_Level_Section }}</p>
+                <p><strong>Student Number:</strong> {{ $student->StudentId }}</p>
+                
             </div>
+            <a href="{{ route('logout') }}"><h5>Log Out</a>
         </div>
         <div class="tabs">
-            <a href="{{ ('StudentPickEvaluation') }}">Evaluation</a>
-            <a href="{{ ('StudentPickConsultation') }}">Consultation</a>
+            <a href="{{ route('StudentPickEvaluation') }}">Evaluation</a>
+            <a href="{{ route('StudentPickConsultation') }}">Consultation</a>
         </div>
     </div>
-
-    
 </body>
 </html>

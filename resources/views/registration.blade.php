@@ -1,112 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Evaluation and Consultation</title>
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-
 <body>
-    <div class="form-container">
-        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-        
-        @if (session('success'))
-            <p class="success-message">{{ session('success') }}</p>
-        @endif
+    <h1>Register as a Student</h1>
 
-        <!-- Updated form action and corrected input names -->
-        <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+    @if ($errors->any())
+        <div class="error">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
-            <!-- Picture Upload -->
-            <div class="form-group picture-upload">
-                <label for="picture">PICTURES</label>
-                <div class="picture-box">1X1</div>
-                <input type="file" id="picture" name="picture">
-                @error('picture')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+    <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
 
-            <!-- Student ID -->
-            <div class="form-group">
-                <label for="student-id">STUDENT ID NO</label>
-                <input type="text" id="student-id" name="StudentId" value="{{ old('StudentId') }}">
-                @error('StudentId')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" id="student_id" value="{{ old('student_id') }}" required>
 
-            <!-- Name -->
-            <div class="form-group">
-                <label for="name">NAME</label>
-                <input type="text" id="name" name="name" value="{{ old('name') }}">
-                @error('name')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{ old('name') }}" required>
 
-            <!-- Age -->
-            <div class="form-group">
-                <label for="age">AGE</label>
-                <input type="text" id="age" name="age" value="{{ old('age') }}">
-                @error('age')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" value="{{ old('age') }}" required>
 
-            <!-- Outlook Email -->
-            <div class="form-group">
-                <label for="email">OUTLOOK EMAIL</label>
-                <input type="email" id="email" name="Outlook_Email" value="{{ old('Outlook_Email') }}">
-                @error('Outlook_Email')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="outlook_email">Outlook Email:</label>
+        <input type="email" name="outlook_email" id="outlook_email" value="{{ old('outlook_email') }}" required>
 
-            <!-- Course/Strand -->
-            <div class="form-group">
-                <label for="course">COURSE/STRAND</label>
-                <input type="text" id="course" name="Course_Strand" value="{{ old('Course_Strand') }}">
-                @error('Course_Strand')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="course_strand">Course Strand:</label>
+        <input type="text" name="course_strand" id="course_strand" value="{{ old('course_strand') }}" required>
 
-            <!-- Grade Level/Section -->
-            <div class="form-group">
-                <label for="grade">GRADE LEVEL/SECTION</label>
-                <input type="text" id="grade" name="Grade_Level_Section" value="{{ old('Grade_Level_Section') }}">
-                @error('Grade_Level_Section')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="grade_level_section">Grade Level Section:</label>
+        <input type="text" name="grade_level_section" id="grade_level_section" value="{{ old('grade_level_section') }}" required>
 
-            <!-- Password -->
-            <div class="form-group">
-                <label for="password">PASSWORD</label>
-                <input type="password" id="password" name="password">
-                @error('password')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
+            <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
+            <option value="Other" {{ old('gender') == 'Other' ? 'selected' : '' }}>Other</option>
+        </select>
 
-            
-            <div class="form-group">
-                <label for="confirm-password">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm-password" name="password_confirmation">
-                @error('password_confirmation')
-                    <p class="error-message">{{ $message }}</p>
-                @enderror
-            </div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
 
-            <!-- Buttons -->
-            <button type="button" class="back-btn" onclick="history.back()">BACK</button>
-            <button type="submit" class="save-btn">SUBMIT</button>
-        </form>
-    </div>
+        <label for="password_confirmation">Confirm Password:</label>
+        <input type="password" name="password_confirmation" id="password_confirmation" required>
+
+        <label for="picture">Profile Picture (optional):</label>
+        <input type="file" name="picture" id="picture" accept="image/*">
+
+        <button type="submit">Register</button>
+    </form>
 </body>
-
 </html>

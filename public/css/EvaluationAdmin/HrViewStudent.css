@@ -11,8 +11,9 @@
 }
 
 h1 {
+    text-align: center;
     font-family: "Averia Serif Libre", serif;
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0;
 }
 

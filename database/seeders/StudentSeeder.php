@@ -1,7 +1,5 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -12,19 +10,23 @@ class StudentSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
+        $numStudents = 10;
+        $prefix = '21-';
+        $counter = 1;
 
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 0; $i < $numStudents; $i++) {
+
+            $studentId = $prefix . str_pad($counter, 4, '0', STR_PAD_LEFT);
+            $counter++;
             DB::table('students')->insert([
-                'StudentId' => '2024A' . str_pad($i, 3, '0', STR_PAD_LEFT), // Unique Student ID
-                'name' => $faker->name, // Random name
-                'age' => $faker->numberBetween(18, 25), // Random age between 18 and 25
-                'Outlook_Email' => $faker->unique()->safeEmail, // Random unique email
-                'Course_Strand' => $faker->randomElement([
-                    'Science and Technology', 'Business Management', 'Arts and Design', 'Humanities'
-                ]), // Random course/strand
-                'Grade_Level_Section' => 'Grade 12 - Section ' . $faker->randomLetter, // Random section
-                'password' => Hash::make('password' . $i), // Hashed password
-                'picture' => $faker->imageUrl(), // Random picture URL (optional)
+                'StudentId' => $studentId,
+                'name' => $faker->name,
+                'age' => $faker->numberBetween(18, 25),
+                'Outlook_Email' => $faker->unique()->safeEmail,
+                'Course_Strand' => 'BSIT',
+                'Grade_Level_Section' => $faker->randomElement(['BSIT 101', 'BSIT 201']), // Adjusted section format
+                'password' => Hash::make('password' . $i),
+                'picture' => $faker->imageUrl(),
             ]);
         }
     }

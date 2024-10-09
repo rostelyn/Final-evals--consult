@@ -17,7 +17,7 @@ use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\ConsultController; // Updated from ConsultationController to ConsultController
 use App\Http\Controllers\HighSchoolConsultController;
 
-use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\HRBSITController;
 
 /*
 |--------------------------------------------------------------------------
@@ -110,8 +110,9 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 
 
 // Student routes
-Route::get('/student.student-evaluation-consultation', function () {return view('student.student-evaluation-consultation');
-})->middleware('auth')->name('student.student-evaluation-consultation');
+
+Route::get('/student.student.dashboard', function () {return view('student.student.dashboard');
+})->middleware('auth')->name('student.student.dashboard');
 
 //for dashboard
 
@@ -185,24 +186,6 @@ Route::get('/HrCollegeCourse', function () {
     return view('hr.HrCollegeCourse');
 })->name('HrCollegeCourse');
 
-//for section
-Route::get('/HrBSIT101', function () {
-    return view('hr.HrCollegeBSIT.HrBSIT101');
-})->name('HrBSIT101');
-
-
-Route::get('/HrBSIT201', function () {
-    return view('hr.HrCollegeBSIT.HrBSIT201');
-})->name('HrBSIT201');
-
-Route::get('/HrBSIT301', function () {
-    return view('hr.HrCollegeBSIT.HrBSIT301');
-})->name('HrBSIT301');
-
-Route::get('/HrBSIT401', function () {
-    return view('hr.HrCollegeBSIT.HrBSIT401');
-})->name('HrBSIT401');
-
 
 //HR BSHM ROUTE
 Route::get('/HrHM', function () {
@@ -266,8 +249,6 @@ Route::get('/HrTourism', function () {
 Route::get('/Tourism101', function () {
     return view('hr.HrTourism.Tourism101');
 })->name('Tourism101');
-
-
 
 
 
@@ -708,7 +689,33 @@ Route::get('/HighSchoolSettings', function () {
 
 
 
-Route::get('/students', [StudentController::class, 'index'])->name('studentList');
+// Route for showing the registration form
+Route::get('/students/register', [StudentController::class, 'create'])->name('students.create');
 
-// Route for viewing an individual student profile (now called viewStudentProfile)
-Route::get('/student/view/{id}', [StudentController::class, 'viewStudent'])->name('viewStudentProfile');
+// Route for storing a new student
+Route::post('/students/store', [StudentController::class, 'store'])->name('students.store');
+
+// Route for viewing a specific student's profile
+Route::get('/students/{id}', [HRBSITController::class, 'show'])->name('student.show');
+
+// Route for viewing the student's dashboard (if separate from show)
+Route::get('/student-evaluation-consultation/{id}', [StudentController::class, 'dashboard'])->name('student-evaluation-consultation');
+
+
+
+// HRBSIT Routes
+
+Route::get('/HrBSIT101', [HRBSITController::class, 'showBSIT101'])->name('HrBSIT101');
+Route::get('/HrBSIT102', [HRBSITController::class, 'showBSIT102'])->name('HrBSIT102');
+Route::get('/HrBSIT103', [HRBSITController::class, 'showBSIT103'])->name('HrBSIT103');
+Route::get('/HrBSIT201', [HRBSITController::class, 'showBSIT201'])->name('HrBSIT201');
+Route::get('/HrBSIT202', [HRBSITController::class, 'showBSIT202'])->name('HrBSIT202');
+Route::get('/HrBSIT203', [HRBSITController::class, 'showBSIT203'])->name('HrBSIT203');
+Route::get('/HrBSIT301', [HRBSITController::class, 'showBSIT301'])->name('HrBSIT301');
+Route::get('/HrBSIT302', [HRBSITController::class, 'showBSIT302'])->name('HrBSIT302');
+Route::get('/HrBSIT303', [HRBSITController::class, 'showBSIT303'])->name('HrBSIT303');
+Route::get('/HrBSIT401', [HRBSITController::class, 'showBSIT401'])->name('HrBSIT401');
+Route::get('/HrBSIT402', [HRBSITController::class, 'showBSIT402'])->name('HrBSIT402');
+Route::get('/HrBSIT403', [HRBSITController::class, 'showBSIT403'])->name('HrBSIT403');
+
+

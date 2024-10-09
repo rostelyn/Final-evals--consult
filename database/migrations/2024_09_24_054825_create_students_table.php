@@ -16,9 +16,10 @@ class CreateStudentsTable extends Migration
             $table->integer('age');
             $table->string('Outlook_Email')->unique();
             $table->string('Course_Strand');
-            $table->string('Grade_Level_Section');
+            $table->string('Grade_Level_Section')->nullable();
+            $table->string('gender');
             $table->string('password');
-            $table->string('picture')->nullable(); // For storing the image
+            $table->string('picture')->nullable();
             $table->timestamps();
         });
     }    
