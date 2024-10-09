@@ -22,6 +22,7 @@ use App\Http\Controllers\BSHMController;
 use App\Http\Controllers\BSCSController;
 use App\Http\Controllers\ACTController;
 use App\Http\Controllers\HRTController;
+use App\Http\Controllers\CETController;
 
 /*
 |--------------------------------------------------------------------------
@@ -782,3 +783,22 @@ Route::get('/HRT203', [HRTController::class, 'showHRT203'])->name('HRT203');
 Route::get('/HRT301', [HRTController::class, 'showHRT301'])->name('HRT301');
 Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
 Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
+
+
+//CET
+
+Route::get('/CET101', [CETController::class, 'showCET101'])->name('CET101');
+Route::get('/CET102', [CETController::class, 'showCET102'])->name('CET102');
+Route::get('/CET103', [CETController::class, 'showCET103'])->name('CET103');
+
+Route::get('/CET201', [CETController::class, 'showCET201'])->name('CET201');
+Route::get('/CET202', [CETController::class, 'showCET202'])->name('CET202');
+Route::get('/CET203', [CETController::class, 'showCET203'])->name('CET203');
+
+Route::get('/CET301', [CETController::class, 'showCET301'])->name('CET301');
+Route::get('/CET302', [CETController::class, 'showCET302'])->name('CET302');
+Route::get('/CET303', [CETController::class, 'showCET303'])->name('CET303');
+
+Route::get('/CET401', [CETController::class, 'showCET401'])->name('CET401');
+Route::get('/CET402', [CETController::class, 'showCET402'])->name('CET402');
+Route::get('/CET403', [CETController::class, 'showCET403'])->name('CET403');
