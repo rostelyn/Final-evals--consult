@@ -18,6 +18,7 @@ use App\Http\Controllers\ConsultController; // Updated from ConsultationControll
 use App\Http\Controllers\HighSchoolConsultController;
 
 use App\Http\Controllers\HRBSITController;
+use App\Http\Controllers\BSHMController;
 
 /*
 |--------------------------------------------------------------------------
@@ -719,3 +720,20 @@ Route::get('/HrBSIT402', [HRBSITController::class, 'showBSIT402'])->name('HrBSIT
 Route::get('/HrBSIT403', [HRBSITController::class, 'showBSIT403'])->name('HrBSIT403');
 
 
+//BSHM
+
+Route::get('/HM101', [BSHMController::class, 'showBSHM101'])->name('HM101');
+Route::get('/HM102', [BSHMController::class, 'showBSHM102'])->name('HM102');
+Route::get('/HM103', [BSHMController::class, 'showBSHM103'])->name('HM103');
+
+Route::get('/HM201', [BSHMController::class, 'showBSHM201'])->name('HM201');
+Route::get('/HM202', [BSHMController::class, 'showBSHM202'])->name('HM202');
+Route::get('/HM203', [BSHMController::class, 'showBSHM203'])->name('HM203');
+
+Route::get('/HM301', [BSHMController::class, 'showBSHM301'])->name('HM301');
+Route::get('/HM302', [BSHMController::class, 'showBSHM302'])->name('HM302');
+Route::get('/HM303', [BSHMController::class, 'showBSHM303'])->name('HM303');
+
+Route::get('/HM401', [BSHMController::class, 'showBSHM401'])->name('HM401');
+Route::get('/HM402', [BSHMController::class, 'showBSHM402'])->name('HM402');
+Route::get('/HM403', [BSHMController::class, 'showBSHM403'])->name('HM403');

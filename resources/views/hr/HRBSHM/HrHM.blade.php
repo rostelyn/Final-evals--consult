@@ -19,36 +19,49 @@
             <a href="{{('HM101') }}">
                 <button>101</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HM102') }}">
                 <button>102</button>
+            </a>
+
+            <a href="{{('HM103') }}">
+                <button>103</button>
             </a>
             
         </div>
         <div class="year-block">
             <h2>Second Year</h2>
-            <a href="{{('HrBSIT201') }}">
+            <a href="{{('HM201') }}">
                 <button>201</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HM202') }}">
                 <button>202</button>
+            </a>
+            <a href="{{('HM203') }}">
+                <button>203</button>
             </a>
         </div>
         <div class="year-block">
             <h2>Third Year</h2>
-            <a href="{{('HrBSIT301') }}">
+            <a href="{{('HM301') }}">
                 <button>301</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HM302') }}">
+                <button>302</button>
+            </a>
+            <a href="{{('HM303') }}">
                 <button>303</button>
             </a>
         </div>
         <div class="year-block">
             <h2>Fourth Year</h2>
-            <a href="{{('HrBSIT401') }}">
+            <a href="{{('HM401') }}">
                 <button>401</button>
             </a>
-            <a href="{{('') }}">
+            <a href="{{('HM402') }}">
                 <button>402</button>
+            </a>
+            <a href="{{('HM403') }}">
+                <button>403</button>
             </a>
         </div>
     </div>
