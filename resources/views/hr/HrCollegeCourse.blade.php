@@ -38,7 +38,7 @@
             <span class="course-name">Hotel and Restaurant Technology</span>
         </div>
     </a>
-    <a href="{{ ('HrComputerScience') }}">
+    <a href="{{ ('HrBSCS') }}">
         <div class="course-item" data-title="Bachelor of Science in Computer Science">
               <img src="{{ asset('css/CoursePicture/COMSCI.jpg') }}">
             <span class="course-name">Bachelor of Science in Computer Science</span>

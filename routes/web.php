@@ -19,6 +19,7 @@ use App\Http\Controllers\HighSchoolConsultController;
 
 use App\Http\Controllers\HRBSITController;
 use App\Http\Controllers\BSHMController;
+use App\Http\Controllers\BSCSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -218,12 +219,9 @@ Route::get('/HRT101', function () {
 
 //COMSCI
 
-Route::get('/HrComputerScience', function () {
-    return view('hr.HrComSci.HrComputerScience');
-})->name('HrComputerScience');
-Route::get('/CS101', function () {
-    return view('hr.HrComSci.CS101');
-})->name('CS101');
+Route::get('/HrBSCS', function () {
+    return view('hr.HrBSCS.HrBSCS');
+})->name('HrBSCS');
 
 //CET
 
@@ -737,3 +735,16 @@ Route::get('/HM303', [BSHMController::class, 'showBSHM303'])->name('HM303');
 Route::get('/HM401', [BSHMController::class, 'showBSHM401'])->name('HM401');
 Route::get('/HM402', [BSHMController::class, 'showBSHM402'])->name('HM402');
 Route::get('/HM403', [BSHMController::class, 'showBSHM403'])->name('HM403');
+
+Route::get('/CS101', [BSCSController::class, 'showBSCS101'])->name('CS101');
+Route::get('/CS102', [BSCSController::class, 'showBSCS102'])->name('CS102');
+Route::get('/CS103', [BSCSController::class, 'showBSCS103'])->name('CS103');
+Route::get('/CS201', [BSCSController::class, 'showBSCS201'])->name('CS201');
+Route::get('/CS202', [BSCSController::class, 'showBSCS202'])->name('CS202');
+Route::get('/CS203', [BSCSController::class, 'showBSCS203'])->name('CS203');
+Route::get('/CS301', [BSCSController::class, 'showBSCS301'])->name('CS301');
+Route::get('/CS302', [BSCSController::class, 'showBSCS302'])->name('CS302');
+Route::get('/CS303', [BSCSController::class, 'showBSCS303'])->name('CS303');
+Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
+Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
+Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
