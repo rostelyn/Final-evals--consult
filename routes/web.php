@@ -21,6 +21,7 @@ use App\Http\Controllers\HRBSITController;
 use App\Http\Controllers\BSHMController;
 use App\Http\Controllers\BSCSController;
 use App\Http\Controllers\ACTController;
+use App\Http\Controllers\HRTController;
 
 /*
 |--------------------------------------------------------------------------
@@ -767,3 +768,17 @@ Route::get('/ACT303', [ACTController::class, 'showACT303'])->name('ACT303');
 Route::get('/ACT401', [ACTController::class, 'showACT401'])->name('ACT401');
 Route::get('/ACT402', [ACTController::class, 'showACT402'])->name('ACT402');
 Route::get('/ACT403', [ACTController::class, 'showACT403'])->name('ACT403');
+
+//HRT
+
+Route::get('/HRT101', [HRTController::class, 'showHRT101'])->name('HRT101');
+Route::get('/HRT102', [HRTController::class, 'showHRT102'])->name('HRT102');
+Route::get('/HRT103', [HRTController::class, 'showHRT103'])->name('HRT103');
+
+Route::get('/HRT201', [HRTController::class, 'showHRT201'])->name('HRT201');
+Route::get('/HRT202', [HRTController::class, 'showHRT202'])->name('HRT202');
+Route::get('/HRT203', [HRTController::class, 'showHRT203'])->name('HRT203');
+
+Route::get('/HRT301', [HRTController::class, 'showHRT301'])->name('HRT301');
+Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
+Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
