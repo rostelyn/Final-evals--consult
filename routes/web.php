@@ -766,6 +766,10 @@ Route::get('/HRT301', [HRTController::class, 'showHRT301'])->name('HRT301');
 Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
 Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
 
+Route::get('/HRT401', [HRTController::class, 'showHRT401'])->name('HRT301');
+Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
+Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
+
 
 //CET
 
@@ -802,7 +806,6 @@ Route::get('/HRS303', [HRSController::class, 'showHRS303'])->name('HRS303');
 Route::get('/HRS401', [HRSController::class, 'showHRS401'])->name('HRS401');
 Route::get('/HRS402', [HRSController::class, 'showHRS402'])->name('HRS402');
 Route::get('/HRS403', [HRSController::class, 'showHRS403'])->name('HRS403');
-
 //TOURISM
 
 Route::get('/Tourism101', [TourismController::class, 'showTourism101'])->name('Tourism101');

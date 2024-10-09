@@ -18,7 +18,7 @@
      </div>
             <h2>HRT 202</h2>
 
-<table class="HRT-course-student-list">
+<table class="bsit-course-student-list">
     <thead>
         <tr>
             <th><center>Name</center></th>
