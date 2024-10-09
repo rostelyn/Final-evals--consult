@@ -20,6 +20,7 @@ use App\Http\Controllers\HighSchoolConsultController;
 use App\Http\Controllers\HRBSITController;
 use App\Http\Controllers\BSHMController;
 use App\Http\Controllers\BSCSController;
+use App\Http\Controllers\ACTController;
 
 /*
 |--------------------------------------------------------------------------
@@ -748,3 +749,21 @@ Route::get('/CS303', [BSCSController::class, 'showBSCS303'])->name('CS303');
 Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
 Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
 Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
+
+//ACT
+
+Route::get('/ACT101', [ACTController::class, 'showACT101'])->name('ACT101');
+Route::get('/ACT102', [ACTController::class, 'showACT102'])->name('ACT102');
+Route::get('/ACT103', [ACTController::class, 'showACT103'])->name('ACT103');
+
+Route::get('/ACT201', [ACTController::class, 'showACT201'])->name('ACT201');
+Route::get('/ACT202', [ACTController::class, 'showACT202'])->name('ACT202');
+Route::get('/ACT203', [ACTController::class, 'showACT203'])->name('ACT203');
+
+Route::get('/ACT301', [ACTController::class, 'showACT301'])->name('ACT301');
+Route::get('/ACT302', [ACTController::class, 'showACT302'])->name('ACT302');
+Route::get('/ACT303', [ACTController::class, 'showACT303'])->name('ACT303');
+
+Route::get('/ACT401', [ACTController::class, 'showACT401'])->name('ACT401');
+Route::get('/ACT402', [ACTController::class, 'showACT402'])->name('ACT402');
+Route::get('/ACT403', [ACTController::class, 'showACT403'])->name('ACT403');
