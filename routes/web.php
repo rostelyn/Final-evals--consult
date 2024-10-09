@@ -424,7 +424,7 @@ Route::post('/HrCalendars', [HrCalendarController::class, 'store']);
 
 
 Route::get('/HrProfile', function () {
-    return view('hr.HrCollege.HrProfile');
+    return view('hr.HrCollegeBSIT.HrProfile');
 })->name('HrProfile');
 
 

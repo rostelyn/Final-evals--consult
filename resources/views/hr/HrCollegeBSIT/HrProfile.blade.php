@@ -52,15 +52,15 @@
                 <tr>
                     <td>ARIES CAYABYAB</td>
                     <td>
-                        <button type="button">Current Evaluation</button>
-                        <button type="button">Past Evaluation</button>
+                        <button type="button">Evaluation History</button>
                     </td>
                 </tr>
                 <tr>
                     <td>SIR PERCIAN</td>       
                     <td>
-                        <button type="button">Current Evaluation</button>
-                        <button type="button">Past Evaluation</button>
+
+                    <button type="button" >Evaluation History</button>
+
                     </td>
                 </tr>
             </table>
