@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
 </head>
 <body>
-
+   
     <div class="header">
         <h1>STUDENT EVALUATION AND CONSULTATION</h1>
      </div>
@@ -21,19 +21,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($students as $student)
-            <tr>
-                <td>{{ $student->name }}</td>
-                <td>
-                <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
-                        <button>VIEW STUDENT</button>
-                    </a>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
-
-
-</body>
+            @foreach($students as $student)
+                @if($student->Course_Strand === 'BSIT' && $student->Grade_Level_Section === '102')
+                    <tr>
+                        <td>{{ $student->name }}</td>
+                        <td>
+                            <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                                <button>VIEW STUDENT</button>
+                            </a>
+                        </td>
+                    </tr>
+                @endif
+            @endforeach
+        </tbody>
+  </table>
+ </body>
 </html>
+
+

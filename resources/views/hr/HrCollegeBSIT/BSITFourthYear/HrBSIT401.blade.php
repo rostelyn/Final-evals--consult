@@ -21,17 +21,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($students as $student)
-            <tr>
-                <td>{{ $student->name }}</td>
-                <td>
-                <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
-                        <button>VIEW STUDENT</button>
-                    </a>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
+            @foreach($students as $student)
+                @if($student->Course_Strand === 'BSIT' && $student->Grade_Level_Section === '401')
+                    <tr>
+                        <td>{{ $student->name }}</td>
+                        <td>
+                            <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                                <button>VIEW STUDENT</button>
+                            </a>
+                        </td>
+                    </tr>
+                @endif
+            @endforeach
+        </tbody>
   </table>
  </body>
 </html>
+
+
