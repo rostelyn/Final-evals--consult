@@ -23,6 +23,7 @@ use App\Http\Controllers\BSCSController;
 use App\Http\Controllers\ACTController;
 use App\Http\Controllers\HRTController;
 use App\Http\Controllers\CETController;
+use App\Http\Controllers\HRSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -197,28 +198,18 @@ Route::get('/HrHM', function () {
     return view('hr.HRBSHM.HrHM');
 })->name('HrHm');
 
-Route::get('/HM101', function () {
-    return view('hr.HRBSHM.HM101');
-})->name('HM101');
-
 
 //HR ACT ROUTE
 Route::get('/HrACT', function () {
     return view('hr.HrACT.HrACT');
 })->name('HrACT');
 
-Route::get('/ACT101', function () {
-    return view('hr.HrACT.ACT101');
-})->name('ACT101');
 
 //HR HRT
 
 Route::get('/HrHRT', function () {
     return view('hr.HrHRT.HrHRT');
 })->name('HrHRT');
-Route::get('/HRT101', function () {
-    return view('hr.HrHRT.HRT101');
-})->name('HRT101');
 
 //COMSCI
 
@@ -231,27 +222,17 @@ Route::get('/HrBSCS', function () {
 Route::get('/HrCET', function () {
     return view('hr.HrCET.HrCET');
 })->name('HrCET');
-Route::get('/CET101', function () {
-    return view('hr.HrCET.CET101');
-})->name('CET101');
 
 //HRS
 
 Route::get('/HrHRS', function () {
     return view('hr.HrHRS.HrHRS');
 })->name('HrHRS');
-Route::get('/HRS101', function () {
-    return view('hr.HrHRS.HRS101');
-})->name('HRS101');
 
 //Tourism
 Route::get('/HrTourism', function () {
     return view('hr.HrTourism.HrTourism');
 })->name('HrTourism');
-Route::get('/Tourism101', function () {
-    return view('hr.HrTourism.Tourism101');
-})->name('Tourism101');
-
 
 
 // HR High School Route
@@ -802,3 +783,21 @@ Route::get('/CET303', [CETController::class, 'showCET303'])->name('CET303');
 Route::get('/CET401', [CETController::class, 'showCET401'])->name('CET401');
 Route::get('/CET402', [CETController::class, 'showCET402'])->name('CET402');
 Route::get('/CET403', [CETController::class, 'showCET403'])->name('CET403');
+
+//HRS
+
+Route::get('/HRS101', [HRSController::class, 'showHRS101'])->name('HRS101');
+Route::get('/HRS102', [HRSController::class, 'showHRS102'])->name('HRS102');
+Route::get('/HRS103', [HRSController::class, 'showHRS103'])->name('HRS103');
+
+Route::get('/HRS201', [HRSController::class, 'showHRS201'])->name('HRS201');
+Route::get('/HRS202', [HRSController::class, 'showHRS202'])->name('HRS202');
+Route::get('/HRS203', [HRSController::class, 'showHRS203'])->name('HRS203');
+
+Route::get('/HRS301', [HRSController::class, 'showHRS301'])->name('HRS301');
+Route::get('/HRS302', [HRSController::class, 'showHRS302'])->name('HRS302');
+Route::get('/HRS303', [HRSController::class, 'showHRS303'])->name('HRS303');
+
+Route::get('/HRS401', [HRSController::class, 'showHRS401'])->name('HRS401');
+Route::get('/HRS402', [HRSController::class, 'showHRS402'])->name('HRS402');
+Route::get('/HRS403', [HRSController::class, 'showHRS403'])->name('HRS403');
