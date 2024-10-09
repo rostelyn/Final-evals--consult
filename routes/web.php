@@ -24,6 +24,7 @@ use App\Http\Controllers\ACTController;
 use App\Http\Controllers\HRTController;
 use App\Http\Controllers\CETController;
 use App\Http\Controllers\HRSController;
+use App\Http\Controllers\TourismController;
 
 /*
 |--------------------------------------------------------------------------
@@ -801,3 +802,21 @@ Route::get('/HRS303', [HRSController::class, 'showHRS303'])->name('HRS303');
 Route::get('/HRS401', [HRSController::class, 'showHRS401'])->name('HRS401');
 Route::get('/HRS402', [HRSController::class, 'showHRS402'])->name('HRS402');
 Route::get('/HRS403', [HRSController::class, 'showHRS403'])->name('HRS403');
+
+//TOURISM
+
+Route::get('/Tourism101', [TourismController::class, 'showTourism101'])->name('Tourism101');
+Route::get('/Tourism102', [TourismController::class, 'showTourism102'])->name('Tourism102');
+Route::get('/Tourism103', [TourismController::class, 'showTourism103'])->name('Tourism103');
+
+Route::get('/Tourism201', [TourismController::class, 'showTourism201'])->name('Tourism201');
+Route::get('/Tourism202', [TourismController::class, 'showTourism202'])->name('Tourism202');
+Route::get('/Tourism203', [TourismController::class, 'showTourism203'])->name('Tourism203');
+
+Route::get('/Tourism301', [TourismController::class, 'showTourism301'])->name('Tourism301');
+Route::get('/Tourism302', [TourismController::class, 'showTourism302'])->name('Tourism302');
+Route::get('/Tourism303', [TourismController::class, 'showTourism303'])->name('Tourism303');
+
+Route::get('/Tourism401', [TourismController::class, 'showTourism401'])->name('Tourism401');
+Route::get('/Tourism402', [TourismController::class, 'showTourism402'])->name('Tourism402');
+Route::get('/Tourism403', [TourismController::class, 'showTourism403'])->name('Tourism403');
