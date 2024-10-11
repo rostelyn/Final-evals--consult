@@ -8,7 +8,7 @@ class FacultyController extends Controller
 {
     public function index()
     {
-        // Replace this with data from your database
+     
         $departments = ['CS', 'Faculty1', 'Faculty2', 'Faculty3'];
         
         return view('student.evaluation.faculty.index', compact('departments'));
@@ -16,7 +16,7 @@ class FacultyController extends Controller
 
     public function show($department)
     {
-        // Replace this with data from your database
+ 
         $facultyDetails = [
             'CS' => [
                 'head' => 'Sir Percian',

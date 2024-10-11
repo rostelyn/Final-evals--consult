@@ -10,7 +10,7 @@ use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\ConsultationHighschoolController;
+
 use App\Http\Controllers\HighSchoolCalendarController;
 
 use App\Http\Controllers\CalendarController;
@@ -19,12 +19,14 @@ use App\Http\Controllers\HighSchoolConsultController;
 
 use App\Http\Controllers\HRBSITController;
 use App\Http\Controllers\BSHMController;
-use App\Http\Controllers\BSCSController;
 use App\Http\Controllers\ACTController;
 use App\Http\Controllers\HRTController;
 use App\Http\Controllers\CETController;
 use App\Http\Controllers\HRSController;
 use App\Http\Controllers\TourismController;
+use App\Http\Controllers\HrGrades7To10Controller;
+use App\Http\Controllers\HrGrade11and12Controller;
+use App\Http\Controllers\BSCSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +143,14 @@ Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighsc
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
+//new evaluation routes
+Route::get('/student.evaluation.evaluation-show', [EvaluationController::class, 'index'])
+    ->name('evaluations-show');
+    
+Route::get('/hr.HrCollegeBSIT.BSITThirdYear.hrStudentlis', [EvaluationController::class, 'showStudents'])->name('bsit.thirdyear.students');
+
+Route::get('/student.evaluation.evaluation-show', [EvaluationController::class, 'showEvaluations'])->name('evaluation-show');
+
 //studentCalendar
 Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('studeHrCalendar.index');
 Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
@@ -153,8 +163,7 @@ Route::get('/Appointment', function () {
     return view('student.consultation.consult');
 })->name('Appointment');
 
-//bago
-Route::post('/consultationhighschool', [ConsultationHighschoolController::class, 'store'])->name('consultationhighschool.store');
+
 
 Route::get('/highschool', function () {
     return view('student.consultation.highschool');
@@ -244,145 +253,34 @@ Route::get('/HrHighSchool', function () {
 
 
 
-//for section highschool and strand
-Route::get('/Grade7-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Grade7-101');
-})->name('Grade7-101');
+/*/
 
-Route::get('/Grade8-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Grade8-101');
-})->name('Grade8-101');
+Route::get('/Torvalds', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Torvalds');
+})->name('Torvalds');
 
-Route::get('/GRADE9-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.GRADE9-101');
-})->name('GRADE9-101');
+Route::get('/Marshall', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Marshall');
+})->name('Marshall');
 
-Route::get('/GRADE10-101', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.GRADE10-101');
-})->name('GRADE10-101');
+Route::get('/Marcus', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Marcus');
+})->name('Marcus');
 
-//strand G11
-Route::get('/Grade11Abm', function () {
-    return view('hr.HRHighSchool.11STRANDSECTION.11ABM.Grade11Abm');
-})->name('Grade11Abm');
+Route::get('/SanPedroCalungsod', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.SanPedroCalungsod');
+})->name('SanPedroCalungsod');
 
-Route::get('/Grade11Stem', function () {
-    return view('hr.HRHighSchool.11STRANDSECTION.11STEM.Grade11Stem');
-})->name('Grade11Stem');
+Route::get('/Einstein', function () {
+    return view('hr.HRHighSchool.VIEWSTUDENT.Einstein');
+})->name('Einstein');
 
-Route::get('/Grade11Gas', function () {
-    return view('hr.HRHighSchool.11GAS.Grade11Gas');
-})->name('Grade11Gas');
-
-Route::get('/GRADE11Ict', function () {
-    return view('hr.HRHighSchool.11STRANDSECTION.11ICT.GRADE11Ict');
-})->name('GRADE11Ict');
-
-Route::get('/GRADE11Gas', function () {
-    return view('hr.HRHighSchool.11STRANDSECTION.11GAS.GRADE11Gas');
-})->name('GRADE11Gas');
-
-Route::get('/11ABM101', function () {
-    return view('hr.HRHighSchool.STRAND.11ABM101');
-})->name('11ABM101');
-
-Route::get('/11STEM101', function () {
-    return view('hr.HRHighSchool.STRAND.11STEM101');
-})->name('11STEM101');
-
-Route::get('/11ICT101', function () {
-    return view('hr.HRHighSchool.STRAND.11ICT101');
-})->name('11ICT101');
-
-Route::get('/11GAS101', function () {
-    return view('hr.HRHighSchool.STRAND.11GAS101');
-})->name('11GAS101');
-
-//strand G12
-Route::get('/GRADE12Abm', function () {
-    return view('hr.HRHighSchool.12STRANDSECTION.12ABM.GRADE12Abm');
-})->name('GRADE12Abm');
-
-Route::get('/GRADE12Stem', function () {
-    return view('hr.HRHighSchool.12STRANDSECTION.12STEM.GRADE12Stem');
-})->name('GRADE12Stem');
-
-Route::get('/GRADE12Gas', function () {
-    return view('hr.HRHighSchool.12STRANDSECTION.12GAS.GRADE12Gas');
-})->name('GRADE12Gas');
-
-Route::get('/GRADE12Ict', function () {
-    return view('hr.HRHighSchool.12STRANDSECTION.12ICT.GRADE12Ict');
-})->name('GRADE12Ict');
-
-Route::get('/12ABM101', function () {
-    return view('hr.HRHighSchool.STRAND.12ABM101');
-})->name('12ABM101');
-
-Route::get('/12STEM101', function () {
-    return view('hr.HRHighSchool.STRAND.12STEM101');
-})->name('12STEM101');
-
-Route::get('/12ICT101', function () {
-    return view('hr.HRHighSchool.STRAND.12ICT101');
-})->name('12ICT101');
-
-Route::get('/12GAS101', function () {
-    return view('hr.HRHighSchool.STRAND.12GAS101');
-})->name('12GAS101');
-
-
+/*/
 
 // ProfileHS
-Route::get('/GRADE7PROFILE', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE7PROFILE');
-})->name('GRADE7PROFILE');
-
-Route::get('/GRADE8PROFILE', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE8PROFILE');
-})->name('GRADE8PROFILE');
-
-Route::get('/GRADE9PROFILE', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE9PROFILE');
-})->name('GRADE9PROFILE');
-
-Route::get('/GRADE10PROFILE', function () {
-    return view('hr.HRHighSchool.HSPROFILE.GRADE10PROFILE');
-})->name('GRADE10PROFILE');
-
-//Profle Strand G11
-Route::get('/HRGRADE11STEM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11STEM');
-})->name('HRGRADE11STEM');
-
-Route::get('/HRGRADE11ABM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11ABM');
-})->name('HRGRADE11ABM');
-
-Route::get('/HRGRADE11GAS', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11GAS');
-})->name('HRGRADE11GAS');
-
-Route::get('/HRGRADE11ICT', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE11ICT');
-})->name('HRGRADE11ICT');
-
-//Profle Strand G12
-Route::get('/HRGRADE12STEM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12STEM');
-})->name('HRGRADE12STEM');
-
-Route::get('/HRGRADE12ABM', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12ABM');
-})->name('HRGRADE12ABM');
-
-Route::get('/HRGRADE12GAS', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12GAS');
-})->name('HRGRADE12GAS');
-
-Route::get('/HRGRADE12ICT', function () {
-    return view('hr.HRHighSchool.HSPROFILE.HRGRADE12ICT');
-})->name('HRGRADE12ICT');
+Route::get('/HsProfile', function () {
+    return view('hr.HRHighSchool.HsProfile');
+})->name('HsProfile');
 
 //
 Route::get('/HrCalendar', function () {
@@ -823,3 +721,21 @@ Route::get('/Tourism303', [TourismController::class, 'showTourism303'])->name('T
 Route::get('/Tourism401', [TourismController::class, 'showTourism401'])->name('Tourism401');
 Route::get('/Tourism402', [TourismController::class, 'showTourism402'])->name('Tourism402');
 Route::get('/Tourism403', [TourismController::class, 'showTourism403'])->name('Tourism403');
+
+
+// Grade 7 route
+Route::get('/HrGrade7', [HrGrades7To10Controller::class, 'showGrade7'])->name('HrGrade7');
+
+// Grade 8 route
+Route::get('/HrGrade8', [HrGrades7To10Controller::class, 'showGrade8'])->name('HrGrade8');
+
+// Grade 9 route
+Route::get('/HrGrade9', [HrGrades7To10Controller::class, 'showGrade9'])->name('HrGrade9');
+
+// Grade 10 route
+Route::get('/HrGrade10', [HrGrades7To10Controller::class, 'showGrade10'])->name('HrGrade10');
+
+
+
+// Grade 11 Sections
+Route::get('/LoveLace', [HrGrade11and12Controller::class, 'showLovelace'])->name('LoveLace');
