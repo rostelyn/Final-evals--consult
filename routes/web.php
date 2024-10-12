@@ -144,12 +144,14 @@ Route::get('/evaluation-form', function () {return view('student.evaluation.eval
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 //new evaluation routes
-Route::get('/student.evaluation.evaluation-show', [EvaluationController::class, 'index'])
-    ->name('evaluations-show');
-    
-Route::get('/hr.HrCollegeBSIT.BSITThirdYear.hrStudentlis', [EvaluationController::class, 'showStudents'])->name('bsit.thirdyear.students');
+Route::get('/student/evaluation/show', [EvaluationController::class, 'index'])
+->name('evaluations.show');
 
-Route::get('/student.evaluation.evaluation-show', [EvaluationController::class, 'showEvaluations'])->name('evaluation-show');
+Route::get('/hr/college/bsit/third-year/students', [EvaluationController::class, 'showStudents'])
+->name('bsit.thirdyear.students');
+
+Route::get('/student/evaluation/evaluations-show', [EvaluationController::class, 'showEvaluations'])
+->name('evaluation.show');
 
 //studentCalendar
 Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('studeHrCalendar.index');
@@ -251,31 +253,6 @@ Route::get('/HrHighSchool', function () {
     return view('hr.HrHighSchool');
 })->name('HrHighSchool');
 
-
-
-/*/
-
-Route::get('/Torvalds', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Torvalds');
-})->name('Torvalds');
-
-Route::get('/Marshall', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Marshall');
-})->name('Marshall');
-
-Route::get('/Marcus', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Marcus');
-})->name('Marcus');
-
-Route::get('/SanPedroCalungsod', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.SanPedroCalungsod');
-})->name('SanPedroCalungsod');
-
-Route::get('/Einstein', function () {
-    return view('hr.HRHighSchool.VIEWSTUDENT.Einstein');
-})->name('Einstein');
-
-/*/
 
 // ProfileHS
 Route::get('/HsProfile', function () {
@@ -521,11 +498,6 @@ Route::get('/BSIT401Profile', function () {
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
 
-
-
-
-
-
 Route::get('/CtNotification', function () {
     return view('AdminCtation.CtNotification');
 })->name('CtNotification');
@@ -555,13 +527,6 @@ Route::get('/DpHeadAppDis', function () {
 })->name('DpHeadAppDis');
 
 
-
-
-//STUDENT VIEW 
-
-Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('HrProfile');
-
-
 //HIGHSCHOOL ROUTE FOR STUDENT SIDEBAR
 
 Route::get('/HighSchoolSettings', function () {
@@ -569,6 +534,11 @@ Route::get('/HighSchoolSettings', function () {
 })->name('HighSchoolSettings');
 
 
+// Student Profile  College
+Route::get('/HrProfile/{studentId}', [StudentController::class, 'show'])->name('HrProfile');
+
+//HighSchool
+Route::get('/HsProfile/{id}', [HrGrades7To10Controller::class, 'show'])->name('HsProfile');
 
 
 // Route for showing the registration form
@@ -739,3 +709,15 @@ Route::get('/HrGrade10', [HrGrades7To10Controller::class, 'showGrade10'])->name(
 
 // Grade 11 Sections
 Route::get('/LoveLace', [HrGrade11and12Controller::class, 'showLovelace'])->name('LoveLace');
+Route::get('/Aristotle', [HrGrade11and12Controller::class, 'showAristotle'])->name('Aristotle');
+Route::get('/StClare', [HrGrade11and12Controller::class, 'showStClare'])->name('StClare');
+Route::get('/Duflo', [HrGrade11and12Controller::class, 'showDuflo'])->name('Duflo');
+Route::get('/EsCoZier', [HrGrade11and12Controller::class, 'showEsCoZier'])->name('EsCoZier');
+
+//Grade 12  Sections
+
+Route::get('/Torvalds', [HrGrade11and12Controller::class, 'showTorvalds'])->name('Torvalds');
+Route::get('/Marshall', [HrGrade11and12Controller::class, 'showMarshall'])->name('Marshall');
+Route::get('/SanPedroCalungsod', [HrGrade11and12Controller::class, 'showSanPedroCalungsod'])->name('SanPedroCalungsod');
+Route::get('/Einstein', [HrGrade11and12Controller::class, 'showEinstein'])->name('Einstein');
+Route::get('/Marcus', [HrGrade11and12Controller::class, 'showMarcus'])->name('Marcus');

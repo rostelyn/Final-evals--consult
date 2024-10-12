@@ -27,8 +27,9 @@
         </div>
         <ul>
             <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-            <li><a href="{{ route('consult.form') }}">Appointment</a></li> <!-- Updated route -->
-            <li><a href="{{ route('StudentSettings') }}">Settings</a></li>
+            <li><a href="{{ ('consult.form') }}">Appointment</a></li>
+            <li><a href="{{ ('evaluation-show') }}">List of Appointment</a></li> 
+            <li><a href="{{ ('StudentSettings') }}">Settings</a></li>
         </ul>
     </div>
     <div class="content">

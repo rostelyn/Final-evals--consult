@@ -32,7 +32,7 @@
                         <td>{{ $student->name }}</td>
                         <td>
                             <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
-                                <button>VIEW STUDENT</button>
+                                <button> VIEW STUDENT</button>
                             </a>
                         </td>
                     </tr>

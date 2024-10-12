@@ -1,9 +1,7 @@
 <?php
 
-// app/Http/Controllers/EvaluationController.php
-// app/Http/Controllers/EvaluationController.php
 namespace App\Http\Controllers;
-// app/Http/Controllers/EvaluationController.php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -35,4 +33,16 @@ class EvaluationController extends Controller
 
         return redirect()->back()->with('success', 'Evaluation submitted successfully!');
     }
+    public function showEvaluations(Request $request)
+    {
+        // Get the teacher's name from the query string
+        $teacherName = $request->query('teacher');
+    
+        // Fetch evaluations for the given teacher
+        $evaluations = Evaluation::where('teacher_name', $teacherName)->get();
+    
+        // Pass the evaluations to the correct view
+        return view('hr.HrCollegeBSIT.BSITThirdYear.hrStudentlis', compact('evaluations'));
+    }
+    
 }
