@@ -51,18 +51,20 @@
                 </tr>
                 <tr>
                     <td>ARIES CAYABYAB</td>
-                    <td>
-                        <button type="button">Evaluation History</button>
-                    </td>
-                </tr>
-                <tr>
+                <td>
+                   <a href="{{ route('evaluation.show', ['teacher' => 'ARIES CAYABYAB']) }}">
+                     <button type="button">Evaluation History</button>
+                   </a>
+                </td>
+              </tr>
+              <tr>
                     <td>SIR PERCIAN</td>       
-                    <td>
-
-                    <button type="button" >Evaluation History</button>
-
-                    </td>
-                </tr>
+                 <td>
+                    <a href="{{ route('evaluation.show', ['teacher' => 'SIR PERCIAN']) }}">
+                       <button type="button">Evaluation History</button>
+                    </a>
+                </td>
+              </tr>
             </table>
         </div>
     </div>

@@ -17,27 +17,18 @@
         <div class="section">
             <h2>GRADE 7</h2>
             <div>
-                <a href="{{('Grade7-101') }}">
-                    <button>101</button>
+                <a href="{{('HrGrade7') }}">
+                    <button>Grade 7</button>
                 </a>
             </div>
-            <div>
-                <a href="{{('GRADE7-201') }}">
-                    <button>201</button>
-                </a>
-            </div>
+
         </div>
 
         <div class="section">
             <h2>GRADE 8</h2>
             <div>
-                <a href="{{('Grade8-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('GRADE8-201') }}">
-                    <button>201</button>
+                <a href="{{('HrGrade8') }}">
+                    <button>Grade 8</button>
                 </a>
             </div>
         </div>
@@ -45,13 +36,8 @@
         <div class="section">
             <h2>GRADE 9</h2>
             <div>
-                <a href="{{('GRADE9-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('GRADE9-201') }}">
-                    <button>201</button>
+                <a href="{{('HrGrade9') }}">
+                    <button>Grade 9</button>
                 </a>
             </div>
         </div>
@@ -59,13 +45,8 @@
         <div class="section">
             <h2>GRADE 10</h2>
             <div>
-                <a href="{{('GRADE10-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('GRADE10-201') }}">
-                    <button>201</button>
+                <a href="{{('HrGrade10') }}">
+                    <button>Grade 10</button>
                 </a>
             </div>
         </div>
@@ -73,23 +54,30 @@
         <div class="section">
             <h2>GRADE 11</h2>
             <div>
-                <a href="{{('Grade11Stem') }}">
-                    <button>STEM</button>
+                <a href="{{('LoveLace') }}">
+                    <button>LoveLace</button>
                 </a>
             </div>
             <div>
-                <a href="{{('Grade11Abm') }}">
-                    <button>ABM</button>
+                <a href="{{('Duflo') }}">
+                    <button>Duflo</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE11Ict') }}">
-                    <button>ICT</button>
+                <a href="{{('StClare') }}">
+                    <button>St.Clare</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE11Gas') }}">
-                    <button>GAS</button>
+                <a href="{{('EsCoZier') }}">
+                    <button>EsCoZier</button>
+                </a>
+            </div>
+             <div>
+                <a href="{{('Aristotle') }}">
+                    <button>Pythagoras/
+                        Aristotle
+                    </button>
                 </a>
             </div>
         </div>
@@ -97,25 +85,32 @@
         <div class="section">
             <h2>GRADE 12</h2>
             <div>
-                <a href="{{('GRADE12Stem') }}">
-                    <button>STEM</button>
+                <a href="{{('Torvalds') }}">
+                    <button>Torvalds</button>
                 </a>
             </div>
             <div>
-                <a href="{{('GRADE12Abm') }}">
-                    <button>ABM</button>
+                <a href="{{('Marshall') }}">
+                    <button>Marshall</button>
                 </a>
             </div>
-            <div>
-                <a href="{{('GRADE12Ict') }}">
-                    <button>ICT</button>
+             <div>
+                <a href="{{('Marcus') }}">
+                    <button>MarCus</button>
                 </a>
             </div>
               <div>
-                 <a href="{{('GRADE12Gas') }}">
-                    <button>GAS</button>
+                 <a href="{{('SanPedroCalungsod') }}">
+                    <button>SanPedro 
+                            Calungsod</button>
                 </a>
             </div>
+               <div>
+                  <a href="{{('Einstein') }}">
+                    <button>Fibonacci/
+                            Einstein</button>
+                  </a>
+               </div>
         </div>
     </div>
             <a href="{{ 'HrStudentList' }}">
