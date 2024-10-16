@@ -40,8 +40,8 @@ class EvaluationController extends Controller
     
         // Fetch evaluations for the given teacher
         $evaluations = Evaluation::where('teacher_name', $teacherName)->get();
-    
-        // Pass the evaluations to the correct view
+
+        $evaluations = Evaluation::all(); 
         return view('hr.HrCollegeBSIT.BSITThirdYear.hrStudentlis', compact('evaluations'));
     }
     
