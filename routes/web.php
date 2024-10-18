@@ -27,6 +27,7 @@ use App\Http\Controllers\TourismController;
 use App\Http\Controllers\HrGrades7To10Controller;
 use App\Http\Controllers\HrGrade11and12Controller;
 use App\Http\Controllers\BSCSController;
+use App\Http\Controllers\CtCollegeCourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -136,6 +137,7 @@ Route::get('/evaluation', function () {
 Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
 
+
 Route::get('/facultyhighschool', [FacultyControllerHighschool::class, 'index'])->name('facultyhighschool.index');
 Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighschool::class, 'show']);
 
@@ -146,6 +148,7 @@ Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('
 //new evaluation routes
 Route::get('/student/evaluation/show', [EvaluationController::class, 'index'])
 ->name('evaluations.show');
+
 
 Route::get('/hr/college/bsit/third-year/students', [EvaluationController::class, 'showStudents'])
 ->name('bsit.thirdyear.students');
@@ -312,11 +315,6 @@ Route::get('/CtHighSchoolSection', function () {
     return view('AdminCtation.CtHighSchoolSection');
 })->name('CtHighSchoolSection');
 
-// Student List/Course list and Highschool
-Route::get('/ConsultationBSITCourse', function () {
-    return view('AdminCtation.StudentlistinfoCL.ConsultationBSITCourse');
-})->name('ConsultationBSITCourse');
-
 
 //highschool route
 Route::get('/CTHS-G10level', function () {
@@ -459,41 +457,6 @@ Route::get('/GRADE12ICT', function () {
     return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE12ICT');
 })->name('GRADE12ICT');
 
-
-//for section college
-Route::get('/ConsultationBsit101', function () {
-    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit101');
-})->name('ConsultationBsit101');
-
-Route::get('/ConsultationBsit201', function () {
-    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit201');
-})->name('ConsultationBsit201');
-
-Route::get('/ConsultationBsit301', function () {
-    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit301');
-})->name('ConsultationBsit301');
-
-Route::get('/ConsultationBsit401', function () {
-    return view('AdminCtation.StudentlistinfoCL.ConsultationBsit401');
-})->name('ConsultationBsit401');
-
-//Profile
-Route::get('/BSIT101Profile', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT101Profile');
-})->name('BSIT101Profile');
-
-Route::get('/BSIT201Profile', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT201Profile');
-})->name('BSIT201Profile');
-
-Route::get('/BSIT301Profile', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT301Profile');
-})->name('BSIT301Profile');
-
-Route::get('/BSIT401Profile', function () {
-    return view('AdminCtation.StudentlistinfoCL.Profile.BSIT401Profile');
-})->name('BSIT401Profile');
-
 //Profile Controller
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
@@ -511,10 +474,6 @@ Route::get('/CtSettings', function () {
 Route::get('/CtDocumentation', function () {
     return view('AdminCtation.CtDocumentation');
 })->name('CtDocumentation');
-
-
-//consultation controller
-
 
 
 //Department Head
@@ -721,3 +680,60 @@ Route::get('/Marshall', [HrGrade11and12Controller::class, 'showMarshall'])->name
 Route::get('/SanPedroCalungsod', [HrGrade11and12Controller::class, 'showSanPedroCalungsod'])->name('SanPedroCalungsod');
 Route::get('/Einstein', [HrGrade11and12Controller::class, 'showEinstein'])->name('Einstein');
 Route::get('/Marcus', [HrGrade11and12Controller::class, 'showMarcus'])->name('Marcus');
+
+
+
+Route::get('/ConsultationBSIT', function () {
+    return view('AdminCtation.CTBSIT.ConsultationBSIT');
+})->name('ConsultationBSIT');
+
+Route::get('/ConsultationBsit101', function () {
+    return view('AdminCtation.CTBSIT.ConsultationBsit101');
+})->name('ConsultationBsit101');
+
+Route::get('/ConsultationBsit201', function () {
+    return view('AdminCtation.CTBSIT.ConsultationBsit201');
+})->name('ConsultationBsit201');
+
+Route::get('/ConsultationBsit301', function () {
+    return view('AdminCtation.CTBSIT.ConsultationBsit301');
+})->name('ConsultationBsit301');
+
+Route::get('/ConsultationBsit401', function () {
+    return view('AdminCtation.CTBSIT.ConsultationBsit401');
+})->name('ConsultationBsit401');
+
+Route::get('/ConsultationBSHM', function () {
+    return view('AdminCtation.CTBSHM.ConsultationBSHM');
+})->name('\ConsultationBSHM');
+
+Route::get('/ConsultationBsit101', function () {
+    return view('AdminCtation.CTBSIT.CTBSITFirstYear.ConsultationBsit101');
+})->name('ConsultationBsit101');
+
+Route::get('/CtProfile', function () {
+    return view('AdminCtation.CtProfile');
+})->name('CtProfile');
+
+
+
+//
+
+Route::get('/ConsultationBsit101/profile/{id}', [CtCollegeCourseController::class, 'showProfile'])->name('CtProfile');
+
+// Route for displaying the student consultation section
+Route::get('/ConsultationBsit101', [CtCollegeCourseController::class, 'showCtBsit101Students'])->name('ConsultationBSIT');
+
+
+//
+
+// web.php
+
+Route::get('/dashboard/hr', [AuthController::class, 'HrDashboard'])->name('HrDashboard');
+Route::get('/dashboard/ct', [AuthController::class, 'CTDashboard'])->name('CTDashboard');
+Route::get('/dashboard/superadmin', [AuthController::class, 'SuperAdminDashboard'])->name('SuperAdminDashboard');
+Route::get('/dashboard/dphead', [AuthController::class, 'DpHeadDashboard'])->name('DpHeadDashboard');
+
+Route::get('/DpHeadDashboard', function () {
+    return view('DpHead.DpHeadDashboard');
+})->middleware('auth')->name('DpHeadDashboard');
