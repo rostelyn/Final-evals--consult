@@ -729,11 +729,6 @@ Route::get('/ConsultationBsit101', [CtCollegeCourseController::class, 'showCtBsi
 
 // web.php
 
-Route::get('/dashboard/hr', [AuthController::class, 'HrDashboard'])->name('HrDashboard');
-Route::get('/dashboard/ct', [AuthController::class, 'CTDashboard'])->name('CTDashboard');
-Route::get('/dashboard/superadmin', [AuthController::class, 'SuperAdminDashboard'])->name('SuperAdminDashboard');
-Route::get('/dashboard/dphead', [AuthController::class, 'DpHeadDashboard'])->name('DpHeadDashboard');
-
 Route::get('/DpHeadDashboard', function () {
     return view('DpHead.DpHeadDashboard');
 })->middleware('auth')->name('DpHeadDashboard');
