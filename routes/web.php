@@ -306,9 +306,7 @@ Route::get('/CtCollegeCourse', function () {
 })->name('CtCollegeCourse');
 
 
-Route::get('/CtCalendar', function () {
-    return view('AdminCtation.CtCalendar');
-})->name('CtCalendar');
+
 
 
 Route::get('/CtHighSchoolSection', function () {
