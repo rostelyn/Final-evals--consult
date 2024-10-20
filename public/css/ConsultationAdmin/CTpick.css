@@ -10,7 +10,6 @@
     padding: 0;
 }
 
-
 .header {
     background-color: #d9ae86;
     height: 70px;
@@ -21,10 +20,9 @@
 
 h1 {
     font-family: "Averia Serif Libre", serif;
-    color: black;
+    color: rgb(0, 0, 0);
     margin: 0;
 }
-
 .courses-container {
     display: flex;
     justify-content: center;

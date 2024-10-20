@@ -1,67 +1,89 @@
-body {
+* {
+    font-family: "Averia Serif Libre", serif;
+}
+.header {
+    background-color: #059862;
+    height: 70px;
     display: flex;
-    font-family: 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
 }
-
-.content {
-    flex: 1;
-    padding: 20px;
-    background-color: #ffffff;
-    position: relative;
-}
-
-.content h1 {
-    color: #059862;
+h1 {
+    color: white;
     text-align: center;
 }
-
-.content h2 {
+h2 {
+    font-family: "Averia Serif Libre", serif;
     color: #000000;
     text-align: center;
     margin-bottom: 20px;
 }
-
-
-button {
-    font-family: 'Times New Roman', serif;
-    background-color: #18A558;
-    color: rgb(0, 0, 0);
-    border: none;
-    width: 250px;
-    height: 150px;
-    padding: 10px; 
-    margin: 10px;
-    font-size: 20px; 
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 10px black;
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-    
-   
-}
-
-button:hover {
-    background-color: #88c999;
-    transform: translateY(-10px);
-}
-
 .course-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #E4E7EB; 
-    border-radius: 10px; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 50px 20px;
+    border-radius: 10px;
     height: 90vh;
-    align-items: flex-start;
-    padding-top: 20px;
+    padding: 20px;
+    margin-left: 30px;
 }
 .course-container a {
     text-decoration: none;
+    margin: 10px;
+    position: relative;
 }
-
+.course-item {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(82, 80, 80);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.course-item:hover {
+    background-color: #006b44;
+}
+.course-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+.course-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+.course-item:hover img {
+    opacity: 0;
+}
+.course-item:hover .course-name {
+    opacity: 1;
+}
+.back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: #f00c0c;
+    color: white;
+    box-shadow: 10px 10px 5px rgb(163, 160, 160);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+.back-button:hover {
+    background-color: #b63240;
+}
