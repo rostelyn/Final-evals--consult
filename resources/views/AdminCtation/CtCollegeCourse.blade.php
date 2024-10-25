@@ -11,7 +11,7 @@
                 Bachelor of Science and Technology Information
             </button>   
         </a>
-        <a href="#">
+        <a href="ConsultationBSHMCourse">
             <button>
             Bachelor of Science and Hospitality Management
             </button>

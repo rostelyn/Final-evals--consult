@@ -512,40 +512,6 @@ Route::get('/student-evaluation-consultation/{id}', [StudentController::class, '
 
 
 
-// HRBSIT Routes
-/*
-Route::get('/HrBSIT101', [HRBSITController::class, 'showBSIT101'])->name('HrBSIT101');
-Route::get('/HrBSIT102', [HRBSITController::class, 'showBSIT102'])->name('HrBSIT102');
-Route::get('/HrBSIT103', [HRBSITController::class, 'showBSIT103'])->name('HrBSIT103');
-Route::get('/HrBSIT201', [HRBSITController::class, 'showBSIT201'])->name('HrBSIT201');
-Route::get('/HrBSIT202', [HRBSITController::class, 'showBSIT202'])->name('HrBSIT202');
-Route::get('/HrBSIT203', [HRBSITController::class, 'showBSIT203'])->name('HrBSIT203');
-Route::get('/HrBSIT301', [HRBSITController::class, 'showBSIT301'])->name('HrBSIT301');
-Route::get('/HrBSIT302', [HRBSITController::class, 'showBSIT302'])->name('HrBSIT302');
-Route::get('/HrBSIT303', [HRBSITController::class, 'showBSIT303'])->name('HrBSIT303');
-Route::get('/HrBSIT401', [HRBSITController::class, 'showBSIT401'])->name('HrBSIT401');
-Route::get('/HrBSIT402', [HRBSITController::class, 'showBSIT402'])->name('HrBSIT402');
-Route::get('/HrBSIT403', [HRBSITController::class, 'showBSIT403'])->name('HrBSIT403');
-/*/
-
-//BSHM
-
-Route::get('/HM101', [BSHMController::class, 'showBSHM101'])->name('HM101');
-Route::get('/HM102', [BSHMController::class, 'showBSHM102'])->name('HM102');
-Route::get('/HM103', [BSHMController::class, 'showBSHM103'])->name('HM103');
-
-Route::get('/HM201', [BSHMController::class, 'showBSHM201'])->name('HM201');
-Route::get('/HM202', [BSHMController::class, 'showBSHM202'])->name('HM202');
-Route::get('/HM203', [BSHMController::class, 'showBSHM203'])->name('HM203');
-
-Route::get('/HM301', [BSHMController::class, 'showBSHM301'])->name('HM301');
-Route::get('/HM302', [BSHMController::class, 'showBSHM302'])->name('HM302');
-Route::get('/HM303', [BSHMController::class, 'showBSHM303'])->name('HM303');
-
-Route::get('/HM401', [BSHMController::class, 'showBSHM401'])->name('HM401');
-Route::get('/HM402', [BSHMController::class, 'showBSHM402'])->name('HM402');
-Route::get('/HM403', [BSHMController::class, 'showBSHM403'])->name('HM403');
-
 Route::get('/CS101', [BSCSController::class, 'showBSCS101'])->name('CS101');
 Route::get('/CS102', [BSCSController::class, 'showBSCS102'])->name('CS102');
 Route::get('/CS103', [BSCSController::class, 'showBSCS103'])->name('CS103');
@@ -699,10 +665,14 @@ Route::get('/DpHeadDashboard', function () {
 
 
 
-
 Route::get('/ConsultationBSITCourse', function () {
     return view('AdminCtation.CtBsit.ConsultationBSITCourse');
 })->name('ConsultationBSITCourse');
+
+Route::get('/ConsultationBSHMCourse', function () {
+    return view('AdminCtation.CtBshm.ConsultationBSHMCourse');
+})->name('ConsultationBSHMCourse');
+
 
 
 Route::get('/BSIT101', [HRBSITController::class, 'listStudentsBySection'])->name('BSIT101')->middleware('auth', 'role:Hradmin,Ctadmin');
@@ -757,4 +727,18 @@ Route::get('/BSIT403', [HRBSITController::class, 'listStudentsBySection'])
 ->middleware(['auth', 'role:Hradmin,Ctadmin']);
 
 
-Route::get('/consultation/student/{id}', [ConsulteController::class, 'showStudent']);
+Route::get('/BSHM101', [BSHMController::class, 'listStudentsBySection'])->name('BSHM101')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM102', [BSHMController::class, 'listStudentsBySection'])->name('BSHM102')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM103', [BSHMController::class, 'listStudentsBySection'])->name('BSHM103')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+Route::get('/BSHM201', [BSHMController::class, 'listStudentsBySection'])->name('BSHM201')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM202', [BSHMController::class, 'listStudentsBySection'])->name('BSHM202')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM203', [BSHMController::class, 'listStudentsBySection'])->name('BSHM203')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+Route::get('/BSHM301', [BSHMController::class, 'listStudentsBySection'])->name('BSHM301')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM302', [BSHMController::class, 'listStudentsBySection'])->name('BSHM302')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM303', [BSHMController::class, 'listStudentsBySection'])->name('BSHM303')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+Route::get('/BSHM401', [BSHMController::class, 'listStudentsBySection'])->name('BSHM401')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM402', [BSHMController::class, 'listStudentsBySection'])->name('BSHM402')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/BSHM403', [BSHMController::class, 'listStudentsBySection'])->name('BSHM403')->middleware('auth', 'role:Hradmin,Ctadmin');
