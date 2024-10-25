@@ -513,7 +513,7 @@ Route::get('/student-evaluation-consultation/{id}', [StudentController::class, '
 
 
 // HRBSIT Routes
-
+/*
 Route::get('/HrBSIT101', [HRBSITController::class, 'showBSIT101'])->name('HrBSIT101');
 Route::get('/HrBSIT102', [HRBSITController::class, 'showBSIT102'])->name('HrBSIT102');
 Route::get('/HrBSIT103', [HRBSITController::class, 'showBSIT103'])->name('HrBSIT103');
@@ -526,7 +526,7 @@ Route::get('/HrBSIT303', [HRBSITController::class, 'showBSIT303'])->name('HrBSIT
 Route::get('/HrBSIT401', [HRBSITController::class, 'showBSIT401'])->name('HrBSIT401');
 Route::get('/HrBSIT402', [HRBSITController::class, 'showBSIT402'])->name('HrBSIT402');
 Route::get('/HrBSIT403', [HRBSITController::class, 'showBSIT403'])->name('HrBSIT403');
-
+/*/
 
 //BSHM
 
@@ -685,48 +685,76 @@ Route::get('/ConsultationBSIT', function () {
     return view('AdminCtation.CTBSIT.ConsultationBSIT');
 })->name('ConsultationBSIT');
 
-Route::get('/ConsultationBsit101', function () {
-    return view('AdminCtation.CTBSIT.ConsultationBsit101');
-})->name('ConsultationBsit101');
-
-Route::get('/ConsultationBsit201', function () {
-    return view('AdminCtation.CTBSIT.ConsultationBsit201');
-})->name('ConsultationBsit201');
-
-Route::get('/ConsultationBsit301', function () {
-    return view('AdminCtation.CTBSIT.ConsultationBsit301');
-})->name('ConsultationBsit301');
-
-Route::get('/ConsultationBsit401', function () {
-    return view('AdminCtation.CTBSIT.ConsultationBsit401');
-})->name('ConsultationBsit401');
 
 Route::get('/ConsultationBSHM', function () {
     return view('AdminCtation.CTBSHM.ConsultationBSHM');
 })->name('\ConsultationBSHM');
 
-Route::get('/ConsultationBsit101', function () {
-    return view('AdminCtation.CTBSIT.CTBSITFirstYear.ConsultationBsit101');
-})->name('ConsultationBsit101');
-
-Route::get('/CtProfile', function () {
-    return view('AdminCtation.CtProfile');
-})->name('CtProfile');
-
-
-
-//
-
-Route::get('/ConsultationBsit101/profile/{id}', [CtCollegeCourseController::class, 'showProfile'])->name('CtProfile');
-
-// Route for displaying the student consultation section
-Route::get('/ConsultationBsit101', [CtCollegeCourseController::class, 'showCtBsit101Students'])->name('ConsultationBSIT');
-
-
-//
 
 // web.php
 
 Route::get('/DpHeadDashboard', function () {
     return view('DpHead.DpHeadDashboard');
 })->middleware('auth')->name('DpHeadDashboard');
+
+
+
+
+Route::get('/ConsultationBSITCourse', function () {
+    return view('AdminCtation.CtBsit.ConsultationBSITCourse');
+})->name('ConsultationBSITCourse');
+
+
+Route::get('/BSIT101', [HRBSITController::class, 'listStudentsBySection'])->name('BSIT101')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+Route::get('/BSIT102', [HRBSITController::class, 'listStudentsBySection'])
+     ->name('BSIT102')
+     ->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+// Route for BSIT103 (accessible by both Hradmin and Ctadmin)
+Route::get('/BSIT103', [HRBSITController::class, 'listStudentsBySection'])
+     ->name('BSIT103')
+     ->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+
+     // Routes for BSIT second year (201, 202, 203)
+Route::get('/BSIT201', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT201')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT202', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT202')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT203', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT203')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+// Routes for BSIT third year (301, 302, 303)
+Route::get('/BSIT301', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT301')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT302', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT302')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT303', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT303')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+// Routes for BSIT fourth year (401, 402, 403)
+Route::get('/BSIT401', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT401')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT402', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT402')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+Route::get('/BSIT403', [HRBSITController::class, 'listStudentsBySection'])
+->name('BSIT403')
+->middleware(['auth', 'role:Hradmin,Ctadmin']);
+
+
+Route::get('/consultation/student/{id}', [ConsulteController::class, 'showStudent']);

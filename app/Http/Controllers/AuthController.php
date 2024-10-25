@@ -30,7 +30,7 @@ class AuthController extends Controller
                 case 'ctadmin':
                     return redirect()->intended('CTDashboard');
                 default:
-                    return redirect()->intended('defaultDashboard'); // Fallback if needed
+                    return redirect()->intended('defaultDashboard'); 
             }
         } else {
             return redirect()->back()->withErrors(['message' => 'Invalid username or password']);

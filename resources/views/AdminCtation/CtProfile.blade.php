@@ -49,10 +49,9 @@
                     <td>Zoom</td>
                     <td>07/28/24 10:00 AM</td>
                 </tr>
-                
             </table>
         </div>
     </div>
-</body>
+  </body>
 </html>
 @endsection

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CTViewStudent.css') }}">
     <title>BSIT 102 Students</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $student->name }}</td>
                     <td>
-                    <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                        <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
                             <button>View Student</button>
                         </a>
                     </td>
