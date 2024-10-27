@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Georgia';
 }
 
@@ -17,7 +17,6 @@ h1 {
     margin: 0;
 }
 
-
 h2 {
     font-family: "Averia Serif Libre", serif;
     color: rgb(0, 0, 0);
@@ -25,42 +24,42 @@ h2 {
     margin-bottom: 20px;
 }
 
-.bsit-course-student-list {
+.student-list {
     width: 95%;
-    margin: 60px auto 60px;
+    margin: 60px auto;
     border-collapse: collapse;
-    border: 2px solid #000000; 
+    border: 2px solid #000000;
 }
 
-.bsit-course-student-list th, .bsit-course-student-list td {
+.student-list th, .student-list td {
     padding: 12px 15px;
     text-align: left;
     font-size: 20px;
-    border: 1px solid #000000; 
+    border: 1px solid #000000;
 }
 
-.bsit-course-student-list th {
+.student-list th {
     background-color: #609966;
     font-size: 20px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-bottom: 2px solid #000000; 
+    border-bottom: 2px solid #000000;
 }
 
-.bsit-course-student-list td:first-child {
-    border-right: 2px solid #000000; 
+.student-list td:first-child {
+    border-right: 2px solid #000000;
 }
 
-.bsit-course-student-list tr:nth-child(even) {
+.student-list tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.bsit-course-student-list tr:hover {
+.student-list tr:hover {
     background-color: #999ea4;
 }
 
-.bsit-course-student-list button {
+.student-list button {
     background-color: #04aa6d;
     padding: 5px 10px;
     font-size: 16px;
@@ -70,9 +69,10 @@ h2 {
     cursor: pointer;
 }
 
-.bsit-course-student-list button:hover {
+.student-list button:hover {
     background-color: #88c999;
 }
+
 .back-button {
     all: unset;
     position: fixed;
@@ -89,6 +89,7 @@ h2 {
     text-align: center;
     display: inline-block;
 }
+
 .back-button:hover {
     background-color: #b63240;
 }
