@@ -124,7 +124,10 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 Route::get('/student.student.dashboard', function () {return view('student.student.dashboard');
 })->middleware('auth')->name('student.student.dashboard');
 
-//for dashboard
+//for student number
+
+Route::get('/dashboard', [StudentController::class, 'dashboard'])->name('dashboard');
+
 
 
 // Student routes
@@ -655,6 +658,23 @@ Route::get('/ConsultationBSIT', function () {
 Route::get('/ConsultationBSHM', function () {
     return view('AdminCtation.CTBSHM.ConsultationBSHM');
 })->name('\ConsultationBSHM');
+
+
+Route::get('/ConsultationBsit101', function () {
+    return view('AdminCtation.CTBSIT.CTBSITFirstYear.ConsultationBsit101');
+})->name('ConsultationBsit101');
+
+Route::get('/CtProfile', function () {
+    return view('AdminCtation.CtProfile');
+})->name('CtProfile');
+
+
+Route::get('/ConsultationBsit101/profile/{id}', [CtCollegeCourseController::class, 'showProfile'])->name('CtProfile');
+
+
+Route::get('/ConsultationBsit101', [CtCollegeCourseController::class, 'showCtBsit101Students'])->name('ConsultationBSIT');
+
+
 
 
 // web.php

@@ -64,6 +64,10 @@ class StudentController extends Controller
     {
         $student = Student::where('StudentId', $id)->firstOrFail();
         return view('student.student-evaluation-consultation', compact('student'));
+
+        $studentCount = Student::count();
+        dd($studentCount); // Check if the count is being fetched correctly
+        return view('hr.HrDashboard', ['studentCount' => $studentCount]);
     }
 
 }

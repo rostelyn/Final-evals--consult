@@ -20,11 +20,14 @@ class StudentSeeder extends Seeder
 
         foreach ($courses as $course) {
             foreach ($sections as $section) {
+                // Ensure the StudentId is unique
+                $studentId = $this->generateStudentId($studentCounter);
+                
                 DB::table('students')->insert([
-                    'StudentId' => $this->generateStudentId($studentCounter), // Generate formatted StudentId
+                    'StudentId' => $studentId, // Generate formatted StudentId
                     'name' => $this->generateRandomName(),
                     'age' => rand(18, 25),
-                    'Outlook_Email' => Str::random(10).'@outlook.com',
+                    'Outlook_Email' => Str::random(10) . '@outlook.com',
                     'Course_Strand' => $course,
                     'Grade_Level_Section' => $section,
                     'gender' => $this->randomGender(),
