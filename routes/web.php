@@ -659,6 +659,12 @@ Route::get('/ConsultationACT', function () {
     return view('AdminCtation.CtACT.ConsultationACT');
 })->name('ConsultationACT');
 
+Route::get('/ConsultationHRT', function () {
+    return view('AdminCtation.CTHRT.ConsultationHRT');
+})->name('\ConsultationHRT');
+
+
+
 
 
 
@@ -752,3 +758,24 @@ Route::get('/ACT303', [ACTController::class, 'listStudentsBySection'])->name('AC
 Route::get('/ACT401', [ACTController::class, 'listStudentsBySection'])->name('ACT401')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/ACT402', [ACTController::class, 'listStudentsBySection'])->name('ACT402')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/ACT403', [ACTController::class, 'listStudentsBySection'])->name('ACT403')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+
+// First Year
+Route::get('/HRT101', [HRTController::class, 'listStudentsBySection'])->name('HRT101')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT102', [HRTController::class, 'listStudentsBySection'])->name('HRT102')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT103', [HRTController::class, 'listStudentsBySection'])->name('HRT103')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Second Year
+Route::get('/HRT201', [HRTController::class, 'listStudentsBySection'])->name('HRT201')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT202', [HRTController::class, 'listStudentsBySection'])->name('HRT202')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT203', [HRTController::class, 'listStudentsBySection'])->name('HRT203')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Third Year
+Route::get('/HRT301', [HRTController::class, 'listStudentsBySection'])->name('HRT301')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT302', [HRTController::class, 'listStudentsBySection'])->name('HRT302')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT303', [HRTController::class, 'listStudentsBySection'])->name('HRT303')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Fourth Year
+Route::get('/HRT401', [HRTController::class, 'listStudentsBySection'])->name('HRT401')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT402', [HRTController::class, 'listStudentsBySection'])->name('HRT402')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT403', [HRTController::class, 'listStudentsBySection'])->name('HRT403')->middleware('auth', 'role:Hradmin,Ctadmin');
