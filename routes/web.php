@@ -528,24 +528,6 @@ Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
 Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
 Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
 
-//ACT
-
-Route::get('/ACT101', [ACTController::class, 'showACT101'])->name('ACT101');
-Route::get('/ACT102', [ACTController::class, 'showACT102'])->name('ACT102');
-Route::get('/ACT103', [ACTController::class, 'showACT103'])->name('ACT103');
-
-Route::get('/ACT201', [ACTController::class, 'showACT201'])->name('ACT201');
-Route::get('/ACT202', [ACTController::class, 'showACT202'])->name('ACT202');
-Route::get('/ACT203', [ACTController::class, 'showACT203'])->name('ACT203');
-
-Route::get('/ACT301', [ACTController::class, 'showACT301'])->name('ACT301');
-Route::get('/ACT302', [ACTController::class, 'showACT302'])->name('ACT302');
-Route::get('/ACT303', [ACTController::class, 'showACT303'])->name('ACT303');
-
-Route::get('/ACT401', [ACTController::class, 'showACT401'])->name('ACT401');
-Route::get('/ACT402', [ACTController::class, 'showACT402'])->name('ACT402');
-Route::get('/ACT403', [ACTController::class, 'showACT403'])->name('ACT403');
-
 //HRT
 
 Route::get('/HRT101', [HRTController::class, 'showHRT101'])->name('HRT101');
@@ -693,6 +675,12 @@ Route::get('/ConsultationBSHMCourse', function () {
     return view('AdminCtation.CtBshm.ConsultationBSHMCourse');
 })->name('ConsultationBSHMCourse');
 
+Route::get('/ConsultationACT', function () {
+    return view('AdminCtation.CtACT.ConsultationACT');
+})->name('ConsultationACT');
+
+
+
 
 
 Route::get('/BSIT101', [HRBSITController::class, 'listStudentsBySection'])->name('BSIT101')->middleware('auth', 'role:Hradmin,Ctadmin');
@@ -762,3 +750,25 @@ Route::get('/BSHM303', [BSHMController::class, 'listStudentsBySection'])->name('
 Route::get('/BSHM401', [BSHMController::class, 'listStudentsBySection'])->name('BSHM401')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/BSHM402', [BSHMController::class, 'listStudentsBySection'])->name('BSHM402')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/BSHM403', [BSHMController::class, 'listStudentsBySection'])->name('BSHM403')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+
+//
+
+Route::get('/ACT101', [ACTController::class, 'listStudentsBySection'])->name('ACT101')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT102', [ACTController::class, 'listStudentsBySection'])->name('ACT102')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT103', [ACTController::class, 'listStudentsBySection'])->name('ACT103')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Second Year
+Route::get('/ACT201', [ACTController::class, 'listStudentsBySection'])->name('ACT201')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT202', [ACTController::class, 'listStudentsBySection'])->name('ACT202')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT203', [ACTController::class, 'listStudentsBySection'])->name('ACT203')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Third Year
+Route::get('/ACT301', [ACTController::class, 'listStudentsBySection'])->name('ACT301')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT302', [ACTController::class, 'listStudentsBySection'])->name('ACT302')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT303', [ACTController::class, 'listStudentsBySection'])->name('ACT303')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Fourth Year
+Route::get('/ACT401', [ACTController::class, 'listStudentsBySection'])->name('ACT401')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT402', [ACTController::class, 'listStudentsBySection'])->name('ACT402')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/ACT403', [ACTController::class, 'listStudentsBySection'])->name('ACT403')->middleware('auth', 'role:Hradmin,Ctadmin');

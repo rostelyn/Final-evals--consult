@@ -73,21 +73,21 @@ class BSHMController extends Controller
     public function showHrProfile($id)
     {
         $student = Student::where('StudentId', $id)->first();
-
+        
         if (!$student) {
-            return redirect()->route('BSHM.list')->with('error', 'Student not found.');
+            return redirect()->route('BSIT.list')->with('error', 'Student not found.');
         }
 
-        return view('hr.HrBSHM.HrProfile', compact('student'));
+        return view('hr.HrCollegeBSIT.HrProfile', compact('student'));
     }
 
     // Show Ctadmin profile
     public function showCtProfile($id)
     {
         $student = Student::where('StudentId', $id)->first();
-
+        
         if (!$student) {
-            return redirect()->route('BSHM.list')->with('error', 'Student not found.');
+            return redirect()->route('BSIT.list')->with('error', 'Student not found.');
         }
 
         return view('AdminCtation.CtProfile', compact('student'));

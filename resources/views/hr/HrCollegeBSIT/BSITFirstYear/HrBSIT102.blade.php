@@ -13,7 +13,7 @@
 
     <h2>BSIT 102</h2>
 
-    <table class="bsit-course-student-list">
+    <table class="hrstudentlist">
         <thead>
             <tr>
                 <th>No.</th>
