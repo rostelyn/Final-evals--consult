@@ -525,25 +525,6 @@ Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
 Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
 Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
 
-//HRT
-
-Route::get('/HRT101', [HRTController::class, 'showHRT101'])->name('HRT101');
-Route::get('/HRT102', [HRTController::class, 'showHRT102'])->name('HRT102');
-Route::get('/HRT103', [HRTController::class, 'showHRT103'])->name('HRT103');
-
-Route::get('/HRT201', [HRTController::class, 'showHRT201'])->name('HRT201');
-Route::get('/HRT202', [HRTController::class, 'showHRT202'])->name('HRT202');
-Route::get('/HRT203', [HRTController::class, 'showHRT203'])->name('HRT203');
-
-Route::get('/HRT301', [HRTController::class, 'showHRT301'])->name('HRT301');
-Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
-Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
-
-Route::get('/HRT401', [HRTController::class, 'showHRT401'])->name('HRT301');
-Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
-Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
-
-
 //CET
 
 Route::get('/CET101', [CETController::class, 'showCET101'])->name('CET101');
