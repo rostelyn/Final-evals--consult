@@ -36,7 +36,7 @@
                 Computer Engineering Technology
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationHRS">
             <button>
             Hotel & Restaurant Services
             </button>

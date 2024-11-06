@@ -512,37 +512,6 @@ Route::get('/student-evaluation-consultation/{id}', [StudentController::class, '
 
 
 
-Route::get('/CS101', [BSCSController::class, 'showBSCS101'])->name('CS101');
-Route::get('/CS102', [BSCSController::class, 'showBSCS102'])->name('CS102');
-Route::get('/CS103', [BSCSController::class, 'showBSCS103'])->name('CS103');
-Route::get('/CS201', [BSCSController::class, 'showBSCS201'])->name('CS201');
-Route::get('/CS202', [BSCSController::class, 'showBSCS202'])->name('CS202');
-Route::get('/CS203', [BSCSController::class, 'showBSCS203'])->name('CS203');
-Route::get('/CS301', [BSCSController::class, 'showBSCS301'])->name('CS301');
-Route::get('/CS302', [BSCSController::class, 'showBSCS302'])->name('CS302');
-Route::get('/CS303', [BSCSController::class, 'showBSCS303'])->name('CS303');
-Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
-Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
-Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
-
-//CET
-
-Route::get('/CET101', [CETController::class, 'showCET101'])->name('CET101');
-Route::get('/CET102', [CETController::class, 'showCET102'])->name('CET102');
-Route::get('/CET103', [CETController::class, 'showCET103'])->name('CET103');
-
-Route::get('/CET201', [CETController::class, 'showCET201'])->name('CET201');
-Route::get('/CET202', [CETController::class, 'showCET202'])->name('CET202');
-Route::get('/CET203', [CETController::class, 'showCET203'])->name('CET203');
-
-Route::get('/CET301', [CETController::class, 'showCET301'])->name('CET301');
-Route::get('/CET302', [CETController::class, 'showCET302'])->name('CET302');
-Route::get('/CET303', [CETController::class, 'showCET303'])->name('CET303');
-
-Route::get('/CET401', [CETController::class, 'showCET401'])->name('CET401');
-Route::get('/CET402', [CETController::class, 'showCET402'])->name('CET402');
-Route::get('/CET403', [CETController::class, 'showCET403'])->name('CET403');
-
 //HRS
 
 Route::get('/HRS101', [HRSController::class, 'showHRS101'])->name('HRS101');
@@ -642,11 +611,16 @@ Route::get('/ConsultationACT', function () {
 
 Route::get('/ConsultationHRT', function () {
     return view('AdminCtation.CTHRT.ConsultationHRT');
-})->name('\ConsultationHRT');
+})->name('ConsultationHRT');
 
 Route::get('/ConsultationCET', function () {
     return view('AdminCtation.CtCet.ConsultationCET');
 })->name('ConsultationCET');
+
+Route::get('/ConsultationHRS', function () {
+    return view('AdminCtation.CtHRS.ConsultationHRS');
+})->name('ConsultationHRS');
+
 
 
 
@@ -781,4 +755,22 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
     Route::get('/CET401', [CETController::class, 'listStudentsBySection'])->name('CET401');
     Route::get('/CET402', [CETController::class, 'listStudentsBySection'])->name('CET402');
     Route::get('/CET403', [CETController::class, 'listStudentsBySection'])->name('CET403');
+});
+
+
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    // Route for listing students by section for Hradmin and Ctadmin
+    Route::get('/HRS101', [HRSController::class, 'listStudentsBySection'])->name('HRS101');
+    Route::get('/HRS102', [HRSController::class, 'listStudentsBySection'])->name('HRS102');
+    Route::get('/HRS103', [HRSController::class, 'listStudentsBySection'])->name('HRS103');
+    Route::get('/HRS201', [HRSController::class, 'listStudentsBySection'])->name('HRS201');
+    Route::get('/HRS202', [HRSController::class, 'listStudentsBySection'])->name('HRS202');
+    Route::get('/HRS203', [HRSController::class, 'listStudentsBySection'])->name('HRS203');
+    Route::get('/HRS301', [HRSController::class, 'listStudentsBySection'])->name('HRS301');
+    Route::get('/HRS302', [HRSController::class, 'listStudentsBySection'])->name('HRS302');
+    Route::get('/HRS303', [HRSController::class, 'listStudentsBySection'])->name('HRS303');
+    Route::get('/HRS401', [HRSController::class, 'listStudentsBySection'])->name('HRS401');
+    Route::get('/HRS402', [HRSController::class, 'listStudentsBySection'])->name('HRS402');
+    Route::get('/HRS403', [HRSController::class, 'listStudentsBySection'])->name('HRS403');
 });
