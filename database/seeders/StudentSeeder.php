@@ -20,21 +20,24 @@ class StudentSeeder extends Seeder
 
         foreach ($courses as $course) {
             foreach ($sections as $section) {
-                DB::table('students')->insert([
-                    'StudentId' => $this->generateStudentId($studentCounter), // Generate formatted StudentId
-                    'name' => $this->generateRandomName(),
-                    'age' => rand(18, 25),
-                    'Outlook_Email' => Str::random(10).'@outlook.com',
-                    'Course_Strand' => $course,
-                    'Grade_Level_Section' => $section,
-                    'gender' => $this->randomGender(),
-                    'password' => bcrypt('password'), // Default password
-                    'picture' => null, // Optionally add image paths
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]);
+                // Insert 10 students per section
+                for ($i = 0; $i < 10; $i++) {
+                    DB::table('students')->insert([
+                        'StudentId' => $this->generateStudentId($studentCounter), // Generate formatted StudentId
+                        'name' => $this->generateRandomName(),
+                        'age' => rand(18, 25),
+                        'Outlook_Email' => Str::random(10) . '@outlook.com',
+                        'Course_Strand' => $course,
+                        'Grade_Level_Section' => $section,
+                        'gender' => $this->randomGender(),
+                        'password' => bcrypt('password'), // Default password
+                        'picture' => null, // Optionally add image paths
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
 
-                $studentCounter++; // Increment student counter after each insert
+                    $studentCounter++; // Increment student counter after each insert
+                }
             }
         }
     }
