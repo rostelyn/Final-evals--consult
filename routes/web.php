@@ -621,6 +621,9 @@ Route::get('/ConsultationHRS', function () {
     return view('AdminCtation.CtHRS.ConsultationHRS');
 })->name('ConsultationHRS');
 
+Route::get('/ConsultationTOURISM', function () {
+    return view('AdminCtation.CtTourism.ConsultationTOURISM');
+})->name('ConsultationTOURISM');
 
 
 
@@ -774,3 +777,20 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
     Route::get('/HRS402', [HRSController::class, 'listStudentsBySection'])->name('HRS402');
     Route::get('/HRS403', [HRSController::class, 'listStudentsBySection'])->name('HRS403');
 });
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    // Route for listing students by section for Hradmin and Ctadmin
+    Route::get('/Tourism101', [TourismController::class, 'listStudentsBySection'])->name('Tourism101');
+    Route::get('/Tourism102', [TourismController::class, 'listStudentsBySection'])->name('Tourism102');
+    Route::get('/Tourism103', [TourismController::class, 'listStudentsBySection'])->name('Tourism103');
+    Route::get('/Tourism201', [TourismController::class, 'listStudentsBySection'])->name('Tourism201');
+    Route::get('/Tourism202', [TourismController::class, 'listStudentsBySection'])->name('Tourism202');
+    Route::get('/Tourism203', [TourismController::class, 'listStudentsBySection'])->name('Tourism203');
+    Route::get('/Tourism301', [TourismController::class, 'listStudentsBySection'])->name('Tourism301');
+    Route::get('/Tourism302', [TourismController::class, 'listStudentsBySection'])->name('Tourism302');
+    Route::get('/Tourism303', [TourismController::class, 'listStudentsBySection'])->name('Tourism303');
+    Route::get('/Tourism401', [TourismController::class, 'listStudentsBySection'])->name('Tourism401');
+    Route::get('/Tourism402', [TourismController::class, 'listStudentsBySection'])->name('Tourism402');
+    Route::get('/Tourism403', [TourismController::class, 'listStudentsBySection'])->name('Tourism403');
+});
+

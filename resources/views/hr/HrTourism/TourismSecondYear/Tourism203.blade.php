@@ -3,44 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
-     
-    <title>Tourism 203 Students</title>
-    
+    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
+    <title>TOURISM 203 Students</title>
 </head>
 <body>
-   
     <div class="header">
-        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-     </div>
-            <h2>Tourism 203</h2>
+        <h1>Student Evaluation and Consultation</h1>
+    </div>
 
-<table class="bsit-course-student-list">
-    <thead>
-        <tr>
-            <th><center>Name</center></th>
-            <th><center>Actions</center></th>
-        </tr>
-    </thead>
-    <tbody>
-            @foreach($students as $student)
-                @if($student->Course_Strand === 'Tourism' && $student->Grade_Level_Section === '203')
-                    <tr>
-                        <td>{{ $student->name }}</td>
-                        <td>
-                            <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
-                                <button>VIEW STUDENT</button>
-                            </a>
-                        </td>
-                    </tr>
-                @endif
+    <h2>TOURISM 203</h2>
+
+    <table class="hrstudentlist">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($students as $index => $student)
+                <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $student->name }}</td>
+                    <td>
+                    <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                            <button>View Student</button>
+                        </a>
+                    </td>
+                </tr>
             @endforeach
         </tbody>
-  </table>
- </body>
+    </table>
+</body>
 </html>
-
-
