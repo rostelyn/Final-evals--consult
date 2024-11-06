@@ -625,6 +625,10 @@ Route::get('/ConsultationTOURISM', function () {
     return view('AdminCtation.CtTourism.ConsultationTOURISM');
 })->name('ConsultationTOURISM');
 
+Route::get('/ConsultationBSCS', function () {
+    return view('AdminCtation.CtBSCS.ConsultationBSCS');
+})->name('ConsultationBSCS');
+
 
 
 
@@ -792,5 +796,20 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
     Route::get('/Tourism401', [TourismController::class, 'listStudentsBySection'])->name('Tourism401');
     Route::get('/Tourism402', [TourismController::class, 'listStudentsBySection'])->name('Tourism402');
     Route::get('/Tourism403', [TourismController::class, 'listStudentsBySection'])->name('Tourism403');
+});
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/BSCS101', [BSCSController::class, 'listStudentsBySection'])->name('BSCS101');
+    Route::get('/BSCS102', [BSCSController::class, 'listStudentsBySection'])->name('BSCS102');
+    Route::get('/BSCS103', [BSCSController::class, 'listStudentsBySection'])->name('BSCS103');
+    Route::get('/BSCS201', [BSCSController::class, 'listStudentsBySection'])->name('BSCS201');
+    Route::get('/BSCS202', [BSCSController::class, 'listStudentsBySection'])->name('BSCS202');
+    Route::get('/BSCS203', [BSCSController::class, 'listStudentsBySection'])->name('BSCS203');
+    Route::get('/BSCS301', [BSCSController::class, 'listStudentsBySection'])->name('BSCS301');
+    Route::get('/BSCS302', [BSCSController::class, 'listStudentsBySection'])->name('BSCS302');
+    Route::get('/BSCS303', [BSCSController::class, 'listStudentsBySection'])->name('BSCS303');
+    Route::get('/BSCS401', [BSCSController::class, 'listStudentsBySection'])->name('BSCS401');
+    Route::get('/BSCS402', [BSCSController::class, 'listStudentsBySection'])->name('BSCS402');
+    Route::get('/BSCS403', [BSCSController::class, 'listStudentsBySection'])->name('BSCS403');
 });
 

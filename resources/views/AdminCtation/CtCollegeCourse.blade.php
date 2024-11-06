@@ -26,7 +26,7 @@
             Hotel and Restaurant Technology
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationBSCS">
             <button>
             Bachelor of Science in Computer Science
             </button>

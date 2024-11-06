@@ -1,18 +1,9 @@
-<head>
+@extends('layouts.AdminConsult-layout')
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrYearList.css') }}">
-</head>
-
-<body>
-<div class="header">
+@section('content')
+<link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CtYearPick.css') }}">
     <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-</div>
-
-    <h2>Bachelor of Science in Computer Science</h2>
+    <h2>BSCS YEAR LIST</h2>
     <div class="year-container">
         <div class="year-block">
             <h2>First Year</h2>
@@ -64,7 +55,4 @@
             </a>
         </div>
     </div>
-    <a href="{{'HrCollegeCourse'}}">
-        <button class="back-button">Back</button>
-    </a>
-</body>
+@endsection
