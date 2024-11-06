@@ -644,6 +644,10 @@ Route::get('/ConsultationHRT', function () {
     return view('AdminCtation.CTHRT.ConsultationHRT');
 })->name('\ConsultationHRT');
 
+Route::get('/ConsultationCET', function () {
+    return view('AdminCtation.CtCet.ConsultationCET');
+})->name('ConsultationCET');
+
 
 
 
@@ -760,3 +764,21 @@ Route::get('/HRT303', [HRTController::class, 'listStudentsBySection'])->name('HR
 Route::get('/HRT401', [HRTController::class, 'listStudentsBySection'])->name('HRT401')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/HRT402', [HRTController::class, 'listStudentsBySection'])->name('HRT402')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/HRT403', [HRTController::class, 'listStudentsBySection'])->name('HRT403')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+
+//
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/CET101', [CETController::class, 'listStudentsBySection'])->name('CET101');
+    Route::get('/CET102', [CETController::class, 'listStudentsBySection'])->name('CET102');
+    Route::get('/CET103', [CETController::class, 'listStudentsBySection'])->name('CET103');
+    Route::get('/CET201', [CETController::class, 'listStudentsBySection'])->name('CET201');
+    Route::get('/CET202', [CETController::class, 'listStudentsBySection'])->name('CET202');
+    Route::get('/CET203', [CETController::class, 'listStudentsBySection'])->name('CET203');
+    Route::get('/CET301', [CETController::class, 'listStudentsBySection'])->name('CET301');
+    Route::get('/CET302', [CETController::class, 'listStudentsBySection'])->name('CET302');
+    Route::get('/CET303', [CETController::class, 'listStudentsBySection'])->name('CET303');
+    Route::get('/CET401', [CETController::class, 'listStudentsBySection'])->name('CET401');
+    Route::get('/CET402', [CETController::class, 'listStudentsBySection'])->name('CET402');
+    Route::get('/CET403', [CETController::class, 'listStudentsBySection'])->name('CET403');
+});

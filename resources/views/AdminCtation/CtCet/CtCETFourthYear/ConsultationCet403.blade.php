@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HrViewStudent.css') }}">
-    <title>CET 402 Students</title>
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CTViewStudent.css') }}">
+    <title>CET 403 Students</title>
 </head>
 <body>
     <div class="header">
         <h1>Student Evaluation and Consultation</h1>
     </div>
 
-    <h2>CET 402</h2>
+    <h2>CET 403</h2>
 
-    <table class="hrstudentlist">
+    <table class="student-list">
         <thead>
             <tr>
                 <th>No.</th>
@@ -27,7 +27,7 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $student->name }}</td>
                     <td>
-                    <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                        <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
                             <button>View Student</button>
                         </a>
                     </td>

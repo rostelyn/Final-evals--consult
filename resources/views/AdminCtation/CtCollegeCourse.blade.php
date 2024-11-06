@@ -31,7 +31,7 @@
             Bachelor of Science in Computer Science
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationCET">
             <button>
                 Computer Engineering Technology
             </button>
