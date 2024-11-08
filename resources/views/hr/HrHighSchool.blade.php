@@ -54,27 +54,27 @@
         <div class="section">
             <h2>GRADE 11</h2>
             <div>
-                <a href="{{('LoveLace') }}">
+                <a href="{{('Grade11Lovelace') }}">
                     <button>LoveLace</button>
                 </a>
             </div>
             <div>
-                <a href="{{('Duflo') }}">
+                <a href="{{('Grade11Duflo') }}">
                     <button>Duflo</button>
                 </a>
             </div>
             <div>
-                <a href="{{('StClare') }}">
+                <a href="{{('Grade11StClare') }}">
                     <button>St.Clare</button>
                 </a>
             </div>
             <div>
-                <a href="{{('EsCoZier') }}">
-                    <button>EsCoZier</button>
+                <a href="{{('Grade11EsCoZier') }}">
+                    <button>Escozier</button>
                 </a>
             </div>
              <div>
-                <a href="{{('Aristotle') }}">
+                <a href="{{('Grade11Aristotle') }}">
                     <button>Pythagoras/
                         Aristotle
                     </button>
