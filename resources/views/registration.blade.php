@@ -19,7 +19,7 @@
                 </ul>
             </div>
         @endif
-            
+
         <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -43,14 +43,30 @@
                 <input type="email" name="outlook_email" id="outlook_email" value="{{ old('outlook_email') }}" required>
             </div>
 
+            <!-- Level Dropdown -->
             <div class="form-group">
-                <label for="course_strand">Course Strand:</label>
-                <input type="text" name="course_strand" id="course_strand" value="{{ old('course_strand') }}" required>
+                <label for="level">Level:</label>
+                <select name="level" id="level" required>
+                    <option value="">Select Department</option>
+                    <option value="High School" {{ old('level') == 'High School' ? 'selected' : '' }}>High School</option>
+                    <option value="College" {{ old('level') == 'College' ? 'selected' : '' }}>College</option>
+                </select>
             </div>
 
+            <!-- Course Strand Dropdown -->
             <div class="form-group">
-                <label for="grade_level_section">Grade Level Section:</label>
-                <input type="text" name="grade_level_section" id="grade_level_section" value="{{ old('grade_level_section') }}" required>
+                <label for="course_strand">Course/Strand:</label>
+                <select name="course_strand" id="course_strand" required>
+                    <!-- Options will be populated dynamically based on selected level -->
+                </select>
+            </div>
+
+            <!-- Grade Level Section Dropdown -->
+            <div class="form-group">
+                <label for="grade_level_section">Grade Level/Section:</label>
+                <select name="grade_level_section" id="grade_level_section" required>
+                    <!-- Options will be populated dynamically based on selected level -->
+                </select>
             </div>
 
             <div class="form-group">
@@ -75,19 +91,67 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
     <div class="profile-container">
         <img src="/path/to/default-profile.jpg" id="profile-preview">
         <h2>1X1 Picture</h2>
-
         <button class="upload-button" id="upload-button">Choose Picture</button>
-        
         <input type="file" name="picture" id="picture" accept="image/*">
     </div>
 
     <script>
+        const levelSelect = document.getElementById('level');
+        const courseStrandSelect = document.getElementById('course_strand');
+        const gradeLevelSectionSelect = document.getElementById('grade_level_section');
+
+        const highSchoolStrands = ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
+        const highSchoolSections = ['Lovelace', 'Aristotle', 'Duflo', 'Escozier', 'St. Clare'];
+
+        const collegeStrands = ['BSIT', 'BSCS', 'BSHM', 'CET', 'ACT', 'HRT', 'HRS', 'TOURISM'];
+        const collegeSections = ['101', '102', '103', '201', '202', '203', '301', '302', '303', '401', '402', '403'];
+
+        function populateOptions() {
+            courseStrandSelect.innerHTML = '';
+            gradeLevelSectionSelect.innerHTML = '';
+
+            if (levelSelect.value === 'High School') {
+                highSchoolStrands.forEach(strand => {
+                    const option = document.createElement('option');
+                    option.value = strand;
+                    option.textContent = strand;
+                    courseStrandSelect.appendChild(option);
+                });
+
+                highSchoolSections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section;
+                    option.textContent = section;
+                    gradeLevelSectionSelect.appendChild(option);
+                });
+
+            } else if (levelSelect.value === 'College') {
+                collegeStrands.forEach(strand => {
+                    const option = document.createElement('option');
+                    option.value = strand;
+                    option.textContent = strand;
+                    courseStrandSelect.appendChild(option);
+                });
+
+                collegeSections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section;
+                    option.textContent = section;
+                    gradeLevelSectionSelect.appendChild(option);
+                });
+            }
+        }
+
+        levelSelect.addEventListener('change', populateOptions);
+
         const pictureInput = document.getElementById('picture');
         const profilePreview = document.getElementById('profile-preview');
         const uploadButton = document.getElementById('upload-button');
+
         uploadButton.addEventListener('click', function() {
             pictureInput.click();
         });
