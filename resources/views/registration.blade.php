@@ -104,8 +104,8 @@
         const courseStrandSelect = document.getElementById('course_strand');
         const gradeLevelSectionSelect = document.getElementById('grade_level_section');
 
-        const highSchoolStrands = ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
-        const highSchoolSections = ['Lovelace', 'Aristotle', 'Duflo', 'Escozier', 'St. Clare'];
+        const highSchoolStrands = ['Grade7', 'Grade8', 'Grade9', 'Grade10', 'Grade 11', 'Grade 12'];
+        const highSchoolSections = ['Grade7', 'Grade8', 'Grade9', 'Grade10','Lovelace', 'Aristotle', 'Duflo', 'Escozier', 'St. Clare'];
 
         const collegeStrands = ['BSIT', 'BSCS', 'BSHM', 'CET', 'ACT', 'HRT', 'HRS', 'TOURISM'];
         const collegeSections = ['101', '102', '103', '201', '202', '203', '301', '302', '303', '401', '402', '403'];

@@ -6,7 +6,7 @@
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="{{ asset('css/Student/studentdb.css') }}">
 </head>
-<body>
+<body class="{{ $student->level === 'College' ? 'college-bg' : 'highschool-bg' }}">
     <div class="header">
         <h1>Welcome, {{ $student->name }}</h1>
     </div>
@@ -23,7 +23,6 @@
                 <p><strong>Course/Strand:</strong> {{ $student->Course_Strand }}</p>
                 <p><strong>Section:</strong> {{ $student->Grade_Level_Section }}</p>
                 <p><strong>Student Number:</strong> {{ $student->StudentId }}</p>
-                
             </div>
             <a href="{{ route('logout') }}"><h5>Log Out</a>
         </div>
