@@ -17,7 +17,7 @@
         <div class="section">
             <h2>GRADE 7</h2>
             <div>
-                <a href="{{('HrGrade7') }}">
+                <a href="{{('Grade7') }}">
                     <button>Grade 7</button>
                 </a>
             </div>
@@ -27,7 +27,7 @@
         <div class="section">
             <h2>GRADE 8</h2>
             <div>
-                <a href="{{('HrGrade8') }}">
+                <a href="{{('Grade8') }}">
                     <button>Grade 8</button>
                 </a>
             </div>
@@ -36,7 +36,7 @@
         <div class="section">
             <h2>GRADE 9</h2>
             <div>
-                <a href="{{('HrGrade9') }}">
+                <a href="{{('Grade9') }}">
                     <button>Grade 9</button>
                 </a>
             </div>
@@ -45,7 +45,7 @@
         <div class="section">
             <h2>GRADE 10</h2>
             <div>
-                <a href="{{('HrGrade10') }}">
+                <a href="{{('Grade10') }}">
                     <button>Grade 10</button>
                 </a>
             </div>

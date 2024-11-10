@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/EvaluationAdmin/HSViewStudent.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/HSViewStudent.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,1000;1,300;1,400;1,1000&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
 </head>
-    <title>Grade 10 Students</title>
+    <title>Grade 7 Students</title>
 </head>
 <body>
     <div class="header">
         <h1>Student Evaluation and Consultation</h1>
     </div>
 
-    <h2>Grade 10</h2>
+    <h2>Grade 7</h2>
 
-    <table class="hrstudentlist">
+    <table class="ctstudentlist">
         <thead>
             <tr>
                 <th>No.</th>

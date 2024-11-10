@@ -80,22 +80,24 @@ class HrGrade11and12Controller extends Controller
     {
         // Fetch the student by StudentId
         $student = Student::where('StudentId', $studentId)->first();
-    
+
+        // If no student is found, return an error or redirect
         if (!$student) {
-            return redirect()->route('Grade11Lovelace') // Redirect to a default section if not found
+            return redirect()->route('Grades', ['section' => 'Grade7', 'studentId' => '0001']) // Redirect to a default section if not found
                 ->with('error', 'Student not found.');
         }
-    
+
         // Get the current user's role
         $userRole = auth()->user()->role;
-    
-        // Check if it's a high school or college profile
+
+        // Load different views based on role, grade, and section
         if ($userRole === 'Hradmin') {
-            return view('hr.HRHighSchool.HsProfile', compact('student'));
+            return view('hr.HRHighSchool.HsProfile', compact('student', 'section'));
         } elseif ($userRole === 'Ctadmin') {
-            return view('AdminCtation.SH.HsCttProfile', compact('student')); // For Ctadmin profile
+            return view('AdminCtation.SH.HsCtProfile', compact('student', 'section'));
         }
-    
+
+        // Handle cases where no matching role is found
         abort(404, "Profile view not found for role: $userRole");
     }
 }

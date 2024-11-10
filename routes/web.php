@@ -320,21 +320,6 @@ Route::get('/CTHS-G10level', function () {
 })->name('CTHS-G10level');
 
 //for section highschool and strand
-Route::get('/CTGrade7-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade7-101');
-})->name('CTGrade7-101');
-
-Route::get('/CTGrade8-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade8-101');
-})->name('CTGrade8-101');
-
-Route::get('/CTGrade9-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade9-101');
-})->name('CTGrade9-101');
-
-Route::get('/CTGrade10-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade10-101');
-})->name('CTGrade10-101');
 
 //strand G11
 Route::get('/CT11ABM', function () {
@@ -507,6 +492,7 @@ Route::post('/students/store', [StudentController::class, 'store'])->name('stude
 // Route for viewing a specific student's profile
 Route::get('/students/{id}', [HRBSITController::class, 'show'])->name('student.show');
 
+
 // Route for viewing the student's dashboard (if separate from show)
 Route::get('/student-evaluation-consultation/{id}', [StudentController::class, 'dashboard'])->name('student-evaluation-consultation');
 
@@ -546,20 +532,6 @@ Route::get('/Tourism303', [TourismController::class, 'showTourism303'])->name('T
 Route::get('/Tourism401', [TourismController::class, 'showTourism401'])->name('Tourism401');
 Route::get('/Tourism402', [TourismController::class, 'showTourism402'])->name('Tourism402');
 Route::get('/Tourism403', [TourismController::class, 'showTourism403'])->name('Tourism403');
-
-
-// Grade 7 route
-Route::get('/HrGrade7', [HrGrades7To10Controller::class, 'showGrade7'])->name('HrGrade7');
-
-// Grade 8 route
-Route::get('/HrGrade8', [HrGrades7To10Controller::class, 'showGrade8'])->name('HrGrade8');
-
-// Grade 9 route
-Route::get('/HrGrade9', [HrGrades7To10Controller::class, 'showGrade9'])->name('HrGrade9');
-
-// Grade 10 route
-Route::get('/HrGrade10', [HrGrades7To10Controller::class, 'showGrade10'])->name('HrGrade10');
-
 
 Route::get('/ConsultationBSIT', function () {
     return view('AdminCtation.CTBSIT.ConsultationBSIT');
@@ -794,6 +766,15 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
 
 Route::get('highschool/{section}/{studentId}', [HrGrade11and12Controller::class, 'show'])->name('highschool.profile');
 
+//HIGHSCHOOL
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/Grade7', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade7');
+    Route::get('/Grade8', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade8');
+    Route::get('/Grade9', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade9');
+    Route::get('/Grade10', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade10');
+});
+
 
 Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
     Route::get('/Grade11Lovelace', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11Lovelace');
@@ -809,4 +790,4 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
     Route::get('/Einstein', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12Einstein');
 
 });
-
+Route::get('Grade{studentId}', [HrGrades7To10Controller::class, 'show'])->name('highschool.profile');
