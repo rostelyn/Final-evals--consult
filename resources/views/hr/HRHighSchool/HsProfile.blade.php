@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+        <h2>STUDENT EVALUATION AND CONSULTATION</h2>
     </div>
     <div class="row">
         <div class="column">
@@ -67,8 +67,6 @@
             </table>
         </div>
     </div>
-    <a href="{{ route('HrBSIT101') }}">
-        <button class="back-button">Back</button>
-    </a>
+  
 </body>
 </html>

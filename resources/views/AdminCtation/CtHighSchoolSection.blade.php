@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HighSchool</title>
 </head>
 <body>
     
@@ -14,19 +14,16 @@
 
 
 
-    <h1> <center> STUDENT EVALUATION AND CONSULTATION </center></h1>
+        <div class="header">
+            <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+        </div>
 
     <div class="grid-container">
         <div class="section">
             <h2>GRADE 7</h2>
             <div>
-                <a href="{{('CTGrade7-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('') }}">
-                    <button>201</button>
+                <a href="{{('Grade7') }}">
+                    <button>Grade 7</button>
                 </a>
             </div>
         </div>
@@ -34,13 +31,8 @@
         <div class="section">
             <h2>GRADE 8</h2>
             <div>
-                <a href="{{('CTGrade8-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('') }}">
-                    <button>201</button>
+                <a href="{{('Grade8') }}">
+                    <button>Grade 8</button>
                 </a>
             </div>
         </div>
@@ -48,13 +40,8 @@
         <div class="section">
             <h2>GRADE 9</h2>
             <div>
-                <a href="{{('CTGrade9-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('') }}">
-                    <button>201</button>
+                <a href="{{('Grade9') }}">
+                    <button>Grade 9</button>
                 </a>
             </div>
         </div>
@@ -62,37 +49,38 @@
         <div class="section">
             <h2>GRADE 10</h2>
             <div>
-                <a href="{{('CTGrade10-101') }}">
-                    <button>101</button>
-                </a>
-            </div>
-            <div>
-                <a href="{{('') }}">
-                    <button>201</button>
+                <a href="{{('Grade10') }}">
+                    <button>Grade 10</button>
                 </a>
             </div>
         </div>
-
-        <div class="section">
+         <div class="section">
             <h2>GRADE 11</h2>
             <div>
-                <a href="{{('CT11STEM') }}">
-                    <button>STEM</button>
+                <a href="{{('Grade11Lovelace') }}">
+                    <button>Lovelace</button>
                 </a>
             </div>
             <div>
-                <a href="{{('CT11ABM') }}">
-                    <button>ABM</button>
+                <a href="{{('Grade11Duflo') }}">
+                    <button>Duflo</button>
                 </a>
             </div>
             <div>
-                <a href="{{('CT11ICT') }}">
-                    <button>ICT</button>
+                <a href="{{('Grade11StClare') }}">
+                    <button>St.Clare</button>
                 </a>
             </div>
             <div>
-                <a href="{{('CT11GAS') }}">
-                    <button>GAS</button>
+                <a href="{{('Grade11EsCoZier') }}">
+                    <button>Escozier</button>
+                </a>
+            </div>
+             <div>
+                <a href="{{('Grade11Aristotle') }}">
+                    <button>Pythagoras/
+                        Aristotle
+                    </button>
                 </a>
             </div>
         </div>
@@ -100,31 +88,34 @@
         <div class="section">
             <h2>GRADE 12</h2>
             <div>
-                <a href="{{('CT12STEM') }}">
-                    <button>STEM</button>
+                <a href="{{('Torvalds') }}">
+                    <button>Torvalds</button>
                 </a>
             </div>
             <div>
-                <a href="{{('CT12ABM') }}">
-                    <button>ABM</button>
+                <a href="{{('Marshall') }}">
+                    <button>Marshall</button>
                 </a>
             </div>
-            <div>
-                <a href="{{('CT12ICT') }}">
-                    <button>ICT</button>
+             <div>
+                <a href="{{('Marcus') }}">
+                    <button>MarCus</button>
                 </a>
             </div>
               <div>
-                 <a href="{{('CT12GAS') }}">
-                    <button>GAS</button>
+                 <a href="{{('SanPedroCalungsod') }}">
+                    <button>SanPedro 
+                            Calungsod</button>
                 </a>
             </div>
+               <div>
+                  <a href="{{('Einstein') }}">
+                    <button>Fibonacci/
+                            Einstein</button>
+                  </a>
+               </div>
         </div>
-       
-        
     </div>
-
-    
-</body>
+ </body>
 </html>
 

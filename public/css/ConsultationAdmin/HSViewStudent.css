@@ -1,36 +1,44 @@
-/* General Styles */
-body {
-    font-family: 'Times New Roman', serif;
+* {
+    font-family: 'Georgia';
 }
 
-.content h1 {
-    color: #0F67B1;
+.header {
+    background-color: #0F67B1;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Averia Serif Libre", serif;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+h2 {
+    font-family: "Averia Serif Libre", serif;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.content h2 {
-    color: #0F67B1;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.bsit-course-student-list {
-    width: 100%;
-    margin: 20px auto;
+.ctstudentlist {
+    width: 95%;
+    margin: 60px auto 60px;
     border-collapse: collapse;
     border: 1px solid #000000;
 }
 
-.bsit-course-student-list th, .bsit-course-student-list td {
+.ctstudentlist th, .ctstudentlist td {
     padding: 12px 15px;
     text-align: left;
     border: 1px solid #000000; 
     font-size: 20px;
 }
 
-.bsit-course-student-list th {
+.ctstudentlist th {
     background-color: #7aa5d9;
     font-size: 20px;
     color: rgb(0, 0, 0);
@@ -39,19 +47,19 @@ body {
     border-bottom: 1px solid #000000;
 }
 
-.bsit-course-student-list td:first-child {
+.ctstudentlist td:first-child {
     border-right: 1px solid #000000; 
 }
 
-.bsit-course-student-list tr:nth-child(even) {
+.ctstudentlist tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.bsit-course-student-list tr:hover {
+.ctstudentlist tr:hover {
     background-color: #999ea4;
 }
 
-.bsit-course-student-list button {
+.ctstudentlist button {
     background-color: #0F67B1;
     padding: 5px 10px;
     font-size: 16px;
@@ -61,6 +69,6 @@ body {
     cursor: pointer;
 }
 
-.bsit-course-student-list button:hover {
+.ctstudentlist button:hover {
     background-color: #7aa5d9;
 }

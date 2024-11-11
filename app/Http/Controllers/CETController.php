@@ -7,130 +7,83 @@ use Illuminate\Http\Request;
 
 class CETController extends Controller
 {
-    public function listStudentsBySection($course_strand, $section)
+    public function listStudentsBySection()
     {
-        // Fetch students based on course strand and section
-        $students = Student::where('Course_Strand', $course_strand)
+        // Extract the section from the route name, e.g., 'CET101' -> '101'
+        $section = str_replace('CET', '', request()->route()->getName());
+
+        // Get the current user's role
+        $userRole = auth()->user()->role;
+
+        // Define views based on role and section
+        $views = [
+            'Hradmin' => [
+                '101' => 'hr.HrCET.CETFirstYear.CET101',
+                '102' => 'hr.HrCET.CETFirstYear.CET102',
+                '103' => 'hr.HrCET.CETFirstYear.CET103',
+                '201' => 'hr.HrCET.CETSecondYear.CET201',
+                '202' => 'hr.HrCET.CETSecondYear.CET202',
+                '203' => 'hr.HrCET.CETSecondYear.CET203',
+                '301' => 'hr.HrCET.CETThirdYear.CET301',
+                '302' => 'hr.HrCET.CETThirdYear.CET302',
+                '303' => 'hr.HrCET.CETThirdYear.CET303',
+                '401' => 'hr.HrCET.CETFourthYear.CET401',
+                '402' => 'hr.HrCET.CETFourthYear.CET402',
+                '403' => 'hr.HrCET.CETFourthYear.CET403',
+            ],
+            'Ctadmin' => [
+                '101' => 'AdminCtation.CtCet.CtCETFirstYear.ConsultationCet101',
+                '102' => 'AdminCtation.CtCet.CtCETFirstYear.ConsultationCet102',
+                '103' => 'AdminCtation.CtCet.CtCETFirstYear.ConsultationCet103',
+                '201' => 'AdminCtation.CtCet.CtCETSecondYear.ConsultationCet201',
+                '202' => 'AdminCtation.CtCet.CtCETSecondYear.ConsultationCet202',
+                '203' => 'AdminCtation.CtCet.CtCETSecondYear.ConsultationCet203',
+                '301' => 'AdminCtation.CtCet.CtCETThirdYear.ConsultationCet301',
+                '302' => 'AdminCtation.CtCet.CtCETThirdYear.ConsultationCet302',
+                '303' => 'AdminCtation.CtCet.CtCETThirdYear.ConsultationCet303',
+                '401' => 'AdminCtation.CtCet.CtCETFourthYear.ConsultationCet401',
+                '402' => 'AdminCtation.CtCet.CtCETFourthYear.ConsultationCet402',
+                '403' => 'AdminCtation.CtCet.CtCETFourthYear.ConsultationCet403',
+            ],
+        ];
+
+        // Get the correct view path based on role and section
+        $view = $views[$userRole][$section] ?? null;
+
+        // If view doesn't exist, return a 404 error
+        if (!$view || !view()->exists($view)) {
+            abort(404, "View not found for section: $section and role: $userRole");
+        }
+
+        // Fetch students based on course strand ('CET') and section
+        $students = Student::where('Course_Strand', 'CET')
                            ->where('Grade_Level_Section', $section)
                            ->get();
 
-        // Determine the view to load based on section
-        $viewName = match ($section) {
-            '101' => 'hr.HrCET.CETFirstYear.CET101',
-            '102' => 'hr.HrCET.CETFirstYear.CET102',
-            '103' => 'hr.HrCET.CETFirstYear.CET103',
-            '201' => 'hr.HrCET.CETSecondYear.CET201',
-            '202' => 'hr.HrCET.CETSecondYear.CET202',
-            '203' => 'hr.HrCET.CETSecondYear.CET203',
-            '301' => 'hr.HrCET.CETThirdYear.CET301',
-            '302' => 'hr.HrCET.CETThirdYear.CET302',
-            '303' => 'hr.HrCET.CETThirdYear.CET303',
-            '401' => 'hr.HrCET.CETFourthYear.CET401',
-            '402' => 'hr.HrCET.CETFourthYear.CET402',
-            '403' => 'hr.HrCET.CETFourthYear.CET403',
-            default => 'hr.HrCET.OtherSections',
-        };
-
-        return view($viewName, compact('students'));
+        return view($view, compact('students'));
     }
 
-    // Show a single student profile
     public function show($id)
     {
-        // Fetch the student by the StudentId
+        // Fetch the student by StudentId
         $student = Student::where('StudentId', $id)->first();
 
-        // Check if a student was found, otherwise show an error message
+        // Check if a student was found
         if (!$student) {
-            return redirect()->route('student.listBySection', ['course_strand' => 'CET', 'section' => '101'])
+            return redirect()->route('CET101') // Redirect to a default section if not found
                 ->with('error', 'Student not found.');
         }
 
-        // If student is found, load the profile view
-        return view('hr.HrCET.HrProfile', compact('student'));
-    }
+        // Get the current user's role
+        $userRole = auth()->user()->role;
 
-    // Show 101 students
-    public function showCET101()
-    {
-        $students = Student::where('Grade_Level_Section', '101')->get();
-        return view('hr.HrCET.CETFirstYear.CET101', compact('students'));
-    }
-
-    // Show 102 students
-    public function showCET102()
-    {
-        $students = Student::where('Grade_Level_Section', '102')->get();
-        return view('hr.HrCET.CETFirstYear.CET102', compact('students'));
-    }
-
-    // Show 103 students
-    public function showCET103()
-    {
-        $students = Student::where('Grade_Level_Section', '103')->get();
-        return view('hr.HrCET.CETFirstYear.CET103', compact('students'));
-    }
-
-    // Show 201 students
-    public function showCET201()
-    {
-        $students = Student::where('Grade_Level_Section', '201')->get();
-        return view('hr.HrCET.CETSecondYear.CET201', compact('students'));
-    }
-
-    // Show 202 students
-    public function showCET202()
-    {
-        $students = Student::where('Grade_Level_Section', '202')->get();
-        return view('hr.HrCET.CETSecondYear.CET202', compact('students'));
-    }
-
-    // Show 203 students
-    public function showCET203()
-    {
-        $students = Student::where('Grade_Level_Section', '203')->get();
-        return view('hr.HrCET.CETSecondYear.CET203', compact('students'));
-    }
-
-    // Show 301 students
-    public function showCET301()
-    {
-        $students = Student::where('Grade_Level_Section', '301')->get();
-        return view('hr.HrCET.CETThirdYear.CET301', compact('students'));
-    }
-
-    // Show 302 students
-    public function showCET302()
-    {
-        $students = Student::where('Grade_Level_Section', '302')->get();
-        return view('hr.HrCET.CETThirdYear.CET302', compact('students'));
-    }
-
-    // Show 303 students
-    public function showCET303()
-    {
-        $students = Student::where('Grade_Level_Section', '303')->get();
-        return view('hr.HrCET.CETThirdYear.CET303', compact('students'));
-    }
-
-    // Show 401 students
-    public function showCET401()
-    {
-        $students = Student::where('Grade_Level_Section', '401')->get();
-        return view('hr.HrCET.CETFourthYear.CET401', compact('students'));
-    }
-
-    // Show 402 students
-    public function showCET402()
-    {
-        $students = Student::where('Grade_Level_Section', '402')->get();
-        return view('hr.HrCET.CETFourthYear.CET402', compact('students'));
-    }
-
-    // Show 403 students
-    public function showCET403()
-    {
-        $students = Student::where('Grade_Level_Section', '403')->get();
-        return view('hr.HrCET.CETFourthYear.CET403', compact('students'));
+        // Load different views based on the role
+        if ($userRole === 'Hradmin') {
+            return view('hr.HrCollegeBSIT.HrProfile', compact('student'));
+        } elseif ($userRole === 'Ctadmin') {
+            return view('AdminCtation.CtProfile', compact('student'));
+        } else {
+            abort(404, "Profile view not found for role: $userRole");
+        }
     }
 }

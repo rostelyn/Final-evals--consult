@@ -110,7 +110,7 @@ class ACTController extends Controller
 
         // Load different views based on the role
         if ($userRole === 'Hradmin') {
-            return view('hr.HrCollegeACT.HrProfile', compact('student'));
+            return view('hr.HrCollegeBSIT.HrProfile', compact('student'));
         } elseif ($userRole === 'Ctadmin') {
             return view('AdminCtation.CtProfile', compact('student'));
         } else {

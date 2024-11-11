@@ -323,21 +323,6 @@ Route::get('/CTHS-G10level', function () {
 })->name('CTHS-G10level');
 
 //for section highschool and strand
-Route::get('/CTGrade7-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade7-101');
-})->name('CTGrade7-101');
-
-Route::get('/CTGrade8-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade8-101');
-})->name('CTGrade8-101');
-
-Route::get('/CTGrade9-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade9-101');
-})->name('CTGrade9-101');
-
-Route::get('/CTGrade10-101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTViewStudent.CTGrade10-101');
-})->name('CTGrade10-101');
 
 //strand G11
 Route::get('/CT11ABM', function () {
@@ -510,60 +495,11 @@ Route::post('/students/store', [StudentController::class, 'store'])->name('stude
 // Route for viewing a specific student's profile
 Route::get('/students/{id}', [HRBSITController::class, 'show'])->name('student.show');
 
+
 // Route for viewing the student's dashboard (if separate from show)
 Route::get('/student-evaluation-consultation/{id}', [StudentController::class, 'dashboard'])->name('student-evaluation-consultation');
 
 
-
-Route::get('/CS101', [BSCSController::class, 'showBSCS101'])->name('CS101');
-Route::get('/CS102', [BSCSController::class, 'showBSCS102'])->name('CS102');
-Route::get('/CS103', [BSCSController::class, 'showBSCS103'])->name('CS103');
-Route::get('/CS201', [BSCSController::class, 'showBSCS201'])->name('CS201');
-Route::get('/CS202', [BSCSController::class, 'showBSCS202'])->name('CS202');
-Route::get('/CS203', [BSCSController::class, 'showBSCS203'])->name('CS203');
-Route::get('/CS301', [BSCSController::class, 'showBSCS301'])->name('CS301');
-Route::get('/CS302', [BSCSController::class, 'showBSCS302'])->name('CS302');
-Route::get('/CS303', [BSCSController::class, 'showBSCS303'])->name('CS303');
-Route::get('/CS401', [BSCSController::class, 'showBSCS401'])->name('CS401');
-Route::get('/CS402', [BSCSController::class, 'showBSCS402'])->name('CS402');
-Route::get('/CS403', [BSCSController::class, 'showBSCS403'])->name('CS403');
-
-//HRT
-
-Route::get('/HRT101', [HRTController::class, 'showHRT101'])->name('HRT101');
-Route::get('/HRT102', [HRTController::class, 'showHRT102'])->name('HRT102');
-Route::get('/HRT103', [HRTController::class, 'showHRT103'])->name('HRT103');
-
-Route::get('/HRT201', [HRTController::class, 'showHRT201'])->name('HRT201');
-Route::get('/HRT202', [HRTController::class, 'showHRT202'])->name('HRT202');
-Route::get('/HRT203', [HRTController::class, 'showHRT203'])->name('HRT203');
-
-Route::get('/HRT301', [HRTController::class, 'showHRT301'])->name('HRT301');
-Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
-Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
-
-Route::get('/HRT401', [HRTController::class, 'showHRT401'])->name('HRT301');
-Route::get('/HRT302', [HRTController::class, 'showHRT302'])->name('HRT302');
-Route::get('/HRT303', [HRTController::class, 'showHRT303'])->name('HRT303');
-
-
-//CET
-
-Route::get('/CET101', [CETController::class, 'showCET101'])->name('CET101');
-Route::get('/CET102', [CETController::class, 'showCET102'])->name('CET102');
-Route::get('/CET103', [CETController::class, 'showCET103'])->name('CET103');
-
-Route::get('/CET201', [CETController::class, 'showCET201'])->name('CET201');
-Route::get('/CET202', [CETController::class, 'showCET202'])->name('CET202');
-Route::get('/CET203', [CETController::class, 'showCET203'])->name('CET203');
-
-Route::get('/CET301', [CETController::class, 'showCET301'])->name('CET301');
-Route::get('/CET302', [CETController::class, 'showCET302'])->name('CET302');
-Route::get('/CET303', [CETController::class, 'showCET303'])->name('CET303');
-
-Route::get('/CET401', [CETController::class, 'showCET401'])->name('CET401');
-Route::get('/CET402', [CETController::class, 'showCET402'])->name('CET402');
-Route::get('/CET403', [CETController::class, 'showCET403'])->name('CET403');
 
 //HRS
 
@@ -600,38 +536,6 @@ Route::get('/Tourism401', [TourismController::class, 'showTourism401'])->name('T
 Route::get('/Tourism402', [TourismController::class, 'showTourism402'])->name('Tourism402');
 Route::get('/Tourism403', [TourismController::class, 'showTourism403'])->name('Tourism403');
 
-
-// Grade 7 route
-Route::get('/HrGrade7', [HrGrades7To10Controller::class, 'showGrade7'])->name('HrGrade7');
-
-// Grade 8 route
-Route::get('/HrGrade8', [HrGrades7To10Controller::class, 'showGrade8'])->name('HrGrade8');
-
-// Grade 9 route
-Route::get('/HrGrade9', [HrGrades7To10Controller::class, 'showGrade9'])->name('HrGrade9');
-
-// Grade 10 route
-Route::get('/HrGrade10', [HrGrades7To10Controller::class, 'showGrade10'])->name('HrGrade10');
-
-
-
-// Grade 11 Sections
-Route::get('/LoveLace', [HrGrade11and12Controller::class, 'showLovelace'])->name('LoveLace');
-Route::get('/Aristotle', [HrGrade11and12Controller::class, 'showAristotle'])->name('Aristotle');
-Route::get('/StClare', [HrGrade11and12Controller::class, 'showStClare'])->name('StClare');
-Route::get('/Duflo', [HrGrade11and12Controller::class, 'showDuflo'])->name('Duflo');
-Route::get('/EsCoZier', [HrGrade11and12Controller::class, 'showEsCoZier'])->name('EsCoZier');
-
-//Grade 12  Sections
-
-Route::get('/Torvalds', [HrGrade11and12Controller::class, 'showTorvalds'])->name('Torvalds');
-Route::get('/Marshall', [HrGrade11and12Controller::class, 'showMarshall'])->name('Marshall');
-Route::get('/SanPedroCalungsod', [HrGrade11and12Controller::class, 'showSanPedroCalungsod'])->name('SanPedroCalungsod');
-Route::get('/Einstein', [HrGrade11and12Controller::class, 'showEinstein'])->name('Einstein');
-Route::get('/Marcus', [HrGrade11and12Controller::class, 'showMarcus'])->name('Marcus');
-
-
-
 Route::get('/ConsultationBSIT', function () {
     return view('AdminCtation.CTBSIT.ConsultationBSIT');
 })->name('ConsultationBSIT');
@@ -666,7 +570,6 @@ Route::get('/DpHeadDashboard', function () {
 })->middleware('auth')->name('DpHeadDashboard');
 
 
-
 Route::get('/ConsultationBSITCourse', function () {
     return view('AdminCtation.CtBsit.ConsultationBSITCourse');
 })->name('ConsultationBSITCourse');
@@ -679,8 +582,25 @@ Route::get('/ConsultationACT', function () {
     return view('AdminCtation.CtACT.ConsultationACT');
 })->name('ConsultationACT');
 
+Route::get('/ConsultationHRT', function () {
+    return view('AdminCtation.CTHRT.ConsultationHRT');
+})->name('ConsultationHRT');
 
+Route::get('/ConsultationCET', function () {
+    return view('AdminCtation.CtCet.ConsultationCET');
+})->name('ConsultationCET');
 
+Route::get('/ConsultationHRS', function () {
+    return view('AdminCtation.CtHRS.ConsultationHRS');
+})->name('ConsultationHRS');
+
+Route::get('/ConsultationTOURISM', function () {
+    return view('AdminCtation.CtTourism.ConsultationTOURISM');
+})->name('ConsultationTOURISM');
+
+Route::get('/ConsultationBSCS', function () {
+    return view('AdminCtation.CtBSCS.ConsultationBSCS');
+})->name('ConsultationBSCS');
 
 
 Route::get('/BSIT101', [HRBSITController::class, 'listStudentsBySection'])->name('BSIT101')->middleware('auth', 'role:Hradmin,Ctadmin');
@@ -751,8 +671,7 @@ Route::get('/BSHM401', [BSHMController::class, 'listStudentsBySection'])->name('
 Route::get('/BSHM402', [BSHMController::class, 'listStudentsBySection'])->name('BSHM402')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/BSHM403', [BSHMController::class, 'listStudentsBySection'])->name('BSHM403')->middleware('auth', 'role:Hradmin,Ctadmin');
 
-
-//
+//ACT
 
 Route::get('/ACT101', [ACTController::class, 'listStudentsBySection'])->name('ACT101')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/ACT102', [ACTController::class, 'listStudentsBySection'])->name('ACT102')->middleware('auth', 'role:Hradmin,Ctadmin');
@@ -772,3 +691,123 @@ Route::get('/ACT303', [ACTController::class, 'listStudentsBySection'])->name('AC
 Route::get('/ACT401', [ACTController::class, 'listStudentsBySection'])->name('ACT401')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/ACT402', [ACTController::class, 'listStudentsBySection'])->name('ACT402')->middleware('auth', 'role:Hradmin,Ctadmin');
 Route::get('/ACT403', [ACTController::class, 'listStudentsBySection'])->name('ACT403')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+
+// First Year
+Route::get('/HRT101', [HRTController::class, 'listStudentsBySection'])->name('HRT101')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT102', [HRTController::class, 'listStudentsBySection'])->name('HRT102')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT103', [HRTController::class, 'listStudentsBySection'])->name('HRT103')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Second Year
+Route::get('/HRT201', [HRTController::class, 'listStudentsBySection'])->name('HRT201')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT202', [HRTController::class, 'listStudentsBySection'])->name('HRT202')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT203', [HRTController::class, 'listStudentsBySection'])->name('HRT203')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Third Year
+Route::get('/HRT301', [HRTController::class, 'listStudentsBySection'])->name('HRT301')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT302', [HRTController::class, 'listStudentsBySection'])->name('HRT302')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT303', [HRTController::class, 'listStudentsBySection'])->name('HRT303')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+// Fourth Year
+Route::get('/HRT401', [HRTController::class, 'listStudentsBySection'])->name('HRT401')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT402', [HRTController::class, 'listStudentsBySection'])->name('HRT402')->middleware('auth', 'role:Hradmin,Ctadmin');
+Route::get('/HRT403', [HRTController::class, 'listStudentsBySection'])->name('HRT403')->middleware('auth', 'role:Hradmin,Ctadmin');
+
+
+//
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/CET101', [CETController::class, 'listStudentsBySection'])->name('CET101');
+    Route::get('/CET102', [CETController::class, 'listStudentsBySection'])->name('CET102');
+    Route::get('/CET103', [CETController::class, 'listStudentsBySection'])->name('CET103');
+    Route::get('/CET201', [CETController::class, 'listStudentsBySection'])->name('CET201');
+    Route::get('/CET202', [CETController::class, 'listStudentsBySection'])->name('CET202');
+    Route::get('/CET203', [CETController::class, 'listStudentsBySection'])->name('CET203');
+    Route::get('/CET301', [CETController::class, 'listStudentsBySection'])->name('CET301');
+    Route::get('/CET302', [CETController::class, 'listStudentsBySection'])->name('CET302');
+    Route::get('/CET303', [CETController::class, 'listStudentsBySection'])->name('CET303');
+    Route::get('/CET401', [CETController::class, 'listStudentsBySection'])->name('CET401');
+    Route::get('/CET402', [CETController::class, 'listStudentsBySection'])->name('CET402');
+    Route::get('/CET403', [CETController::class, 'listStudentsBySection'])->name('CET403');
+});
+
+
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    // Route for listing students by section for Hradmin and Ctadmin
+    Route::get('/HRS101', [HRSController::class, 'listStudentsBySection'])->name('HRS101');
+    Route::get('/HRS102', [HRSController::class, 'listStudentsBySection'])->name('HRS102');
+    Route::get('/HRS103', [HRSController::class, 'listStudentsBySection'])->name('HRS103');
+    Route::get('/HRS201', [HRSController::class, 'listStudentsBySection'])->name('HRS201');
+    Route::get('/HRS202', [HRSController::class, 'listStudentsBySection'])->name('HRS202');
+    Route::get('/HRS203', [HRSController::class, 'listStudentsBySection'])->name('HRS203');
+    Route::get('/HRS301', [HRSController::class, 'listStudentsBySection'])->name('HRS301');
+    Route::get('/HRS302', [HRSController::class, 'listStudentsBySection'])->name('HRS302');
+    Route::get('/HRS303', [HRSController::class, 'listStudentsBySection'])->name('HRS303');
+    Route::get('/HRS401', [HRSController::class, 'listStudentsBySection'])->name('HRS401');
+    Route::get('/HRS402', [HRSController::class, 'listStudentsBySection'])->name('HRS402');
+    Route::get('/HRS403', [HRSController::class, 'listStudentsBySection'])->name('HRS403');
+});
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    // Route for listing students by section for Hradmin and Ctadmin
+    Route::get('/Tourism101', [TourismController::class, 'listStudentsBySection'])->name('Tourism101');
+    Route::get('/Tourism102', [TourismController::class, 'listStudentsBySection'])->name('Tourism102');
+    Route::get('/Tourism103', [TourismController::class, 'listStudentsBySection'])->name('Tourism103');
+    Route::get('/Tourism201', [TourismController::class, 'listStudentsBySection'])->name('Tourism201');
+    Route::get('/Tourism202', [TourismController::class, 'listStudentsBySection'])->name('Tourism202');
+    Route::get('/Tourism203', [TourismController::class, 'listStudentsBySection'])->name('Tourism203');
+    Route::get('/Tourism301', [TourismController::class, 'listStudentsBySection'])->name('Tourism301');
+    Route::get('/Tourism302', [TourismController::class, 'listStudentsBySection'])->name('Tourism302');
+    Route::get('/Tourism303', [TourismController::class, 'listStudentsBySection'])->name('Tourism303');
+    Route::get('/Tourism401', [TourismController::class, 'listStudentsBySection'])->name('Tourism401');
+    Route::get('/Tourism402', [TourismController::class, 'listStudentsBySection'])->name('Tourism402');
+    Route::get('/Tourism403', [TourismController::class, 'listStudentsBySection'])->name('Tourism403');
+});
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/BSCS101', [BSCSController::class, 'listStudentsBySection'])->name('BSCS101');
+    Route::get('/BSCS102', [BSCSController::class, 'listStudentsBySection'])->name('BSCS102');
+    Route::get('/BSCS103', [BSCSController::class, 'listStudentsBySection'])->name('BSCS103');
+    Route::get('/BSCS201', [BSCSController::class, 'listStudentsBySection'])->name('BSCS201');
+    Route::get('/BSCS202', [BSCSController::class, 'listStudentsBySection'])->name('BSCS202');
+    Route::get('/BSCS203', [BSCSController::class, 'listStudentsBySection'])->name('BSCS203');
+    Route::get('/BSCS301', [BSCSController::class, 'listStudentsBySection'])->name('BSCS301');
+    Route::get('/BSCS302', [BSCSController::class, 'listStudentsBySection'])->name('BSCS302');
+    Route::get('/BSCS303', [BSCSController::class, 'listStudentsBySection'])->name('BSCS303');
+    Route::get('/BSCS401', [BSCSController::class, 'listStudentsBySection'])->name('BSCS401');
+    Route::get('/BSCS402', [BSCSController::class, 'listStudentsBySection'])->name('BSCS402');
+    Route::get('/BSCS403', [BSCSController::class, 'listStudentsBySection'])->name('BSCS403');
+});
+
+
+
+// HS PROFILE
+
+Route::get('highschool/{section}/{studentId}', [HrGrade11and12Controller::class, 'show'])->name('highschool.profile');
+
+//HIGHSCHOOL
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/Grade7', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade7');
+    Route::get('/Grade8', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade8');
+    Route::get('/Grade9', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade9');
+    Route::get('/Grade10', [HrGrades7To10Controller::class, 'listStudentsBySection'])->name('Grade10');
+});
+
+
+Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
+    Route::get('/Grade11Lovelace', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11Lovelace');
+    Route::get('/Grade11Aristotle', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11Aristotle');
+    Route::get('/Grade11StClare', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11StClare');
+    Route::get('/Grade11Duflo', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11Duflo');
+    Route::get('/Grade11EsCoZier', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade11EsCoZier');
+
+    Route::get('/Torvalds', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12Torvalds');
+    Route::get('/Marshall', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12Marshall');
+    Route::get('/Marcus', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12Marcus');
+    Route::get('/SanPedroCalungsod', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12SanPedroCalungsod');
+    Route::get('/Einstein', [HrGrade11and12Controller::class, 'listStudentsBySection'])->name('Grade12Einstein');
+
+});
+Route::get('Grade{studentId}', [HrGrades7To10Controller::class, 'show'])->name('highschool.profile');

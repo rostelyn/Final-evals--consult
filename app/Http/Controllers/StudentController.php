@@ -23,6 +23,7 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'age' => 'required|integer',
             'outlook_email' => 'required|email|unique:students,Outlook_Email',
+            'level' => 'required|string', // Add validation for level
             'course_strand' => 'required|string',
             'grade_level_section' => 'required|string',
             'gender' => 'required|string',
@@ -44,6 +45,7 @@ class StudentController extends Controller
             'name' => $request->name,
             'age' => $request->age,
             'Outlook_Email' => $request->outlook_email,
+            'level' => $request->level, // Save the level
             'Course_Strand' => $request->course_strand,
             'Grade_Level_Section' => $request->grade_level_section,
             'gender' => $request->gender,

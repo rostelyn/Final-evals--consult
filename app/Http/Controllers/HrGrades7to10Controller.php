@@ -7,66 +7,68 @@ use Illuminate\Http\Request;
 
 class HrGrades7To10Controller extends Controller
 {
-    public function listStudentsBySection($grade)
+    public function listStudentsBySection()
     {
-        // Fetch students based on grade level and section (since each grade has only one section)
+        // Retrieve the grade dynamically from the route name (e.g., 'Grade7', 'Grade8')
+        $grade = request()->route()->getName(); // This gives us 'Grade7', 'Grade8', etc.
+
+        // Check the user role
+        $userRole = auth()->user()->role;
+
+        // Define views based on role and grade
+        $views = [
+            'Hradmin' => [
+                'Grade7' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade7',
+                'Grade8' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade8',
+                'Grade9' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade9',
+                'Grade10' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade10',
+            ],
+            'Ctadmin' => [
+                'Grade7' => 'AdminCtation.SH.CtGrade7',
+                'Grade8' => 'AdminCtation.SH.CtGrade8',
+                'Grade9' => 'AdminCtation.SH.CtGrade9',
+                'Grade10' => 'AdminCtation.SH.CtGrade10',
+            ],
+        ];
+
+        // Retrieve the appropriate view for the user role and grade
+        $view = $views[$userRole][$grade] ?? null;
+
+        if (!$view || !view()->exists($view)) {
+            abort(404, "View not found for grade: $grade and role: $userRole");
+        }
+
+        // Fetch students from the database based on the grade (e.g., 'Grade7')
         $students = Student::where('Grade_Level_Section', $grade)->get();
 
-        // Determine the view to load based on grade
-        $viewName = match ($grade) {
-            'Grade7' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade7',
-            'Grade8' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade8',
-            'Grade9' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade9',
-            'Grade10' => 'hr.HRHighSchool.VIEWSTUDENT.HrGrade10',
-            default => 'hr.HRHighSchool.OtherGrades',
-        };
+        // If no students found, you can show a message
+        if ($students->isEmpty()) {
+            return view($view)->with('message', 'No students found for this grade.');
+        }
 
-        return view($viewName, compact('students'));
+        return view($view, compact('students'));
     }
 
-    // Show a single student profile
-    public function show($id)
+    public function show($studentId)
     {
-        // Fetch the student by their unique StudentId
-        $student = Student::where('StudentId', $id)->first();
+        // Fetch the student by StudentId
+        $student = Student::where('StudentId', $studentId)->first();
 
-        // If the student is not found, redirect back with an error message
         if (!$student) {
-            return redirect()->route('student.listBySection', ['grade' => 'Grade7'])
+            return redirect()->route('Grade7') // Redirect to the Grade 7 list if not found
                 ->with('error', 'Student not found.');
         }
 
-        // Return the high school student profile view
-        return view('hr.HRHighSchool.HsProfile', compact('student'));
-    }
+        // Get the current user's role
+        $userRole = auth()->user()->role;
 
-    // Show Grade 7 students
-    public function showGrade7()
-    {
-        $students = Student::where('Grade_Level_Section', 'Grade7')->get();
-        return view('hr.HRHighSchool.VIEWSTUDENT.HrGrade7', compact('students'));
+        // Load different views based on the role
+        if ($userRole === 'Hradmin') {
+            return view('hr.HRHighSchool.HsProfile', compact('student'));
+        } elseif ($userRole === 'Ctadmin') {
+            return view('AdminCtation.SH.HsCtProfile', compact('student'));
+        } else {
+            abort(404, "Profile view not found for role: $userRole");
+        }
     }
-
-    // Show Grade 8 students
-    public function showGrade8()
-    {
-        $students = Student::where('Grade_Level_Section', 'Grade8')->get();
-        return view('hr.HRHighSchool.VIEWSTUDENT.HrGrade8', compact('students'));
-    }
-
-    // Show Grade 9 students
-    public function showGrade9()
-    {
-        $students = Student::where('Grade_Level_Section', 'Grade9')->get();
-        return view('hr.HRHighSchool.VIEWSTUDENT.HrGrade9', compact('students'));
-    }
-
-    // Show Grade 10 students
-    public function showGrade10()
-    {
-        $students = Student::where('Grade_Level_Section', 'Grade10')->get();
-        return view('hr.HRHighSchool.VIEWSTUDENT.HrGrade10', compact('students'));
-    }
-
-    
 }

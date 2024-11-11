@@ -7,130 +7,114 @@ use Illuminate\Http\Request;
 
 class HRTController extends Controller
 {
-    public function listStudentsBySection($course_strand, $section)
+    // Method to list students by section
+    public function listStudentsBySection($course_strand = 'HRT', $section = null)
     {
+        if (!auth()->check()) {
+            abort(403, 'Unauthorized action.');
+        }
+
+        // Get the current user's role
+        $userRole = auth()->user()->role;
+
+        // Define views based on role and section
+        $views = [
+            'Hradmin' => [
+                '101' => 'hr.HrHRT.HRTFirstYear.HRT101',
+                '102' => 'hr.HrHRT.HRTFirstYear.HRT102',
+                '103' => 'hr.HrHRT.HRTFirstYear.HRT103',
+                '201' => 'hr.HrHRT.HRTSecondYear.HRT201',
+                '202' => 'hr.HrHRT.HRTSecondYear.HRT202',
+                '203' => 'hr.HrHRT.HRTSecondYear.HRT203',
+                '301' => 'hr.HrHRT.HRTThirdYear.HRT301',
+                '302' => 'hr.HrHRT.HRTThirdYear.HRT302',
+                '303' => 'hr.HrHRT.HRTThirdYear.HRT303',
+                '401' => 'hr.HrHRT.HRTFourthYear.HRT401',
+                '402' => 'hr.HrHRT.HRTFourthYear.HRT402',
+                '403' => 'hr.HrHRT.HRTFourthYear.HRT403',
+            ],
+            'Ctadmin' => [
+                '101' => 'AdminCtation.CtHrt.CtHRTFirstYear.ConsultationHrt101',
+                '102' => 'AdminCtation.CtHrt.CtHRTFirstYear.ConsultationHrt102',
+                '103' => 'AdminCtation.CtHrt.CtHRTFirstYear.ConsultationHrt103',
+                '201' => 'AdminCtation.CtHrt.CtHRTSecondYear.ConsultationHrt201',
+                '202' => 'AdminCtation.CtHrt.CtHRTSecondYear.ConsultationHrt202',
+                '203' => 'AdminCtation.CtHrt.CtHRTSecondYear.ConsultationHrt203',
+                '301' => 'AdminCtation.CtHrt.CtHRTThirdYear.ConsultationHrt301',
+                '302' => 'AdminCtation.CtHrt.CtHRTThirdYear.ConsultationHrt302',
+                '303' => 'AdminCtation.CtHrt.CtHRTThirdYear.ConsultationHrt303',
+                '401' => 'AdminCtation.CtHrt.CtHRTFourthYear.ConsultationHrt401',
+                '402' => 'AdminCtation.CtHrt.CtHRTFourthYear.ConsultationHrt402',
+                '403' => 'AdminCtation.CtHrt.CtHRTFourthYear.ConsultationHrt403',
+            ],
+        ];
+
+        // Dynamically set the section based on the route name if not provided
+        if ($section === null) {
+            $section = str_replace('HRT', '', request()->route()->getName());
+        }
+
+        // Get the view based on the user role and section
+        $view = $views[$userRole][$section] ?? null;
+
+        if (!$view || !view()->exists($view)) {
+            abort(404, "View not found for section: $section and role: $userRole");
+        }
+
         // Fetch students based on course strand and section
         $students = Student::where('Course_Strand', $course_strand)
                            ->where('Grade_Level_Section', $section)
                            ->get();
 
-        // Determine the view to load based on section
-        $viewName = match ($section) {
-            '101' => 'hr.HrHRT.HRTFirstYear.HRT101',
-            '102' => 'hr.HrHRT.HRTFirstYear.HRT102',
-            '103' => 'hr.HrHRT.HRTFirstYear.HRT103',
-            '201' => 'hr.HrHRT.HRTSecondYear.HRT201',
-            '202' => 'hr.HrHRT.HRTSecondYear.HRT202',
-            '203' => 'hr.HrHRT.HRTSecondYear.HRT203',
-            '301' => 'hr.HrHRT.HRTThirdYear.HRT301',
-            '302' => 'hr.HrHRT.HRTThirdYear.HRT302',
-            '303' => 'hr.HrHRT.HRTThirdYear.HRT303',
-            '401' => 'hr.HrHRT.HRTFourthYear.HRT401',
-            '402' => 'hr.HrHRT.HRTFourthYear.HRT402',
-            '403' => 'hr.HrHRT.HRTFourthYear.HRT403',
-            default => 'hr.HrHRT.OtherSections',
-        };
-
-        return view($viewName, compact('students'));
+        return view($view, compact('students'));
     }
 
-    // Show a single student profile
-    public function show($id)
+    // Show Hradmin profile
+    public function showHrProfile($id)
     {
-        // Fetch the student by the StudentId
         $student = Student::where('StudentId', $id)->first();
 
-        // Check if a student was found, otherwise show an error message
         if (!$student) {
-            return redirect()->route('student.listBySection', ['course_strand' => 'HRT', 'section' => '101'])
-                ->with('error', 'Student not found.');
+            return redirect()->route('HRT101.list')->with('error', 'Student not found.');
         }
 
-        // If student is found, load the profile view
         return view('hr.HrHRT.HrProfile', compact('student'));
     }
 
-    // Show 101 students
-    public function showHRT101()
+    // Show Ctadmin profile
+    public function showCtProfile($id)
     {
-        $students = Student::where('Grade_Level_Section', '101')->get();
-        return view('hr.HrHRT.HRTFirstYear.HRT101', compact('students'));
+        $student = Student::where('StudentId', $id)->first();
+
+        if (!$student) {
+            return redirect()->route('HRT101.list')->with('error', 'Student not found.');
+        }
+
+        return view('AdminCtation.CtProfile', compact('student'));
     }
 
-    // Show 102 students
-    public function showHRT102()
+    // Show a single student profile based on user role
+    public function show($id)
     {
-        $students = Student::where('Grade_Level_Section', '102')->get();
-        return view('hr.HrHRT.HRTFirstYear.HRT102', compact('students'));
-    }
+        // Fetch the student by StudentId
+        $student = Student::where('StudentId', $id)->first();
 
-    // Show 103 students
-    public function showHRT103()
-    {
-        $students = Student::where('Grade_Level_Section', '103')->get();
-        return view('hr.HrHRT.HRTFirstYear.HRT103', compact('students'));
-    }
+        // Check if a student was found
+        if (!$student) {
+            return redirect()->route('HRT101.list') // Use the route name for the student list
+                ->with('error', 'Student not found.');
+        }
 
-    // Show 201 students
-    public function showHRT201()
-    {
-        $students = Student::where('Grade_Level_Section', '201')->get();
-        return view('hr.HrHRT.HRTSecondYear.HRT201', compact('students'));
-    }
+        // Get the current user's role
+        $userRole = auth()->user()->role;
 
-    // Show 202 students
-    public function showHRT202()
-    {
-        $students = Student::where('Grade_Level_Section', '202')->get();
-        return view('hr.HrHRT.HRTSecondYear.HRT202', compact('students'));
-    }
-
-    // Show 203 students
-    public function showHRT203()
-    {
-        $students = Student::where('Grade_Level_Section', '203')->get();
-        return view('hr.HrHRT.HRTSecondYear.HRT203', compact('students'));
-    }
-
-    // Show 301 students
-    public function showHRT301()
-    {
-        $students = Student::where('Grade_Level_Section', '301')->get();
-        return view('hr.HrHRT.HRTThirdYear.HRT301', compact('students'));
-    }
-
-    // Show 302 students
-    public function showHRT302()
-    {
-        $students = Student::where('Grade_Level_Section', '302')->get();
-        return view('hr.HrHRT.HRTThirdYear.HRT302', compact('students'));
-    }
-
-    // Show 303 students
-    public function showHRT303()
-    {
-        $students = Student::where('Grade_Level_Section', '303')->get();
-        return view('hr.HrHRT.HRTThirdYear.HRT303', compact('students'));
-    }
-
-    // Show 401 students
-    public function showHRT401()
-    {
-        $students = Student::where('Grade_Level_Section', '401')->get();
-        return view('hr.HrHRT.HRTFourthYear.HRT401', compact('students'));
-    }
-
-    // Show 402 students
-    public function showHRT402()
-    {
-        $students = Student::where('Grade_Level_Section', '402')->get();
-        return view('hr.HrHRT.HRTFourthYear.HRT402', compact('students'));
-    }
-
-    // Show 403 students
-    public function showHRT403()
-    {
-        $students = Student::where('Grade_Level_Section', '403')->get();
-        return view('hr.HrHRT.HRTFourthYear.HRT403', compact('students'));
+        // Load different views based on the role
+        if ($userRole === 'Hradmin') {
+            return view('hr.HrCollegeBSIT.HrProfile', compact('student'));
+        } elseif ($userRole === 'Ctadmin') {
+            return view('AdminCtation.CtProfile', compact('student'));
+        } else {
+            abort(404, "Profile view not found for role: $userRole");
+        }
     }
 }

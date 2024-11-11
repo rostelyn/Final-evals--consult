@@ -21,27 +21,27 @@
              Associate in Computer Technology
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationHRT">
             <button>
             Hotel and Restaurant Technology
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationBSCS">
             <button>
             Bachelor of Science in Computer Science
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationCET">
             <button>
                 Computer Engineering Technology
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationHRS">
             <button>
             Hotel & Restaurant Services
             </button>
         </a>
-        <a href="#">
+        <a href="ConsultationTOURISM">
             <button>
                 TOURISM
             </button>

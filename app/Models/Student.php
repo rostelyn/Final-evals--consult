@@ -19,5 +19,6 @@ class Student extends Model
         'Grade_Level_Section',
         'password',
         'picture',
+         'level',
     ];
 }
