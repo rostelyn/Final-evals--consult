@@ -97,8 +97,6 @@ Route::delete('/busyhours/{id}', [CalendarController::class, 'deleteBusyHour'])-
 
 
 
-
-
 //LOGIN AND REGISTER//
 
 Route::get('/',[AuthController::class,'index'])->name('login');
@@ -107,7 +105,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/',[AuthController::class,'login'])->name('login.submit');
 Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
-
 
 
 
