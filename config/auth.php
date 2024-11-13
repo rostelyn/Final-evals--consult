@@ -109,15 +109,7 @@ return [
     | confirmation screen. By default, the timeout lasts for three hours.
     |
     */
-// config/auth.php
 
-'providers' => [
-    'users' => [
-        'driver' => 'eloquent',
-        'model' => App\Models\Student::class,
-    ],
-    // ...
-],
 
     'password_timeout' => 10800,
 
