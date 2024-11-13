@@ -10,6 +10,7 @@ use App\Http\Controllers\DpHeadConsultationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\HrAdminController;
 
 use App\Http\Controllers\HighSchoolCalendarController;
 
@@ -195,10 +196,14 @@ Route::get('/StudentPickConsultation', function () {
     return view('student.StudentPickConsultation');
 })->name('StudentPickConsultation');
 
+/*/
 // HR routes
-Route::get('/HrDashboard', function () {
-    return view('hr.HrDashboard');
-})->middleware('auth')->name('HrDashboard');
+Route::get('/HrDashboard', [StudentController::class, 'dashboard'])
+    ->middleware('auth')
+    ->name('HrDashboard');
+/*/
+
+Route::get('/HrAdminDashboard', [HrAdminController::class, 'index'])->name('HrAdminDashboard')->middleware('auth');
 
 Route::get('/HrStudentList', function () {
     return view('hr.HrStudentList');

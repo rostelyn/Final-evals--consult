@@ -1,6 +1,10 @@
-@extends('hslayout.HsSidebar-layout')
+<!DOCTYPE html>
+<html lang="en">
+   
 
-@section('content')
+<body>
+    
+
 <link rel="stylesheet" href="{{ asset('css/Student/faculty.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,4 +38,6 @@
     </div>
 </div>
 
-@endsection
+
+</body>
+</html>

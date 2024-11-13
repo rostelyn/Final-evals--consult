@@ -1,6 +1,9 @@
-@extends('hslayout.HsSidebar-layout')
+<!DOCTYPE html>
+<html lang="en">
+   
 
-@section('content')
+<body>
+    
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,4 +64,6 @@
 }
 
     </style>
-@endsection
+
+</body>
+</html>

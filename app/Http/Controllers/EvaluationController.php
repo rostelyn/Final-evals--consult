@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Evaluation;
 
 class EvaluationController extends Controller
 {
+    // Submit evaluation form
     public function submit(Request $request)
     {
         $request->validate([
@@ -33,16 +32,15 @@ class EvaluationController extends Controller
 
         return redirect()->back()->with('success', 'Evaluation submitted successfully!');
     }
+
+    // Show evaluations based on teacher name
     public function showEvaluations(Request $request)
     {
-        // Get the teacher's name from the query string
         $teacherName = $request->query('teacher');
-    
-        // Fetch evaluations for the given teacher
-        $evaluations = Evaluation::where('teacher_name', $teacherName)->get();
+        $evaluations = Evaluation::when($teacherName, function ($query, $teacherName) {
+            return $query->where('teacher_name', $teacherName);
+        })->get();
 
-        $evaluations = Evaluation::all(); 
-        return view('hr.HrCollegeBSIT.BSITThirdYear.hrStudentlis', compact('evaluations'));
+        return view('hr.HrCollegeBSIT.BSITThirdYear.hrStudentlist', compact('evaluations'));
     }
-    
 }
