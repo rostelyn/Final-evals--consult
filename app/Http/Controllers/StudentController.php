@@ -11,7 +11,7 @@ class StudentController extends Controller
 {
    public function store(Request $request)
 {
-    // Validate the request, including 'username'
+
     $request->validate([
         'student_id' => 'required|string|max:255|unique:students,StudentId',
         'username' => 'required|string|max:255|unique:students,username',
@@ -34,7 +34,6 @@ class StudentController extends Controller
         $picture = null;
     }
 
-    // Create a new student record with 'username'
     $student = new Student([
         'StudentId' => $request->student_id,
         'username' => $request->username,

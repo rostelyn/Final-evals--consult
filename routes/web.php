@@ -121,6 +121,10 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 
 // Student routes
 
+//new registration web (harenz)
+Route::get('/student/dashboard/{id}', [StudentController::class, 'dashboard'])->name('student.dashboard')->middleware('auth');
+//hanggang dito
+
 Route::get('/student.student.dashboard', function () {return view('student.student.dashboard');
 })->middleware('auth')->name('student.student.dashboard');
 
@@ -147,6 +151,7 @@ Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighsc
 
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
+
 
 //new evaluation routes
 Route::get('/student/evaluation/show', [EvaluationController::class, 'index'])
