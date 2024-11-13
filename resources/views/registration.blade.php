@@ -29,6 +29,11 @@
             </div>
 
             <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" value="{{ old('username') }}" required>
+            </div>
+
+            <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" value="{{ old('name') }}" required>
             </div>

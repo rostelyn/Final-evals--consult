@@ -8,6 +8,7 @@
 </head>
 <body class="{{ $student->level === 'College' ? 'college-bg' : 'highschool-bg' }}">
     <div class="header">
+        <p><strong>Username:</strong> {{ ucfirst($student->username) }}</p>
         <h1>Welcome, {{ $student->name }}</h1>
     </div>
      
