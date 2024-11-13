@@ -1,6 +1,10 @@
-@extends('hslayout.HsSidebar-layout')
+<!DOCTYPE html>
+<html lang="en">
+   
 
-@section('content')
+<body>
+    
+
     <h1 class="department-heading">Select Highschool Department</h1>
 
     <div class="department-container">
@@ -52,5 +56,6 @@
 }
 
     </style>
-@endsection
 
+</body>
+</html>

@@ -1,8 +1,9 @@
-@extends('hslayout.HsSidebar-layout')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+   
 <link rel="stylesheet" href="{{ asset('css/Student/facultyhighschool.css') }}">
-
+<body>
+    
 <div class="hsfaculty-page">
 
     <div class="header">
@@ -26,4 +27,5 @@
     </div>
 </div>
 
-@endsection
+</body>
+</html>
