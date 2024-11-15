@@ -1,50 +1,71 @@
-@extends('layouts.AdminConsult-layout')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CtCollegeCourse.css') }}">
+</head>
+    <body>
 
-@section('content')
-<link rel="stylesheet" href="{{ asset('css/ConsultationAdmin/CtCollegeCourse.css') }}">
-
-    <h1>STUDENT EVALUATION AND CONSULTATION</h1>
-    <h2>COURSES</h2>
-    <div class="course-container">
-    <a href="{{ route('ConsultationBSITCourse') }}">
-            <button class="button">
-                Bachelor of Science and Technology Information
-            </button>   
-        </a>
-        <a href="ConsultationBSHMCourse">
-            <button>
-            Bachelor of Science and Hospitality Management
-            </button>
-        </a>
-        <a href="ConsultationACT">
-            <button>
-             Associate in Computer Technology
-            </button>
-        </a>
-        <a href="ConsultationHRT">
-            <button>
-            Hotel and Restaurant Technology
-            </button>
-        </a>
-        <a href="ConsultationBSCS">
-            <button>
-            Bachelor of Science in Computer Science
-            </button>
-        </a>
-        <a href="ConsultationCET">
-            <button>
-                Computer Engineering Technology
-            </button>
-        </a>
-        <a href="ConsultationHRS">
-            <button>
-            Hotel & Restaurant Services
-            </button>
-        </a>
-        <a href="ConsultationTOURISM">
-            <button>
-                TOURISM
-            </button>
-        </a>
+        <div class="header">
+            <h1>STUDENT EVALUATION AND CONSULTATION</h1>
+       </div>
+           <h2>COURSE</h2>
+     <div class="course-container">
+            <a href="{{ ('ConsultationBSITCourse') }}">
+                <div class="course-item" data-title="Bachelor of Science in Technology Information">
+                   <img src="{{ asset('css/CoursePicture/CS.jfif') }}">
+                       <span class="course-name">Bachelor of Science in Technology Information</span>
     </div>
-@endsection
+            </a>
+          <a href="{{ ('ConsultationBSHMCourse') }}">
+              <div class="course-item" data-title="Bachelor of Science in Hospitality Management">
+                <img src="{{ asset('css/CoursePicture/Hm.jfif') }}">
+                  <span class="course-name">Bachelor of Science in Hospitality Management</span>
+              </div>
+           </a>
+         <a href="{{ ('ConsultationACT') }}">
+             <div class="course-item" data-title="Associate in Computer Technology">
+                <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
+                  <span class="course-name">Associate in Computer Technology</span>
+        </div>
+    </a>
+         <a href="{{ ('HrHRT') }}">
+            <div class="course-item" data-title="Hotel and Restaurant Technology">
+                <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
+                  <span class="course-name">Hotel and Restaurant Technology</span>
+            </div>
+         </a>
+              <a href="{{ ('ConsultationBSCS') }}">
+                <div class="course-item" data-title="Bachelor of Science in Computer Science">
+                  <img src="{{ asset('css/CoursePicture/COMSCI.jpg') }}">
+                     <span class="course-name">Bachelor of Science in Computer Science</span>
+             </div>
+    </a>
+           <a href="{{ ('ConsultationCET') }}">
+               <div class="course-item" data-title="CET">
+                 <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
+                    <span class="course-name">Computer Engineering Technology</span>
+             </div>
+         </a>
+            <a href="{{ ('ConsultationHRS') }}">
+               <div class="course-item" data-title="Hotel & Restaurant Services">
+                 <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
+                   <span class="course-name">Hotel & Restaurant Services</span>
+             </div>
+           </a>
+             <a href="{{ ('ConsultationTOURISM') }}">
+               <div class="course-item" data-title="Tourism">
+                   <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
+                     <span class="course-name">Tourism</span>
+               </div>
+          </a>
+</div>
+
+<a href="{{ 'CtStudentList' }}">
+    <button class="back-button">Back</button>
+</a>
+
+</body>
+</html>

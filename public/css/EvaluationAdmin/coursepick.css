@@ -42,7 +42,7 @@ h2 {
 .course-item {
     position: relative;
     width: 250px;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 10px 10px 5px rgb(82, 80, 80);
@@ -55,6 +55,7 @@ h2 {
 .course-item img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     object-fit: cover;
     transition: opacity 0.3s ease;
 }

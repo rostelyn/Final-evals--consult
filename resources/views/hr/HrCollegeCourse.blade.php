@@ -16,25 +16,25 @@
 <div class="course-container">
     <a href="{{ ('HrBSIT') }}">
         <div class="course-item" data-title="Bachelor of Science in Technology Information">
-           <img src="{{ asset('css/CoursePicture/BSIT.jpg') }}">
+           <img src="{{ asset('css/CoursePicture/CS.jfif') }}">
             <span class="course-name">Bachelor of Science in Technology Information</span>
         </div>
     </a>
       <a href="{{ ('HrHM') }}">
         <div class="course-item" data-title="Bachelor of Science in Hospitality Management">
-              <img src="{{ asset('css/CoursePicture/BSHM.jpg') }}">
+              <img src="{{ asset('css/CoursePicture/Hm.jfif') }}">
             <span class="course-name">Bachelor of Science in Hospitality Management</span>
         </div>
       </a>
       <a href="{{ ('HrACT') }}">
         <div class="course-item" data-title="Associate in Computer Technology">
-              <img src="{{ asset('css/CoursePicture/ACT.jpg') }}">
+              <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
             <span class="course-name">Associate in Computer Technology</span>
         </div>
     </a>
     <a href="{{ ('HrHRT') }}">
         <div class="course-item" data-title="Hotel and Restaurant Technology">
-              <img src="{{ asset('css/CoursePicture/HRT.jpg') }}">
+              <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
             <span class="course-name">Hotel and Restaurant Technology</span>
         </div>
     </a>
@@ -46,19 +46,19 @@
     </a>
     <a href="{{ ('HrCET') }}">
         <div class="course-item" data-title="CET">
-             <img src="{{ asset('css/CoursePicture/CET.jpg') }}">
+             <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
             <span class="course-name">Computer Engineering Technology</span>
         </div>
     </a>
     <a href="{{ ('HrHRS') }}">
         <div class="course-item" data-title="Hotel & Restaurant Services">
-             <img src="{{ asset('css/CoursePicture/HRS.jpg') }}">
+             <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
             <span class="course-name">Hotel & Restaurant Services</span>
         </div>
     </a>
     <a href="{{ ('HrTourism') }}">
         <div class="course-item" data-title="Tourism">
-             <img src="{{ asset('css/CoursePicture/TOURISM.jpg') }}">
+             <img src="{{ asset('css/CoursePicture/Tesda.png') }}">
             <span class="course-name">Tourism</span>
         </div>
     </a>

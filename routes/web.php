@@ -285,7 +285,7 @@ Route::get('/HrSettings', function () {
 //route for the hr notifications harenz
 Route::get('/HrNotification', [HrAdminController::class, 'showNotifications'])->name('HrNotification');
 // Route for viewing recent evaluations harenz
-Route::get('/HrRecentEvaluations', [HrAdminController::class, 'showRecentEvaluations'])->name('HrRecentEvaluations');
+Route::get('/hr.HrRecentEvaluations', [HrAdminController::class, 'showRecentEvaluations'])->name('HrRecentEvaluations');
 
 
 Route::get('/HrCalendars', [HrCalendarController::class, 'index']);
@@ -321,133 +321,6 @@ Route::get('/CtHighSchoolSection', function () {
     return view('AdminCtation.CtHighSchoolSection');
 })->name('CtHighSchoolSection');
 
-
-//highschool route
-Route::get('/CTHS-G10level', function () {
-    return view('AdminCtation.StudentlistinfoHS.CTHS-G10level');
-})->name('CTHS-G10level');
-
-//for section highschool and strand
-
-//strand G11
-Route::get('/CT11ABM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT11ABM');
-})->name('CT11ABM');
-
-Route::get('/CT11STEM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT11STEM');
-})->name('CT11STEM');
-
-Route::get('/CT11GAS', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT11GAS');
-})->name('CT11GAS');
-
-Route::get('/CT11ICT', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT11ICT');
-})->name('CT11ICT');
-
-Route::get('/G11abm101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G11abm101');
-})->name('G11abm101');
-
-Route::get('/G11stem101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G11stem101');
-})->name('G11stem101');
-
-Route::get('/G11ict101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G11ict101');
-})->name('G11ict101');
-
-Route::get('/G11gas101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G11gas101');
-})->name('G11gas101');
-
-//strang G12
-Route::get('/CT12ABM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT12ABM');
-})->name('CT12ABM');
-
-Route::get('/CT12STEM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT12STEM');
-})->name('CT12STEM');
-
-Route::get('/CT12GAS', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT12GAS');
-})->name('CT12GAS');
-
-Route::get('/CT12ICT', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CT12ICT');
-})->name('CT12ICT');
-
-Route::get('/G12abm101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G12abm101');
-})->name('G12abm101');
-
-Route::get('/G12stem101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G12stem101');
-})->name('G12stem101');
-
-Route::get('/G12ict101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G12ict101');
-})->name('G12ict101');
-
-Route::get('/G12gas101', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtHS-Strand.CTStrandSection.G12gas101');
-})->name('G12gas101');
-
-
-
-// ProfileHS
-Route::get('/Grade7-101Profile', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.Grade7-101Profile');
-})->name('Grade7-101Profile');
-
-Route::get('/Grade8-101Profile', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.Grade8-101Profile');
-})->name('Grade8-101Profile');
-
-Route::get('/Grade9-101Profile', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.Grade9-101Profile');
-})->name('Grade9-101Profile');
-
-Route::get('/Grade10-101Profile', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.Grade10-101Profile');
-})->name('Grade10-101Profile');
-
-//Profle Strand G11
-Route::get('/GRADE11STEM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE11STEM');
-})->name('GRADE11STEM');
-
-Route::get('/GRADE11ABM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE11ABM');
-})->name('GRADE11ABM');
-
-Route::get('/GRADE11GAS', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE11GAS');
-})->name('GRADE11GAS');
-
-Route::get('/GRADE11ICT', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE11ICT');
-})->name('GRADE11ICT');
-
-//Profle Strand G12
-Route::get('/GRADE12STEM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE12STEM');
-})->name('GRADE12STEM');
-
-Route::get('/GRADE12ABM', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE12ABM');
-})->name('GRADE12ABM');
-
-Route::get('/GRADE12GAS', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE12GAS');
-})->name('GRADE12GAS');
-
-Route::get('/GRADE12ICT', function () {
-    return view('AdminCtation.StudentlistinfoHS.CtProfileHS.GRADE12ICT');
-})->name('GRADE12ICT');
-
 //Profile Controller
 Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->name('profile.show');
 //
@@ -455,7 +328,6 @@ Route::get('/profile/bsit{level}', [ProfileController::class, 'showProfile'])->n
 Route::get('/CtNotification', function () {
     return view('AdminCtation.CtNotification');
 })->name('CtNotification');
-
 
 
 Route::get('/CtSettings', function () {
@@ -558,14 +430,6 @@ Route::get('/ConsultationBsit101', function () {
 Route::get('/CtProfile', function () {
     return view('AdminCtation.CtProfile');
 })->name('CtProfile');
-
-
-Route::get('/ConsultationBsit101/profile/{id}', [CtCollegeCourseController::class, 'showProfile'])->name('CtProfile');
-
-
-Route::get('/ConsultationBsit101', [CtCollegeCourseController::class, 'showCtBsit101Students'])->name('ConsultationBSIT');
-
-
 
 
 // web.php
