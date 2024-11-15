@@ -26,7 +26,7 @@ class AuthController extends Controller
                 case 'dphead':
                     return redirect()->intended('DpHeadDashboard');
                 case 'hradmin':
-                    return redirect()->intended('HrDashboard');
+                    return redirect()->intended('HrAdminDashboard');
                 case 'ctadmin':
                     return redirect()->intended('CTDashboard');
                 default:

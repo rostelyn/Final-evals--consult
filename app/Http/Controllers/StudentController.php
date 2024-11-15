@@ -72,6 +72,6 @@ class StudentController extends Controller
 
         $studentCount = Student::count();
         dd($studentCount); // Check if the count is being fetched correctly
-        return view('hr.HrDashboard', ['studentCount' => $studentCount]);
+        return view('hr.HrAdminDashboard', ['studentCount' => $studentCount]);
     }
 }

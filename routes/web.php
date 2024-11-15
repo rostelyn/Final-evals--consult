@@ -196,13 +196,6 @@ Route::get('/StudentPickConsultation', function () {
     return view('student.StudentPickConsultation');
 })->name('StudentPickConsultation');
 
-/*/
-// HR routes
-Route::get('/HrDashboard', [StudentController::class, 'dashboard'])
-    ->middleware('auth')
-    ->name('HrDashboard');
-/*/
-
 Route::get('/HrAdminDashboard', [HrAdminController::class, 'index'])->name('HrAdminDashboard')->middleware('auth');
 
 Route::get('/HrStudentList', function () {
@@ -280,15 +273,20 @@ Route::get('/HrCalendar', function () {
 Route::get('/HrNotification', function () {
     return view('hr.HrNotification');
 })->name('HrNotification');
+//added by harenz
+Route::get('/HrRecentEvaluations', function () {
+    return view('hr.HrRecentEvaluations');
+})->name('HrRecentEvaluations');
 
 Route::get('/HrSettings', function () {
     return view('hr.HrSettings');
 })->name('HrSettings');
 
+//route for the hr notifications harenz
+Route::get('/HrNotification', [HrAdminController::class, 'showNotifications'])->name('HrNotification');
+// Route for viewing recent evaluations harenz
+Route::get('/HrRecentEvaluations', [HrAdminController::class, 'showRecentEvaluations'])->name('HrRecentEvaluations');
 
-Route::get('/hr-sidebar', function () {
-    return view('hr.hr-sidebar');
-})->name('hr.HrDashboard');
 
 Route::get('/HrCalendars', [HrCalendarController::class, 'index']);
 Route::post('/HrCalendars', [HrCalendarController::class, 'store']);

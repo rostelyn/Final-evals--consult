@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Student;
@@ -11,39 +10,91 @@ class HrAdminController extends Controller
     // Show HrAdmin Dashboard
     public function index()
     {
-        // In your controller (e.g., HrDashboardController.php)
+        // Count all students
+        $studentCount = Student::count();
 
-// Get the total number of students
-$studentCount = Student::count();
+        // Count all evaluations (all status)
+        $evaluationCount = Evaluation::count();
 
-// Get the total number of evaluations (where evaluation is completed, i.e., not pending)
-$evaluatedEvaluationsCount = Evaluation::where('status', '!=', 'pending')->count();
+        // Count pending evaluations
+        $pendingEvaluationsCount = Evaluation::where('status', 'pending')->count();
 
-// Get the number of pending evaluations (evaluations with status "pending")
-$pendingEvaluationsCount = $studentCount - $evaluatedEvaluationsCount; // Subtract evaluated students from total students
+        // **Fetch the latest 10 evaluations (evaluated or newly submitted)**
+        $recentEvaluations = Evaluation::orderBy('created_at', 'desc') // Sort by submission time
+            ->take(10) // Get the most recent 10 entries
+            ->get();
 
-// Get the number of recent evaluations (completed evaluations that are marked as 'evaluated')
-$recentEvaluationsCount = Evaluation::where('status', '!=', 'pending')->count(); // All completed evaluations, regardless of when they were done
+        // Count recent evaluations
+        $recentEvaluationsCount = $recentEvaluations->count();
 
-// Get the total number of evaluations (completed or not)
-$evaluationCount = Evaluation::count();
+        // Fetch the latest 10 notifications for pending evaluations
+        $notifications = Evaluation::where('status', 'pending')
+            ->orderBy('created_at', 'desc') // Sort by the most recent creation time
+            ->take(10) // Limit to the latest 10
+            ->get();
 
-// Get the notifications (e.g., evaluations pending more than 7 days)
-$notifications = Evaluation::where('status', 'pending')
-                            ->whereDate('created_at', '<', now()->subDays(7))
-                            ->get(); // Get all evaluations that are overdue
+        // Count notifications
+        $notificationCount = $notifications->count();
 
-$notificationCount = $notifications->count();
-
-// Pass the counts and notifications to the view
-return view('hr.HrDashboard', compact(
-    'studentCount', 
-    'evaluationCount', 
-    'recentEvaluationsCount', 
-    'pendingEvaluationsCount', 
-    'notificationCount', 
-    'notifications'
-));
-
+        // Pass data to the view
+        return view('hr.HrAdminDashboard', compact(
+            'studentCount',
+            'evaluationCount',
+            'recentEvaluationsCount',
+            'recentEvaluations',
+            'pendingEvaluationsCount',
+            'notificationCount',
+            'notifications'
+        ));
     }
+    //i added harenz
+    public function showNotifications(Request $request)
+    {
+        // Get the filter parameters
+        $teacherName = $request->input('teacher_name');
+        $section = $request->input('section');
+        $date = $request->input('date');
+
+        // Build the query with filters
+        $query = Evaluation::query();
+
+        if ($teacherName) {
+            $query->where('teacher_name', 'like', '%' . $teacherName . '%');
+        }
+
+        if ($section) {
+            $query->where('section', 'like', '%' . $section . '%');
+        }
+
+        if ($date) {
+            $query->whereDate('created_at', $date);
+        }
+
+        // Fetch the filtered notifications
+        $notifications = $query->where('status', 'pending')
+            ->orderBy('created_at', 'desc') // Sort by the most recent
+            ->get();
+
+        // Get the count of notifications
+        $notificationCount = $notifications->count();
+
+        // Return the view with the filtered notifications
+        return view('hr.HrNotification', compact('notifications', 'notificationCount'));
+    }
+
+
+    public function showRecentEvaluations()
+    {
+        // Fetch the latest 10 evaluations (either evaluated or newly submitted)
+        $recentEvaluations = Evaluation::orderBy('created_at', 'desc') // Sort by submission time
+            ->take(10) // Get the most recent 10 entries
+            ->get();
+
+        // Count recent evaluations
+        $recentEvaluationsCount = $recentEvaluations->count();
+
+        // Pass the recent evaluations data to the view
+        return view('hr.HrRecentEvaluations', compact('recentEvaluations', 'recentEvaluationsCount'));
+    }
+
 }

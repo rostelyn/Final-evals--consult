@@ -17,10 +17,9 @@
             <h1>HR Admin</h1>
         </div>
         <ul>
-            <li><a href="{{('HrDashboard') }}">Dashboard</a></li>
+            <li><a href="{{('HrAdminDashboard') }}">Dashboard</a></li>
             <li><a href="{{('HrStudentList') }}">Student List</a></li>
             <li><a href="{{('HrCalendar') }}">Calendar</a></li>
-            <li><a href="{{('HrNotification') }}">Notifications</a></li>
             <li><a href="{{('HrSettings') }}">Settings</a></li>
         </ul>
     </div>

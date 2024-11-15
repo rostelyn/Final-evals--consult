@@ -20,6 +20,7 @@ class EvaluationController extends Controller
             'canteen' => 'required|string',
         ]);
 
+        // Create a new evaluation and automatically set its status to 'evaluated'
         Evaluation::create([
             'teacher_name' => $request->teacher_name,
             'subject' => $request->subject,
@@ -28,6 +29,7 @@ class EvaluationController extends Controller
             'laboratory' => $request->laboratory,
             'comfort_room' => $request->comfort_room,
             'canteen' => $request->canteen,
+            'status' => 'evaluated', // Set the status as evaluated
         ]);
 
         return redirect()->back()->with('success', 'Evaluation submitted successfully!');

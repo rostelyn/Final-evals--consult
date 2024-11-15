@@ -34,16 +34,17 @@
                     </div>
                 </div>
 
-                <!-- Recent Evaluations -->
+                        <!-- Recent Evaluations -->
                 <div class="col-lg-3 col-md-6">
                     <div class="dashboard-card">
                         <img src="{{ asset('css/HRResources/recent.png') }}">
                         <h5>{{ $recentEvaluationsCount > 0 ? $recentEvaluationsCount : 'No Recent Evaluations' }}</h5>
                         <p>Recent Evaluations</p>
+                        <!-- Link to the Recent Evaluations page -->
+                        <a href="{{ route('HrRecentEvaluations') }}" class="btn btn-primary">View Recent Evaluations</a>
                     </div>
                 </div>
-
-                <!-- Pending Evaluations -->
+       <!-- Pending Evaluations -->
                 <div class="col-lg-3 col-md-6">
                     <div class="dashboard-card">
                         <img src="{{ asset('css/HRResources/pending.png') }}">
@@ -51,30 +52,16 @@
                         <p>Pending Evaluations</p>
                     </div>
                 </div>
-
-                <!-- Notifications -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="dashboard-card">
-                        <img src="{{ asset('css/HRResources/notif.png') }}">
-                        <h5>{{ $notificationCount > 0 ? $notificationCount : 'No Notifications' }}</h5>
-                        <p>Notifications</p>
+                    <!-- Notifications -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dashboard-card">
+                            <img src="{{ asset('css/HRResources/notif.png') }}">
+                            <h5>{{ $notificationCount > 0 ? $notificationCount : 'No Notifications' }}</h5>
+                            <p>Notifications</p>
+                            <!-- Link to the Notifications page -->
+                            <a href="{{ route('HrNotification') }}" class="btn btn-primary">View Notifications</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Display Notifications if there are any -->
-            @if($notificationCount > 0)
-                <div class="alert alert-warning mt-4">
-                    <strong>Notifications:</strong>
-                    <ul>
-                        @foreach($notifications as $notification)
-                            <li>
-                                <strong>{{ $notification->teacher_name }}</strong> evaluation is pending for over 7 days.
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
         </div>
     </body>
 @endsection
