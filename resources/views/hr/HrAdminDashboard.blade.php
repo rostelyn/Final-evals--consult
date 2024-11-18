@@ -48,8 +48,8 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="dashboard-card">
                         <img src="{{ asset('css/HRResources/pending.png') }}">
-                        <h5>{{ $pendingEvaluationsCount }} / {{ $studentCount }}</h5>
-                        <p>Pending Evaluations</p>
+                        <h5>{{ $pendingEvaluationsCount }}</h5>
+                           <p>Pending Evaluations</p>
                     </div>
                 </div>
                     <!-- Notifications -->

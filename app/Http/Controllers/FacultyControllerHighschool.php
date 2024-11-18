@@ -8,11 +8,18 @@ class FacultyControllerHighschool extends Controller
 {
     public function index()
     {
-     
         $departmenthighschools = ['Facultyhighschool1', 'Facultyhighschool2', 'Facultyhighschool3'];
         
-        return view('student.evaluation.facultyhighschool.index', compact('departmenthighschools'));
+        // Map department names to image paths
+        $departmentImages = [
+            'Facultyhighschool1' => asset('css/CoursePicture/CS.jfif'),
+            'Facultyhighschool2' => asset('css/CoursePicture/CS.jfif'),
+            'Facultyhighschool3' => asset('css/CoursePicture/CS.jfif'),
+        ];
+        
+        return view('student.evaluation.facultyhighschool.index', compact('departmenthighschools', 'departmentImages'));
     }
+
 
     public function show($departmenthighschool)
     {

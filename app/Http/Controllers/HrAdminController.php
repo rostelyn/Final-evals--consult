@@ -17,7 +17,8 @@ class HrAdminController extends Controller
         $evaluationCount = Evaluation::count();
 
         // Count pending evaluations
-        $pendingEvaluationsCount = Evaluation::where('status', 'pending')->count();
+        $pendingEvaluationsCount = $studentCount - $evaluationCount;
+
 
         // **Fetch the latest 10 evaluations (evaluated or newly submitted)**
         $recentEvaluations = Evaluation::orderBy('created_at', 'desc') // Sort by submission time

@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <div class="logo">
-        <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
+    <div class="logo">
+            <h1>Student Dashboard</h1>
         </div>
         <ul>
         <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>

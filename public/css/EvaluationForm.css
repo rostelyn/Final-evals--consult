@@ -1,0 +1,130 @@
+
+* {
+    font-family: 'Georgia';
+}
+
+.header {
+    background-color: #d9ae86;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+
+.h1 {
+    font-family: "Averia Serif Libre", serif;
+    color: black;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.h2 {
+    font-size: 20px;
+    font-family: "Averia Serif Libre", serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.evaluation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.evaluation-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.select-year-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#school_year {
+    width: 150px;
+}
+
+.form-control {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #d9ae86;
+    box-shadow: 0 0 0 0.2rem rgba(217, 174, 134, 0.25);
+}
+
+textarea.form-control {
+    width: 350px;
+    height: 40px;
+}
+
+#teacher_name,
+#subject {
+    width: 250px;
+    height: 28px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.custom-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+}
+
+.popup-content {
+    background-color: white;
+    color: green;
+    padding: 30px 50px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.back-btn {
+    background-color: #f00c0c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #d00b0b;
+    text-decoration: none;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}

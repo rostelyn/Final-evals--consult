@@ -1,165 +1,98 @@
 @extends('layouts.evaluation-layout')
 
 @section('content')
-
-<style>
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        width: 100%;
-        max-width: 1200px; 
-        margin: 0 auto;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-        background-color: #ffffff;
-        border-radius: 10px; 
-    }
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: #333333;
-        text-transform: uppercase;
-    }
-
-    .evaluation-content {
-        width: 100%;
-    }
-
-    .evaluation-section {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 2rem;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .form-label {
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        color: #4BC0C0; 
-    }
-
-    .form-select, .form-control {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 1.5rem;
-        border: 1px solid #ced4da;
-        border-radius: 8px;
-        font-size: 1rem;
-        background-color: #ffffff;
-    }
-
-    textarea.form-control {
-        resize: vertical;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: #4BC0C0; 
-        text-transform: uppercase;
-    }
-
-    p {
-        margin-bottom: 1.5rem;
-        color: #6c757d;
-    }
-
-    .btn {
-        padding: 12px 20px;
-        font-size: 1rem;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-secondary {
-        background-color: #6c757d;
-        border: none;
-        color: #ffffff;
-    }
-
-    .btn-secondary:hover {
-        background-color: #5a6268;
-    }
-
-    .btn-primary {
-        background-color: #4BC0C0;
-        border: none;
-        color: #ffffff;
-    }
-
-    .btn-primary:hover {
-        background-color: #3da9a9;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-</style>
-
-<div class="container">
-    <div class="evaluation-content">
-        <h2 class="text-center mb-4">EASTWOODS Professional College of Science and Technology</h2>
-        
-   
-        <div class="text-center mb-4">
-            <label for="school_year" class="form-label">Select School Year:</label>
-            <select class="form-select" id="school_year" name="school_year">
-                <option value="2023-2024">2023-2024</option>
-                <option value="2024-2025" selected>2024-2025</option>
-                <option value="2025-2026">2025-2026</option>
-            </select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/EvaluationForm.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="header">
+            <h1 class="h1">Eastwoods Professional College of Science and Technology</h1>
         </div>
-        
-        
-        <form action="{{ route('evaluation.submit') }}" method="POST">
-            @csrf
-            <div class="evaluation-section mb-4">
-                <h5>PART 1</h5>
-                <p>Directions: Kindly evaluate your teacher/s per subject according to their teaching performance.</p>
-                <div class="form-group">
-                    <label for="teacher_name" class="form-label">Name of Teacher:</label>
-                    <input type="text" class="form-control" id="teacher_name" name="teacher_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject" class="form-label">Subject:</label>
-                    <input type="text" class="form-control" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="teaching_performance" class="form-label">Teaching Performance:</label>
-                    <textarea class="form-control" id="teaching_performance" name="teaching_performance" rows="4" required></textarea>
-                </div>
+        <div class="evaluation-content">
+            <div class="select-year-container">
+                <h2 class="h2">Select School Year:</h2>
+                <select class="form-select" id="school_year" name="school_year">
+                    <option value="2023-2024">2023-2024</option>
+                    <option value="2024-2025" selected>2024-2025</option>
+                    <option value="2025-2026">2025-2026</option>
+                </select>
             </div>
-            
-            <div class="evaluation-section mb-4">
-                <h5>PART 2</h5>
-                <p>Directions: Kindly evaluate the following in terms of facilities and services.</p>
-                <div class="form-group">
-                    <label for="library" class="form-label">Library:</label>
-                    <textarea class="form-control" id="library" name="library" rows="2" required></textarea>
+            <form action="{{ route('evaluation.submit') }}" method="POST">
+                @csrf
+                <div class="evaluation-form">
+                    <div class="evaluation-section">
+                        <h2 class="h2">PART 1</h2>
+                        <h2 class="h2">Directions:</h2>
+                        <p>Kindly evaluate your teacher/s per subject according to their teaching performance.</p>
+                        <div class="form-group">
+                            <h2 class="h2">Name of Teacher:</h2>
+                            <input type="text" class="form-control" id="teacher_name" name="teacher_name" required>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="h2">Subject:</h2>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="h2">Teaching Performance:</h2>
+                            <textarea class="form-control" id="teaching_performance" name="teaching_performance" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="evaluation-section">
+                        <h2 class="h2">PART 2</h2>
+                        <h2 class="h2">Directions:</h2>
+                        <p>Kindly evaluate the following in terms of facilities and services.</p>
+                        <div class="form-group">
+                            <h2 class="h2">Library:</h2>
+                            <textarea class="form-control" id="library" name="library" rows="2" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="h2">Laboratory:</h2>
+                            <textarea class="form-control" id="laboratory" name="laboratory" rows="2" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="h2">Comfort Room:</h2>
+                            <textarea class="form-control" id="comfort_room" name="comfort_room" rows="2" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="h2">Canteen:</h2>
+                            <textarea class="form-control" id="canteen" name="canteen" rows="2" required></textarea>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="laboratory" class="form-label">Laboratory:</label>
-                    <textarea class="form-control" id="laboratory" name="laboratory" rows="2" required></textarea>
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="{{ ('/faculty') }}" class="back-btn">Back</a>
+                    <button type="submit" class="submit-btn">Submit</button>
                 </div>
-                <div class="form-group">
-                    <label for="comfort_room" class="form-label">Comfort Room:</label>
-                    <textarea class="form-control" id="comfort_room" name="comfort_room" rows="2" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="canteen" class="form-label">Canteen:</label>
-                    <textarea class="form-control" id="canteen" name="canteen" rows="2" required></textarea>
-                </div>
-            </div>
-            
-            <div class="d-flex justify-content-between">
-                <a href="{{ ('/faculty') }}" class="btn btn-secondary">Back</a>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-
+    @if(session('success'))
+        <div class="custom-popup">
+            <div class="popup-content">
+                {{ session('success') }}
+            </div>
+        </div>
+    @endif
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.querySelector('.custom-popup');
+        if (popup) {
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+    });
+    </script>
+</body>
+</html>
 @endsection
