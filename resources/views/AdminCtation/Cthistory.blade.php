@@ -1,12 +1,12 @@
-@extends('layouts.DpHead-layout')
+@extends('layouts.AdminConsult-layout')
 
-@section('title', 'Department Head Consultation History')
+@section('title', 'Admin Consultation History')
 
 @section('content')
-    <h2>Department Head Consultation History</h2>
+    <h2>Admin Consultant Consultation History</h2>
 
     @if($consultations->isEmpty())
-        <p>No consultations have been recorded in the Department Head’s history.</p>
+        <p>No consultations have been recorded in the Admin Consultant’s history.</p>
     @else
         <table>
             <thead>

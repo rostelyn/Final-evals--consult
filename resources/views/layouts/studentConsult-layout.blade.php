@@ -26,11 +26,14 @@
             <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-            <li><a href="{{ ('consult.form') }}">Appointment</a></li>
-            <li><a href="{{ ('evaluation-show') }}">List of Appointment</a></li> 
-            <li><a href="{{ ('StudentSettings') }}">Settings</a></li>
-        </ul>
+    <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
+    <li><a href="{{ route('college.consultation') }}">Consultation</a></li>
+    
+    <li><a href="{{ route('StudentSettings') }}">Settings</a></li>
+    <li><a href="{{ route('student.history') }}">Consultation History</a></li>
+    <li><a href="{{ route('student.calendar') }}">Calendar</a></li>
+</ul>
+
     </div>
     <div class="content">
         <div class="menu-icon" onclick="toggleSidebar()">☰</div>

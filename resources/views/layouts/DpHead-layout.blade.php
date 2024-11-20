@@ -13,12 +13,12 @@
         <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
-            <li><a href="{{('#') }}">Dashboard</a></li>
-            <li><a href="#">Student List</a></li>
-            <li><a href="DpHeadAppDis">Approve/Disapprove</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="#">Settings</a></li>
+    
+        <li><a href="{{ route('dpHead.approval') }}">Department Head Approval</a></li>
+<li><a href="{{ route('dp.calendar') }}">Department Head Calendar</a></li>
+<li><a href="{{ route('dp.history') }}">Department Head History</a></li>
+
+            
         </ul>
     </div>
     <div class="content">

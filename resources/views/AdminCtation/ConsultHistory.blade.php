@@ -1,4 +1,4 @@
-@extends('layouts.AdminConsult-layout')
+
 
 @section('title', 'Consultation History')
 

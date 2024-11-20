@@ -1,4 +1,4 @@
-@extends('layouts.DpHead-layout')
+@extends('layouts.AdminConsult-layout')
 
 @section('title', 'Admin Consultation Calendar')
 
@@ -14,12 +14,12 @@
         <button onclick="changeMonth(1)">&#10095;</button>
     </div>
 
-    <button id="busyButton" onclick="openBusyModal()">Mark Busy</button>
+    <button id="busyButton" onclick="openMarkBusyModal()">Mark Busy</button>
 
-    <!-- Busy Modal -->
-    <div class="modal" id="busyModal" style="display: none;">
+    <!-- Mark Busy Modal -->
+    <div class="modal" id="markBusyModal" style="display: none;">
         <div class="modal-content">
-            <span class="close" onclick="closeBusyModal()">&times;</span>
+            <span class="close" onclick="closeMarkBusyModal()">&times;</span>
             <h3>Mark as Busy</h3>
 
             <!-- Error message -->
@@ -30,12 +30,12 @@
             @endif
 
             <!-- Updated form for busy slot creation -->
-            <form method="POST" action="{{ route('busySlot.store') }}">
+            <form method="POST" id="busySlotForm" action="{{ route('busySlot.store') }}">
                 @csrf
 
                 <!-- Hidden consultation ID -->
                 <input type="hidden" name="consultation_id" value="{{ $consultationId ?? '' }}">
-                
+
                 <div>
                     <label for="busyTitle">Title:</label>
                     <input type="text" name="title" id="busyTitle" required>
@@ -53,15 +53,37 @@
 
                 <div>
                     <h4>Select Time Slots:</h4>
-                    @foreach(['8:00', '9:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00'] as $time)
-                        <label>
-                            <input type="checkbox" name="busy_times[]" value="{{ $time }}">
-                            {{ $time }}
-                        </label><br>
-                    @endforeach
+                    <select id="startTime" name="startTime" required>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select>
+
+                    <label for="endTime">To:</label>
+                    <select id="endTime" name="endTime" required>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select>
+
+                    <!-- Whole day checkbox -->
+                    <label for="wholeDay">Mark Whole Day as Busy</label>
+                    <input type="checkbox" id="wholeDay" name="wholeDay">
                 </div>
 
-                <button type="submit">Create</button>
+                <!-- Create Button -->
+                <button type="button" onclick="submitBusySlot()">Create</button>
             </form>
         </div>
     </div>
@@ -75,17 +97,7 @@
         </div>
     </div>
 
-    <div class="calendar-days" id="calendar-days">
-        <!-- Render the calendar days dynamically -->
-        @foreach($consultations as $consultation)
-            <div class="day">
-                <p>{{ \Carbon\Carbon::parse($consultation->date)->format('M d, Y') }}</p> <!-- Display the formatted date -->
-                <p>{{ $consultation->title }}</p>
-                <p>{{ $consultation->description }}</p>
-                <p>{{ $consultation->time }}</p>
-            </div>
-        @endforeach
-    </div>
+    <div class="calendar-days" id="calendar-days"></div>
 </div>
 
 <script>
@@ -149,39 +161,62 @@
         renderCalendar();
     }
 
-    // Function to open the "Mark Busy" modal
-    function openBusyModal(date = null) {
-        // Preload busy times for the selected date
-        const busyTimesForDate = busySlots.filter(slot => slot.date === date).flatMap(slot => slot.busy_times);
+    // Open Mark Busy Modal
+    function openMarkBusyModal() {
+        document.getElementById("markBusyModal").style.display = "block";
+    }
 
-        // Disable checkboxes for already busy times
-        document.querySelectorAll('input[name="busy_times[]"]').forEach(checkbox => {
-            checkbox.disabled = busyTimesForDate.includes(checkbox.value);
-        });
+    // Close Mark Busy Modal
+    function closeMarkBusyModal() {
+        document.getElementById("markBusyModal").style.display = "none";
+    }
 
-        // Set the date if provided
-        if (date) {
-            document.getElementById('busyDate').value = date;
+    // Submit the busy slot form
+    function submitBusySlot() {
+    const date = document.getElementById("busyDate").value;
+    const startTime = document.getElementById("startTime").value;
+    const endTime = document.getElementById("endTime").value;
+    const wholeDay = document.getElementById("wholeDay").checked;
+
+    // Handle form validation
+    if (!date || (wholeDay === false && !startTime) || (wholeDay === false && !endTime)) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('date', date);
+    formData.append('start_time', startTime);
+    formData.append('end_time', endTime);
+    formData.append('whole_day', wholeDay);
+
+    fetch("{{ route('busySlot.store') }}", {
+        method: "POST",
+        headers: {
+            "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Your busy slot has been saved.");
+            closeMarkBusyModal();
+            renderCalendar(); // Re-render the calendar to reflect new busy slots
+        } else {
+            alert(data.message || "Failed to save the busy slot.");
         }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while saving the busy slot. Please try again later.");
+    });
+}
 
-        // Display the modal
-        document.getElementById("busyModal").style.display = "block";
-    }
-
-    // Function to close the busy modal
-    function closeBusyModal() {
-        document.getElementById("busyModal").style.display = "none";
-        // Re-enable all checkboxes when closing the modal
-        document.querySelectorAll('input[name="busy_times[]"]').forEach(checkbox => {
-            checkbox.disabled = false;
-        });
-    }
 
     // Function to open the Consultation Modal
     function openConsultationModal(date, consultations) {
-        // Display the formatted date in the modal header
         document.getElementById("selectedDate").innerText = new Date(date).toLocaleDateString();
-        
         const consultationList = document.getElementById("consultationList");
         consultationList.innerHTML = ''; // Clear previous list
 
@@ -191,7 +226,6 @@
             consultationList.appendChild(listItem);
         });
 
-        // Show the modal with consultation details
         document.getElementById("consultationModal").style.display = "block";
     }
 

@@ -1,9 +1,9 @@
-@extends('layouts.DpHead-layout')
+@extends('layouts.AdminConsult-layout')
 
 @section('title', 'Consultation Approvals')
 
 @section('content')
-<h2>Consultation DpHead Approvals</h2>
+<h2>Consultation Admin Approvals</h2>
 
 @if($consultations->isEmpty())
     <p>No pending consultations for approval.</p>
@@ -23,12 +23,14 @@
         <tbody>
             @foreach($consultations as $consultation)
                 <tr>
-                    <td>{{ $consultation->name }}</td>
-                    <td>{{ $consultation->course }}</td>
-                    <td>{{ $consultation->purpose }}</td>
-                    <td>{{ $consultation->meeting_mode }}</td>
-                    <td>{{ $consultation->online_platform ?? 'N/A' }}</td>
-                    <td>{{ $consultation->schedule->format('M d, Y - h:i A') }}</td>
+                <td>{{ $consultation->name }}</td>
+                <td>{{ $consultation->course }}</td>
+                <td>{{ $consultation->purpose }}</td>
+                <td>{{ $consultation->meeting_mode }}</td>
+                <td>{{ $consultation->online_platform ?? 'N/A' }}</td>
+                <td>{{ $consultation->schedule->format('M d, Y - h:i A') }}</td>
+                <td>{{ ucfirst($consultation->status) }}</td> <!-- Show the status here -->
+                <td>{{ $consultation->decline_reason ?? 'N/A' }}</td> <!-- Optionally show decline reason -->
                     <td>
                         <form method="POST" action="{{ route('consultation.accept', $consultation->id) }}" style="display:inline;">
                             @csrf

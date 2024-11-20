@@ -1,0 +1,77 @@
+/* Styling for the consultation form */
+body {
+    background-color: #f4f9ff;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #23942d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a71f94;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}

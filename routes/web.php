@@ -41,60 +41,62 @@ use App\Http\Controllers\CtCollegeCourseController;
 |
 */
 
-Route::get('/highschoolconsult', [HighSchoolConsultController::class, 'showHighSchoolConsultForm'])->name('highschoolconsult.form');
-Route::post('/highschoolconsult/submit', [HighSchoolConsultController::class, 'submitHighSchoolConsult'])->name('highschoolconsult.submit');
-Route::post('/highschoolconsult/approve/{id}', [HighSchoolConsultController::class, 'approveConsultation'])->name('highschoolconsult.approve');
-Route::post('/highschoolconsult/decline/{id}', [HighSchoolConsultController::class, 'declineConsultation'])->name('highschoolconsult.decline');
+//New
 
-// High School consultation approval, calendar, and history
-Route::get('/highschoolconsult/approval', [HighSchoolConsultController::class, 'showApproval'])->name('highschool.approval');
-Route::get('/highschoolconsult/calendar', [HighSchoolConsultController::class, 'showCalendar'])->name('highschool.calendar');
-Route::get('/highschoolconsult/history', [HighSchoolConsultController::class, 'showHistory'])->name('highschool.history');
+use App\Http\Controllers\ConsultationController;
+Route::get('/student/calendar', function () {
+    return view('student.StudentCalendar');
+})->name('student.calendar');
 
+// Route for the Student History view
+Route::get('/student/history', function () {
+    return view('student.StudentHistory');
+})->name('student.history');
+Route::get('/college-consult', function () {
+    return view('student.consultation.CollegeConsult');
+})->name('college.consult');
 
-Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
-Route::post('/highschool/consult/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
-Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
-Route::post('/highschool/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
-Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
-Route::post('/highschool/approve/{id}', [HighSchoolConsultController::class, 'approveConsult'])->name('highschoolconsult.approve');
-
-
-
-
-Route::get('/consult/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
-// Route for submitting the high school consultation form
-
-Route::post('/consult/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
+Route::get('/highschool-consult', function () {
+    return view('student.consultation.HSchoolConsult');
+})->name('highschool.consult');
 
 
-Route::get('/admin/calendar', [ConsultController::class, 'showCalendar'])->name('admin.calendar');
-Route::get('/admin/approval', [ConsultController::class, 'showApproval'])->name('admin.approval');
-Route::get('/admin/history', [ConsultController::class, 'showHistory'])->name('admin.history');
 
-Route::get('/consult', [ConsultController::class, 'showConsultForm'])->name('consult.form');
 
-// Routes for consultation
+Route::get('/student/consultation/college', [ConsultationController::class, 'showCollegeConsultation'])->name('college.consultation');
+Route::get('/student/consultation/highschool', [ConsultationController::class, 'showHSchoolConsultation'])->name('highschool.consultation');
+Route::post('/student/consultation/submit', [ConsultationController::class, 'submitConsultation'])->name('consultation.submit');
 
-Route::post('/highschoolconsult/approval', [ConsultController::class, 'submitHighSchoolConsult'])->name('highschoolconsult.approval');
-Route::post('/consult/submit', [ConsultController::class, 'submitConsult'])->name('consult.submit');
-Route::get('/approval', [ConsultController::class, 'showApproval'])->name('consult.approval');
-Route::post('/consult/approve/{id}', [ConsultController::class, 'approveConsult'])->name('consult.approve');
-Route::post('/consult/decline/{id}', [ConsultController::class, 'declineConsult'])->name('consult.decline');
-Route::get('/history', [ConsultController::class, 'showHistory'])->name('consult.history');
+// Approval routes
 
-Route::post('/busyhourscreation', [CalendarController::class, 'createBusyEvent'])->name('busyhourscreate');
+Route::get('/dp-head/approval/{id}', [ConsultationController::class, 'dpHeadApproval'])->name('dpHead.approval');
+Route::get('/admin-ctation/approval/{id}', [ConsultationController::class, 'adminCtationApproval'])->name('adminCtation.approval');
 
-// Routes for calendar
-Route::get('/calendar', [CalendarController::class, 'showCalendar'])->name('calendar.show');
+// Calendar routes
+Route::get('/admin/calendar', [ConsultationController::class, 'adminCalendar'])->name('admin.calendar');
+Route::get('/dp-head/calendar', [ConsultationController::class, 'dpCalendar'])->name('dp.calendar');
+Route::get('/student/calendar', [ConsultationController::class, 'studentCalendar'])->name('student.calendar');
 
-// Route to create a calendar event (other than busy hour)
-Route::post('/create-event', [CalendarController::class, 'createEvent'])->name('create.event');
+// History routes
+Route::get('/admin/history', [ConsultationController::class, 'adminHistory'])->name('admin.history');
+Route::get('/dp-head/history', [ConsultationController::class, 'dpHistory'])->name('dp.history');
+Route::get('/student/history', [ConsultationController::class, 'studentHistory'])->name('student.history');
 
-// Additional route to handle destroying busy hours (if it's different from `deleteBusyHour`)
-Route::delete('/busyhours/{id}', [CalendarController::class, 'destroyBusyHour'])->name('busyhours.destroy');
+Route::post('/consultation/accept/{id}', [ConsultationController::class, 'accept'])->name('consultation.accept');
+Route::post('/consultation/decline/{id}', [ConsultationController::class, 'decline'])->name('consultation.decline');
 
-Route::delete('/busyhours/{id}', [CalendarController::class, 'deleteBusyHour'])->name('deletehours');
+
+Route::get('/dp-head/approval', [ConsultationController::class, 'dpHeadApproval'])->name('dpHead.approval');
+Route::get('/admin-ctation/approval', [ConsultationController::class, 'adminCtationApproval'])->name('adminCtation.approval');
+
+Route::post('/busy-slot', [ConsultationController::class, 'storeBusySlot'])->name('busySlot.store');
+Route::post('/busy-slot', [ConsultationController::class, 'storeBusySlot'])->name('busySlot.store');
+
+
+//END
+
+
+
 
 
 
