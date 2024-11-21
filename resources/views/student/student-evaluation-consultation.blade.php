@@ -28,8 +28,8 @@
             <a href="{{ route('logout') }}"><h5>Log Out</a>
         </div>
         <div class="tabs">
-            <a href="{{ route('StudentPickEvaluation') }}">Evaluation</a>
-            <a href="{{ route('StudentPickConsultation') }}">Consultation</a>
+        <a href="{{ $student->level === 'College' ? route('faculty.index', ['grade_level_section' => 'college']) : route('facultyhighschool.index', ['grade_level_section' => 'highschool']) }}">Evaluation
+            <a href="{{ route('consult') }}">Consultation</a>
         </div>
     </div>
 </body>

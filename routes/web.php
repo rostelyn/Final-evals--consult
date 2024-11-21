@@ -137,7 +137,12 @@ Route::get('/evaluation', function () {
     return view('faculty.index');
 })->name('evaluation');
 
+Route::get('/consult', function () {
+    return view('consultation.consult');
+})->name('consult');
 
+
+/*/
 //list of teachers
 Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
 Route::get('/faculty/{department}', [FacultyController::class, 'show']);
@@ -145,9 +150,15 @@ Route::get('/faculty/{department}', [FacultyController::class, 'show']);
 
 Route::get('/facultyhighschool', [FacultyControllerHighschool::class, 'index'])->name('facultyhighschool.index');
 Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighschool::class, 'show']);
+/*/
+Route::get('/faculty/{grade_level_section}', [FacultyController::class, 'index'])->name('faculty.index');
+Route::get('/facultyhighschool/{grade_level_section}', [FacultyController::class, 'index'])->name('facultyhighschool.index');
+Route::get('/faculty/{grade_level_section}/{department}', [FacultyController::class, 'show'])->name('faculty.show');
 
 
 Route::get('/evaluation-form', function () {return view('student.evaluation.evaluation-form');})->name('evaluation-form');
+
+Route::get('/evaluation-form', [EvaluationController::class, 'create'])->name('evaluation-form');
 Route::post('/evaluation-form', [EvaluationController::class, 'submit'])->name('evaluation.submit');
 
 
@@ -186,15 +197,6 @@ Route::get('/StudentSettings', function () {
     return view('student.StudentSettings');
 })->name('StudentSettings');
 
-//StudentPickEvaluation
-
-Route::get('/StudentPickEvaluation', function () {
-    return view('student.StudentPickEvaluation');
-})->name('StudentPickEvaluation');
-
-Route::get('/StudentPickConsultation', function () {
-    return view('student.StudentPickConsultation');
-})->name('StudentPickConsultation');
 
 Route::get('/HrAdminDashboard', [HrAdminController::class, 'index'])->name('HrAdminDashboard')->middleware('auth');
 
@@ -211,46 +213,6 @@ Route::get('/HrCollegeCourse', function () {
 })->name('HrCollegeCourse');
 
 
-//HR BSHM ROUTE
-Route::get('/HrHM', function () {
-    return view('hr.HRBSHM.HrHM');
-})->name('HrHm');
-
-
-//HR ACT ROUTE
-Route::get('/HrACT', function () {
-    return view('hr.HrACT.HrACT');
-})->name('HrACT');
-
-
-//HR HRT
-
-Route::get('/HrHRT', function () {
-    return view('hr.HrHRT.HrHRT');
-})->name('HrHRT');
-
-//COMSCI
-
-Route::get('/HrBSCS', function () {
-    return view('hr.HrBSCS.HrBSCS');
-})->name('HrBSCS');
-
-//CET
-
-Route::get('/HrCET', function () {
-    return view('hr.HrCET.HrCET');
-})->name('HrCET');
-
-//HRS
-
-Route::get('/HrHRS', function () {
-    return view('hr.HrHRS.HrHRS');
-})->name('HrHRS');
-
-//Tourism
-Route::get('/HrTourism', function () {
-    return view('hr.HrTourism.HrTourism');
-})->name('HrTourism');
 
 
 // HR High School Route
@@ -680,3 +642,4 @@ Route::middleware(['auth', 'role:Hradmin,Ctadmin'])->group(function () {
 
 });
 Route::get('Grade{studentId}', [HrGrades7To10Controller::class, 'show'])->name('highschool.profile');
+

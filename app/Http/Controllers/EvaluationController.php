@@ -7,6 +7,14 @@ use App\Models\Evaluation;
 
 class EvaluationController extends Controller
 {
+    public function create(Request $request)
+{
+    // Get the teacher's name from the query string (passed in URL)
+    $teacherName = $request->query('teacher_name'); 
+    
+    // Return the view with the teacher's name passed to the form
+    return view('student.evaluation.evaluation-form', compact('teacherName'));
+}
     // Submit evaluation form
     public function submit(Request $request)
     {

@@ -34,10 +34,9 @@
                         <h2 class="h2">PART 1</h2>
                         <h2 class="h2">Directions:</h2>
                         <p>Kindly evaluate your teacher/s per subject according to their teaching performance.</p>
-                        <div class="form-group">
-                            <h2 class="h2">Name of Teacher:</h2>
-                            <input type="text" class="form-control" id="teacher_name" name="teacher_name" required>
-                        </div>
+                        <label for="teacher_name">Teacher Name:</label>
+        <input type="text" id="teacher_name" name="teacher_name" value="{{ $teacherName }}" readonly>
+
                         <div class="form-group">
                             <h2 class="h2">Subject:</h2>
                             <input type="text" class="form-control" id="subject" name="subject" required>
@@ -70,7 +69,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="{{ ('/faculty') }}" class="back-btn">Back</a>
+                    <a href="{{ ('/faculty/college/Computer%20Department') }}" class="back-btn">Back</a>
                     <button type="submit" class="submit-btn">Submit</button>
                 </div>
             </form>

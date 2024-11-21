@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Diplomata+SC&display=swap" rel="stylesheet">
-    <title>Select Highschool Department</title>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+    <title>Select Department</title>
+
     <style>
         /* Global styles */
         * {
@@ -82,19 +83,24 @@
         }
     </style>
 </head>
-<body>
-    <h1 class="department-heading">Select Highschool Department</h1>
+<body class="{{ strtolower($grade_level_section) === 'highschool' ? 'highschool-bg' : 'college-bg' }}">
+    <div class="department-heading">
+        <h1>Select {{ ucfirst($grade_level_section) }} Department</h1>
+    </div>
 
     <div class="department-container">
-        @foreach($departmenthighschools as $departmenthighschool)
+        @foreach ($departments as $department)
             <div class="department-card">
-                <!-- Add image dynamically -->
-                <img src="{{ $departmentImages[$departmenthighschool] ?? asset('images/default.jpg') }}" alt="{{ $departmenthighschool }} Image">
-                <a href="{{ url('/facultyhighschool/'.$departmenthighschool) }}" class="department-link">
-                    {{ $departmenthighschool }}
+                <img src="{{ $departmentImages[$department] }}" alt="{{ $department }} Image">
+                <a href="{{ route('faculty.show', ['grade_level_section' => 'highschool', 'department' => $department]) }}" class="department-link">
+                <span class="department-link">
+                {{ $department }}
+                </span>
                 </a>
             </div>
         @endforeach
     </div>
 </body>
 </html>
+
+  
