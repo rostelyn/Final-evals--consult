@@ -26,10 +26,10 @@
         <ul>
             <li><a href="{{ route('CTDashboard') }}">Dashboard</a></li>
             <li><a href="{{ route ('CtStudentList') }}">Student List</a></li>
-            <li><a href="{{ route('consult.approval') }}">Approve/Disapprove</a></li> 
-            <li><a href="{{ route('calendar.show') }}">Calendar</a></li> 
+            <li><a href="{{ route('adminCtation.approval', ['id' => 1]) }}">Admin Consultant Approval</a></li>
+            <li><a href="{{ route('admin.calendar') }}">Admin Calendar</a></li>
             <li><a href="{{ route('CtNotification') }}">Notifications</a></li>
-            <li><a href="{{ route('consult.history') }}">Consultation History</a></li> 
+            <li><a href="{{ route('admin.history') }}">Admin Consultation History</a></li>
             <li><a href="{{ route('CtDocumentation') }}">Documentation</a></li>
             <li><a href="{{ route('CtSettings') }}">Settings</a></li>
         </ul>

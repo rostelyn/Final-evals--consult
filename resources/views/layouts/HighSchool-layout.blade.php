@@ -23,17 +23,16 @@
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo">
-        <h1>Consultation Admin</h1>
+            <img src="{{ asset('css/GeneralResources/logoo.jpg') }}" alt="Logo">
         </div>
         <ul>
-    <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-    <li><a href="{{ route('college.consultation') }}">Consultation</a></li>
-    
-    <li><a href="{{ route('StudentSettings') }}">Settings</a></li>
-    <li><a href="{{ route('student.history') }}">Consultation History</a></li>
-    <li><a href="{{ route('student.calendar') }}">Calendar</a></li>
-</ul>
-
+            <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
+            <li><a href="{{ route('highschool.consultation') }}">Consultation</a></li>
+            <li><a href="{{ route('student.history') }}">Consultation History</a></li>
+            <li><a href="{{ route('student.calendar') }}">Calendar</a></li>
+          
+          
+        </ul>
     </div>
     <div class="content">
         <div class="menu-icon" onclick="toggleSidebar()">☰</div>
