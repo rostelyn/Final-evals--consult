@@ -17,7 +17,11 @@ class ConsultationController extends Controller
     {
         return view('student.consultation.HSchoolConsult');
     }
-
+    public function pickConsultation()
+    {
+        return view('student.StudentPickConsultation'); // Ensure this view file exists
+    }
+    
     public function submitConsultation(Request $request)
     {
         // Validate the form inputs

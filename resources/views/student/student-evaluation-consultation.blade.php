@@ -29,7 +29,10 @@
         </div>
         <div class="tabs">
         <a href="{{ $student->level === 'College' ? route('faculty.index', ['grade_level_section' => 'college']) : route('facultyhighschool.index', ['grade_level_section' => 'highschool']) }}">Evaluation
-            <a href="{{ route('consult') }}">Consultation</a>
+        <a href="{{ url('/consultation') }}">Consultation</a>
+
+
+
         </div>
     </div>
 </body>

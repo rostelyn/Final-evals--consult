@@ -94,11 +94,23 @@ Route::post('/busy-slot', [ConsultationController::class, 'storeBusySlot'])->nam
 
 
 //END
+use App\Http\Controllers\StudentConsultationController;
+
+Route::prefix('consultation')->group(function () {
+    Route::get('/', [StudentConsultationController::class, 'pickConsultation'])->name('consultation.pick');
+});
+
+Route::get('/consultation', function () {
+    return view('student.StudentPickConsultation');
+})->name('consultation.pick');
+
+Route::get('/consultation', function () {
+    return view('student.StudentPickConsultation');
+});
 
 
 
-
-
+Route::get('/consultation', [StudentConsultationController::class, 'pickConsultation'])->name('consultation.pick');
 
 //LOGIN AND REGISTER//
 
@@ -139,9 +151,9 @@ Route::get('/evaluation', function () {
     return view('faculty.index');
 })->name('evaluation');
 
-Route::get('/consult', function () {
-    return view('consultation.consult');
-})->name('consult');
+Route::get('/CollegeConsult', function () {
+    return view('consultation.college.consult');
+})->name('CollegeConsult');
 
 
 /*/
@@ -179,9 +191,7 @@ Route::get('/student/evaluation/evaluations-show', [EvaluationController::class,
 Route::get('/student-calendar', [StudentCalendarController::class, 'index'])->name('studeHrCalendar.index');
 Route::get('/student-calendar/events', [StudentCalendarController::class, 'events'])->name('studentCalendar.events');
 
-Route::get('/consultation', function () {
-    return view('student.consultation.consult');
-})->name('consultation');
+
 
 Route::get('/Appointment', function () {
     return view('student.consultation.consult');
@@ -252,8 +262,6 @@ Route::get('/HrNotification', [HrAdminController::class, 'showNotifications'])->
 Route::get('/hr.HrRecentEvaluations', [HrAdminController::class, 'showRecentEvaluations'])->name('HrRecentEvaluations');
 
 
-Route::get('/HrCalendars', [HrCalendarController::class, 'index']);
-Route::post('/HrCalendars', [HrCalendarController::class, 'store']);
 
 
 Route::get('/HrProfile', function () {
