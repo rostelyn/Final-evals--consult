@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Registration</h1>
+          <div class="header">
+          <h1>Student Registration Form</h1>
+    </div>
+        <div class="profile-container">
+        <img src="/path/to/default-profile.jpg" id="profile-preview">
+        <button class="upload-button" id="upload-button">Choose Picture</button>
+        <input type="file" name="picture" id="picture" accept="image/*">
+    </div>
+
 
         @if ($errors->any())
             <div class="error">
@@ -20,18 +31,10 @@
             </div>
         @endif
 
+        
+
         <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-
-            <div class="form-group">
-                <label for="student_id">Student ID:</label>
-                <input type="text" name="student_id" id="student_id" value="{{ old('student_id') }}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" value="{{ old('username') }}" required>
-            </div>
 
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -39,8 +42,22 @@
             </div>
 
             <div class="form-group">
+                <label for="student_id">Student ID:</label>
+                <input type="text" name="student_id" id="student_id" value="{{ old('student_id') }}" required>
+            </div>
+
+            <div class="form-group">
                 <label for="age">Age:</label>
                 <input type="number" name="age" id="age" value="{{ old('age') }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
+                    <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
+                </select>
             </div>
 
             <div class="form-group">
@@ -60,7 +77,7 @@
 
             <!-- Course Strand Dropdown -->
             <div class="form-group">
-                <label for="course_strand">Course/Strand:</label>
+                <label for="course_strand">Course/Grade Level:</label>
                 <select name="course_strand" id="course_strand" required>
                     <!-- Options will be populated dynamically based on selected level -->
                 </select>
@@ -68,18 +85,9 @@
 
             <!-- Grade Level Section Dropdown -->
             <div class="form-group">
-                <label for="grade_level_section">Grade Level/Section:</label>
+                <label for="grade_level_section">Section:</label>
                 <select name="grade_level_section" id="grade_level_section" required>
                     <!-- Options will be populated dynamically based on selected level -->
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select name="gender" id="gender" required>
-                    <option value="">Select Gender</option>
-                    <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
-                    <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
                 </select>
             </div>
 
@@ -93,18 +101,13 @@
                 <input type="password" name="password_confirmation" id="password_confirmation" required>
             </div>
 
-            <button type="submit">Register</button>
+            <div class="button-container">
+              <button type="submit" class="register-button">Register</button>
+         </div>
         </form>
     </div>
 
-    <div class="profile-container">
-        <img src="/path/to/default-profile.jpg" id="profile-preview">
-        <h2>1X1 Picture</h2>
-        <button class="upload-button" id="upload-button">Choose Picture</button>
-        <input type="file" name="picture" id="picture" accept="image/*">
-    </div>
-
-    <script>
+      <script>
         const levelSelect = document.getElementById('level');
         const courseStrandSelect = document.getElementById('course_strand');
         const gradeLevelSectionSelect = document.getElementById('grade_level_section');
