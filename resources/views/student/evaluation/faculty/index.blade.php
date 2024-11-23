@@ -18,6 +18,9 @@
 
     <div class="department-container">
         @foreach ($departments as $department)
+        @php
+            $urlFriendlyDepartment = str_replace(' ', '', $department); // Remove spaces
+        @endphp
             <div class="department-card">
                 <img src="{{ $departmentImages[$department] }}" alt="{{ $department }} Image">
                 <a href="{{ route('faculty.show', ['grade_level_section' => 'college', 'department' => $department]) }}" class="department-link">
