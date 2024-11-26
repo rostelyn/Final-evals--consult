@@ -27,7 +27,7 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $student->name }}</td>
                     <td>
-                        <a href="{{ route('student.show', ['id' => $student->StudentId]) }}">
+                        <a href="{{ ('student.show', ['id' => $student->StudentId]) }}">
                             <button>View Student</button>
                         </a>
                     </td>

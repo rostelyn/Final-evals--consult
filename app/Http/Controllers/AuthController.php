@@ -32,11 +32,19 @@ class AuthController extends Controller
             Auth::login($user);
             
             switch ($user->username) {
-                case 'dphead':
+                case 'ComputerDepartment':
                     return redirect()->intended('DpHeadDashboard');
-                case 'hradmin':
+                case 'EngineeringDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                case 'HospitalityManagementDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                case 'TesdaDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                 case 'HighschoolDepartment':
+                         return redirect()->intended('DpHeadDashboard');
+                case 'Hradmin':
                     return redirect()->intended('HrAdminDashboard');
-                case 'ctadmin':
+                case 'Ctadmin':
                     return redirect()->intended('CTDashboard');
                 default:
                     return redirect()->intended('defaultDashboard'); 
