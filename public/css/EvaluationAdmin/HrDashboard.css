@@ -54,12 +54,10 @@
     margin-top: 50px;
 }
 
-a:link {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
 
-
-a:hover {
-    color: black;
+.logout {
+    font-size: 20px; 
+    border: none;
+    background: none;
+    cursor: pointer;
 }

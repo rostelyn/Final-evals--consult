@@ -13,8 +13,9 @@
                 <div style="position: absolute; top: 8px; right: 8px;">
                 <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit"><h5>Log Out</h5></button>
-            </form>
+                    <button type="submit" class="logout">Log Out</button>
+                </form>
+
                 </div>
             </div>
 
