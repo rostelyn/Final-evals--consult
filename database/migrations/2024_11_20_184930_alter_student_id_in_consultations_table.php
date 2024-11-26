@@ -6,18 +6,24 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up()
     {
         Schema::table('consultations', function (Blueprint $table) {
-            $table->string('decline_reason')->nullable(); // Make sure it's nullable
+            $table->unsignedBigInteger('student_id')->default(1)->change(); // Set default value if appropriate
         });
     }
     
-    public function down()
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
     {
         Schema::table('consultations', function (Blueprint $table) {
-            $table->dropColumn('decline_reason');
+            //
         });
     }
-    
 };

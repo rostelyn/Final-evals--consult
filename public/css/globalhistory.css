@@ -1,0 +1,27 @@
+/* Table styles for the consultation history */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ce0909;
+}
+
+table th {
+    background-color: #cec8c8;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #af8e8e;
+}
+
+table tr:hover {
+    background-color: #818d60;
+}
+table {
+    background-color: #8f6b6b; /* This will apply a background color to the entire table */
+}

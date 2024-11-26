@@ -91,6 +91,7 @@ Route::get('/admin-ctation/approval', [ConsultationController::class, 'adminCtat
 
 Route::post('/busy-slot', [ConsultationController::class, 'storeBusySlot'])->name('busySlot.store');
 Route::post('/busy-slot', [ConsultationController::class, 'storeBusySlot'])->name('busySlot.store');
+Route::get('/student/history', [ConsultationController::class, 'studentHistory'])->name('student.history');
 
 
 //END
