@@ -20,9 +20,13 @@ return new class extends Migration
 
         // Create default admin accounts
         DB::table('users')->insert([
-            ['name' => 'Department Head', 'username' => 'dphead', 'password' => bcrypt('dpheadpassword')],
-            ['name' => 'HR Admin', 'username' => 'hradmin', 'password' => bcrypt('hradminpassword')],
-            ['name' => 'CT Admin', 'username' => 'ctadmin', 'password' => bcrypt('ctadminpassword')],
+            ['name' => 'CSDepartment Head', 'username' => 'ComputerDepartment', 'password' => bcrypt('Csheadpassword')],
+            ['name' => 'Department Head1', 'username' => 'EngineeringDepartment', 'password' => bcrypt('Engineeringhead')],
+            ['name' => 'Department Head2', 'username' => 'HospitalityManagementDepartment', 'password' => bcrypt('Hmheadpassword')],
+            ['name' => 'Department Head3', 'username' => 'TesdaDepartment', 'password' => bcrypt('Tesdahead')],
+            ['name' => 'Department Head4', 'username' => 'HighschoolDepartment', 'password' => bcrypt('Hsheadpassword')],
+            ['name' => 'HR Admin', 'username' => 'Hradmin', 'password' => bcrypt('Hradminpassword')],
+            ['name' => 'CT Admin', 'username' => 'Ctadmin', 'password' => bcrypt('Ctadminpassword')],
         ]);
     }
 

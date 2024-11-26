@@ -11,7 +11,10 @@
                 <p>Academic Year: 2023-2024 1st Semester</p>
                 <p>Evaluation Status: On-going</p>
                 <div style="position: absolute; top: 8px; right: 8px;">
-                    <a href="{{ route('logout') }}"><h5>Log Out</h5></a>
+                <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit"><h5>Log Out</h5></button>
+            </form>
                 </div>
             </div>
 

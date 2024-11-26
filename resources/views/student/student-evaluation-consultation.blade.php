@@ -8,7 +8,7 @@
 </head>
 <body class="{{ $student->level === 'College' ? 'college-bg' : 'highschool-bg' }}">
     <div class="header">
-        <p><strong>Username:</strong> {{ ucfirst($student->username) }}</p>
+       
         <h1>Welcome, {{ $student->name }}</h1>
     </div>
      
@@ -25,7 +25,10 @@
                 <p><strong>Section:</strong> {{ $student->Grade_Level_Section }}</p>
                 <p><strong>Student Number:</strong> {{ $student->StudentId }}</p>
             </div>
-            <a href="{{ route('logout') }}"><h5>Log Out</a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit"><h5>Log Out</h5></button>
+            </form>
         </div>
         <div class="tabs">
         <a href="{{ $student->level === 'College' ? route('faculty.index', ['grade_level_section' => 'college']) : route('facultyhighschool.index', ['grade_level_section' => 'highschool']) }}">Evaluation

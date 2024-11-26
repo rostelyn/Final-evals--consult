@@ -34,7 +34,8 @@
                         <input type="checkbox" name="remember" id="remember">
                         <label for="remember">Remember Me</label>
                     </div>
-                    <div class="form-buttons">      <a href="register">Register if you Dont have Account</a>
+                    <div class="form-buttons">     
+                         <a href="register">Register if you Dont have Account</a>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>

@@ -115,13 +115,14 @@ Route::get('/consultation', [StudentConsultationController::class, 'pickConsulta
 
 //LOGIN AND REGISTER//
 
-Route::get('/',[AuthController::class,'index'])->name('login');
-Route::post('/login',[AuthController::class,'login'])->name('login.submit');
+// Show the login form (GET request)
+Route::get('/', [AuthController::class, 'index'])->name('login');
+
+// Handle the login form submission (POST request)
+Route::post('/', [AuthController::class, 'login'])->name('login.submit');
+
+// Handle logout (POST request)
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::post('/',[AuthController::class,'login'])->name('login.submit');
-Route::get('/logout',[AuthController::class,'logout'])->middleware('auth')->name('logout');
-
 
 
 Route::get('/register', [StudentController::class, 'create'])->name('students.create');

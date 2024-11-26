@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash; 
+use App\Models\Student;
 
 class AuthController extends Controller
 {
@@ -17,17 +19,32 @@ class AuthController extends Controller
     {
         $credentials = $request->only(['username', 'password']);
 
-        if (Auth::attempt($credentials)) {
-            // Get the authenticated user
-            $user = Auth::user();
+        $student = Student::where('StudentId', $credentials['username'])->first();
 
-            // Redirect based on the user's role
+        if ($student && Hash::check($credentials['password'], $student->password)) {
+            Auth::login($student);
+            return view('student.student-evaluation-consultation', compact('student'));
+        }
+
+        $user = User::where('username', $credentials['username'])->first();
+
+        if ($user && Hash::check($credentials['password'], $user->password)) {
+            Auth::login($user);
+            
             switch ($user->username) {
-                case 'dphead':
+                case 'ComputerDepartment':
                     return redirect()->intended('DpHeadDashboard');
-                case 'hradmin':
+                case 'EngineeringDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                case 'HospitalityManagementDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                case 'TesdaDepartment':
+                        return redirect()->intended('DpHeadDashboard');
+                 case 'HighschoolDepartment':
+                         return redirect()->intended('DpHeadDashboard');
+                case 'Hradmin':
                     return redirect()->intended('HrAdminDashboard');
-                case 'ctadmin':
+                case 'Ctadmin':
                     return redirect()->intended('CTDashboard');
                 default:
                     return redirect()->intended('defaultDashboard'); 
@@ -36,12 +53,13 @@ class AuthController extends Controller
             return redirect()->back()->withErrors(['message' => 'Invalid username or password']);
         }
     }
-
     public function logout()
     {
+        // Log out the user
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');  // Redirect to login page after logout
     }
+
 
     public function registration()
     {
