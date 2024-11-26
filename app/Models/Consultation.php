@@ -18,6 +18,8 @@ class Consultation extends Model
         'online_platform',
         'schedule',
         'status',
+        'decline_reason',
+        'student_id',
     ];
 
     protected $casts = [

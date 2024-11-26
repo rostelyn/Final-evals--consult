@@ -3,11 +3,11 @@
 @section('title', 'Student Consultation History')
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/globalhistory.css') }}">
+
     <h2>Your Consultation History</h2>
 
-    @if($consultations->isEmpty())
-        <p>You have no consultation history.</p>
-    @else
+
         <table>
             <thead>
                 <tr>
@@ -18,23 +18,28 @@
                     <th>Online Platform</th>
                     <th>Schedule</th>
                     <th>Status</th>
+                    <th>Decline Reason</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach($consultations as $consultation)
-    <tr>
-        <td>{{ $consultation->name }}</td>
-        <td>{{ $consultation->course }}</td>
-        <td>{{ $consultation->purpose }}</td>
-        <td>{{ $consultation->meeting_mode }}</td>
-        <td>{{ $consultation->online_platform ?? 'N/A' }}</td>
-        <td>{{ $consultation->schedule->format('M d, Y - h:i A') }}</td>
-        <td>{{ ucfirst($consultation->status) }}</td> <!-- Show the status here -->
-        <td>{{ $consultation->decline_reason ?? 'N/A' }}</td> <!-- Optionally show decline reason -->
-    </tr>
-@endforeach
+    @forelse($consultations as $consultation)
+        <tr>
+            <td>{{ $consultation->name }}</td>
+            <td>{{ $consultation->course }}</td>
+            <td>{{ $consultation->purpose }}</td>
+            <td>{{ $consultation->meeting_mode }}</td>
+            <td>{{ $consultation->online_platform ?? 'N/A' }}</td>
+            <td>{{ \Carbon\Carbon::parse($consultation->schedule)->format('M d, Y - h:i A') }}</td>
+            <td>{{ ucfirst($consultation->status) }}</td>
+            <td>{{ $consultation->decline_reason ?? 'N/A' }}</td>
+        </tr>
+    @empty
+        <tr>
+            <td colspan="8">No consultations found.</td>
+        </tr>
+    @endforelse
+</tbody>
 
-            </tbody>
         </table>
-    @endif
+ 
 @endsection

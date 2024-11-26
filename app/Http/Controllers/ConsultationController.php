@@ -164,38 +164,34 @@ public function dpHistory()
 
 public function studentHistory()
 {
-    // Include declined consultations for the student
     $consultations = Consultation::where('student_id', auth()->id())
                                   ->whereIn('status', ['approved', 'declined'])
+                                  ->latest('updated_at') // Show the most recent ones first
                                   ->get();
 
     return view('student.StudentHistory', compact('consultations'));
 }
 
 
+
 public function accept($id)
 {
-    // Find the consultation by ID
     $consultation = Consultation::findOrFail($id);
-    
-    // Change the status to 'approved'
     $consultation->status = 'approved';
     $consultation->save();
 
-    // Redirect to the appropriate calendar view based on the consultant type
+    // Redirect to the appropriate calendar view
     if ($consultation->consultant === 'department_head') {
-        // Redirect to the Department Head calendar view
         return redirect()->route('dp.calendar')
-                         ->with('success', 'Consultation has been approved by Department Head and added to the calendar.');
+                         ->with('success', 'Consultation approved by Department Head.');
     } elseif ($consultation->consultant === 'admin_consultant') {
-        // Redirect to the Admin Consultant calendar view
         return redirect()->route('admin.calendar')
-                         ->with('success', 'Consultation has been approved by Admin Consultant and added to the calendar.');
+                         ->with('success', 'Consultation approved by Admin Consultant.');
     }
 
-    // Fallback if the consultant type is unexpected
     return redirect()->back()->with('error', 'Consultant type not recognized.');
 }
+
 
 public function decline(Request $request, $id)
 {
@@ -204,19 +200,20 @@ public function decline(Request $request, $id)
     ]);
 
     $consultation = Consultation::findOrFail($id);
-    $consultation->status = 'declined'; // Set the status to declined
-    $consultation->decline_reason = $request->input('decline_reason'); // Save the decline reason
+    $consultation->status = 'declined';
+    $consultation->decline_reason = $request->input('decline_reason');
     $consultation->save();
 
     if ($consultation->consultant === 'department_head') {
         return redirect()->route('dpHead.approval')
-                         ->with('success', 'Consultation has been declined.');
+                         ->with('success', 'Consultation declined.');
     } elseif ($consultation->consultant === 'admin_consultant') {
         return redirect()->route('adminCtation.approval')
-                         ->with('success', 'Consultation has been declined.');
+                         ->with('success', 'Consultation declined.');
     }
 
     return redirect()->back()->with('error', 'Consultant type not recognized.');
 }
+
     
 }
