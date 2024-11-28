@@ -51,6 +51,6 @@ class EvaluationController extends Controller
             return $query->where('teacher_name', $teacherName);
         })->get();
 
-        return view('hr.HrCollegeBSIT.BSITThirdYear.hrStudentlist', compact('evaluations'));
+        return view('hr.HrCollegeBSIT.hrStudentlis', compact('evaluations'));
     }
 }

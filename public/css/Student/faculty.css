@@ -41,7 +41,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 80%;
+    width: 70%;
 }
 
 .faculty-picture {
@@ -66,7 +66,7 @@ h2 {
 }
 
 .btn-evaluate {
-    background-color: #18A558;
+    background-color: #0F67B1;
     color: #fff;
     padding: 8px 16px;
     border-radius: 5px;
@@ -76,7 +76,7 @@ h2 {
 }
 
 .btn-evaluate:hover {
-    background-color: #88c999;
+    background-color: #0F67B1;
 }
 
 @media (max-width: 768px) {

@@ -158,15 +158,6 @@ Route::get('/CollegeConsult', function () {
 })->name('CollegeConsult');
 
 
-/*/
-//list of teachers
-Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
-Route::get('/faculty/{department}', [FacultyController::class, 'show']);
-
-
-Route::get('/facultyhighschool', [FacultyControllerHighschool::class, 'index'])->name('facultyhighschool.index');
-Route::get('/facultyhighschool/{departmenthighschool}', [FacultyControllerHighschool::class, 'show']);
-/*/
 Route::get('/faculty/{grade_level_section}', [FacultyController::class, 'index'])->name('faculty.index');
 Route::get('/facultyhighschool/{grade_level_section}', [FacultyController::class, 'index'])->name('facultyhighschool.index');
 Route::get('/faculty/{grade_level_section}/{department}', [FacultyController::class, 'show'])->name('faculty.show');

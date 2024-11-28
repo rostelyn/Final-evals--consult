@@ -15,17 +15,15 @@ class FacultyController extends Controller
                 'Computer Department' => asset('css/CoursePicture/CS.jfif'),
                 'HM Department' => asset('css/CoursePicture/Hm.jfif'),
                 'Tesda Department' => asset('css/CoursePicture/Tesda.png'),
-                'Engineering Department' => asset('css/CoursePicture/COMSCI.jpg'),
+                'Engineering Department' => asset('css/GeneralResources/logoo.jpg'),
             ];
             return view('student.evaluation.faculty.index', compact('departments', 'departmentImages', 'grade_level_section'));
         } 
         // High school department details
         elseif ($grade_level_section === 'highschool') {
-            $departments = ['Facultyhighschool1', 'Facultyhighschool2', 'Facultyhighschool3'];
+            $departments = ['Highschool Department'];
             $departmentImages = [
-                'Facultyhighschool1' => asset('css/CoursePicture/CS.jfif'),
-                'Facultyhighschool2' => asset('css/CoursePicture/CS.jfif'),
-                'Facultyhighschool3' => asset('css/CoursePicture/CS.jfif'),
+                'Highschool Department' => asset('css/GeneralResources/hslogo.jpg'),
             ];
             
             return view('student.evaluation.facultyhighschool.index', compact('departments', 'departmentImages', 'grade_level_section'));
@@ -62,10 +60,11 @@ class FacultyController extends Controller
                         'image' => asset('css/CoursePicture/CS.jfif'),
                     ],
                     'members' => [
-                        ['name' => 'Percian Joseph Borja', 'image' => asset('css/FacultyPictures/Percian.jpg')],
-                        ['name' => 'Eric Almoguerra', 'image' => asset('css/FacultyPictures/Eric.jpg')],
-                        ['name' => 'Aries Cayabyab', 'image' => asset('css/FacultyPictures/Aries.jpg')],
-                        ['name' => 'Nomer Aleviado', 'image' => asset('css/FacultyPictures/Nomer.jpg')],
+                        ['name' => 'Percian Joseph Borja', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Eric Almoguerra', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Aries Cayabyab', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Nomer Aleviado', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Joseph Chua', 'image' => asset('css/evaluatepicture/icon.jpg')],
                     ],
                 ],
                 'HM Department' => [
@@ -74,9 +73,11 @@ class FacultyController extends Controller
                         'image' => asset('css/CoursePicture/Hm.jfif'),
                     ],
                     'members' => [
-                        ['name' => 'John Cruz', 'image' => asset('css/FacultyPictures/John.jpg')],
-                        ['name' => 'Ana Lopez', 'image' => asset('css/FacultyPictures/Ana.jpg')],
-                        ['name' => 'Liza Mendoza', 'image' => asset('css/FacultyPictures/Liza.jpg')],
+                        ['name' => 'Katherine Araos', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Hannie Faye Cuaresma', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Jaevend Mae Deuda', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Chrislyn Colleen Sison', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Atty. RK. Dela Fuente', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
                     ],
                 ],
                 'Tesda Department' => [
@@ -85,58 +86,45 @@ class FacultyController extends Controller
                         'image' => asset('css/CoursePicture/Tesda.png'),
                     ],
                     'members' => [
-                        ['name' => 'Carlos Rivera', 'image' => asset('css/FacultyPictures/Carlos.jpg')],
-                        ['name' => 'Juan Santos', 'image' => asset('css/FacultyPictures/Juan.jpg')],
-                        ['name' => 'Maria De Leon', 'image' => asset('css/FacultyPictures/Maria.jpg')],
+                        ['name' => 'Carlos Rivera', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Juan Santos', 'image' =>    asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Maria De Leon', 'image' =>  asset('css/evaluatepicture/icon.jpg')],
                     ],
                 ],
                 'Engineering Department' => [
                     'head' => [
                         'name' => 'Engr. Adelino Cordova Jr.',
-                        'image' => asset('css/CoursePicture/COMSCI.jpg'),
+                        'image' => asset('css/GeneralResources/logoo.jpg'),
                     ],
                     'members' => [
-                        ['name' => 'Engr. Sarah Jane Bartolome', 'image' => asset('css/FacultyPictures/Oscar.jpg')],
-                        ['name' => 'Engr. Arberlyn Rodriguez', 'image' => asset('css/FacultyPictures/Gina.jpg')],
-                        ['name' => 'Engr. Christian Macalinao', 'image' => asset('css/FacultyPictures/Lloyd.jpg')],
-                        ['name' => 'Engr. Saira Marie Mangayao', 'image' => asset('css/FacultyPictures/Lloyd.jpg')],
-                        ['name' => 'Engr. Jenny Ventura', 'image' => asset('css/FacultyPictures/Lloyd.jpg')],
+                        ['name' => 'Engr. Taylor', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Engr. Evans', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Engr. James', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Engr. Harris', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Engr. White', 'image' => asset('css/evaluatepicture/icon.jpg')],
                     ],
                 ],
             ],
             'highschool' => [
-                'Facultyhighschool1' => [
+                'Highschool Department' => [
                     'head' => [
-                        'name' => 'Dr. Green',
-                        'image' => asset('css/CoursePicture/CS.jfif'),
+                        'name' => 'Arlene Cabillan',
+                        'image' => asset('css/GeneralResources/hslogo.jpg'),
                     ],
                     'members' => [
-                        ['name' => 'Prof. Taylor', 'image' => null],
-                        ['name' => 'Prof. Evans', 'image' => null],
-                        ['name' => 'Prof. White', 'image' => null],
-                        ['name' => 'Prof. Harris', 'image' => null],
-                    ],
-                ],
-                'Facultyhighschool2' => [
-                    'head' => [
-                        'name' => 'Mrs. Rachel',
-                        'image' => asset('css/CoursePicture/CS.jfif'),
-                    ],
-                    'members' => [
-                        ['name' => 'Prof. Clark', 'image' => null],
-                        ['name' => 'Prof. Scott', 'image' => null],
-                        ['name' => 'Prof. James', 'image' => null],
-                    ],
-                ],
-                'Facultyhighschool3' => [
-                    'head' => [
-                        'name' => 'Mr. David',
-                        'image' => asset('css/CoursePicture/CS.jfif'),
-                    ],
-                    'members' => [
-                        ['name' => 'Prof. Lewis', 'image' => null],
-                        ['name' => 'Prof. Miller', 'image' => null],
-                        ['name' => 'Prof. Robinson', 'image' => null],
+                        ['name' => 'Baby-Lyn Ravago', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Ronald Simbul', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Juniel Jenolan', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Dhan Ramos', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Eljer Dizon', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Angelica Garcia', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Shelby Enriquez', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Mhaicka Tolentino', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Mitzi Malixi', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Jan Antonnete Canindo', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Christine Leron', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Sean Reclosado', 'image' => asset('css/evaluatepicture/icon.jpg')],
+                        ['name' => 'Saira Mangayao', 'image' => asset('css/evaluatepicture/icon.jpg')],
                     ],
                 ],
             ],
