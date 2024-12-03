@@ -5,20 +5,26 @@
         <h2>Recent Evaluations</h2>
 
         @if($recentEvaluationsCount > 0)
-            <div class="alert alert-info mt-4">
-                <strong>Recent Evaluations:</strong>
-                <ul>
-                    @foreach($recentEvaluations as $evaluation)
-                        <li>
-                            <strong>{{ $evaluation->teacher_name }}</strong> - 
-                            {{ $evaluation->subject }} evaluation 
-                            (Submitted on {{ $evaluation->created_at->format('Y-m-d H:i:s') }})
-                        </li>
-                    @endforeach
-                </ul>
+            <div class="table-responsive mt-4">
+                <table class="table" style="border: 1px solid black;">
+                    <thead style= "color: black">
+                        <tr>
+                            <th style="border: 1px solid black;">Teacher Name</th>
+                            <th style="border: 1px solid black;">Submission Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($recentEvaluations as $evaluation)
+                            <tr>
+                                <td>{{ $evaluation->teacher_name }}</td>
+                                <td>{{ $evaluation->created_at->format('Y-m-d H:i:s') }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         @else
-            <div class="alert alert-info">
+            <div class="alert alert-info mt-4">
                 <strong>No recent evaluations available.</strong>
             </div>
         @endif

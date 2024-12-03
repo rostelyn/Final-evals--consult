@@ -27,8 +27,8 @@
             </div>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit"><h5>Log Out</h5></button>
-            </form>
+                    <button type="submit" class="logout">Log Out</button>
+                </form>
         </div>
         <div class="tabs">
         <a href="{{ $student->level === 'College' ? route('faculty.index', ['grade_level_section' => 'college']) : route('facultyhighschool.index', ['grade_level_section' => 'highschool']) }}">Evaluation

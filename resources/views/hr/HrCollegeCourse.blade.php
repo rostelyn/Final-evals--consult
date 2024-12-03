@@ -40,7 +40,7 @@
     </a>
     <a href="{{ ('HrBSCS') }}">
         <div class="course-item" data-title="Bachelor of Science in Computer Science">
-              <img src="{{ asset('css/CoursePicture/COMSCI.jpg') }}">
+              <img src="{{ asset('css/GeneralResources/logoo.jpg') }}">
             <span class="course-name">Bachelor of Science in Computer Science</span>
         </div>
     </a>
