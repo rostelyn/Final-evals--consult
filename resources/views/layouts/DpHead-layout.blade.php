@@ -15,8 +15,8 @@
         <ul>
     
         <li><a href="{{ route('dpHead.approval') }}">Department Head Approval</a></li>
-<li><a href="{{ route('dp.calendar') }}">Department Head Calendar</a></li>
-<li><a href="{{ route('dp.history') }}">Department Head History</a></li>
+<li><a href="{{ route('') }}">Department Head Calendar</a></li>
+<li><a href="{{ route('') }}">Department Head History</a></li>
 
             
         </ul>
