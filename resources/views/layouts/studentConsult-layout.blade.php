@@ -27,11 +27,11 @@
         </div>
         <ul>
     <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-    <li><a href="{{ route('college.consultation') }}">Consultation</a></li>
+    <li><a href="{{ route('') }}">Consultation</a></li>
     
-    <li><a href="{{ route('StudentSettings') }}">Settings</a></li>
-    <li><a href="{{ route('student.history') }}">Consultation History</a></li>
-    <li><a href="{{ route('student.calendar') }}">Calendar</a></li>
+    <li><a href="{{ route('') }}">Settings</a></li>
+    <li><a href="{{ route('') }}">Consultation History</a></li>
+    <li><a href="{{ route('') }}">Calendar</a></li>
 </ul>
 
     </div>

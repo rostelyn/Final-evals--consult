@@ -27,9 +27,9 @@
         </div>
         <ul>
             <li><a href="/student.student-evaluation-consultation">Dashboard</a></li>
-            <li><a href="{{ route('highschool.consultation') }}">Consultation</a></li>
-            <li><a href="{{ route('student.history') }}">Consultation History</a></li>
-            <li><a href="{{ route('student.calendar') }}">Calendar</a></li>
+            <li><a href="{{ route('') }}">Consultation</a></li>
+            <li><a href="{{ route('') }}">Consultation History</a></li>
+            <li><a href="{{ route('') }}">Calendar</a></li>
           
           
         </ul>
